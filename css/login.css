@@ -2,10 +2,11 @@ body {
   margin: 0;
   height: 100%;
   color: white;
-  background-color: #cae9ff;
+  background-image: url(../Img/fundo.png);
   font-family: Arial;
   text-align: center;
   display: flex;
+  
 }
 
 /* Navbar */
@@ -56,11 +57,18 @@ fieldset {
   margin: 100px auto;
   width: 60%;
   max-width: 1000px;
-  background-color: #396481;
+  background-color: #1b4965;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  border-radius: 75px;
+  margin-left: auto;
+  /*bordinha*/
+  border: 3px dashed black;
+  padding: 20px;
+  box-sizing: border-box;
+  
 }
 
 h1 {
