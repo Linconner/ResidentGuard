@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  height: 100%;
+  color: white;
+  background-color: #cae9ff;
+  font-family: Arial;
+  text-align: center;
+  display: flex;
+}
+
+/* Navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #396481;
+  overflow: hidden;
+  position: fixed;
+  font-size: 20px;
+  font-family: Verdana;
+  top: 0;
+  z-index: 1;
+}
+
+li {
+  float: left;
+  display: inline;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+a:hover:not(#active) {
+  text-decoration: underline;
+  text-decoration-color: rgb(160, 191, 231);
+}
+
+#active {
+  background-color: #3986ba;
+}
+/* Fim da Navbar */
+
+form {
+  margin: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+fieldset {
+  margin: 100px auto;
+  width: 60%;
+  max-width: 1000px;
+  background-color: #396481;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+h1 {
+  font: normal 40px Verdana;
+}
+
+img {
+  height: 100px;
+  width: 85px;
+}
+
+label {
+  margin: 10px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 18px 14px;
+  color: rgb(0, 0, 0);
+  background-color: #cae9ff;
+  border-radius: 50px;
+  font-size: 32px;
+}
+
+#form-logo {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  position: relative;
+
+}
+
+#left-logo {
+  position: absolute;
+  left: 50px;
+}
+
+#center-logo {
+  flex: 1;
+  text-align: center; 
+}
+
+button {
+  padding: 20px 110px;
+  color: white;
+  background-color: #396481;
+  border-radius: 50px;
+  font-size: 32px;
+}
+
+#password {
+  margin-bottom: 100px;
+  color: white;
+}
