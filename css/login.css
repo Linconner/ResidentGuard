@@ -1,88 +1,73 @@
 body {
   margin: 0;
-  height: 100%;
+  height: 100vh;
   color: white;
   background-image: url(../Img/fundo.png);
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
 }
 
-/* Navbar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #396481;
-  overflow: hidden;
-  position: fixed;
-  font-size: 20px;
-  font-family: Verdana;
-  top: 0;
-  z-index: 1;
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: auto;
 }
 
-li {
-  float: left;
-  display: inline;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 12px;
-  text-decoration: none;
-}
-
-a:hover:not(#active) {
-  text-decoration: underline;
-  text-decoration-color: rgb(160, 191, 231);
-}
-
-#active {
-  background-color: #3986ba;
-}
-/* Fim da Navbar */
-
-form {
-  margin: 50px;
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
 
-fieldset {
-  margin: 100px auto;
-  width: 150%;
-  max-width: 1200px;
-  background-color: #1b4965;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  border-radius: 75px;
-  margin-left: auto;
-  
-  /*bordinha*/
-  border: 3px dashed black;
-  padding: 20px;
-  box-sizing: border-box;
-  
-}
-
-.logoresi img{
-  width: 250px;
-  height: auto;
-}
-.left{
-  margin-top: -85px;
-  margin-left: 250px;
+.left, .right {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  width: 580px;
+  height: auto;
+  background-color: rgba(27, 73, 101, 0.61);
+  border-radius: 70px;
+  border: 3px dashed #153345;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column; /* Garante que os itens serão organizados verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+fieldset > * {
+  transform: scale(0.9);
+  margin-top: 10px; /* Adiciona espaçamento entre os elementos internos */
+}
+
+
+.logoresi img {
+  width: 250px;
+  height: auto;
+}
+
+.userlog img {
+  width: 135px;
+  height: auto;
 }
 
 h1 {
@@ -94,16 +79,9 @@ img {
   width: 85px;
 }
 
-
-input::placeholder {
-  color: black;
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-}
 input {
   padding: 30px;
-  color: black !important;
+  color: black;
   background-color: #5ab0f0;
   border-radius: 55px;
   font-size: 25px;
@@ -111,22 +89,56 @@ input {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   width: 75%;
- 
-}
-.userlog img{
-width: 150px;
-height: auto;
+  height: 5px;
 }
 
+input::placeholder {
+  color: black;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  padding-left: 25px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+
+
+a#password {
+  margin-top: 20px; /* Ajuste a margem superior do link */
+}
+
+/*buttonrsrsrsrs*/
 button {
-  padding: 20px 110px;
-  color: white;
-  background-color: #396481;
+  padding: 20px 70px;
+  color: rgb(0, 0, 0); /* Cor do texto */
+  background-color: #5ab1f1; /* Cor de fundo original */
   border-radius: 50px;
   font-size: 32px;
+  border: solid 3px; /* Borda original */
+  cursor: pointer;
+  transform: scale(0.7);
+  transition: all 0.3s ease-in-out; /* Adiciona transição suave */
+  font-family: 'Montserrat', sans-serif; /* Garante a consistência da fonte */
 }
 
-#password {
-  margin-bottom: 100px;
-  color: white;
+/* Adicionando efeito de gradiente e sombra para manter a animação sem alterar a cor */
+button:hover {
+  transform: translateY(3px); /* Efeito ao passar o mouse */
+  box-shadow: none; /* Remove sombra no hover */
 }
+
+button:active {
+  opacity: 0.5; /* Torna o botão parcialmente transparente quando pressionado */
+}
+
+/* Mantendo o estilo da borda e cor original */
+button {
+  background-color: #5ab1f1; /* Cor de fundo original */
+  border: solid 3px; /* Borda original */
+  color: rgb(0, 0, 0); /* Cor do texto */
+}
+
+/*arrumar o botao depois*/

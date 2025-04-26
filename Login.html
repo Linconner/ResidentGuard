@@ -2,46 +2,50 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResidentGuard</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResidentGuard</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <ul>
-        <li><a id="active" href="#">Tela de Login</a></li>
-        <li><a href="cadastro de visitantes.html">Cadastro de Visitantes</a></li>
-    </ul>
-
+  <div class="main-container">
+    
     <div class="container">
-        <div class="left">
-            <div class="logoresi"><img src="img/Logo.png" alt="Logo"></div>
+      <div class="left">
+        <div class="logoresi">
+          <img src="img/Logo.png" alt="Logo">
         </div>
+      </div>
     </div>
 
     <div class="container">
-        <div class="right">
-            <form>
-                <fieldset>
-                    <div class="userlog"><img src="img/loguser.png" alt="User Icon"></div>
+      <div class="right">
+        <form>
+          <fieldset>
+            <div class="userlog">
+              <img src="img/loguser.png" alt="User Icon">
+            </div>
 
-                        <input placeholder="Digite seu login" type="text" id="inputName"  required autofocus>
-                        <br><br>
-                        <input placeholder="Digite sua senha" type="password" id="inputPassword" required>
-                    </label><br>
+            <input placeholder="Digite seu login" type="text" id="inputName" required autofocus onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite seu login'}">
 
-                    <br><button type="submit" value="submit" class="button">Entrar</button>
-                    <a id="password" href="#">Esqueci minha senha</a>
-                </fieldset>
-            </form>
-        </div>
+<input placeholder="Digite sua senha" type="password" id="inputPassword" required onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite sua senha'}">
+
+
+            <a id="password" href="#">Esqueci minha senha</a>
+
+            <button type="submit" class="button">Cadastrar</button>
+
+          </fieldset>
+        </form>
+      </div>
     </div>
 
-    <script src="js/script.js"></script>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
