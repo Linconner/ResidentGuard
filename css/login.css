@@ -3,7 +3,7 @@ body {
   height: 100%;
   color: white;
   background-image: url(../Img/fundo.png);
-  font-family: Arial;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   display: flex;
   
@@ -55,8 +55,8 @@ form {
 
 fieldset {
   margin: 100px auto;
-  width: 60%;
-  max-width: 1000px;
+  width: 150%;
+  max-width: 1200px;
   background-color: #1b4965;
   display: flex;
   flex-direction: column;
@@ -64,11 +64,25 @@ fieldset {
   gap: 5px;
   border-radius: 75px;
   margin-left: auto;
+  
   /*bordinha*/
   border: 3px dashed black;
   padding: 20px;
   box-sizing: border-box;
   
+}
+
+.logoresi img{
+  width: 250px;
+  height: auto;
+}
+.left{
+  margin-top: -85px;
+  margin-left: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -80,39 +94,28 @@ img {
   width: 85px;
 }
 
-label {
-  margin: 10px;
-  font-size: 36px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
+input::placeholder {
+  color: black;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 input {
-  padding: 18px 14px;
-  color: rgb(0, 0, 0);
-  background-color: #cae9ff;
-  border-radius: 50px;
-  font-size: 32px;
+  padding: 30px;
+  color: black !important;
+  background-color: #5ab0f0;
+  border-radius: 55px;
+  font-size: 25px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  width: 75%;
+ 
 }
-
-#form-logo {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  position: relative;
-
-}
-
-#left-logo {
-  position: absolute;
-  left: 50px;
-}
-
-#center-logo {
-  flex: 1;
-  text-align: center; 
+.userlog img{
+width: 150px;
+height: auto;
 }
 
 button {
