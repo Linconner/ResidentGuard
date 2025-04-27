@@ -9,27 +9,29 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.bv {
+  font-family: 'montserrat', sans-serif;
+}
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  height: auto;
+  height: 100%; /* Ajustado para ocupar toda a altura */
 }
 
+.left {
+  width: 100vh;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 0;
+}
 .right {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-}
-
-.left, .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 form {
@@ -44,21 +46,22 @@ fieldset {
   height: auto;
   background-color: rgba(27, 73, 101, 0.61);
   border-radius: 70px;
-  border: 3px dashed #153345;
-  padding: 20px;
+  border: 4px dashed #153345;
+  padding: 15px;
   box-sizing: border-box;
+  padding-bottom: 80px;
   
   display: flex;
   flex-direction: column; /* Garante que os itens serão organizados verticalmente */
   align-items: center; /* Centraliza os itens horizontalmente */
   justify-content: center;
-  gap: 20px; /* Espaçamento entre os elementos */
+  gap: 10px; /* Espaçamento entre os elementos */
 }
+
 fieldset > * {
   transform: scale(0.9);
   margin-top: 10px; /* Adiciona espaçamento entre os elementos internos */
 }
-
 
 .logoresi img {
   width: 250px;
@@ -79,38 +82,12 @@ img {
   width: 85px;
 }
 
-input {
-  padding: 30px;
-  color: black;
-  background-color: #5ab0f0;
-  border-radius: 55px;
-  font-size: 25px;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-  width: 75%;
-  height: 5px;
-}
-
-input::placeholder {
-  color: black;
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-  padding-left: 25px;
-}
-
-input:focus::placeholder {
-  color: transparent;
-}
-
-
-
 a#password {
+  color: white;
   margin-top: 20px; /* Ajuste a margem superior do link */
 }
 
-/*buttonrsrsrsrs*/
+/* Botão */
 button {
   padding: 20px 70px;
   color: rgb(0, 0, 0); /* Cor do texto */
@@ -119,26 +96,59 @@ button {
   font-size: 32px;
   border: solid 3px; /* Borda original */
   cursor: pointer;
-  transform: scale(0.7);
   transition: all 0.3s ease-in-out; /* Adiciona transição suave */
-  font-family: 'Montserrat', sans-serif; /* Garante a consistência da fonte */
+  font-family: 'Montserrat', sans-serif;
+  transform: scale(0.7);
 }
 
-/* Adicionando efeito de gradiente e sombra para manter a animação sem alterar a cor */
+/* Efeito de hover e active */
 button:hover {
-  transform: translateY(3px); /* Efeito ao passar o mouse */
-  box-shadow: none; /* Remove sombra no hover */
+  transform: scale(0.75); /* Levemente menor ao passar o mouse */
+  box-shadow: 0 9px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 button:active {
+  transform: scale(0.75);
   opacity: 0.5; /* Torna o botão parcialmente transparente quando pressionado */
 }
 
-/* Mantendo o estilo da borda e cor original */
-button {
-  background-color: #5ab1f1; /* Cor de fundo original */
-  border: solid 3px; /* Borda original */
-  color: rgb(0, 0, 0); /* Cor do texto */
+.textboxesteste, .textboxesteste2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  transform: scale(0.8);
+  align-items: center;
+  transition: transform 0.3s ease; /* Adiciona uma transição para o contêiner também */
 }
 
-/*arrumar o botao depois*/
+.textboxesteste input, .textboxesteste2 input {
+  padding: 20px; /* Removido o !important */
+  padding-left: 55px; /* Ajuste esse valor conforme necessário */
+  font-size: 25px;
+  color: black;
+  background-color: #5ab0f0;
+  border-radius: 55px;
+  border: none;
+  width: 500px;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease;
+  box-sizing: border-box; /* Adicionado para garantir que o padding seja incluído nas dimensões */
+}
+
+.textboxesteste2 input:focus, .textboxesteste input:focus {
+  transition: transform 0.3s ease-in-out; /* Consolidado em uma única linha */
+  transform: scale(1.05);
+}
+
+input::placeholder {
+  color: black;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
