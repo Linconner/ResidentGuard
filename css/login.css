@@ -1,154 +1,295 @@
 body {
   margin: 0;
-  height: 100vh;
-  color: white;
-  background-image: url(../Img/fundo.png);
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../Img/fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
-.bv {
-  font-family: 'montserrat', sans-serif;
-}
+
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  height: 100%; /* Ajustado para ocupar toda a altura */
-}
-
-.left {
-  width: 100vh;
-  height: auto;
-  margin-right: 10px;
-  margin-left: 0;
-}
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  max-width: 1800px;
   width: 100%;
-}
-
-form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-fieldset {
-  width: 580px;
-  height: auto;
-  background-color: rgba(27, 73, 101, 0.61);
-  border-radius: 70px;
-  border: 4px dashed #153345;
-  padding: 15px;
-  box-sizing: border-box;
-  padding-bottom: 80px;
   
-  display: flex;
-  flex-direction: column; /* Garante que os itens serão organizados verticalmente */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  justify-content: center;
-  gap: 10px; /* Espaçamento entre os elementos */
+  flex-wrap: nowrap; /* <-- evita quebra de linha */
 }
 
-fieldset > * {
-  transform: scale(0.9);
-  margin-top: 10px; /* Adiciona espaçamento entre os elementos internos */
+.left, .right {
+  flex: 1 1 500px;
+  align-items: center;
+}
+
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ResidentGuardtexto {
+  font-size: 2.4rem;
+}
+
+.Sistematexto {
+  font-size: 1.8rem;
 }
 
 .logoresi img {
-  width: 250px;
+  max-width: 100%;
   height: auto;
+  width: 240px;
 }
 
 .userlog img {
-  width: 135px;
+  width: 120px;
   height: auto;
 }
 
-h1 {
-  font: normal 40px Verdana;
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-img {
-  height: 100px;
-  width: 85px;
-}
 
-a#password {
-  color: white;
-  margin-top: 20px; /* Ajuste a margem superior do link */
-}
 
-/* Botão */
-button {
-  padding: 20px 70px;
-  color: rgb(0, 0, 0); /* Cor do texto */
-  background-color: #5ab1f1; /* Cor de fundo original */
+fieldset {
+  background-color: rgba(27, 73, 101, 0.61);
   border-radius: 50px;
-  font-size: 32px;
-  border: solid 3px; /* Borda original */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Adiciona transição suave */
-  font-family: 'Montserrat', sans-serif;
-  transform: scale(0.7);
-}
-
-/* Efeito de hover e active */
-button:hover {
-  transform: scale(0.75); /* Levemente menor ao passar o mouse */
-  box-shadow: 0 9px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-button:active {
-  transform: scale(0.75);
-  opacity: 0.5; /* Torna o botão parcialmente transparente quando pressionado */
+  border: 3.5px #1b3059 solid;
+  padding: 60px 75px 0px;
+  width: 100%;
+  max-width: 580px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+  height: 83vh;
 }
 
 .textboxesteste, .textboxesteste2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
   width: 100%;
-  transform: scale(0.8);
-  align-items: center;
-  transition: transform 0.3s ease; /* Adiciona uma transição para o contêiner também */
+  display: flex;
+  justify-content: center;
+  height: 3.6rem;
+  border-radius: 35px;
+
 }
 
-.textboxesteste input, .textboxesteste2 input {
-  padding: 20px; /* Removido o !important */
-  padding-left: 55px; /* Ajuste esse valor conforme necessário */
-  font-size: 25px;
-  color: black;
-  background-color: #5ab0f0;
-  border-radius: 55px;
+.textboxesteste input,
+.textboxesteste2 input {
+  width: 100%;
+  max-width: 500px;
+  padding: 22px 30px 22px 70px;
+  font-size: 1.6rem;
+  border-radius: 50px;
   border: none;
-  width: 500px;
+  background-color: #5ab0f0;
+  color: black;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
   transition: transform 0.3s ease;
-  box-sizing: border-box; /* Adicionado para garantir que o padding seja incluído nas dimensões */
 }
 
-.textboxesteste2 input:focus, .textboxesteste input:focus {
-  transition: transform 0.3s ease-in-out; /* Consolidado em uma única linha */
-  transform: scale(1.05);
+.textboxesteste input:focus,
+.textboxesteste2 input:focus {
+  transform: scale(1.03);
 }
 
 input::placeholder {
   color: black;
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 input:focus::placeholder {
   color: transparent;
+}
+
+a#password {
+  color: white;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 13px 65px;
+  font-size: 1.4rem;
+  background-color: #5ab1f1;
+  color: black;
+  border: 3px solid #000;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 8vh;
+}
+
+button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+
+/*switch*/
+.container-switch {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container-switch > * {
+  height: auto;
+  max-height: 10vh;
+}
+
+.botao-deslizante {
+  position: relative;
+  display: inline-block;
+  width: 175px;
+  height: 7.5vh;
+  transform: scale(1.4);
+}
+
+.botao-deslizante input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.fundo-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50vh;
+  background-color: rgba(27, 73, 101, 0.61);
+  border: 3px solid rgba(0, 0, 0, 0.61);
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.bolinha::selection {
+  background: transparent;
+  color: transparent;
+}
+
+.bolinha {
+  position: absolute;
+  z-index: 3;
+  height: 90%;              /* altura proporcional ao switch */
+  width: 50%;               /* metade do fundo */
+  top: 50%;                 /* centraliza verticalmente */
+  left: 2px;                /* pequena margem esquerda */
+  transform: translateY(-50%);
+  background-color: #5ab1f1;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vh;
+  transition: transform 0.4s, background-color 0.4s, color 0.4s;
+  font-size: 16.7px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.texto-fundo {
+  /*usar o top etals*/
+  position: absolute;
+
+  /*deixar o texto embaixo*/
+  z-index: 1;
+
+  /*ajustes*/
+  width: 50%;
+  height: 100%;
+  font-size: 13px;
+  color: white;
+
+  /*alinhar*/
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.texto-fundo.esquerda {
+  left: 0;
+}
+
+.texto-fundo.direita {
+  right: 0;
+}
+
+input:checked + .fundo-switch .bolinha {
+  transform: translate(80px, -50%);
+  color: white;
+  background-color: #5ab1f1;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+  }
+
+  .left, .right {
+    max-width: 100%;
+  }
+
+  .logoresi img {
+    width: 150px;
+  }
+
+  .userlog img {
+    width: 80px;
+  }
+
+  .textboxesteste input, .textboxesteste2 input {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+  }
+
+  .ResidentGuardtexto {
+    font-size: 1.4rem;
+  }
+
+  .Sistematexto {
+    font-size: 1.1rem;
+  }
 }

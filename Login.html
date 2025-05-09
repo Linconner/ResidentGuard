@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +7,56 @@
   <link rel="stylesheet" href="css/login.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
   <div class="main-container">
-    <div class="container">
-      <!-- Seção da esquerda que engloba todos os itens à esquerda -->
-      <div class="left">
-        <!-- Título -->
-        <div class="greeting">
-          <h1 class="bv">Bem-Vindo</h1>
-        </div>
-    
-        <!-- Logo -->
-        <div class="logoresi">
-          <img src="img/Logo.png" alt="Logo">
-        </div>
-    
-        <!-- Nome do Sistema -->
-        <div class="system-name">
-          ResidentGuard
-        </div>
-    
-        <!-- Descrição -->
-        <div class="description">
-          Sistema de acesso a condomínios
-        </div>
+
+    <div class="left">
+      <div class="greeting">
+        <h1 class="bv">Bem-Vindo</h1>
       </div>
-    </div>
-    
-    
-
-    <div class="container">
-      <div class="right">
-        <form>
-          <fieldset>
-            <div class="userlog">
-              <img src="img/loguser.png" alt="User Icon">
-            </div>
-
-            <div class="textboxesteste">
-              <input placeholder="Digite seu login" type="text" id="inputName" required onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite seu login'}">
-            </div>
-
-            <div class="textboxesteste2">
-              <input placeholder="Digite sua senha" type="password" id="inputPassword" required onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite sua senha'}">
-            </div>
-
-            <a id="password" href="#">Esqueci minha senha</a>
-            <button type="submit" class="button">Cadastrar</button>
-
-          </fieldset>
-        </form>
+      <div class="logoresi">
+        <img src="img/Logo.png" alt="Logo">
+      </div>
+      <div>
+        <p class="ResidentGuardtexto">ResidentGuard</p>
+      </div>
+      <div>
+        <p class="Sistematexto">Sistema de acesso a condomínios</p>
       </div>
     </div>
 
+    <div class="right">
+      <form>
+        <fieldset>
+          <div class="userlog">
+            <img src="img/loguser.png" alt="User Icon">
+          </div>
+
+          <div class="textboxesteste">
+            <input placeholder="Digite seu usuário" type="text" id="inputUser" minlength="3" maxlength="20" required>
+          </div>
+
+          <div class="textboxesteste2">
+            <input placeholder="Digite sua senha" type="password" id="inputPassword" minlength="3" required>
+          </div>
+
+          
+          <button type="submit" class="button">ENTRAR</button>
+        </fieldset>
+      </form>
+      <div class="container-switch">
+        <label class="botao-deslizante">
+          <input type="checkbox" id="modoSwitch">
+          <span class="fundo-switch">
+            <span class="bolinha">ADM</span>
+            <span class="texto-fundo esquerda">Porteiro</span>
+            <span class="texto-fundo direita">Admin</span>
+          </span>
+        </label>
+      </div>
+      
+    </div>
   </div>
-
   <script src="js/script.js"></script>
 </body>
-
 </html>
