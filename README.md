@@ -1,1 +1,1 @@
-Não sei se fizemos certo pois demos a sorte de ambos do projeto terem faltado no dia da explicação, vi o arquivo de autenticação e não entendemos bulhufas então fizemos um CRUD com FK  pois nao tinhamos feito com novas views (??) já que não tinha nada na atividade falando sobre autenticação, espero que entenda. Como o prazo foi muito pouco tempo e temos nossas limitações foi o que deu pra fazer.
+TCC em processo
