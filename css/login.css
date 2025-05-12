@@ -135,6 +135,7 @@ button {
   transition: all 0.3s ease-in-out;
   font-family: 'Montserrat', sans-serif;
   margin-top: 8vh;
+  height: 8.5vh;
 }
 
 button:hover {
@@ -239,12 +240,23 @@ button:active {
   justify-content: center;
 }
 
+.texto-fundo.direita, .texto-fundo.esquerda {
+color: rgb(16, 45, 62);
 
+font-weight: bold;
+font-family: 'Open Sans', sans-serif;
+}
+
+#textobolinha {
+  transition: font-size 0.10s ease, color 0.5 ease;
+}
 .texto-fundo.esquerda {
+  font-size: 16.7px;
   left: 0;
 }
 
 .texto-fundo.direita {
+  font-size: 12px;
   right: 0;
 }
 

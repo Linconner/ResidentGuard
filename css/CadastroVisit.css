@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5ab0f0;
+  font-family: sans-serif;
+}
+.quadradodetras {
+ width: 170vh;
+ height: 90vh;
+ background-color: #1b4965;
+ border-radius: 10vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.quadradodafrente {
+    background-color: #396481;
+    width: 160vh;
+    height: 80vh;
+    border-radius: 10vh;
+    position: relative;
+}
+.lblnome {
+    color: white;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: block; /*<br>*/
+    margin-bottom: 0.5vh;
+    font-size: 15px;
+}
+.cadastro {
+width: auto;
+height: 50vh;
+border: dashed;
+margin-left: 10vh;
+margin-top: 8vh;
+}
+.txt {
+    background-color: #396481;
+    border: solid rgb(255, 255, 255);
+    border-radius: 8vh;
+    width: 30vh;
+    height: 3.5vh;
+    padding: 0.6vh 2vh;
+}
+.txt::placeholder {
+    color: white;
+    
+}
