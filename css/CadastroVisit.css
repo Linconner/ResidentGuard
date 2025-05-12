@@ -50,5 +50,5 @@ margin-top: 8vh;
 }
 .txt::placeholder {
     color: white;
-    
+    font-family: 'Montserrat', sans-serif;
 }
