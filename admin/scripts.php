@@ -1,0 +1,1 @@
+<script src="<?= JS_PATH ?>script.js" type="text/javascript"></script>
