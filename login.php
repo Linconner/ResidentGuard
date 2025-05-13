@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 1 - Verifica primeiro se o usuário está na tabela `admin`
 
         //Para mais segurança se utiliza os statements, no caso do prepare, é passado a consulta SQL com placeholders em vez de concatenar os valores diretamente na SQL
-        $stmtAdmin = $db->prepare("SELECT username, senha FROM admin WHERE username = ?");
+        $stmtAdmin = $db->prepare("SELECT nome_admin, senha_admin FROM admin WHERE nome_admin = ?");
         //O bind_param serve para associar os valores que devem substituir os placeholders na consulta, o type "s" significa string
         $stmtAdmin->bind_param("s", $username);
         $stmtAdmin->execute();
@@ -26,9 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtAdmin->close();
 
         // Aqui provavelmente vai mudar depois para ficar com o passwordhash, que é mais seguro
-        if ($resultAdmin && $password === $resultAdmin['senha']) {
+        if ($resultAdmin && $password === $resultAdmin['senha_admin']) {
             //_SESSION é uma funciona como um array, armazenando informações que poderão ficar disponíveis ao longo de várias páginas pelo mesmo usuário.
-            $_SESSION['usuario'] = $resultAdmin['username'];
+            $_SESSION['usuario'] = $resultAdmin['nome_admin'];
             $_SESSION['role']    = 'admin_principal'; //Os valores _SESSION ficam salvos no servidor e serão acessiveis em todas as páginas com session_start
             header("Location: admin/index.php");
             exit();
@@ -36,15 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // 2 - Verifica se é um funcionário com (role = "Porteiro") para acessar o admin secundário
 
-        $stmtFunc = $db->prepare("SELECT username, senha, role FROM funcionario WHERE username = ?");
+        $stmtFunc = $db->prepare("SELECT nome_funcionario, senha_funcionario, cargo_funcionario FROM funcionario WHERE nome_funcionario = ?");
         $stmtFunc->bind_param("s", $username);
         $stmtFunc->execute();
         $resultFunc = $stmtFunc->get_result()->fetch_assoc();
         $stmtFunc->close();
 
-        if ($resultFunc && $password === $resultFunc['senha']) {
-            if ($resultFunc['role'] === 'Atendente') {
-                $_SESSION['usuario'] = $resultFunc['username'];
+        if ($resultFunc && $password === $resultFunc['senha_funcionario']) {
+            if ($resultFunc['cargo_funcionario'] === 'Porteiro') {
+                $_SESSION['usuario'] = $resultFunc['nome_funcionario'];
                 $_SESSION['role']    = 'admin_secundario';
                 header("Location: admin/index.php");
                 exit();

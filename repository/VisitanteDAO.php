@@ -12,13 +12,13 @@ class VisitanteDAO {
 
     // Método para listar visitantes
     public function listar() {
-        $sql = "SELECT id, nome, descricao FROM visitantes";
+        $sql = "SELECT id_visitante, nome_visitante, descricao_visitante FROM visitantes";
         $result = $this->db->query($sql);
         $dados = [];
         if ($result && $result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 // Usamos o campo 'id' como chave para cada visitante
-                $dados[$row['id']] = $row;
+                $dados[$row['id_visitante']] = $row;
             }
         }
         return $dados;
@@ -26,7 +26,7 @@ class VisitanteDAO {
 
     // Método para inserir um novo visitante
     public function salvar($nome, $descricao) {
-        $stmt = $this->db->prepare("INSERT INTO visitantes (nome, descricao) VALUES (?, ?)");
+        $stmt = $this->db->prepare("INSERT INTO visitantes (nome_visitante, descricao_visitante) VALUES (?, ?)");
         $stmt->bind_param("ss", $nome, $descricao);
         $stmt->execute();
         $idInserido = $stmt->insert_id;
@@ -34,9 +34,9 @@ class VisitanteDAO {
         return $idInserido;
     }
 
-    // Método para excluir um visitante dado seu id
+    // Método para excluir um visitante a partir do id
     public function excluir($id) {
-        $stmt = $this->db->prepare("DELETE FROM visitantes WHERE id = ?");
+        $stmt = $this->db->prepare("DELETE FROM visitantes WHERE id_visitante = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $stmt->close();

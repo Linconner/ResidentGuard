@@ -37,8 +37,8 @@ $titulo = "Lista de Visitantes"; // Define o título da página antes de ser def
                 ?>
                 <tr>
                     <th scope="row"><?= $id ?></th>
-                    <td><?= $mostrar['nome'] ?></td>
-                    <td><?= $mostrar['descricao'] ?></td>
+                    <td><?= $mostrar['nome_visitante'] ?></td>
+                    <td><?= $mostrar['descricao_visitante'] ?></td>
                     <td style="text-align: center">
                         <a href="?p=visitante/excluir&id=<?= $id ?>" title="excluir"><img src="<?= IMG_PATH ?>Deletar.png" alt="Deletar"></a>
                         <a href="?p=visitante/salvar"><img src="<?= IMG_PATH ?>Editar.png" alt="Editar"></a>
