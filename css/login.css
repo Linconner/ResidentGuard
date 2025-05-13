@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../Img/fundo.png);
+  background-image: url(/public/Img/fundo.png);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
