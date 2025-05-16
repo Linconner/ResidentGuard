@@ -14,7 +14,7 @@ body {
 /* Container principal */
 .quadradodetras {
   width: 165vh;
-  height: 75vh;
+  height: 80vh;
   background-color: #1b4965;
   border-radius: 6vh;
   display: flex;
@@ -25,23 +25,31 @@ body {
 
 .quadradodafrente {
   background-color: #396481;
-  width: 160vh;
+  width: 155vh; /* Reduzi um pouco para dar mais margem */
   height: 70vh;
   border-radius: 6vh;
   position: relative;
+  padding: 2vh; /* Adicionei padding interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cadastro {
   width: 100%;
   height: 100%;
-  padding: 3vh;
+  padding: 1vh;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  
+
 }
 
 .cadastrointeiro {
   width: 100%;
   height: 100%;
-  position: relative;
+  
 }
 
 /* Header */
@@ -70,27 +78,39 @@ fieldset {
   padding: 2vh;
   margin: 0;
   background-color: rgba(57, 100, 129, 0.7);
+
 }
 
-.fieldset-left {
+.fieldset-cadastro {
   width: 45vh;
   position: absolute;
   left: 5vh;
-  top: 5vh;
+  top: 2vh;
+  height: 65vh;
+  
 }
 
-.fieldset-center {
+.fieldset-moradia {
   width: 45vh;
   position: absolute;
   left: 60vh;
-  top: 5vh;
+  top: 2vh;
+  
 }
 
-.fieldset-right {
-  width: 40vh;
+.fieldset-liberação {
+  width: 45vh;
+  position: absolute;
+  left: 60vh;
+  top: 32vh;
+  height: 35vh;
+}
+
+.fieldset-horario {
+  width: 35vh;
   position: absolute;
   left: 115vh;
-  top: 5vh;
+  top: 2vh;
 }
 
 legend {
@@ -122,14 +142,14 @@ legend {
 .txt {
   width: 100%;
   height: 5vh;
-  padding: 1.8vh 1.8vh 1.8vh 5vh; /* Reduzi o padding-left para 5vh */
+  padding: 1.8vh 1.8vh 1.8vh 5vh;
   background-color: #396481;
   color: white;
   border: 2px solid white;
   border-radius: 8vh;
   box-sizing: border-box;
   font-size: 1.8vh;
-  position: relative; /* Adicionado para referência dos ícones */
+  position: relative;
 }
 
 .txt:focus {
@@ -144,46 +164,71 @@ legend {
 }
 
 /* Ícones */
-.icone-input {
-  font-size: 2.5vh;
+.icones {
+  font-size: 2vh;
   position: absolute;
-  left: 1.8vh; /* Posicionamento dentro do padding */
-  top: 55%;
-  transform: translateY(-50%);
-  color: white;
-  pointer-events: none;
+  top: 1.5vh;
+  left: 1.7vh;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-/* Ajuste fino para ícones específicos */
-.bi-buildings-fill {
-  left: 1.5vh; /* Ajuste mais preciso para ícones de prédio */
+.bi-car-front-fill{
+position: absolute;
+bottom: 4.9vh;
+z-index: 2;
+left: 3.7vh;
 }
 
 .bi-clock-fill {
-  font-size: 2.3vh; /* Ícone de relógio ligeiramente menor */
+  position: absolute;
+  left: 1.7vh;
+  bottom: 1.4vh;
+  z-index: 2;
+  font-size: 2vh;
 }
+
 /* Seção de automóvel */
-.campo-btnrd {
-  margin-top: 2vh;
+
+.txtplaca {
+  margin-top: 1vh;
+}
+
+.campo-btnrd label.lblnome1 {
+  height: 7vh;
+}
+.lblnome1{
+  color: white;
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2vh;
 }
 
 .quadradobtnrd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: rgba(202, 233, 255, 0.62);
   border-radius: 3vh;
   border: 1px solid rgb(0, 0, 0);
   padding: 2vh;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5vh;
+  gap: 1vh;
+  margin-top: 1vh;
 }
 
-.custom-checkbox {
+.custom-radio {
+  flex: 0 0 49%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 1vh;
-  width: 45%;
 }
+
+
 
 .custom-checkbox input[type='checkbox'] {
   -webkit-appearance: none;
@@ -196,6 +241,10 @@ legend {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  position: absolute;
+  bottom: 7vh;
+  left: 13vh;
+    
 }
 
 .custom-checkbox input[type='checkbox']:checked {
@@ -246,12 +295,13 @@ legend {
   font-size: 1.8vh;
   font-weight: bold;
   color: #1b4965;
+  line-height: 6vh;
 }
 
 /* Botão */
 .confirmbutton {
   position: absolute;
-  bottom: 3vh;
+  bottom: 3.5vh;
   right: 3vh;
 }
 
@@ -273,7 +323,7 @@ legend {
 }
 
 /* Ajustes para campos específicos */
-.campo-form-right .campo-form {
+.campo-form-right {
   margin-bottom: 2vh;
 }
 
@@ -288,6 +338,7 @@ legend {
 
 .campo-formtempoh {
   margin-top: 2vh;
+  position: relative;
 }
 
 /* Datalist */
@@ -303,7 +354,7 @@ datalist {
     min-height: 80vh;
   }
   
-  .fieldset-left, .fieldset-center, .fieldset-right {
+  .fieldset-cadastro, .fieldset-moradia, .fieldset-liberação, .fieldset-horario {
     position: static;
     width: 100%;
     margin-bottom: 3vh;
