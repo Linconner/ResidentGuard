@@ -7,14 +7,11 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url(/public/Img/fundo.png);
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 
-.cadastrointeiro {
-  width: auto;
-}
-
+/* Container principal */
 .quadradodetras {
   width: 165vh;
   height: 75vh;
@@ -23,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .quadradodafrente {
@@ -31,259 +29,22 @@ body {
   height: 70vh;
   border-radius: 6vh;
   position: relative;
-
 }
 
 .cadastro {
-  width: auto;
-  height: 56vh;
-  border: dashed;
-
-}
-
-/* Labels and text */
-.lblnome {
-  font-size: 2vh;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  margin-bottom: 0.56vh;
-  display: block;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-}
-
-/* Input text fields */
-.txt {
-  max-width: 40vh;
-  width: 35vh;
-  height: 5vh;
-  padding: 1.8vh 1.8vh 1.8vh 7vh;
-  background-color: #396481;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  border: 2px solid white;
-  border-radius: 8vh;
+  width: 100%;
+  height: 100%;
+  padding: 3vh;
   box-sizing: border-box;
 }
 
-.txt:focus {
-  outline: none;
-}
-
-.txt::placeholder {
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6vh;
-}
-
-/* Form field containers */
-.campo-form {
-  width: auto;
+.cadastrointeiro {
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin-bottom: 2.5vh;
-  flex-direction: column;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
 }
 
-.campo-formtempoh {
-  margin-top: 2vh;
-  position: relative;
-  margin-bottom: 1.5vh;
-  flex-direction: column;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  
-}
-
-.campo-form-left {
-  display: flex;
-}
-
-/* Icons */
-.icones {
-  font-size: 3vh;
-  position: absolute;
-  top: 70%;
-  left: 2vh;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: black;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  
-}
-
-.campo-form-right i {
-  top: 2.5vh;
-}
-
-/* Right side form fields */
-.campo-form-right {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 8vh;
-  left: 60vh;
-  max-width: 50vh;
-}
-
-.campo-form-right input {
-  width: 25vh;
-}
-
-.middle-icon {
-  position: absolute;
-  left: 50%;
-  font-size: 2vh;
-  pointer-events: none;
-  color: white;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.campo-form-right .campo-form {
-  position: relative;
-  margin-bottom: 2.22vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.campo-form-right .campo-form + .campo-form {
-  margin-top: 2.22vh;
-  
-}
-
-/* moreright */
-.moreright {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 8vh;
-  left: 100vh;
-  max-width: 30vh;
-}
-
-.quadradobtnrd,
-.quadradobtnrd-2 {
-  background-color: rgba(202, 233, 255, 0.62);
-  width: 29vh;
-  max-width: 27vh;
-  height: 19vh;
-  border-radius: 3vh;
-  border: 1px solid rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-  padding: 1vh 2vh;
-  gap: 2vh;
-  width: 25vh;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-}
-
-.quadradobtnrd-2 {
-  height: 6vh;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 9vh;
-}
-
-.radio-btnmi {
-  font-size: 2vh;
-  font-family: 'montserrat', sans-serif;
-  font-weight: bold;
-  color: #1b4965;
-}
-
-.radio-btn {
-  font-size: 2vh;
-  font-family: 'montserrat', sans-serif;
-  font-weight: bold;
-  color: #1b4965;
-}
-
-.custom-radio {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.custom-radio input[type='radio'] {
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 2.22vh;
-  height: 2.22vh;
-  background-color: #396481;
-  border: 2px solid #396481;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-}
-
-input[type='radio']:checked {
-  border-color: #396481;
-  background-color: rgb(255, 255, 255);
-  box-shadow: inset 0 0 0.0vh #396481;
-}
-
-.custom-radio .radio-btn {
-  order: 1;
-}
-
-.custom-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.custom-checkbox input[type='checkbox'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 2.22vh;
-  height: 2.22vh;
-  background-color: #396481;
-  border: 2px solid #396481;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-}
-
-.custom-checkbox input[type='checkbox']:checked {
-  border-color: #396481;
-  background-color: rgb(255, 255, 255);
-  box-shadow: inset 0 0 0.0vh #396481;
-}
-
-.custom-checkbox .radio-btn {
-  order: 1;
-}
-
-/* Buttons */
-.custom-button {
-  display: block;
-  position: relative;
-  margin-top: 2vh;
-}
-
-/* Other layout elements */
+/* Header */
 .tópico {
   background-color: #1b4965;
   height: 14vh;
@@ -293,26 +54,265 @@ input[type='radio']:checked {
   margin-bottom: 4vh;
 }
 
-.txtmoradores {
-  max-width: 40vh;
-  width: 35vh;
-  height: 5vh;
-  padding: 1.8vh 1.8vh 1.8vh;
-  background-color: #396481;
+/* Formulário */
+.formscadastro {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Fieldsets */
+fieldset {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2vh;
+  padding: 2vh;
+  margin: 0;
+  background-color: rgba(57, 100, 129, 0.7);
+}
+
+.fieldset-left {
+  width: 45vh;
+  position: absolute;
+  left: 5vh;
+  top: 5vh;
+}
+
+.fieldset-center {
+  width: 45vh;
+  position: absolute;
+  left: 60vh;
+  top: 5vh;
+}
+
+.fieldset-right {
+  width: 40vh;
+  position: absolute;
+  left: 115vh;
+  top: 5vh;
+}
+
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 2.2vh;
+  background-color: #1b4965;
+  padding: 0.5vh 1.5vh;
+  border-radius: 1vh;
+  margin-left: -0.5vh;
+}
+
+/* Campos do formulário */
+.campo-form {
+  position: relative;
+  margin-bottom: 2.5vh;
+}
+
+.campo-form label {
+  display: block;
+  font-size: 2vh;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.5vh;
+}
+
+.txt {
+  width: 100%;
+  height: 5vh;
+  padding: 1.8vh 1.8vh 1.8vh 5vh; /* Reduzi o padding-left para 5vh */
+  background-color: #396481;
+  color: white;
   border: 2px solid white;
   border-radius: 8vh;
   box-sizing: border-box;
-}
-
-
-.txtmoradores:focus {
-  outline: none;
-}
-
-.txtmoradores::placeholder {
-  color: white;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.8vh;
+  position: relative; /* Adicionado para referência dos ícones */
+}
+
+.txt:focus {
+  outline: none;
+  border-color: #CAE9FF;
+}
+
+.txt::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6vh;
+}
+
+/* Ícones */
+.icone-input {
+  font-size: 2.5vh;
+  position: absolute;
+  left: 1.8vh; /* Posicionamento dentro do padding */
+  top: 55%;
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Ajuste fino para ícones específicos */
+.bi-buildings-fill {
+  left: 1.5vh; /* Ajuste mais preciso para ícones de prédio */
+}
+
+.bi-clock-fill {
+  font-size: 2.3vh; /* Ícone de relógio ligeiramente menor */
+}
+/* Seção de automóvel */
+.campo-btnrd {
+  margin-top: 2vh;
+}
+
+.quadradobtnrd {
+  background-color: rgba(202, 233, 255, 0.62);
+  border-radius: 3vh;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vh;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  width: 45%;
+}
+
+.custom-checkbox input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 2.2vh;
+  height: 2.2vh;
+  background-color: #396481;
+  border: 2px solid #396481;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type='checkbox']:checked {
+  background-color: white;
+}
+
+.radio-btn {
+  font-size: 1.8vh;
+  font-weight: bold;
+  color: #1b4965;
+}
+
+/* Menor de idade */
+.quadradobtnrd-2 {
+  background-color: rgba(202, 233, 255, 0.62);
+  height: 6vh;
+  border-radius: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.custom-radio input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 2.2vh;
+  height: 2.2vh;
+  background-color: #396481;
+  border: 2px solid #396481;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-radio input[type='radio']:checked {
+  background-color: white;
+}
+
+.radio-btnmi {
+  font-size: 1.8vh;
+  font-weight: bold;
+  color: #1b4965;
+}
+
+/* Botão */
+.confirmbutton {
+  position: absolute;
+  bottom: 3vh;
+  right: 3vh;
+}
+
+.custom-button {
+  background-color: #1b4965;
+  color: white;
+  border: none;
+  padding: 1.5vh 4vh;
+  border-radius: 8vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 2vh;
+}
+
+.custom-button:hover {
+  background-color: #0d3a5a;
+}
+
+/* Ajustes para campos específicos */
+.campo-form-right .campo-form {
+  margin-bottom: 2vh;
+}
+
+.campo-form-right input {
+  width: 100%;
+}
+
+.moreright {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-formtempoh {
+  margin-top: 2vh;
+}
+
+/* Datalist */
+datalist {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsividade básica */
+@media (max-width: 1200px) {
+  .quadradodetras, .quadradodafrente {
+    width: 95vw;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .fieldset-left, .fieldset-center, .fieldset-right {
+    position: static;
+    width: 100%;
+    margin-bottom: 3vh;
+  }
+  
+  .confirmbutton {
+    position: static;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+  }
 }
