@@ -12,6 +12,10 @@ body {
   text-align: center;
   color: white;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
 }
 
 .main-container {
@@ -28,7 +32,9 @@ body {
   flex: 1 1 500px;
   align-items: center;
 }
-
+.right {
+  transform: scale(1.2);
+}
 
 h1 {
   font-size: 40px;
@@ -53,6 +59,7 @@ h1 {
 .userlog img {
   width: 120px;
   height: auto;
+  
 }
 
 form {
@@ -75,8 +82,12 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vh;
-  height: 83vh;
+  gap: 2vh;
+  height: 60vh;
+}
+
+fieldset > * {
+  transform: scale(0.9);
 }
 
 .textboxesteste, .textboxesteste2 {
@@ -134,7 +145,7 @@ button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   font-family: 'Montserrat', sans-serif;
-  margin-top: 8vh;
+  margin-top: 4vh;
   height: 8.5vh;
 }
 
@@ -153,11 +164,15 @@ button:active {
   margin-top: 2vh;
   display: flex;
   justify-content: center;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
 }
 
 .container-switch > * {
   height: auto;
-  max-height: 10vh;
+  max-height: 6vh;
 }
 
 .botao-deslizante {
@@ -235,6 +250,10 @@ button:active {
   transform: translateY(-50%);
   pointer-events: none;
   user-select: none;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
   display: flex;
   align-items: center;
   justify-content: center;

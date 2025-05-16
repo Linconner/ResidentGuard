@@ -1,18 +1,25 @@
+/* Body and layout */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5ab0f0;
+  background-image: url(/public/Img/fundo.png);
   font-family: sans-serif;
+  overflow: hidden;
+}
+
+.cadastrointeiro {
+  width: auto;
 }
 
 .quadradodetras {
-  width: 170vh;
-  height: 90vh;
+  width: 165vh;
+  height: 75vh;
   background-color: #1b4965;
-  border-radius: 10vh;
+  border-radius: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,104 +28,45 @@ body {
 .quadradodafrente {
   background-color: #396481;
   width: 160vh;
-  height: 80vh;
-  border-radius: 10vh;
+  height: 70vh;
+  border-radius: 6vh;
   position: relative;
-}
 
+}
 
 .cadastro {
   width: auto;
-  height: 50vh;
+  height: 56vh;
   border: dashed;
-  margin-left: 10vh;
-  margin-top: 8vh;
+
 }
 
+/* Labels and text */
 .lblnome {
+  font-size: 2vh;
   color: white;
-  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.56vh;
   display: block;
-}
-
-.campo-form {
-  position: relative;
-  margin-bottom: 20px;
-}
-.campo-form-left  {
-    display: flex;
-}
-
-.campo-form-right {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 8vh;
-    left: 60vh;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-}
-
-.middle-icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 18px;
-    pointer-events: none;
-    color: white;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.icones {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(10%);
-  font-size: 18px;
   pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
 }
 
-.campo-form-right .campo-form {
-  position: relative;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.campo-form-right .campo-form + .campo-form {
-  margin-top: 20px;
-}
-
-.campo-form-right .icones {
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  position: absolute;
-  font-size: 18px;
-  pointer-events: none;
-  color: black;
-}
-
+/* Input text fields */
 .txt {
-  width: 100%;
-  max-width: 30vh;
+  max-width: 40vh;
+  width: 35vh;
+  height: 5vh;
+  padding: 1.8vh 1.8vh 1.8vh 7vh;
   background-color: #396481;
   color: white;
   font-family: 'Montserrat', sans-serif;
   border: 2px solid white;
   border-radius: 8vh;
-  padding: 10px 10px 10px 45px;
-  height: 40px;
   box-sizing: border-box;
 }
 
@@ -129,59 +77,242 @@ body {
 .txt::placeholder {
   color: white;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6vh;
 }
 
-.quadradobtnrd {
-  background-color: rgba(202, 233, 255, 0.62);
-  width: 27vh;
-  height: auto;
-  border-radius: 3vh;
-  border: solid rgb(0, 0, 0, 0.62);
+/* Form field containers */
+.campo-form {
+  width: auto;
+  position: relative;
+  margin-bottom: 2.5vh;
+  flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+.campo-formtempoh {
+  margin-top: 2vh;
+  position: relative;
+  margin-bottom: 1.5vh;
+  flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  
+}
+
+.campo-form-left {
+  display: flex;
+}
+
+/* Icons */
+.icones {
+  font-size: 3vh;
+  position: absolute;
+  top: 70%;
+  left: 2vh;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  
+}
+
+.campo-form-right i {
+  top: 2.5vh;
+}
+
+/* Right side form fields */
+.campo-form-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 1vh 2vh;
-  gap: 1vh;
+  position: absolute;
+  top: 8vh;
+  left: 60vh;
+  max-width: 50vh;
 }
-.radio-btn {
-  font-size: 12.7px;
+
+.campo-form-right input {
+  width: 25vh;
+}
+
+.middle-icon {
+  position: absolute;
+  left: 50%;
+  font-size: 2vh;
+  pointer-events: none;
+  color: white;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.campo-form-right .campo-form {
+  position: relative;
+  margin-bottom: 2.22vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-form-right .campo-form + .campo-form {
+  margin-top: 2.22vh;
+  
+}
+
+/* moreright */
+.moreright {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8vh;
+  left: 100vh;
+  max-width: 30vh;
+}
+
+.quadradobtnrd,
+.quadradobtnrd-2 {
+  background-color: rgba(202, 233, 255, 0.62);
+  width: 29vh;
+  max-width: 27vh;
+  height: 19vh;
+  border-radius: 3vh;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  padding: 1vh 2vh;
+  gap: 2vh;
+  width: 25vh;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+.quadradobtnrd-2 {
+  height: 6vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 9vh;
+}
+
+.radio-btnmi {
+  font-size: 2vh;
   font-family: 'montserrat', sans-serif;
   font-weight: bold;
   color: #1b4965;
 }
 
-/* Added styles to reorder radio button and span */
+.radio-btn {
+  font-size: 2vh;
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+  color: #1b4965;
+}
+
 .custom-radio {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-.custom-radio input[type="radio"] {
-  order: 2;
+.custom-radio input[type='radio'] {
+
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
-   width: 20px;
-  height: 20px;
-
+  width: 2.22vh;
+  height: 2.22vh;
   background-color: #396481;
-  border: 2px solid #396481; /* cor do círculo externo */
+  border: 2px solid #396481;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
 }
 
-/* Cor quando selecionado */
-input[type="radio"]:checked {
-  border-color: #396481; /* cor do círculo externo quando selecionado */
-  background-color: white; /* cor de fundo do círculo maior */
-
-   /* Cria a bolinha interna */
-  box-shadow: inset 0 0 0 px #396481; /* 5px é o tamanho da bolinha interna */
+input[type='radio']:checked {
+  border-color: #396481;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 0 0 0.0vh #396481;
 }
+
 .custom-radio .radio-btn {
   order: 1;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.custom-checkbox input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 2.22vh;
+  height: 2.22vh;
+  background-color: #396481;
+  border: 2px solid #396481;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type='checkbox']:checked {
+  border-color: #396481;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 0 0 0.0vh #396481;
+}
+
+.custom-checkbox .radio-btn {
+  order: 1;
+}
+
+/* Buttons */
+.custom-button {
+  display: block;
+  position: relative;
+  margin-top: 2vh;
+}
+
+/* Other layout elements */
+.tópico {
+  background-color: #1b4965;
+  height: 14vh;
+  width: 190vh;
+  display: block;
+  margin-top: -6.2vh;
+  margin-bottom: 4vh;
+}
+
+.txtmoradores {
+  max-width: 40vh;
+  width: 35vh;
+  height: 5vh;
+  padding: 1.8vh 1.8vh 1.8vh;
+  background-color: #396481;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid white;
+  border-radius: 8vh;
+  box-sizing: border-box;
+}
+
+
+.txtmoradores:focus {
+  outline: none;
+}
+
+.txtmoradores::placeholder {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8vh;
 }

@@ -1,91 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Guard</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resident Guard</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap Icons CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- CSS Principal -->
-  <link rel="stylesheet" href="/css/CadastroVisit.css">
-</head>
-<body>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="/css/CadastroVisit.css" />
+  </head>
+  <body>
+    <div class="tópico"></div>
+    <div class="quadradodetras">
+      <section class="quadradodafrente">
+        <div class="cadastro">
+          <div class="cadastrointeiro">
+            <form action="" method="get" class="formscadastro">
 
-  <main class="quadradodetras">
-    <section class="quadradodafrente">
-      <div class="cadastro">
-        <div class="cadastrointeiro">
-       <form action="" method="get" class="formscadastro">
+              <div class="campo-form">
+                <label class="lblnome" for="nome">Nome completo</label>
+                <i class="bi bi-pencil-fill icones"></i>
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  placeholder="Nome completo"
+                  class="txt"
+                />
+              </div>
 
-  <div class="campo-form">
-    <label class="lblnome" for="nome">Nome completo</label>
-    <i class="bi bi-pencil-fill icones"></i>
-    <input id="nome" type="text" placeholder="Nome completo" class="txt" />
-  </div>
+              <div class="campo-form">
+                <label class="lblnome" for="cpf">CPF</label>
+                <i class="bi bi-person-vcard-fill icones"></i>
+                <input
+                  id="cpf"
+                  name="cpf"
+                  type="text"
+                  placeholder="CPF"
+                  class="txt"
+                />
+              </div>
 
-  <div class="campo-form">
-    <label class="lblnome" for="cpf">CPF</label>
-    <i class="bi bi-person-vcard-fill icones"></i>
-    <input id="cpf" type="text" placeholder="CPF" class="txt" />
-  </div>
+              <div class="campo-form">
+                <label class="lblnome" for="telefone">Telefone</label>
+                <i class="bi bi-telephone-fill icones"></i>
+                <input
+                  id="telefone"
+                  name="telefone"
+                  type="tel"
+                  placeholder="Número de telefone"
+                  class="txt"
+                />
+              </div>
 
-  <div class="campo-form">
-    <label class="lblnome" for="email">Telefone</label>
-    <i class="bi bi-telephone-fill icones"></i>
-    <input id="email" type="email" placeholder="Número de telefone" class="txt" />
-  </div>
+              <div class="campo-form">
+                <label class="lblnome" for="cartao">Cartão</label>
+                <i class="bi bi-person-vcard-fill icones"></i>
+                <input
+                  id="cartao"
+                  name="cartao"
+                  type="text"
+                  placeholder="Cartão"
+                  class="txt"
+                />
+              </div>
 
-  </div>
+              <div class="campo-form-right">
+                <label class="lblnome">Moradia</label>
+                <div class="campo-form">
+                  <i class="bi bi-buildings-fill icones black-icon"></i>
+                  <input id="bloco" name="bloco" placeholder="Bloco" class="txt" />
+                </div>
+                <div class="campo-form">
+                  <i class="bi bi-buildings-fill icones black-icon"></i>
+                  <input
+                    id="apartamento"
+                    name="apartamento"
+                    placeholder="Apartamento"
+                    class="txt"
+                  />
+                </div>
+              <div class="campo-btnrd">
+                <label class="lblnome">Possui automóvel?</label>
+                <div class="quadradobtnrd">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="automovel" value="moto" />
+                    <span class="radio-btn">Moto</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="automovel" value="carro" />
+                    <span class="radio-btn">Carro</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input
+                      type="checkbox"
+                      name="automovel"
+                      value="acessocomum"
+                    />
+                    <span class="radio-btn">Acesso comum</span>
+                  </label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="automovel" value="bicicleta" />
+                    <span class="radio-btn">Bicicleta</span>
+                  </label>
+                </div>
+              </div>
+              </div>
+              <div class="moreright">
+                <label class="lblnome" for="liberado">Liberado pelo morador</label>
+                <div class="campo-form">
+                  <input
+                    list="moradores"
+                    id="liberado"
+                    name="liberado"
+                    class="txt"
+                    placeholder="Selecione ou digite o morador"
+                  />
+                  <datalist id="moradores">
+                    <option value="Morador 1"></option>
+                    <option value="Morador 2"></option>
+                    <option value="Morador 3"></option>
+                    <option value="Morador 4"></option>
+                  </datalist>
+                </div>
+                <div class="quadradobtnrd-2">
+                  <label class="custom-radio">
+                    <input
+                      type="radio"
+                      name="menordeidade"
+                      value="menordeidade"
+                    />
+                    <span class="radio-btnmi">Menor de idade</span>
+                  </label>
+                </div>
 
-  <div class="campo-form-right">
-    <label class="lblnome">Moradia</label>
-    <div class="campo-form">
-      <i class="bi bi-buildings-fill icones black-icon"></i>
-      <input id="bloco"  placeholder="Bloco" class="txt" />
+                <div class="campo-formtempoh">
+                  <label class="lblnome" for="horario1">Horário 1</label>
+                  <i class="bi bi-clock-fill icones"></i>
+                  <input
+                    id="horario1"
+                    name="horario1"
+                    type="time"
+                    class="txt"
+                  />
+                </div>
+
+                <div class="campo-formtempoh">
+                  <label class="lblnome" for="horario2">Horário 2</label>
+                  <i class="bi bi-clock-fill icones"></i>
+                  <input
+                    id="horario2"
+                    name="horario2"
+                    type="time"
+                    class="txt"
+                  />
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="campo-form">
-      <i class="bi bi-buildings-fill icones black-icon"></i>
-      <input id="apartamento"  placeholder="Apartamento" class="txt" />
+    <div class="confirmbutton">
+      <input type="submit" value="Registrar" class="custom-button" />
     </div>
-<div class="campo-btnrd">
-
-  <label class="lblnome">Possui automóvel?</label>
-  <div class="quadradobtnrd">
-    <label class="custom-radio">
-      <input type="radio" name="automovel" value="moto" />
-      <span class="radio-btn">Moto</span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="automovel" value="carro" />
-      <span class="radio-btn">Carro</span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="automovel" value="acessocomum" />
-      <span class="radio-btn">Acesso comum</span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="automovel" value="biciclet" />
-      <span class="radio-btn">Bicicleta</span>
-    </label>
-  
-    </label>
-  </div>
-</div>
-</div>
-  </div>
-
-</form>
-
-      </div>
-    </section>
-  </main>
-
-</body>
+  </body>
 </html>
