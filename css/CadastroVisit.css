@@ -9,6 +9,7 @@ body {
   background-image: url(/public/Img/fundo.png);
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
+  padding-top: 7vh;  /* igual à altura da .tópico */
 }
 
 /* Container principal */
@@ -55,11 +56,25 @@ body {
 /* Header */
 .tópico {
   background-color: #1b4965;
-  height: 14vh;
-  width: 190vh;
-  display: block;
-  margin-top: -6.2vh;
-  margin-bottom: 4vh;
+  height: 13vh;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  display: flex;             /* Faltava isso */
+  justify-content: center;   /* Alinha no centro horizontalmente */
+  align-items: center;       /* Alinha no centro verticalmente */
+}
+
+.toptxt {
+  color: white;
+  font-size: 1.5rem;           /* Tamanho da fonte, ajustável */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: initial;
+  
+  margin: 0;                 /* Remove margens que bagunçam o alinhamento */
 }
 
 /* Formulário */
@@ -103,7 +118,8 @@ fieldset {
   position: absolute;
   left: 60vh;
   top: 32vh;
-  height: 35vh;
+  height: auto;
+  padding-bottom: 4vh;
 }
 
 .fieldset-horario {
@@ -177,7 +193,7 @@ legend {
 
 .bi-car-front-fill{
 position: absolute;
-bottom: 4.9vh;
+bottom: 5vh;
 z-index: 2;
 left: 3.7vh;
 }
@@ -191,9 +207,15 @@ left: 3.7vh;
 }
 
 /* Seção de automóvel */
+#txtplaca {
+  display: none;
+  height: 0;
+  overflow: hidden;
 
+}
 .txtplaca {
-  margin-top: 1vh;
+  margin-top: 1.5vh;
+  
 }
 
 .campo-btnrd label.lblnome1 {

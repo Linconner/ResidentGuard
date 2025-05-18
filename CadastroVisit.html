@@ -23,7 +23,9 @@
   <link rel="stylesheet" href="/css/CadastroVisit.css" />
 </head>
 <body>
-  <div class="tópico"></div>
+  <div class="tópico">
+    <h1 class="toptxt">REGISTRO DE VISITANTES</h1>
+  </div>
   <div class="quadradodetras">
     <section class="quadradodafrente">
       <div class="cadastro">
@@ -158,10 +160,10 @@
                     </label>
       
     </div>
-  <div class="txtplaca">
+  <div class="txtplaca" id="txtplaca">
     <label class="lblnome1" for="placa" >Placa</label>
     <i class="bi bi-car-front-fill"></i>
-     <input type="text" name="placa" placeholder="Placa" class="txt"/>
+     <input type="text" name="placa" placeholder="Placa" class="txt" id="placa"/>
   </div>
  
       
@@ -210,5 +212,6 @@
       </div>
     </section>
   </div>
+   <script src="js/visitantes.js"></script>
 </body>
 </html>
