@@ -263,7 +263,15 @@ fieldset {
   position: absolute;
   left: 60vh;
   top: 2vh;
-  
+  height: auto;
+}
+
+.lblnomelbl{
+  margin-top: 5rem;
+    color: white;
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2vh;
 }
 
 .fieldset-liberação {
@@ -355,9 +363,14 @@ legend {
   top: 0.6rem;
 }
 
+.bi-pencil-fill{
+  left: 1.5vh;
+  top: 0.6rem;
+}
+
 .bi-clipboard-fill {
-  left: 1.6rem;
-  top: 2.3rem;
+  left: 1.5vh;
+  top: 0.4rem;
 }
 
 .bi-car-front-fill{

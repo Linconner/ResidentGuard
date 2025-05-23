@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resident Guard</title>
+  <link rel="icon" href="/public/Img/Logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="/css/TelaEncomendas.css" />
+</head>
+<body>
+  <div class="tópico">
+    <h1 class="toptxt">REGISTRO DE VISITANTES</h1>
+    <i class="bi bi-list customnavbar" id="menu"></i>
+
+    <!-- Pop-up escondido inicialmente -->
+    <div id="popup" class="popup">
+      <h1 class="popuptelas">Telas</h1>
+
+      <!-- Navegação do pop-up com links -->
+      <div class="navitem">
+        <a href="TelaEventos.html" class="navitem-link">
+          <i class="bi bi-calendar-event-fill navicon"></i>
+          <p>Registro de Eventos</p>
+        </a>
+      </div>
+
+      <div class="navitem">
+        <a href="TelaFuncionarios.html" class="navitem-link">
+          <i class="bi bi-display navicon"></i>
+          <p>Registro de Funcionarios</p>
+        </a>
+      </div>
+
+      <div class="navitem">
+        <a href="TelaEncomendas.html" class="navitem-link">
+          <i class="bi bi-display navicon"></i>
+          <p>Registro de Encomendas</p>
+        </a>
+      </div>
+
+
+
+      <input type="button" value="Fechar" class="btnsair" id="btnfechar" />
+    </div>
+  </div>
+
+  <div class="quadradodetras">
+    <section class="quadradodafrente">
+      <div class="cadastro">
+        <form action="" method="post" class="formscadastro">
+          <!-- Fieldset 1: Dados Cadastrais -->
+          <fieldset class="fieldset-cadastro">
+            <legend class="legend-cadastro">Dados do Visitante</legend>
+
+            <div class="campo-form">
+              <label class="lblnome" for="nome">Nome completo</label>
+              <i class="bi bi-pencil-fill icones"></i>
+              <input
+                id="nome"
+                name="nome"
+                type="text"
+                placeholder="Nome completo"
+                class="txt"
+                required
+              />
+            </div>
+
+            <div class="campo-form">
+              <label class="lblnome" for="cpf">CPF</label>
+              <i class="bi bi-person-vcard-fill icones"></i>
+              <input
+                id="cpf"
+                name="cpf"
+                type="text"
+                placeholder="CPF"
+                class="txt"
+                required
+              />
+            </div>
+
+            <div class="campo-form">
+              <label class="lblnome" for="telefone">Telefone</label>
+              <i class="bi bi-telephone-fill icones"></i>
+              <input
+                id="telefone"
+                name="telefone"
+                type="tel"
+                placeholder="Número de telefone"
+                class="txt"
+                required
+              />
+            </div>
+
+            <div class="campo-form">
+              <label class="lblnome" for="cartao">Cartão</label>
+              <i class="bi bi-person-vcard-fill icones"></i>
+              <input
+                id="cartao"
+                name="cartao"
+                type="text"
+                placeholder="Cartão"
+                class="txt"
+              />
+            </div>
+
+            <div class="campo-form">
+              <label class="lblnome" for="liberado">Liberado pelo morador</label>
+              <input
+                list="moradores"
+                id="liberado"
+                name="liberado"
+                class="txt"
+                placeholder="Selecione ou digite o morador"
+                required
+              />
+              <datalist id="moradores">
+                <option value="Morador 1"></option>
+                <option value="Morador 2"></option>
+                <option value="Morador 3"></option>
+                <option value="Morador 4"></option>
+              </datalist>
+            </div>
+
+            <div class="quadradobtnrd-2">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="menordeidade" value="sim" />
+                <span class="radio-btnmi">Menor de idade</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 2: Moradia -->
+          <fieldset class="fieldset-moradia">
+            <legend class="legend-cadastro">Moradia</legend>
+            <div class="campo-form-right">
+              <div class="campo-form">
+                <label class="lblnome" for="bloco">Bloco</label>
+                <i class="bi bi-buildings-fill icones black-icon"></i>
+                <input id="bloco" name="bloco" placeholder="Bloco" class="txt" required />
+              </div>
+              <div class="campo-form">
+                <label class="lblnome" for="apartamento">Apartamento</label>
+                <i class="bi bi-buildings-fill icones black-icon"></i>
+                <input
+                  id="apartamento"
+                  name="apartamento"
+                  placeholder="Apartamento"
+                  class="txt"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 3: Liberação -->
+          <fieldset class="fieldset-liberação">
+            <legend class="legend-cadastro">Acesso</legend>
+            <div class="campo-btnrd">
+              <label class="lblnome1">Forma de entrada</label>
+              <div class="quadradobtnrd">
+                <label class="custom-radio">
+                  <input type="radio" name="automovel" value="moto" />
+                  <span class="radio-btn">Moto</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="automovel" value="carro" />
+                  <span class="radio-btn">Carro</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="automovel" value="acessocomum" />
+                  <span class="radio-btn">Acesso comum</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="automovel" value="bicicleta" />
+                  <span class="radio-btn">Bicicleta</span>
+                </label>
+              </div>
+
+              <div class="txtplaca" id="txtplaca">
+                <label class="lblnome1" for="placa">Placa</label>
+                <i class="bi bi-car-front-fill"></i>
+                <input type="text" name="placa" placeholder="Placa" class="txt" id="placa" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 4: Horários e Liberação -->
+          <fieldset class="fieldset-horario">
+            <legend class="legend-cadastro">Horários e Liberação</legend>
+            <div class="moreright">
+              <div class="campo-formtempoh">
+                <label class="lblnome1" for="horario1">Horário de Entrada</label>
+                <i class="bi bi-clock-fill i1"></i>
+                <input
+                  id="horario1"
+                  name="horario1"
+                  type="time"
+                  class="txt"
+                  required
+                />
+              </div>
+
+              <div class="campo-formtempoh">
+                <label class="lblnome1" for="horario2">Horário de Saída</label>
+                <i class="bi bi-clock-fill i2"></i>
+                <input
+                  id="horario2"
+                  name="horario2"
+                  type="time"
+                  class="txt"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Botão de Submit -->
+          <div class="confirmbutton">
+            <input type="submit" value="Registrar" class="custom-button" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/visitantes.js"></script>
+</body>
+</html>
