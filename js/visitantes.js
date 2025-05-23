@@ -24,7 +24,7 @@ const btnfechar = document.getElementById('btnfechar');
 menu.addEventListener('click', () => {
   if (popup.style.display === 'none' || popup.style.display === '') {
     // Se o popup está escondido, mostre-o
-    popup.style.display = 'flex'; // Ou 'block', dependendo do seu CSS
+    popup.style.display = 'block'; // Ou 'block', dependendo do seu CSS
   } else {
     // Se o popup está visível, esconda-o
     popup.style.display = 'none';

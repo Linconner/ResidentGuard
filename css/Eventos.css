@@ -251,9 +251,12 @@ fieldset {
   position: absolute;
   left: 5vh;
   top: 2vh;
-  height: 65vh;
+  height: auto;
   
 }
+
+
+
 
 .fieldset-moradia {
   width: 45vh;
@@ -278,6 +281,9 @@ fieldset {
   left: 115vh;
   top: 2vh;
 }
+
+
+
 
 legend {
   font-family: 'Montserrat', sans-serif;
@@ -333,12 +339,25 @@ legend {
 .icones {
   font-size: 2vh;
   position: absolute;
-  top: 1.5vh;
-  left: 1.7vh;
   z-index: 2;
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.bi-buildings-fill{
+  left: 1.5vh;
+  top: 1.3vh;
+}
+
+.bi-cash-coin {
+  left: 1.5vh;
+  top: 0.6rem;
+}
+
+.bi-clipboard-fill {
+  left: 1.6rem;
+  top: 2.3rem;
 }
 
 .bi-car-front-fill{
@@ -430,14 +449,18 @@ left: 3.7vh;
 }
 
 /* Menor de idade */
-.quadradobtnrd-2 {
-  background-color: rgba(202, 233, 255, 0.62);
-  height: 6vh;
-  border-radius: 9vh;
+.voceemorador {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin-top: 2vh;
+
+  background-color: rgba(202, 233, 255, 0.62);
+  border-radius: 3vh;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2vh;
+  gap: 1vh;
+  margin-top: 1vh;
 }
 
 .custom-radio {
@@ -496,7 +519,8 @@ left: 3.7vh;
 
 /* Ajustes para campos específicos */
 .campo-form-right {
-  margin-bottom: 2vh;
+  margin-top: 1vh;
+  display: none;
 }
 
 .campo-form-right input {
@@ -513,10 +537,88 @@ left: 3.7vh;
   position: relative;
 }
 
-/* Datalist */
-datalist {
-  font-family: 'Montserrat', sans-serif;
+.datalist-container {
+  position: relative;
+  width: 300px;
+  margin-top: 0.5vh;
 }
+
+
+.select-button {
+  
+  margin-top: 2vh;
+  width: 100%;
+  
+  padding: 10px 5vh;
+  font-size: 1.6vh;
+  border: 2px solid #ffffff;
+  border-radius: 5vh;
+  text-align: left;
+  background-color: #396481;
+  cursor: pointer;
+  color: white;
+  font-family: 'montserrat', sans-serif;
+}
+
+.select-button:focus {
+  outline: none;
+  border-color: #1976D2;
+}
+
+.opcoes-pagamento {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 180px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opcoes-pagamento div {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.opcoes-pagamento div:hover {
+  background-color: #e0f0ff;
+}
+
+
+
+.opcoes-areaexterna {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 180px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opcoes-areaexterna div {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.opcoes-areaexterna div:hover {
+  background-color: #e0f0ff;
+}
+
 
 /* Responsividade básica */
 @media (max-width: 768px) {
