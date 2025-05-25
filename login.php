@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $erro = "Você não tem permissão para acessar o admin.";
             }
-        } 
-        
+        }
+
         // 3 - Se os dados colocados pelo usuário não são nem do Porteiro, nem do Admin
         else {
             $erro = "Usuário ou senha inválidos.";
@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,53 +71,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="main-container">
-        <div class="container">
-            <div class="left">
-                <div class="greeting">
-                    <h1 class="bv">Bem-Vindo</h1>
-                </div>
-                <div class="logoresi">
-                    <img src="img/Logo.png" alt="Logo">
-                </div>
-                <div class="system-name">
-                    ResidentGuard
-                </div>
-                <div class="description">
-                    Sistema de acesso a condomínios
-                </div>
+        <div class="left">
+            <div class="greeting">
+                <h1 class="bv">Bem-Vindo</h1>
+            </div>
+            <div class="logoresi">
+                <img src="img/Logo.png" alt="Logo">
+            </div>
+            <div>
+                <p class="ResidentGuardtexto">ResidentGuard</p>
+            </div>
+            <div>
+                <p class="Sistematexto">Sistema de acesso a condomínios</p>
             </div>
         </div>
 
-        <form method="POST" action="">
-            <fieldset>
-                <div class="userlog">
-                    <img src="img/loguser.png" alt="User Icon">
-                </div>
+        <div class="right">
+            <form method="POST" action="">
+                <fieldset>
+                    <div class="userlog">
+                        <img src="img/loguser.png" alt="User Icon">
+                    </div>
 
-                <div class="textboxesteste">
-                    <input placeholder="Digite seu login" type="text" id="inputname" name="inputname" required
-                        onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite seu login'}">
-                </div>
+                    <div class="textboxesteste">
+                        <input placeholder="Digite seu login" type="text" id="inputname" name="inputname" required
+                            onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite seu login'}">
+                    </div>
 
-                <div class="textboxesteste2">
-                    <input placeholder="Digite sua senha" type="password" id="inputpassword" name="inputpassword" required
-                        onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite sua senha'}">
-                </div>
+                    <div class="textboxesteste2">
+                        <input placeholder="Digite sua senha" type="password" id="inputpassword" name="inputpassword" required
+                            onfocus="this.placeholder=''" onblur="if (this.value == '') {this.placeholder='Digite sua senha'}">
+                    </div>
 
-                <a id="password" href="login.html">Esqueci minha senha</a>
+                    <a id="password" href="login.html">Esqueci minha senha</a>
 
-                <button type="submit" class="button" id="btncadastrar" name="btncadastrar" value="Cadastrar">Cadastrar</button>
+                    <button type="submit" class="button" id="btncadastrar" name="btncadastrar" value="Cadastrar">ENTRAR</button>
 
-                <?php if (isset($erro)): ?>
-                    <p id="error"><?= $erro ?></p>
-                <?php endif; ?>
-            </fieldset>
-        </form>
+                    <?php if (isset($erro)): ?>
+                        <p id="error"><?= $erro ?></p>
+                    <?php endif; ?>
+                </fieldset>
+            </form>
+
+            <div class="container-switch">
+                <label class="botao-deslizante">
+                    <input type="checkbox" id="modoSwitch" />
+                    <span class="fundo-switch">
+                        <span class="bolinha" id="textobolinha">ADM</span>
+                        <span class="texto-fundo esquerda">ADM</span>
+                        <span class="texto-fundo direita">PORTEIRO</span>
+                    </span>
+                </label>
+            </div>
+        </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
 </body>
+
 </html>

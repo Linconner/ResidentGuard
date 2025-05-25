@@ -3,28 +3,32 @@
 // Verifica se o usuário é admin_principal
 if ($_SESSION['role'] !== 'admin_principal') {
     echo "<p style='color: red';>Você não tem permissão para acessar esta página.<p>";
-    exit(); 
+    exit();
     // Encerra a execução da página
 }
 
 ?>
 
 <div>
-    <h3>Cadastrar Visitante</h3>
+    <h3>Editar Visitante</h3>
 </div>
 
 <div>
     <form method="post" enctype="multipart/form-data" name="frmCadastro" id="frmCadastro">
         <div style="margin-bottom: 6px;">
+            <label for="txtnome">ID</label>
+            <input type="text" name="txtid" id="txtid" style="font-size: 20px; padding: 6px;" />
+        </div>
+        <div style="margin-bottom: 6px;">
             <label for="txtnome">Nome</label>
-            <input type="text" name="txtnome" id="txtnome" placeholder="Informe o visitante" maxlength="50" minlength="3" style="font-size: 20px; padding: 6px;" required/>
+            <input type="text" name="txtnome" id="txtnome" placeholder="Informe o visitante" maxlength="50" minlength="3" style="font-size: 20px; padding: 6px;" required />
         </div>
         <div style="margin-bottom: 6px;">
             <label for="txtdescricao">Descrição</label>
             <input name="txtdescricao" id="txtdescricao" placeholder="Informe a descrição" style="font-size: 20px; padding: 6px;"></>
         </div>
         <div>
-            <input type="submit" id="btnsalvar" name="btnsalvar" value="Cadastrar" style="font-size: 20px; padding: 4px 9px;" />
+            <input type="submit" id="btneditar" name="btneditar" value="Editar" style="font-size: 20px; padding: 4px 9px;" />
         </div>
     </form>
 </div>
@@ -35,7 +39,8 @@ if ($_SESSION['role'] !== 'admin_principal') {
 // então, se perder a função de editar, imagino que será necessário criar outro arquivo chamado editar.php 
 // enquanto isso, esse arquivo será chamado de criar.php
 
-if (filter_input(INPUT_POST, 'btnsalvar')) {
+if (filter_input(INPUT_POST, 'btneditar')) {
+    $id = filter_input(INPUT_POST, 'txtid', FILTER_SANITIZE_NUMBER_INT);
     $nome = filter_input(INPUT_POST, 'txtnome');
     $descricao = filter_input(INPUT_POST, 'txtdescricao');
 
@@ -50,7 +55,7 @@ if (filter_input(INPUT_POST, 'btnsalvar')) {
 
     // Chama o método salvar passando o nome e a descrição.
     // O método tem que retornar o ID do registro inserido se ocorrer sem problemas ou false se ocorrer algum erro.
-    $newId = $visitanteDAO->salvar($nome, $descricao);
+    $newId = $visitanteDAO->editar($id, $nome, $descricao); //OBS: ANALISAR O QUE É QUE É PRECISO RETORNAR AQUI!!!!!!!!!!!!
 
     if ($newId) {
         $msg = "Dados salvos com sucesso! ID: " . $newId;

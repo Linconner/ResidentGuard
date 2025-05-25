@@ -1,5 +1,6 @@
 <?php
-$titulo = "Lista de Visitantes"; // Define o título da página antes de ser definido pelo index.php
+$titulo = "Lista de Visitantes"; // Define o título da página antes de ser definido pelo index.php - Ver se ainda é utilizado 15-05
+
 ?>
 
 

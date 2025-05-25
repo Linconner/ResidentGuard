@@ -18,31 +18,25 @@ if (!isset($_SESSION['role'])) {
 
     <?php include_once 'navegacao.php'; ?>
 
-    <div>
-        <div>
-            <!-- conteúdo aqui -->
-            <?php
-            $pagina = filter_input(INPUT_GET, 'p');
+    <?php
+    $pagina = filter_input(INPUT_GET, 'p');
 
-            if (empty($pagina)) {
-                include_once 'home.php';
-            } 
-            else {
-                if (file_exists($pagina . '.php')) {
-                    include_once $pagina . '.php';
-                } 
-                else {
-                    echo "<div>"
-                        . "<div role='alert'>"
-                        . "Erro 404, página não encontrada!"
-                        . "</div>"
-                        . "</div>";
-                }
-            }
-            ?>
-        </div>
-    </div>
-
+    if (empty($pagina)) {
+        include_once 'home.php';
+    }
+    else {
+        if (file_exists($pagina . '.php')) {
+            include_once $pagina . '.php';
+        } 
+        else {
+            echo "<div>"
+                . "<div role='alert'>"
+                . "Erro 404, página não encontrada!"
+                . "</div>"
+                . "</div>";
+        }
+    }
+    ?>
     <?php include_once 'scripts.php'; ?>
 </body>
 

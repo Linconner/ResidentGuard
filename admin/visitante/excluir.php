@@ -1,4 +1,10 @@
 <?php
+
+if ($_SESSION['role'] !== 'admin_principal') {
+    echo "<p style='color: red';>Você não tem permissão para acessar esta página.<p>";
+    exit();
+}
+
 // Obtém o id do visitante via GET
 $id = filter_input(INPUT_GET, 'id');
 
@@ -12,7 +18,7 @@ include_once ROOT_PATH . '/repository/VisitanteDAO.php';
 $visitanteDAO = new VisitanteDAO();
 
 // Chama o método excluir passando o id.
-// O método deve retornar true se a exclusão ocorrer com sucesso ou false em caso de erro.
+// O método tem que retornar true se ocorrer a exclusão ou false se ocorrer algum erro.
 $result = $visitanteDAO->excluir($id);
 
 // Define a mensagem com base no resultado
