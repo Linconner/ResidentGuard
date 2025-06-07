@@ -1,0 +1,188 @@
+/* Unique styles in RegistroV.css after removing those present in Base.css */
+
+.cadastrodados {
+    height: 78vh;
+    width: 100%;
+}
+
+
+
+#acesso {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(13, 52, 77, 0.308);
+}
+
+.fieldsetsjuntos {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bloco {
+    width: 100%;
+}
+
+#apartamento {
+    width: 100%;
+}
+
+.input-position {
+    display: grid;
+    gap: 0.1rem;
+}
+
+
+#placaautomovel {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+#placaautomovel.visible {
+  opacity: 1;
+  max-height: 100px; /* Ajuste conforme necessário */
+}
+
+.botaoradio {
+    margin-top: 5vh;
+    border: 3px solid var(--var-azulescuroprofundo);
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.checkbox-item:hover {
+    background-color: var(--var-textocor);
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--var-azulescuroprofundo);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.setmoradia {
+    height: 30vh;
+    width: 100%;
+}
+
+.cadastromoradia {
+    width: 100%;
+    height: 30vh;
+}
+
+.form-rowmoradia {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+/* Estilos para Radio Buttons */
+
+.cadastroautomovelradiobutton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.setautomovel {
+    width: 100%;
+    height: auto;
+}
+
+.cadastroautomovel {
+    width: 100%;
+    height: auto;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+}
+
+.radio-item:hover {
+    background-color: var(--var-textocor);
+}
+
+.radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--var-azulescuroprofundo);
+    cursor: pointer;
+}
+
+.radio-item label {
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.cadastrohorarios {
+    width: 100%;
+    height: 30vh;
+}
+
+
+.cadastrohorarios input[type="time"] {
+    width: 40%;
+}
+
+.tempoinputs {
+    display: flex; /* mantém inputs empilhados */
+    justify-content: space-between;
+}
+
+.radio-group, 
+.tempoinputs {
+    flex-wrap: wrap;
+}
+
+.tempoinputs input[type="time"] {
+    width: 100%;
+}
+
+.tempoinputs .ajeitador {
+    width: 50%;
+}
+
+.ajeitador {
+    margin-bottom: 15px;
+}

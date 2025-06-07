@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Visitantes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CDN Flaticon Uicons SOLID ROUNDED -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="/css/Consulta.css">
+    <link rel="stylesheet" href="/css/Base.css">
+</head>
+<body>
+
+<header class="topico">
+  <span>CONSULTA</span>
+  
+  <svg id="botaoicone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+    <path d="M4 6H20M4 12H14M4 18H9" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </svg>
+
+  <!-- Menu dropdown -->
+   <div class="navbarmenu" id="navbarmenu">
+
+        <div class="itensnavbar">
+      <a href="RegistroV.html" class="nav-item" id="visitantes">
+        <i class="fi fi-sr-user-pen"></i>
+        <h3 class="itenvey">Registro Visitantes</h3>
+      </a>
+      
+      <a href="RegistroE.html" class="nav-item" id="eventos">
+        <i class="fi fi-sr-calendar-star"></i>
+       <h3 class="itenvey">Registro Eventos</h3> 
+      </a>
+      
+      <a href="RegistroEN.html" class="nav-item" id="encomendas">
+        <i class="fi fi-sr-gifts"></i>
+       <h3 class="itenvey">Registro Encomendas</h3>
+      </a>
+      
+      <a href="Consulta.html" class="nav-item" id="consulta">
+        <i class="fi fi-sr-search-alt"></i>
+        <h3 class="itenvey">Consulta</h3>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<div class="blurOverlay" id="blurOverlay"></div>
+
+<div class="container-consulta">
+    
+        <div class="search-box">
+            <i class="fi fi-sr-search"></i>
+            <input type="text" id="busca" placeholder="Pesquisar por nome, CPF ou apartamento...">
+        </div>
+      
+   
+</div>
+<div class="container-consultatables">
+    <div class="tabela-contair">
+        <table id="tabela-visitantes">
+        
+            <thead>
+                <tr>                  
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Bloco/Apto</th>
+                    <th>Liberado por</th>
+                    <th>ransporte</th>
+                    <th>Placa</th>
+                    <th>Entrada</th>
+                    <th>Saída</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Bloco/Apto</th>
+                    <th>Liberado por</th>
+                    <th>ransporte</th>
+                    <th>Placa</th>
+                    <th>Entrada</th>
+                    <th>Saída</th>
+                    <th>Ações</th>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="/js/Consulta.js"></script>
+</body>
+</html>

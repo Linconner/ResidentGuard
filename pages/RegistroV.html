@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- CDN Flaticon Uicons SOLID ROUNDED -->
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+<link rel="stylesheet" href="/css/RegistroV.css">
+<link rel="stylesheet" href="/css/Base.css">
+
+
+</head>
+<body>
+
+
+
+<header class="topico">
+  <span>REGISTRO DE VISITANTES</span>
+  
+  <svg id="botaoicone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+    <path d="M4 6H20M4 12H14M4 18H9" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </svg>
+
+  <!-- Menu dropdown -->
+  <div class="navbarmenu" id="navbarmenu">
+
+        <div class="itensnavbar">
+      <a href="RegistroV.html" class="nav-item" id="visitantes">
+        <i class="fi fi-sr-user-pen"></i>
+        <h3 class="itenvey">Registro Visitantes</h3>
+      </a>
+      
+      <a href="RegistroE.html" class="nav-item" id="eventos">
+        <i class="fi fi-sr-calendar-star"></i>
+       <h3 class="itenvey">Registro Eventos</h3> 
+      </a>
+      
+      <a href="RegistroEN.html" class="nav-item" id="encomendas">
+        <i class="fi fi-sr-gifts"></i>
+       <h3 class="itenvey">Registro Encomendas</h3>
+      </a>
+      
+      <a href="Consulta.html" class="nav-item" id="consulta">
+        <i class="fi fi-sr-search-alt"></i>
+        <h3 class="itenvey">Consulta</h3>
+      </a>
+      
+    </div>
+  </div>
+</header>
+
+<div class="blurOverlay" id="blurOverlay"></div>
+
+
+<div class="container1">
+
+
+
+    <div class="left">
+
+
+<fieldset class="cadastrodados">
+<legend>Dados Cadastrais</legend>
+
+<div class="input-group">
+
+    <div class="input-position">
+        
+<div class="ajeitador">
+    <label for=nome>Nome completo</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite o nome completo"/>
+</div>
+
+   <div class="ajeitador">
+    <label for=CPF>CPF</label>
+    <input type="text" id="CPF" name="CPF" placeholder="000.000.000-00"/>
+</div>
+
+    <div class="ajeitador">
+    <label for=telefone>Número de telefone</label>
+    <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000"/>
+</div>
+
+    <div class="ajeitador">
+    <label for=cartao>Cartão</label>
+    <input type="text" id="cartao" name="cartao" placeholder="Número do cartão de acesso"/>
+</div>
+
+ <div class="ajeitador">
+    <label for="acesso">Liberado por:</label>
+                        <select id="acesso" required>
+                            <option value="">Escolha o morador</option>
+                            <option value="Morador1">Morador1</option>
+                            <option value="Morador2">Morador2</option>
+                            <option value="Morador3">Morador3</option>
+                            <option value="Morador4">Morador4</option>
+                        </select>
+</div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="menor-idade">
+                        <label for="menor-idade">Menor de idade</label>
+                    </div>
+    </div>
+    
+  </div>
+
+</fieldset>
+
+
+
+    </div>
+
+<div class="right">
+
+
+
+    <div class="setmoradia">
+
+ <fieldset class="cadastromoradia" id="Passo2">
+                <legend>Moradia</legend>
+                <div class="form-rowmoradia">
+                    <div class="ajeitador">
+                        <label for="bloco">Bloco</label>
+                        <input type="text" id="bloco" placeholder="Digite o bloco" required>
+                    </div>
+                    <div class="ajeitador">
+                        <label for="apartamento">Apartamento</label>
+                        <input type="text" id="apartamento" placeholder="Digite o número" required>
+                    </div>
+                    
+                </div>
+            </fieldset>
+
+</div>
+
+
+
+
+<div class="setautomovel">
+
+    <fieldset class="cadastroautomovel">
+        <legend>Meio de transporte</legend>
+
+<div class="input-position">
+
+<div class="cadastroautomovelradiobutton">
+        <div class="radio-item">
+    <input type="radio" id="carro" name="transporte" value="carro">
+    <label for="carro">Carro</label>
+</div>
+<div class="radio-item">
+    <input type="radio" id="moto" name="transporte" value="moto">
+    <label for="moto">Moto</label>
+</div>
+<div class="radio-item">
+    <input type="radio" id="acesso-comum" name="transporte" value="acesso-comum" checked>
+    <label for="acesso-comum">Acesso Comum</label>
+</div>
+<div class="radio-item">
+    <input type="radio" id="bicicleta" name="transporte" value="bicicleta">
+    <label for="bicicleta">Bicicleta</label>
+</div>
+</div>
+
+<div class="placaautomovel" id="placaautomovel">
+    <label for=placa id="labelplaca">Placa do automovel</label>
+    <input type="text" id="placa" name="placa" placeholder="Insira aqui"/>
+</div>
+
+</div>
+</fieldset>
+
+</div>
+
+<fieldset class="cadastrohorarios" id="Passo4">
+    <legend>Horários</legend>
+    <div class="cadastrohorarios1">
+        <div class="tempoinputs">
+            <div class="ajeitador">
+                <label for="entrada">Horário de Entrada</label>
+                <input type="time" id="entrada" required>
+           
+           
+                <label for="saida">Horário de Saída</label>
+                <input type="time" id="saida">
+               </div>
+
+               <div class="botaoregistrodiv"> 
+                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
+            
+        </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+</div>
+        </div>
+
+<div class="blurOverlay" id="blurOverlay"></div>
+
+
+
+</div>
+<script src="/js/RegistroV.js"></script>
+<!-- Bootstrap Bundle JS (inclui Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqEQIYa7M1jZNRg1BJFYjGIKKSBdBf1V3jj1lmDq/TN1jQY2Nc0LwlQbl2h6j" crossorigin="anonymous"></script>
+
+</body>
+</html>
