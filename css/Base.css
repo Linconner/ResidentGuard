@@ -122,29 +122,6 @@ body {
 }
 
 
-.left, .right {
-    flex: 1;
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-    background-color: #396481; /* cinza mais claro */
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    flex-direction: column;
-}
-
-.left {
-    border-radius: 3vh 0 0 3vh;
-}
-
-.right {
-    justify-content: space-between;
-    border-radius: 0 3vh 3vh 0;
-}
-
 
 
 .navbarmenu {
@@ -319,7 +296,7 @@ input[type="time"]:focus {
 
 .input-position {
     display: grid;
-    gap: 0.1rem;
+    gap: 0.5rem;
 }
 
 

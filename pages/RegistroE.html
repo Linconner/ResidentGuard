@@ -61,7 +61,7 @@
    <div class="left">
 
     <fieldset class="cadastrodados">
-<legend>...</legend>
+<legend>Dados do locatário</legend>
 
 <div class="input-group">
 
@@ -76,40 +76,82 @@
     <label for=CPF>CPF</label>
     <input type="text" id="CPF" name="CPF" placeholder="000.000.000-00"/>
 </div>
-  
+<div class="blocoapartamento">
+        <div class="ajeitador">
+            <label for="bloco">Bloco</label>
+            <input type="text" id="bloco" placeholder="Digite o bloco" required>
+        </div>
+        <div class="ajeitador">
+            <label for="apartamento">Apartamento</label>
+            <input type="text" id="apartamento" placeholder="Digite o número" required>
+        </div>
+    </div>     
 
-                
-                    <div class="ajeitador">
-                        <label for="bloco">Bloco</label>
-                        <input type="text" id="bloco" placeholder="Digite o bloco" required>
-                    </div>
-                    <div class="ajeitador">
-                        <label for="apartamento">Apartamento</label>
-                        <input type="text" id="apartamento" placeholder="Digite o número" required>
-                    </div>
-                   
-                    <div class="ajeitador">
-                        <label for="data">Dia do aluguel</label>
-                        <input type="date" id="data" placeholder="Digite o número" required>
-                    </div>
-                   
-              
-                <div class="form-row">
-
-                </div>
-         
   </div>
 </div>
 
 </fieldset>
 
+<fieldset class="registrotipoaluguel">
+
+         <div class="ajeitador">
+         
+          <div class="cadastroautomovelradiobutton">
+            
+            <div class="radio-item">
+              
+              <input type="radio" id="area-externa" name="tipoAluguel" value="carro">
+              <label for="area-externa">Área externa</label>
+            </div>
+          
+            <div class="radio-item">
+              <input type="radio" id="comercio-itinerante" name="tipoAluguel" value="comercio-itinerante">
+              <label for="comercio-itinerante">Comércio Itinerante</label>
+            </div>
+          
+            <div class="radio-item">
+              <input type="radio" id="outro-radio" name="tipoAluguel" value="outro">
+              <label for="outro-radio">Outro</label>
+            </div>
+          </div>
+          
+          <div class="outroopcao" id="outroopcao">
+            
+            <input type="text" id="outro" placeholder="Especifique outro aluguel" />
+          </div>
+
+          <div class="outraopcao" id="outraopcao">
+            <select>
+              <option value="">Selecione uma opção</option>
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+            
+          </div>
+          
+        </div>
+
+
+
+</fieldset>
+
+
+
     
+
+
     </div>
 
     <div class="right">
 
-      <fieldset class="cadastrodados">
-         <legend>...</legend>
+      <fieldset class="registroaluguel">
+         <legend>Dados do aluguel</legend>
+
+
+         
+
+
 <div class="ajeitador">
            
   <label for="opcoes">Escolha o local</label>
@@ -133,7 +175,31 @@
   
 </div>
 
+
+
 </fieldset>
+<fieldset class="registrodataehora">
+<legend> Data e hora </legend>
+
+<div class="ajeitador">
+  <label for="data">Dia do aluguel</label>
+  <input type="date" id="data" placeholder="Digite o número" required>
+</div>
+<div class="ajeitador">
+  <label for="horaentrada">Hora de entrada</label>
+  <input type="time" id="horaentrada" placeholder="Digite o número" required>
+</div>
+
+<div class="ajeitador">
+  <label for="horasaida">Hora da saida</label>
+  <input type="time" id="horasaida" placeholder="Digite o número" required>
+</div>
+
+</fieldset>
+
+
+
+
 
 <div class="botaoregistrodiv"> 
                 <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
