@@ -255,7 +255,7 @@ legend {
 }
 
 
-input[type="text"], input[type="time"], input[type="date"], select {
+input[type="text"], input[type="time"], input[type="date"],input[type="tel"] ,select {
     width: 100%;
     padding: 0.5rem 0.5rem;
     border: 0.1rem solid #f5f5f5;
@@ -266,16 +266,22 @@ input[type="text"], input[type="time"], input[type="date"], select {
     height: auto;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus {
     box-shadow: 0 0 5px 5px rgba(13, 52, 77, 0.288);
     border-color: var(--var-azulescurosuavehover);
     outline: none;
 }
 
-input[type="text"], input[type="time"], input[type="date"], select::placeholder {
+input[type="text"]::placeholder,
+input[type="time"]::placeholder,
+input[type="date"]::placeholder,
+input[type="tel"]::placeholder
+{
     color: rgba(13, 52, 77, 0.308);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 
 
 input[type="time"] {
