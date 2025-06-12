@@ -27,21 +27,29 @@
 <div class="navbarmenu" id="navbarmenu">
 <div class="itensnavbar">
 <a href="RegistroV.html" class="nav-item" id="visitantes">
-<i class="fi fi-sr-user-pen"></i>
-<h3 class="itenvey">Registro Visitantes</h3>
-</a>
-<a href="RegistroE.html" class="nav-item" id="eventos">
-<i class="fi fi-sr-calendar-star"></i>
-<h3 class="itenvey">Registro Eventos</h3>
-</a>
-<a href="RegistroEN.html" class="nav-item" id="encomendas">
-<i class="fi fi-sr-gifts"></i>
-<h3 class="itenvey">Registro Encomendas</h3>
-</a>
-<a href="Consulta.html" class="nav-item" id="consulta">
-<i class="fi fi-sr-search-alt"></i>
-<h3 class="itenvey">Consulta</h3>
-</a>
+        <i class="fi fi-sr-user-pen"></i>
+        <h3 class="itenvey">Registro Visitantes</h3>
+      </a>
+      
+      <a href="RegistroE.html" class="nav-item" id="eventos">
+        <i class="fi fi-sr-calendar-star"></i>
+       <h3 class="itenvey">Registro Eventos</h3> 
+      </a>
+      
+      <a href="RegistroEN.html" class="nav-item" id="encomendas">
+        <i class="fi fi-sr-gifts"></i>
+       <h3 class="itenvey">Registro Encomendas</h3>
+      </a>
+      
+      <a href="Consulta.html" class="nav-item" id="consulta">
+        <i class="fi fi-sr-search-alt"></i>
+        <h3 class="itenvey">Consulta</h3>
+      </a>
+      
+      <a href="RegistroM.html" class="nav-item" id="moradores">
+        <i class="fi fi-sr-search-alt"></i>
+        <h3 class="itenvey">Moradores</h3>
+      </a>
 </div>
 </div>
 </header>
@@ -50,7 +58,7 @@
 
 <div class="left">
 
-    <fieldset>
+    <fieldset class="registromoradorprincipal" id="registromoradorprincipal">
         <legend>Dados do morador principal</legend>
 <div class="input-group">
 
@@ -93,15 +101,23 @@
 </div>
 
 <div class="checkbox-item">
+<input type="checkbox" id="naopossuo" value="naopossuo"/>
+<label for="naopossuo">Não possuo</label>
+</div>
+
+<div class="checkbox-item">
 <input type="checkbox" id="outro" value="outro"/>
 <label for="outro">Outro</label>
 </div>
 
 </div>
 
-<label for="outroinput">Coloque ai </label>
-<input type="tel" id="outroinput" placeholder=""/>
-
+<div class="containeradicional" id="containeradicional">
+<div class="inner" id="inner">
+<label for="outroinput" id="labeloutroinput">Insira um automovel válido</label>
+<input type="tel" id="outroinput" placeholder="Escreva aqui um automovel que não esteja acima"/>
+</div>
+</div>
 </div>
 
 </div>
@@ -127,6 +143,50 @@
                     </div>
                 </div>
 </fieldset>
+
+<fieldset>
+    <legend>Informações adicionais</legend>
+
+    <div class="ajeitador">
+    <label for=idade>Data de nascimento</label>
+    <input type="date" id="idade" name="idade" style="width: auto;"/>
+</div>
+</fieldset>
+<fieldset class="registropets">
+    <legend>O morador tem animal de estimação</legend>
+
+    <div class="ajeitador">
+<div class="petsyrn">
+    
+<div class="radiobuttonpets">
+            
+            <div class="radio-item">
+              <input type="radio" id="naopets" name="pets" value="sim">
+              <label for="naopets">Sim</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="simpets" name="pets" value="nao">
+              <label for="simpets">Não</label>
+            </div>
+
+</div>
+</div>
+
+
+
+<div class="botaoadddiv"> 
+                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
+            
+        </div>
+
+<div class="botaoregistrodiv"> 
+                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
+            
+        </div>
+
+</fieldset>
+
+
 </div>
  
 

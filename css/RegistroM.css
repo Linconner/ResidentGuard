@@ -72,12 +72,71 @@
     padding: 1rem;
 }
 
-
-#outroinput {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 100%;
+.registromoradorprincipal {
+    height: auto;
+    padding-bottom: 2rem;
 }
-#outroinput.ativo {
+
+.containeradicional {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.4s ease;
+} 
+.containeradicional.ativo {
+    height: 10vh;
     opacity: 1;
+}
+
+.inner {
+    padding-bottom: 5vh;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+}
+
+.radio-item:hover {
+    background-color: var(--var-textocor);
+}
+
+.radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--var-azulescuroprofundo);
+    cursor: pointer;
+}
+
+.radio-item label {
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+
+.radiobuttonpets {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.botaoregistrodiv {
+    width: auto; /* example width */
+    height: auto; /* example height */
+    position: absolute;
+    right: 8vh;
+    bottom: 8vh;
+} 
+
+.registropets {
+    height: 30vh;
 }
