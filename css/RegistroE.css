@@ -1,57 +1,57 @@
-.left, .right {
-    display: flex;
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-    background-color: #396481; /* cinza mais claro */
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    flex-direction: column;
+.left,
+.right {
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  background-color: #396481; /* cinza mais claro */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .left {
-    border-radius: 3vh 0 0 3vh;
-    justify-content: space-between;
+  border-radius: 3vh 0 0 3vh;
+  justify-content: space-between;
 }
 
 .right {
-    justify-content: space-evenly;
-    border-radius: 0 3vh 3vh 0;
+  justify-content: space-evenly;
+  border-radius: 0 3vh 3vh 0;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .registroaluguel {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto;
 }
 
 .cadastrodados .ajeitador {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;   
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 #outraopcao {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 #outraopcao.visivel {
-    opacity: 1;
-    max-height: 25vh;
+  opacity: 1;
+  max-height: 25vh;
 }
 
 #outroopcao {
@@ -62,115 +62,165 @@
 }
 
 #outroopcao.visivel {
-    opacity: 1;
-    max-height: 25vh;
+  opacity: 1;
+  max-height: 25vh;
 }
 
-/*rdbtn*/
+/* rdbtn */
 .cadastroautomovelradiobutton {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 8vh;
 }
 
 .setautomovel {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .cadastroautomovel {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .radio-group {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin: 15px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin: 15px 0;
 }
 
 .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
 }
 
 .radio-item:hover {
-    background-color: var(--var-textocor);
+  background-color: var(--var-textocor);
 }
 
 .radio-item input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--var-azulescuroprofundo);
-    cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--var-azulescuroprofundo);
+  cursor: pointer;
 }
 
 .radio-item label {
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0;
-    user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .blocoapartamento {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 
 .inputs input {
-   width: 50% !important;
-   display: flex;
-   gap: 1rem;
-   align-items: flex-start;
-   justify-content: flex-start;
+  width: 50% !important;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .botaoregistrodiv {
-    width: auto; /* example width */
-    height: auto; /* example height */
-    position: absolute;
-    right: 8vh;
-    bottom: 8vh;
+  width: auto; /* example width */
+  height: auto; /* example height */
+  position: absolute;
+  right: 8vh;
+  bottom: 8vh;
 }
 
 .botaoregistro {
-    width: auto; /* make button fill the container */
-    height: auto; /* make button fill the container */
-    background-color: #396481;
-    color: white;
-    border: 3px solid var(--var-azulescuroprofundo);
-    border-radius: var(--border-radius);
-    font-size: 15px;
-    padding: 0; /* remove padding to fit container */
-    font-weight: 500;
-    cursor: pointer;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
+  width: auto; /* make button fill the container */
+  height: auto; /* make button fill the container */
+  background-color: #396481;
+  color: white;
+  border: 3px solid var(--var-azulescuroprofundo);
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  padding: 0; /* remove padding to fit container */
+  font-weight: 500;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
 }
 
 .botaoregistro:hover {
-    background-color: #184965;
-    color: white;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0 0 0.25rem 0.15rem rgba(0, 0, 0, 0.064);
+  background-color: #184965;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 0.25rem 0.15rem rgb(0 0 0 / 6.4%);
 }
 
 .botaoregistro:active {
-    background-color: var(--var-blue);
+  background-color: var(--var-blue);
 }
 
 .registrodataehora {
-    height: 45vh;
+  height: 45vh;
+}
+
+@media (width <= 768px) {
+  .left,
+  .right {
+    width: 100% !important;
+    padding: 0.5rem !important;
+    border-radius: 0 !important;
+  }
+
+  .left {
+    border-radius: 3vh 3vh 0 0 !important;
+  }
+
+  .right {
+    border-radius: 0 0 3vh 3vh !important;
+  }
+
+  .input-group {
+    height: auto !important;
+  }
+
+  .cadastrodados .ajeitador {
+    gap: 0.25rem !important;
+  }
+
+  .blocoapartamento {
+    flex-direction: column !important;
+    padding: 0.5rem !important;
+  }
+
+  .inputs input {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .botaoregistrodiv {
+    position: static !important;
+    margin: 1rem auto !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .botaoregistro {
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 1rem !important;
+  }
 }

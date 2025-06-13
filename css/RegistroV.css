@@ -1,37 +1,34 @@
 /* Unique styles in RegistroV.css after removing those present in Base.css */
 
 .cadastrodados {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-
-
 #acesso {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(13, 52, 77, 0.308);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(13 52 77 / 30.8%);
 }
 
 .fieldsetsjuntos {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #bloco {
-    width: 100%;
+  width: 100%;
 }
 
 #apartamento {
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .input-position {
-    display: grid;
-    gap: 0.1rem;
+  display: grid;
+  gap: 0.1rem;
 }
-
 
 #placaautomovel {
   opacity: 0;
@@ -46,171 +43,155 @@
 }
 
 .botaoradio {
-    margin-top: 5vh;
-    border: 3px solid var(--var-azulescuroprofundo);
-    width: 100%;
-    height: 20%;
-    border-radius: 15px;
+  margin-top: 5vh;
+  border: 3px solid var(--var-azulescuroprofundo);
+  width: 100%;
+  height: 20%;
+  border-radius: 15px;
 }
 
 .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 .checkbox-item:hover {
-    background-color: var(--var-textocor);
+  background-color: var(--var-textocor);
 }
 
 .checkbox-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--var-azulescuroprofundo);
-    border-radius: 4px;
-    cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--var-azulescuroprofundo);
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .checkbox-item label {
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0;
-    user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
 .setmoradia {
-    height: 15vh;
-    width: 100%;
+  height: 15vh;
+  width: 100%;
 }
 
 .cadastromoradia {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .blocoapartamento {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-   
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
 .blocoapartamento .ajeitador {
-    width: auto;
+  width: auto;
 }
 
 /* Estilos para Radio Buttons */
 
 .cadastroautomovelradiobutton {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .setautomovel {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .cadastroautomovel {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-
-
 .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
 }
 
 .radio-item:hover {
-    background-color: var(--var-textocor);
+  background-color: var(--var-textocor);
 }
 
 .radio-item input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--var-azulescuroprofundo);
-    cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--var-azulescuroprofundo);
+  cursor: pointer;
 }
 
 .radio-item label {
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0;
-    user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
-.left, .right {
-    display: flex;
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-    background-color: #396481; /* cinza mais claro */
-   
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: space-between;
+.left,
+.right {
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  background-color: #396481; /* cinza mais claro */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .left {
-    border-radius: 3vh 0 0 3vh;
+  border-radius: 3vh 0 0 3vh;
 }
 
 .right {
-    justify-content: space-between;
-    border-radius: 0 3vh 3vh 0;
+  justify-content: space-between;
+  border-radius: 0 3vh 3vh 0;
 }
-
 
 .cadastrohorarios {
-    width: 100%;
-    height: 35vh;
+  padding-bottom: 2rem;
+  width: 100%;
+  height: auto;
 }
-
 
 .cadastrohorarios input[type="time"] {
-    width: 40%;
+  width: 40%;
 }
 
+.radio-group,
 .tempoinputs {
-    display: flex; /* mantém inputs empilhados */
-    justify-content: space-between;
-}
-
-.radio-group, 
-.tempoinputs {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .tempoinputs input[type="time"] {
-    width: 100%;
+  width: 100%;
 }
 
-.tempoinputs .ajeitador {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-   
+.tempoinputs {
+  display: flex;
+  justify-content: space-evenly;
 }
-
-

@@ -1,37 +1,36 @@
-.left, .right {
-    display: flex;
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-    background-color: #396481; /* cinza mais claro */
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    flex-direction: column;
+.left,
+.right {
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  background-color: #396481; /* cinza mais claro */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .left {
-    border-radius: 3vh 0 0 3vh;
-    justify-content: space-between;
+  border-radius: 3vh 0 0 3vh;
+  justify-content: space-between;
 }
 
 .right {
-    justify-content: space-evenly;
-    border-radius: 0 3vh 3vh 0;
+  justify-content: space-between;
+  border-radius: 0 3vh 3vh 0;
 }
 
 .blocoapartamento {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    box-sizing: border-box;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
-/*checkbox*/
-
-
+/* checkbox */
 
 .checkbox-item {
   display: flex;
@@ -46,97 +45,186 @@
 }
 
 .checkbox-item:hover {
-    background-color: var(--var-textocor);
+  background-color: var(--var-textocor);
 }
 
 .checkbox-item input[type="checkbox"] {
-    width: auto;
-    height: auto;
-    accent-color: var(--var-azulescuroprofundo);
-    cursor: pointer;
+  width: auto;
+  height: auto;
+  accent-color: var(--var-azulescuroprofundo);
+  cursor: pointer;
 }
 
 .checkbox-item label {
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0;
-    user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
 .checkbox-group .ajeitador {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .registromoradorprincipal {
-    height: auto;
-    padding-bottom: 2rem;
+  height: auto;
+  padding-bottom: 1rem;
 }
 
 .containeradicional {
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    transition: height 0.4s ease, opacity 0.4s ease;
-} 
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
 .containeradicional.ativo {
-    height: 10vh;
-    opacity: 1;
+  height: 10vh;
+  opacity: 1;
 }
 
 .inner {
-    padding-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 
 .radio-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
 }
 
 .radio-item:hover {
-    background-color: var(--var-textocor);
+  background-color: var(--var-textocor);
 }
 
 .radio-item input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--var-azulescuroprofundo);
-    cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--var-azulescuroprofundo);
+  cursor: pointer;
 }
 
 .radio-item label {
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0;
-    user-select: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
 }
-
 
 .radiobuttonpets {
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-   
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.botaoregistrodiv {
-    width: auto; /* example width */
-    height: auto; /* example height */
-    position: absolute;
-    right: 8vh;
-    bottom: 8vh;
-} 
 
-.registropets {
-    height: 30vh;
+.registrarfamilia {
+  background-color: var(--var-azulescuroprofundo);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+}
+
+.registrarfamilia:hover {
+  background-color: #184965;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 0.25rem 0.15rem rgb(0 0 0 / 6.4%);
+}
+
+.registrarfamilia:active {
+  background-color: var(--var-blue);
+}
+
+.botaoregistrodiv {
+  margin-left: auto;
+}
+
+.botaoregistro {
+  width: auto; /* make button fill the container */
+  height: auto; /* make button fill the container */
+  background-color: #396481;
+  color: white;
+  border: 3px solid var(--var-azulescuroprofundo);
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  padding: 0; /* remove padding to fit container */
+  font-weight: 500;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+.botaoregistro:hover {
+  background-color: #184965;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 0 0.25rem 0.15rem rgb(0 0 0 / 6.4%);
+}
+
+.botaoregistro:active {
+  background-color: var(--var-blue);
+}
+
+.infosadicionais .radio-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.infosadicionais .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#tempodepermanenciadiv {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+#tempodepermanenciadiv.ativaa {
+  opacity: 1;
+  height: auto;
+}
+
+@media (width <= 768px) {
+  .body {
+    overflow: auto;
+  }
+
+  .blocoapartamento {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .left {
+    border-radius: 3vh 3vh 0 0;
+  }
+
+  .right {
+    border-radius: 0 0 3vh 3vh;
+  }
 }

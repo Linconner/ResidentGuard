@@ -114,7 +114,7 @@
 
 <div class="containeradicional" id="containeradicional">
 <div class="inner" id="inner">
-<label for="outroinput" id="labeloutroinput">Insira um automovel válido</label>
+<label for="outroinput" id="labeloutroinput">Insira um automóvel válido</label>
 <input type="tel" id="outroinput" placeholder="Escreva aqui um automovel que não esteja acima"/>
 </div>
 </div>
@@ -124,6 +124,13 @@
 </div>
 </fieldset>
 
+<fieldset>
+  <legend>Adicionar moradores nessa familia</legend>
+<div class="botaoadddiv"> 
+                <input type="button" id="registrarfamilia" class="registrarfamilia" value="Registrar outro morador"/> 
+            
+        </div>
+</fieldset>
 
 
 </div>
@@ -144,14 +151,33 @@
                 </div>
 </fieldset>
 
-<fieldset>
+<fieldset class="infosadicionais">
     <legend>Informações adicionais</legend>
-
+<div class="input-group">
     <div class="ajeitador">
     <label for=idade>Data de nascimento</label>
-    <input type="date" id="idade" name="idade" style="width: auto;"/>
+    <input type="date" id="idade" name="idade"/>
+</div>
+<div class="radio-group">
+   <div class="radio-item">
+ <input type="radio" id="radio1" name="propietario" value="proprietario"/>
+ <label for="radio1">Proprietário</label>
+ </div>
+
+ <div class="radio-item">
+  <input type="radio" id="radio2" name="propietario" value="inquilino"/>
+ <label for="radio2">Inquilino</label>
+   </div>
+   
+ 
+</div>
+</div>
+<div class="tempodepermanenciadiv" id="tempodepermanenciadiv">
+<label for="tempodepermanencia">Tempo de permanencia</label>
+  <input type="text" id="tempodepermanencia" name="tempodepermanencia" placeholder="Tempo de permanencia do Inquilino"/>
 </div>
 </fieldset>
+
 <fieldset class="registropets">
     <legend>O morador tem animal de estimação</legend>
 
@@ -171,24 +197,23 @@
 
 </div>
 </div>
-
-
-
-<div class="botaoadddiv"> 
-                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
-            
-        </div>
-
-<div class="botaoregistrodiv"> 
-                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
-            
-        </div>
-
 </fieldset>
 
 
+
+
+
+
+
+
+
+
+ <div class="botaoregistrodiv"> 
+                <input type="button" id="registrarform" class="botaoregistro" value="Registrar"/> 
+            
+        </div>
 </div>
- 
+
 
 </div>
 
