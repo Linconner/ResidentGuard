@@ -18,7 +18,7 @@
 }
 
 .right {
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 0 3vh 3vh 0;
 }
 
@@ -130,20 +130,10 @@
   padding: 1rem;
 }
 
-.inputs input {
-  width: 50% !important;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
 .botaoregistrodiv {
   width: auto; /* example width */
   height: auto; /* example height */
-  position: absolute;
-  right: 8vh;
-  bottom: 8vh;
+  margin-left: auto;
 }
 
 .botaoregistro {
@@ -174,7 +164,13 @@
 }
 
 .registrodataehora {
-  height: 45vh;
+  height: auto;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (width <= 768px) {

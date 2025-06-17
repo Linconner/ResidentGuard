@@ -230,6 +230,7 @@ input[type="text"],
 input[type="time"],
 input[type="date"],
 input[type="tel"],
+input[type="datetime-local"],
 select {
   width: 100%;
   padding: 0.5rem;
@@ -242,7 +243,8 @@ select {
 }
 
 input[type="text"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="datetime-local"]:focus {
   box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
   border-color: var(--var-azulescurosuavehover);
   outline: none;
@@ -251,7 +253,8 @@ input[type="tel"]:focus {
 input[type="text"]::placeholder,
 input[type="time"]::placeholder,
 input[type="date"]::placeholder,
-input[type="tel"]::placeholder {
+input[type="tel"]::placeholder,
+input[type="datetime-local"]::placeholder {
   color: rgb(13 52 77 / 30.8%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -269,7 +272,7 @@ input[type="time"]:focus {
 }
 
 .ajeitador {
-  margin-bottom: 15px;
+  margin-bottom: 0.3rem;
 }
 
 .input-position {
@@ -301,76 +304,59 @@ input[type="time"]:focus {
   background-color: var(--var-blue);
 }
 
-@media (width <= 768px) {
-  body {
-    padding: 10px;
-    overflow: auto;
-    height: auto;
-  }
-
+/* Estilos para telas menores (tablets) */
+@media (width <= 992px) {
   .container1 {
-    position: static;
-    transform: none;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
     width: 100%;
-    height: auto;
-    max-width: 100%;
+  }
+
+  .blocoapartamento {
     flex-direction: column;
-    padding: 0.5rem;
-    border-radius: 1rem;
   }
 
-  .topico {
-    position: relative;
-    height: auto;
-    padding: 1rem;
-    border-radius: 1rem;
+  .blocoapartamento .ajeitador {
+    width: 100%;
+  }
+
+  .tempoinputs {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
-  .topico span {
-    font-size: 3vh;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 0.5rem 0;
+  .tempoinputs .input-group {
+    width: 100%;
+  }
+}
+
+/* Estilos para telas muito pequenas (celulares) */
+@media (width <= 576px) {
+  .input-position {
+    padding: 10px;
   }
 
-  .topico svg {
-    width: 50px;
-    height: 50px;
-    margin-left: 0;
-    margin-bottom: 0.5rem;
+  fieldset {
+    margin: 10px 0;
+    padding: 10px;
   }
 
-  .navbarmenu {
-    width: 90vw;
-    left: 5vw;
-    max-height: 50vh;
+  .cadastroautomovelradiobutton {
+    flex-wrap: wrap;
   }
 
-  .nav-item {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-  }
-
-  label {
-    font-size: 1rem;
-  }
-
-  input[type="text"],
-  input[type="time"],
-  input[type="date"],
-  input[type="tel"],
-  select {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.5rem;
+  .radio-item {
+    min-width: 50%;
   }
 
   .botaoregistro {
-    font-size: 1rem;
-    padding: 8px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .navbarmenu {
+    width: 100%;
   }
 }

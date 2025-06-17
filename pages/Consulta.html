@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulta de Visitantes</title>
+    <title>Consulta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,6 @@
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
     <link rel="stylesheet" href="/css/Consulta.css" />
-    <link rel="stylesheet" href="/css/Base.css" />
   </head>
   <body>
     <header class="topico">
@@ -60,14 +59,14 @@
             <h3 class="itenvey">Registro Encomendas</h3>
           </a>
 
+          <a href="RegistroM.html" class="nav-item" id="moradores">
+            <i class="fi fi-sr-user-pen"></i>
+            <h3 class="itenvey">Moradores</h3>
+          </a>
+
           <a href="Consulta.html" class="nav-item" id="consulta">
             <i class="fi fi-sr-search-alt"></i>
             <h3 class="itenvey">Consulta</h3>
-          </a>
-
-          <a href="RegistroM.html" class="nav-item" id="moradores">
-            <i class="fi fi-sr-search-alt"></i>
-            <h3 class="itenvey">Moradores</h3>
           </a>
         </div>
       </div>
@@ -75,50 +74,22 @@
 
     <div class="blurOverlay" id="blurOverlay"></div>
 
-    <div class="container-consulta">
-      <div class="search-box">
-        <i class="fi fi-sr-search"></i>
-        <input
-          type="text"
-          id="busca"
-          placeholder="Pesquisar por nome, CPF ou apartamento..."
-        />
+    <div class="container1">
+      <div class="consultatop">
+        <div class="inputpesquisa">
+          <div class="relative">
+            <input
+              id="pesquisaconsulta"
+              type="search"
+              placeholder="Pesquisar por nome, morador ou telefone"
+            />
+            <button id="pesquisarbotao">🔎</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="container-consultatables">
-      <div class="tabela-contair">
-        <table id="tabela-visitantes">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>CPF</th>
-              <th>Telefone</th>
-              <th>Bloco/Apto</th>
-              <th>Liberado por</th>
-              <th>ransporte</th>
-              <th>Placa</th>
-              <th>Entrada</th>
-              <th>Saída</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Bloco/Apto</th>
-            <th>Liberado por</th>
-            <th>ransporte</th>
-            <th>Placa</th>
-            <th>Entrada</th>
-            <th>Saída</th>
-            <th>Ações</th>
-          </tbody>
-        </table>
-      </div>
+      <div class="consultabottom"></div>
     </div>
 
-    <script src="/js/Consulta.js"></script>
     <script src="/js/Base.js"></script>
   </body>
 </html>

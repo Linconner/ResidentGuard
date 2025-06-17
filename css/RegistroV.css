@@ -148,6 +148,10 @@
   margin-bottom: 0;
 }
 
+.botaoregistrodiv {
+  margin-left: auto;
+}
+
 .left,
 .right {
   display: flex;

@@ -1,167 +1,312 @@
-/* Unique styles in Consulta.css after removing those present in Base.css */
-
-.container-consulta {
-  margin-top: 80px;
-  background-color: var(--var-azulescuroprofundo);
-  border-radius: 0.6rem 0.6rem 0 0;
-  box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 10%);
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
+:root {
+  --var-azulbb: #cae9ff;
+  --var-azulescuroprofundo: #184965;
+  --var-azulclarogray: #5fa8d3;
+  --var-azulescurosuavehover: #468faf;
+  --var-textocor: #184965;
+  --var-azulclaroesverdeado: #bee9eb;
+  --var-darkgray: #9ca3af;
+  --var-dark: #212529;
+  --var-fonttop: "League Spartan", sans-serif;
+  --var-fontlabel: "Inter", sans serif;
+  --transition: all 0.3s ease;
+  --border-radius: 0.6rem;
+  --fieldset-radius: 1rem;
 }
 
-.container-consultatables {
-  background-color: var(--var-azulescuroprofundo);
-  padding: 1rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    sans-serif;
 }
 
-.filtros {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 25px;
-}
-
-.search-box {
-  position: relative;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  box-sizing: border-box;
 }
 
-.search-box i {
+body {
+  background-color: var(--var-azulbb);
+  line-height: 1.6;
+  padding: 20px;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container1 {
+  box-sizing: border-box;
   position: absolute;
-  left: 26.5%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 100vw;
+  min-width: 26.7vw; /* ~320px relativo a uma viewport de 1200px */
+  height: 83vh;
+  min-height: 20vh;
+  border-radius: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem; /* rem é relativo ao root font-size (acessível e escalável) */
+  background-color: var(--var-azulescuroprofundo);
+  border: 0.15vw solid #bee9eb;
+  box-shadow: 0 0.3vh 0.8vh rgb(24 73 101 / 10%);
+  overflow: auto;
+}
+
+.topico {
+  display: flex;
+  align-items: center;
+  background-color: var(--var-azulescuroprofundo);
+  position: fixed;
+  top: 0; /* topo da viewport */
+  left: 0; /* opcional, alinha à esquerda */
+  width: 100%; /* ocupa toda largura */
+  z-index: 1000; /* para ficar acima de outros elementos */
+  border-radius: 1vh;
+  height: 12%;
+  padding: 2vh;
+}
+
+.topico span {
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  color: var(--var-azulescuroprofundo);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--var-fonttop);
+  font-weight: 600;
+  font-size: 4vh;
+  color: white;
+}
+
+.topico svg {
+  color: white;
+  width: 70px;
+  height: auto;
+  margin-left: 3vh;
+  border: 2px solid #0d354d;
+  border-radius: var(--border-radius);
+  padding: 10px;
   font-size: 20px;
   cursor: pointer;
 }
 
-#busca::placeholder {
+.topico svg:hover {
+  transform: scale(1.05);
+  transition: color 0.1s ease-out;
+  color: #0d354d;
+}
+
+.topico svg:active {
+  background-color: var(--var-blue);
+}
+
+.navbarmenu {
   position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translateY(-50%);
-  color: #888;
-}
-
-#busca {
-  width: 50%;
-  padding: 1rem 2rem 1rem 4rem;
-  border: 2px solid #6868683b;
+  top: calc(100% - -30px); /* Ajuste fino para alinhar melhor */
+  left: 20px;
+  width: 275px;
+  background-color: #184965;
   border-radius: var(--border-radius);
-  font-size: 16px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
+  z-index: 1001;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.25s ease-out;
+  max-height: 70vh;
+  overflow-y: auto;
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+.navbarmenu.ativa {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Ajuste para os itens do menu */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 20px;
+  color: #0d354d;
+  text-decoration: none;
   transition: var(--transition);
-  background-color: white;
+  gap: 4px;
 }
 
-#busca:focus {
-  border-color: var(--var-azulescuroprofundo);
+.nav-item:hover {
+  background-color: #0d344d75;
+}
+
+.nav-item.active {
+  background-color: #0d354d;
+  color: #396481;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item i {
+  font-size: 1.1rem;
+  width: auto;
+}
+
+/* prettier-ignore-start */
+.blur-overlay {
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  background-color: rgb(0 0 0 / 0.15%);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-backdrop-filter: blur(3px); /* Safari */
+  backdrop-filter: blur(3px); /* Chrome/Edge */
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* prettier-ignore-end */
+
+.blur-overlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.itenvey {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.itensnavbar {
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.consultatop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  border-radius: 10vh 10vh 0 0;
+}
+
+.consultabottom {
+  height: 80%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 0 10vh 10vh;
+}
+
+input[type="search"] {
+  padding: 1rem;
+  border: 0.1rem solid #f5f5f5;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #fff;
+  height: auto;
+}
+
+input[type="search"]:focus {
+  box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
+  border-color: var(--var-azulescurosuavehover);
   outline: none;
-  box-shadow: 0 0 0 3px rgb(24 73 101 / 20%);
 }
 
-.filtro-data {
+input[type="search"]::placeholder {
+  color: rgb(13 52 77 / 30.8%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.relative {
+  position: relative;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
 }
 
-.tabela-container {
-  overflow-x: auto;
-  border-radius: var(--border-radius);
-  border: 2px solid var(--var-azulclarogray);
-}
-
-table {
+.inputpesquisa {
+  flex: 1;
   width: 100%;
+  padding: 1rem; /* espaçamento à direita pra não ficar embaixo do botão */
+  box-sizing: border-box;
 }
 
-thead {
+#pesquisarbotao {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  background-color: #184965;
+  cursor: pointer;
+  color: white;
+  border-radius: 0 30px 30px 0;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #0d354d;
+}
+
+#pesquisaconsulta {
   width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
 }
 
-th,
-td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid var(--var-azulclarogray);
-  font-family: var(--var-fontlabel);
-  color: var(--var-dark);
-}
-
-th {
-  background-color: var(--var-azulclarogray);
-  color: white;
-  font-weight: 600;
-}
-
-tbody tr:nth-child(even) {
-  background-color: var(--var-azulclaroesverdeado);
-}
-
-tbody tr:hover {
-  background-color: var(--var-azulescurosuavehover);
-  color: white;
-  transition: var(--transition);
-}
-
-td {
-  background-color: white;
-}
-
-@media (width <= 768px) {
-  .filtro-data {
+/* Estilos para telas menores (tablets) */
+@media (width <= 992px) {
+  .container1 {
     flex-direction: column;
-    align-items: stretch;
   }
 
-  .data-input {
-    flex-direction: column;
-    align-items: flex-start;
+  input[type="search"]::placeholder {
+    font-size: small;
   }
 
-  th,
-  td {
-    padding: 10px 8px;
-    font-size: 0.8rem;
-  }
-
-  .btn-acao {
-    padding: 6px 8px;
-    font-size: 0.7rem;
-  }
-
-  .btn-acao span {
-    display: none;
-  }
-
-  .btn-acao i {
-    margin-right: 0;
-  }
-
-  /* Additional responsiveness improvements */
-  .container-consulta {
-    margin-top: 60px;
-    padding: 0.5rem;
-    border-radius: 0.6rem;
-  }
-
-  .container-consultatables {
-    padding: 0.5rem;
-    overflow-x: auto;
-  }
-
-  .search-box {
+  .left,
+  .right {
     width: 100%;
   }
 
-  #busca {
-    width: 100%;
-    padding: 0.75rem 1rem 0.75rem 3rem;
-    font-size: 1rem;
+  .topico {
+    height: 10%;
+  }
+}
+
+@media (width <=400px) {
+  input[type="search"]::placeholder {
+    font-size: 0.6rem;
+  }
+
+  input[type="search"] {
+    padding-right: 4rem;
+  }
+
+  .topico svg {
+    margin-left: 0;
+  }
+
+  .topico {
+    padding-left: 0.5vh;
   }
 }

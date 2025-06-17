@@ -36,8 +36,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 6px; /* espaço entre o checkbox e o texto */
-  padding: 8px 12px;
+  gap: 0.3rem; /* espaço entre o checkbox e o texto */
+  padding: 0.5vh 0.4vh;
   cursor: pointer;
   transition: var(--transition);
   border-radius: var(--border-radius);
@@ -57,21 +57,29 @@
 
 .checkbox-item label {
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
-.checkbox-group .ajeitador {
+.checkbox-group .ajeitadorcheckbox {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .registromoradorprincipal {
   height: auto;
-  padding-bottom: 1rem;
+}
+
+.registromoradorprincipal .input-position {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+..registromoradorprincipal .ajeitador {
 }
 
 .containeradicional {
@@ -181,6 +189,11 @@
   background-color: var(--var-blue);
 }
 
+.infosadicionais {
+  height: auto;
+  width: auto;
+}
+
 .infosadicionais .radio-group {
   display: flex;
   justify-content: space-evenly;
@@ -189,8 +202,11 @@
 .infosadicionais .input-group {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 0.3rem;
+  padding-bottom: 0.2rem;
+}
+
+.input-group .ajeitador {
 }
 
 #tempodepermanenciadiv {
