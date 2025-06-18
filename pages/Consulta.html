@@ -19,6 +19,10 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
     <link rel="stylesheet" href="/css/Consulta.css" />
   </head>
   <body>
@@ -76,20 +80,28 @@
 
     <div class="container1">
       <div class="consultatop">
-        <div class="inputpesquisa">
-          <div class="relative">
+        <div class="inputsconsultatop">
+          <div class="searchbar">
+            <i class="fi fi-rs-search"></i>
+
             <input
-              id="pesquisaconsulta"
               type="search"
-              placeholder="Pesquisar por nome, morador ou telefone"
+              placeholder="Pesquise por nome, CPF, Número de Telefone, Respostas entre 'sim' ou 'não'...."
             />
-            <button id="pesquisarbotao">🔎</button>
           </div>
+
+          <select class="selectconsulta" title="select">
+            <option value="visitantes">Visitantes</option>
+            <option value="eventos">Eventos</option>
+            <option value="encomendas">Encomendas</option>
+            <option value="moradores">Moradores</option>
+          </select>
+          <button>X</button>
         </div>
       </div>
-      <div class="consultabottom"></div>
-    </div>
 
+      <div class="consultabottom">bottom</div>
+    </div>
     <script src="/js/Base.js"></script>
   </body>
 </html>
