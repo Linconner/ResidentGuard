@@ -54,11 +54,12 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
   padding: 2rem; /* rem é relativo ao root font-size (acessível e escalável) */
   background-color: var(--var-azulescuroprofundo);
   border: 0.15vw solid #bee9eb;
   box-shadow: 0 0.3vh 0.8vh rgb(24 73 101 / 10%);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .topico {
@@ -198,71 +199,111 @@ body {
 }
 
 .consultatop {
+  display: flex;
   padding: 1rem;
-  height: 20%;
   width: 100%;
   background-color: #396481;
   border-radius: 16px 16px 0 0;
+  height: 10vh;
+  box-sizing: border-box;
 }
 
 .consultabottom {
-  height: 80%;
+  height: 73%;
   width: 100%;
   border: 1px solid black;
 }
 
 .inputsconsultatop {
-  height: 100%;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.inputsconsultatop input[type="search"],
-select {
-  padding: 0.5rem;
-  border: 0.1rem solid #f5f5f5;
-  border-radius: var(--border-radius);
-  font-size: 0.8rem;
-  transition: var(--transition);
-  background-color: #fff;
-  height: auto;
-}
-
-.inputsconsultatop input[type="search"] {
   width: 100%;
-  padding-left: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .searchbar {
-  width: 70%;
+  flex: 1 1 300px;
   position: relative;
 }
 
 .searchbar i {
   position: absolute;
-  width: 5vh;
-  height: 5vh;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   color: rgb(13 52 77 / 30.8%);
-  z-index: 9999;
-  top: 0%;
-  left: 0%;
+  font-size: 1.2rem;
 }
 
-.inputsconsultatop input[type="search"]:focus,
-select:focus {
-  box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
-  border-color: var(--var-azulescurosuavehover);
+.searchbar input {
+  width: 100%;
+  padding: 0.6rem 0.6rem 0.6rem 2.5rem;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  font-family: Montserrat, sans-serif;
+}
+
+.searchbar input:focus {
   outline: none;
+  box-shadow: 0 0 4px #0d354d66;
+  border-color: #0d354d;
 }
 
-.inputsconsultatop input[type="search"]::placeholder,
-select::placeholder {
-  color: rgb(13 52 77 / 30.8%);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.filtroconsulta {
+  flex: 0 0 180px;
+}
+
+.selectconsulta {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  font-family: Montserrat, sans-serif;
+}
+
+.selectconsulta:focus {
+  outline: none;
+  box-shadow: 0 0 4px #0d354d66;
+  border-color: #0d354d;
+}
+
+.limpartxt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+#botaolimpar {
+  background: none;
+  border: none;
+}
+
+.limpar {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #184965;
+  border: 2px solid #0d354d;
+  border-radius: 9.6px;
+  color: white;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 10.7%);
+  cursor: pointer;
+}
+
+.limpar:active {
+  background-color: #103951;
+}
+
+#botaolimpar i {
+  font-size: 1rem;
+  color: #0d354d;
 }
 
 /* Estilos para telas menores (tablets) */
@@ -282,6 +323,20 @@ select::placeholder {
 
   .topico {
     height: 10%;
+  }
+}
+
+@media (width <= 992px) {
+  .container1 {
+    box-sizing: border-box;
+  }
+
+  .consultatop {
+    height: 20vh;
+  }
+
+  .consultabottom {
+    height: 50vh;
   }
 }
 
