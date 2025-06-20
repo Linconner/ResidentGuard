@@ -204,14 +204,15 @@ body {
   width: 100%;
   background-color: #396481;
   border-radius: 16px 16px 0 0;
-  height: 10vh;
+  height: 17%;
   box-sizing: border-box;
 }
 
 .consultabottom {
   height: 73%;
   width: 100%;
-  border: 1px solid black;
+  background-color: #396481;
+  border-radius: 0 0 16px 16px;
 }
 
 .inputsconsultatop {
@@ -277,7 +278,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  flex: 0 0 auto;
 }
 
 #botaolimpar {
@@ -295,6 +295,8 @@ body {
   color: white;
   box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 10.7%);
   cursor: pointer;
+  flex: 0 1 auto;
+  min-width: 90px;
 }
 
 .limpar:active {
@@ -306,54 +308,116 @@ body {
   color: #0d354d;
 }
 
-/* Estilos para telas menores (tablets) */
-@media (width <= 992px) {
-  .container1 {
-    flex-direction: column;
-  }
-
-  input[type="search"]::placeholder {
-    font-size: small;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-  }
-
-  .topico {
-    height: 10%;
-  }
+/* Envolve a tabela com scroll se necessário */
+.tabelaconsulta {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1rem;
 }
 
-@media (width <= 992px) {
-  .container1 {
-    box-sizing: border-box;
-  }
-
-  .consultatop {
-    height: 20vh;
-  }
-
-  .consultabottom {
-    height: 50vh;
-  }
+/* Estilização geral da tabela */
+.tabela {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.78rem 0.628rem;
 }
 
-@media (width <=400px) {
-  input[type="search"]::placeholder {
-    font-size: 0.6rem;
+.tabela td {
+  background-color: #f4f4f4;
+}
+
+/* Cabeçalho da tabela */
+.tabela-head th {
+  background-color: #07c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 16px;
+}
+
+.tabela-head .id {
+  /* Corpo da tabela */
+  .tabela-body td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    color: #333;
   }
 
-  input[type="search"] {
-    padding-right: 4rem;
+  /* Zebra stripe */
+  .tabela-body tr:nth-child(even) {
+    background-color: #f9f9f9;
   }
 
-  .topico svg {
-    margin-left: 0;
+  /* Responsivo para telas menores */
+
+  /* Estilos para telas menores (tablets) */
+  @media (width <= 992px) {
+    .container1 {
+      flex-direction: column;
+    }
+
+    input[type="search"]::placeholder {
+      font-size: small;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .topico {
+      height: 10%;
+    }
   }
 
-  .topico {
-    padding-left: 0.5vh;
+  @media (width <= 992px) {
+    .container1 {
+      box-sizing: border-box;
+    }
+
+    .consultatop {
+      height: 20vh;
+    }
+
+    .consultabottom {
+      height: 50vh;
+    }
+  }
+
+  @media (width <=558px) {
+    .consultatop {
+      height: 20%;
+      overflow: auto;
+    }
+
+    .limpar {
+      margin-bottom: 5%;
+    }
+
+    .tabela-head th,
+    .tabela-body td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+  @media (width <=400px) {
+    input[type="search"]::placeholder {
+      font-size: 0.6rem;
+    }
+
+    input[type="search"] {
+      padding-right: 4rem;
+    }
+
+    .topico svg {
+      margin-left: 0;
+    }
+
+    .topico {
+      padding-left: 0.5vh;
+    }
   }
 }

@@ -101,6 +101,7 @@
           <div class="searchbar">
             <i class="fi fi-rs-search"></i>
             <input
+              id="txtsearch"
               type="search"
               placeholder="Pesquise por nome, CPF, Número de Telefone, Respostas entre 'sim' ou 'não'..."
             />
@@ -108,27 +109,61 @@
 
           <!-- Filtro de Categoria -->
           <div class="filtroconsulta">
-            <select class="selectconsulta" title="select">
-              <option value="visitantes">Visitantes</option>
-              <option value="eventos">Eventos</option>
-              <option value="encomendas">Encomendas</option>
-              <option value="moradores">Moradores</option>
+            <select id="selectseacrh" class="selectconsulta" title="select">
+              <option value="visitantes">Nome</option>
+              <option value="eventos">CPF</option>
+              <option value="encomendas">Telefone</option>
+              <option value="moradores">...</option>
             </select>
           </div>
 
           <!-- Botões de Limpar -->
           <div class="limpartxt">
             <div class="limpartxtbotoes">
-              <button class="limpar">Limpar Texto</button>
-              <button class="limpar">Limpar Filtro</button>
+              <button class="limpar" id="limpartxt">Limpar Texto</button>
+              <button class="limpar" id="limparfiltro">Limpar Filtro</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="consultabottom">bottom</div>
-    </div>
+      <div class="consultabottom">
+  <div class="tabelaconsulta">
+    <table class="tabela">
+      <thead class="tabela-head">
+        <tr>
+          <th class="id">ID</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Número de telefone</th>
+          <th>Cartão</th>
+          <th>Liberação</th>
+          <th>Menor de idade</th>
+          <th>Menor de idade</th>
+        </tr>
+      </thead>
+      <tbody class="tabela-body">
+        <tr>
+          <td>1</td>
+          <td>Maria Silva</td>
+          <td>28</td>
+          <td>20/06/2025</td>
+          <td>Ativo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>João Souza</td>
+          <td>34</td>
+          <td>19/06/2025</td>
+          <td>Inativo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
     <script src="/js/Base.js"></script>
+    <script src="/js/Consulta.js"></script>
   </body>
 </html>
