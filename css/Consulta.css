@@ -206,6 +206,8 @@ body {
   border-radius: 16px 16px 0 0;
   height: 17%;
   box-sizing: border-box;
+  flex: 2;
+  max-height: 25%;
 }
 
 .consultabottom {
@@ -213,6 +215,7 @@ body {
   width: 100%;
   background-color: #396481;
   border-radius: 0 0 16px 16px;
+  flex: 5;
 }
 
 .inputsconsultatop {
@@ -313,17 +316,24 @@ body {
   overflow-x: auto;
   max-width: 100%;
   padding: 1rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Estilização geral da tabela */
+
 .tabela {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0.78rem 0.628rem;
+  border-spacing: 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
 .tabela td {
   background-color: #f4f4f4;
+  border-radius: 18px;
+  font-weight: 600;
 }
 
 /* Cabeçalho da tabela */
@@ -336,88 +346,125 @@ body {
   border-radius: 16px;
 }
 
-.tabela-head .id {
-  /* Corpo da tabela */
+/* Corpo da tabela */
+.tabela-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Zebra stripe */
+.tabela-body tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsivo para telas menores */
+
+/* Estilos para telas menores (tablets) */
+@media (width <= 992px) {
+  .container1 {
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  input[type="search"]::placeholder {
+    font-size: small;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .topico {
+    height: 10%;
+  }
+
+  .consultatop {
+    height: 20vh;
+  }
+
+  .consultabottom {
+    height: 50vh;
+  }
+
+  .tabela {
+    border-collapse: collapse;
+    border-radius: 0;
+  }
+}
+
+@media (width <=558px) {
+  .consultatop {
+    height: 20%;
+    overflow: auto;
+    max-height: 40%;
+    flex-grow: 2;
+  }
+
+  .consultabottom {
+    flex-grow: 3;
+    max-height: 60%;
+  }
+
+  .limpar {
+    margin-bottom: 5%;
+  }
+
+  .tabela-head th,
   .tabela-body td {
-    padding: 10px 12px;
-    border-bottom: 1px solid #ddd;
-    font-size: 15px;
-    color: #333;
+    font-size: 14px;
+    padding: 8px;
   }
 
-  /* Zebra stripe */
-  .tabela-body tr:nth-child(even) {
-    background-color: #f9f9f9;
+  .tabela {
+    display: block;
+    width: 100%;
   }
 
-  /* Responsivo para telas menores */
-
-  /* Estilos para telas menores (tablets) */
-  @media (width <= 992px) {
-    .container1 {
-      flex-direction: column;
-    }
-
-    input[type="search"]::placeholder {
-      font-size: small;
-    }
-
-    .left,
-    .right {
-      width: 100%;
-    }
-
-    .topico {
-      height: 10%;
-    }
+  .tabela thead {
+    display: none;
   }
 
-  @media (width <= 992px) {
-    .container1 {
-      box-sizing: border-box;
-    }
-
-    .consultatop {
-      height: 20vh;
-    }
-
-    .consultabottom {
-      height: 50vh;
-    }
+  .tabela tbody,
+  .tabela tr,
+  .tabela td {
+    display: block;
+    width: 100%;
   }
 
-  @media (width <=558px) {
-    .consultatop {
-      height: 20%;
-      overflow: auto;
-    }
-
-    .limpar {
-      margin-bottom: 5%;
-    }
-
-    .tabela-head th,
-    .tabela-body td {
-      font-size: 14px;
-      padding: 8px;
-    }
+  .tabela td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+    border-bottom: 1px solid #ccc;
   }
 
-  @media (width <=400px) {
-    input[type="search"]::placeholder {
-      font-size: 0.6rem;
-    }
+  .tabela td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    font-weight: bold;
+    text-align: left;
+  }
+}
 
-    input[type="search"] {
-      padding-right: 4rem;
-    }
+@media (width <=400px) {
+  input[type="search"]::placeholder {
+    font-size: 0.6rem;
+  }
 
-    .topico svg {
-      margin-left: 0;
-    }
+  input[type="search"] {
+    padding-right: 4rem;
+  }
 
-    .topico {
-      padding-left: 0.5vh;
-    }
+  .topico svg {
+    margin-left: 0;
+  }
+
+  .topico {
+    padding-left: 0.5vh;
   }
 }

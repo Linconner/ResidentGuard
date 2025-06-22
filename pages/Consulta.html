@@ -129,36 +129,158 @@
 
       <div class="consultabottom">
   <div class="tabelaconsulta">
-    <table class="tabela">
-      <thead class="tabela-head">
-        <tr>
-          <th class="id">ID</th>
-          <th>Nome</th>
-          <th>CPF</th>
-          <th>Número de telefone</th>
-          <th>Cartão</th>
-          <th>Liberação</th>
-          <th>Menor de idade</th>
-          <th>Menor de idade</th>
-        </tr>
-      </thead>
-      <tbody class="tabela-body">
-        <tr>
-          <td>1</td>
-          <td>Maria Silva</td>
-          <td>28</td>
-          <td>20/06/2025</td>
-          <td>Ativo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>João Souza</td>
-          <td>34</td>
-          <td>19/06/2025</td>
-          <td>Inativo</td>
-        </tr>
-      </tbody>
-    </table>
+<table class="tabela">
+  <thead class="tabela-head">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Telefone</th>
+      <th>Cartão</th>
+       <th>Liberado por</th>
+       <th>Menor de idade</th>
+       <th>Bloco/APT</th>
+       <th>Meio de transporte</th>
+       <th>Horario de entrada</th>
+       <th>Horario de saída</th>
+
+    </tr>
+  </thead>
+<tbody class="tabela-body">
+  <tr>
+    <td data-label="ID">1</td>
+    <td data-label="Nome">João da Silva</td>
+    <td data-label="CPF">123.456.789-00</td>
+    <td data-label="Telefone">(11) 91234-5678</td>
+    <td data-label="Cartão">Cartão Azul</td>
+    <td data-label="Liberado por">Porteiro Carlos</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco B / APT 302</td>
+    <td data-label="Meio de transporte">Bicicleta</td>
+    <td data-label="Horário de entrada">22/06/2025 - 14:35</td>
+    <td data-label="Horário de saída">22/06/2025 - 15:10</td>
+  </tr>
+  <tr>
+    <td data-label="ID">2</td>
+    <td data-label="Nome">Maria Oliveira</td>
+    <td data-label="CPF">987.654.321-00</td>
+    <td data-label="Telefone">(21) 99876-5432</td>
+    <td data-label="Cartão">Cartão Verde</td>
+    <td data-label="Liberado por">Porteira Ana</td>
+    <td data-label="Menor de idade">Sim</td>
+    <td data-label="Bloco/APT">Bloco A / APT 101</td>
+    <td data-label="Meio de transporte">A pé</td>
+    <td data-label="Horário de entrada">22/06/2025 - 09:00</td>
+    <td data-label="Horário de saída">22/06/2025 - 11:00</td>
+  </tr>
+  <tr>
+    <td data-label="ID">3</td>
+    <td data-label="Nome">Carlos Mendes</td>
+    <td data-label="CPF">111.222.333-44</td>
+    <td data-label="Telefone">(31) 91111-2233</td>
+    <td data-label="Cartão">Cartão Vermelho</td>
+    <td data-label="Liberado por">Porteiro João</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco C / APT 201</td>
+    <td data-label="Meio de transporte">Moto</td>
+    <td data-label="Horário de entrada">22/06/2025 - 13:15</td>
+    <td data-label="Horário de saída">22/06/2025 - 13:45</td>
+  </tr>
+  <tr>
+    <td data-label="ID">4</td>
+    <td data-label="Nome">Fernanda Souza</td>
+    <td data-label="CPF">222.333.444-55</td>
+    <td data-label="Telefone">(41) 92222-3344</td>
+    <td data-label="Cartão">Cartão Roxo</td>
+    <td data-label="Liberado por">Porteira Juliana</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco D / APT 404</td>
+    <td data-label="Meio de transporte">Carro</td>
+    <td data-label="Horário de entrada">22/06/2025 - 10:45</td>
+    <td data-label="Horário de saída">22/06/2025 - 12:00</td>
+  </tr>
+  <tr>
+    <td data-label="ID">5</td>
+    <td data-label="Nome">Lucas Lima</td>
+    <td data-label="CPF">333.444.555-66</td>
+    <td data-label="Telefone">(85) 93333-4455</td>
+    <td data-label="Cartão">Cartão Branco</td>
+    <td data-label="Liberado por">Porteiro Marcos</td>
+    <td data-label="Menor de idade">Sim</td>
+    <td data-label="Bloco/APT">Bloco E / APT 105</td>
+    <td data-label="Meio de transporte">Skate</td>
+    <td data-label="Horário de entrada">22/06/2025 - 08:20</td>
+    <td data-label="Horário de saída">22/06/2025 - 09:00</td>
+  </tr>
+  <tr>
+    <td data-label="ID">6</td>
+    <td data-label="Nome">Patrícia Gomes</td>
+    <td data-label="CPF">444.555.666-77</td>
+    <td data-label="Telefone">(61) 94444-5566</td>
+    <td data-label="Cartão">Cartão Cinza</td>
+    <td data-label="Liberado por">Porteiro Caio</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco F / APT 501</td>
+    <td data-label="Meio de transporte">Ônibus</td>
+    <td data-label="Horário de entrada">22/06/2025 - 15:30</td>
+    <td data-label="Horário de saída">22/06/2025 - 16:00</td>
+  </tr>
+  <tr>
+    <td data-label="ID">7</td>
+    <td data-label="Nome">Rafael Costa</td>
+    <td data-label="CPF">555.666.777-88</td>
+    <td data-label="Telefone">(62) 95555-6677</td>
+    <td data-label="Cartão">Cartão Verde</td>
+    <td data-label="Liberado por">Porteira Laura</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco G / APT 303</td>
+    <td data-label="Meio de transporte">Patinete Elétrico</td>
+    <td data-label="Horário de entrada">22/06/2025 - 17:05</td>
+    <td data-label="Horário de saída">22/06/2025 - 17:40</td>
+  </tr>
+  <tr>
+    <td data-label="ID">8</td>
+    <td data-label="Nome">Camila Torres</td>
+    <td data-label="CPF">666.777.888-99</td>
+    <td data-label="Telefone">(71) 96666-7788</td>
+    <td data-label="Cartão">Cartão Azul</td>
+    <td data-label="Liberado por">Porteiro Henrique</td>
+    <td data-label="Menor de idade">Sim</td>
+    <td data-label="Bloco/APT">Bloco H / APT 206</td>
+    <td data-label="Meio de transporte">Bicicleta</td>
+    <td data-label="Horário de entrada">22/06/2025 - 16:00</td>
+    <td data-label="Horário de saída">22/06/2025 - 16:45</td>
+  </tr>
+  <tr>
+    <td data-label="ID">9</td>
+    <td data-label="Nome">Eduardo Pereira</td>
+    <td data-label="CPF">777.888.999-00</td>
+    <td data-label="Telefone">(51) 97777-8899</td>
+    <td data-label="Cartão">Cartão Laranja</td>
+    <td data-label="Liberado por">Porteira Renata</td>
+    <td data-label="Menor de idade">Não</td>
+    <td data-label="Bloco/APT">Bloco I / APT 407</td>
+    <td data-label="Meio de transporte">A pé</td>
+    <td data-label="Horário de entrada">22/06/2025 - 11:10</td>
+    <td data-label="Horário de saída">22/06/2025 - 11:50</td>
+  </tr>
+  <tr>
+    <td data-label="ID">10</td>
+    <td data-label="Nome">Beatriz Almeida</td>
+    <td data-label="CPF">888.999.000-11</td>
+    <td data-label="Telefone">(92) 98888-9900</td>
+    <td data-label="Cartão">Cartão Preto</td>
+    <td data-label="Liberado por">Porteiro Felipe</td>
+    <td data-label="Menor de idade">Sim</td>
+    <td data-label="Bloco/APT">Bloco J / APT 108</td>
+    <td data-label="Meio de transporte">Carro</td>
+    <td data-label="Horário de entrada">22/06/2025 - 18:00</td>
+    <td data-label="Horário de saída">22/06/2025 - 18:50</td>
+  </tr>
+</tbody>
+
+
+</table>
   </div>
 </div>
 
