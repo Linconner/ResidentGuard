@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
-    <link rel="stylesheet" href="/css/RegistroE.css" />
+    <link rel="stylesheet" href="/css/RegistroEN.css" />
     <link rel="stylesheet" href="/css/Base.css" />
   </head>
   <body>
@@ -76,12 +76,87 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="left"></div>
+      <div class="left">
+        <fieldset class="registroDestinatario">
+          <legend>Informações do destinátario</legend>
+
+          <label for="nomeDestinatario">Nome do destinatário</label>
+          <input type="text" placeholder="Nome de quem recebe" />
+          <br /><br />
+          <div class="destinatarioMoradia">
+            <div class="campos">
+              <label for="apartamentoDestinatario">Apartamento</label>
+              <input type="text" placeholder="Apartamento" />
+            </div>
+
+            <div class="campos">
+              <label for="blocoDestinatario">Bloco</label>
+              <input type="text" placeholder="Bloco do apartamento" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="registroInformacoes">
+          <legend>Informações da Encomenda</legend>
+          <div class="tipoEncomenda">
+            <div class="camposRadio">
+              <input
+                type="radio"
+                value="Alimento"
+                title="Alimento"
+                name="Infos"
+              />
+              <label for="tipoEncomenda">Alimento</label>
+            </div>
+
+            <!--  -->
+
+            <div class="camposRadio">
+              <input type="radio" value="pacote" title="pacote" name="Infos" />
+              <label for="tipoEncomenda">Pacote</label>
+            </div>
+
+            <!--  -->
+
+            <div class="camposRadio">
+              <input
+                type="radio"
+                value="farmacia"
+                title="farmacia"
+                name="Infos"
+              />
+              <label for="tipoEncomenda">Farmácia</label>
+            </div>
+
+            <div class="camposRadio">
+              <input type="radio" value="outros" title="outros" name="Infos" />
+              <label for="tipoEncomenda">Outros</label>
+            </div>
+          </div>
+
+          <div class="descricaoEncomenda">
+            <label for="descricao">Descrição da encomenda</label>
+            <input
+              type="text"
+              name="descricao"
+              placeholder="Descrição da encomenda"
+            />
+          </div>
+          <label for="entregadorTransportadora"
+            >Entregador/Transportadore</label
+          >
+          <input
+            type="text"
+            name="entregadorTransportadora"
+            placeholder="Coloque aqui a info"
+          />
+        </fieldset>
+      </div>
 
       <div class="right"></div>
     </div>
 
-    <script src="/js/RegistroE.js"></script>
+    <script src="/js/RegistroEN.js"></script>
     <script src="/js/Base.js"></script>
   </body>
 </html>

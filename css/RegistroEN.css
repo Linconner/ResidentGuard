@@ -1,0 +1,66 @@
+.left,
+.right {
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  background-color: #396481; /* cinza mais claro */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.left {
+  border-radius: 3vh 0 0 3vh;
+  justify-content: space-between;
+}
+
+.right {
+  justify-content: space-between;
+  border-radius: 0 3vh 3vh 0;
+}
+
+.destinatarioMoradia {
+  display: flex;
+  justify-content: space-between;
+}
+.destinatarioMoradia input[type="text"] {
+  width: auto;
+}
+.tipoEncomenda {
+  display: flex;
+  justify-content: space-around;
+}
+
+.camposRadio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+}
+
+.camposRadio:hover {
+  background-color: var(--var-textocor);
+}
+
+.camposRadio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--var-azulescuroprofundo);
+  cursor: pointer;
+}
+
+.camposRadio label {
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 0;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-user-select: none;
+  user-select: none;
+}
