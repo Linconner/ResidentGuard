@@ -101,26 +101,31 @@
                   placeholder="000.000.000-00"
                 />
               </div>
-              <div class="blocoapartamento">
-                <div class="ajeitador">
-                  <label for="bloco">Bloco</label>
-                  <input
-                    type="text"
-                    id="bloco"
-                    placeholder="Digite o bloco"
-                    required
-                  />
-                </div>
-                <div class="ajeitador">
-                  <label for="apartamento">Apartamento</label>
-                  <input
-                    type="text"
-                    id="apartamento"
-                    placeholder="Digite o número"
-                    required
-                  />
-                </div>
-              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="cadastromoradia">
+          <div class="blocoapartamento">
+            <div class="ajeitador">
+              <label for="bloco">Bloco</label>
+              <input
+                type="text"
+                id="bloco"
+                name="bloco"
+                placeholder="Digite o bloco"
+                required
+              />
+            </div>
+            <div class="ajeitador">
+              <label for="apartamento">Apartamento</label>
+              <input
+                type="text"
+                id="apartamento"
+                name="apartamento"
+                placeholder="Digite o número"
+                required
+              />
             </div>
           </div>
         </fieldset>
@@ -163,12 +168,17 @@
               <input
                 type="text"
                 id="outro"
+                name="outro"
                 placeholder="Especifique outro aluguel"
               />
             </div>
 
             <div class="outraopcao" id="outraopcao">
-              <select class="select" title="Selecione uma opção">
+              <select
+                class="select"
+                title="Selecione uma opção"
+                name="outraopcao"
+              >
                 <option value="">Selecione uma opção</option>
                 <option value="opcao1">Opção 1</option>
                 <option value="opcao2">Opção 2</option>
@@ -185,7 +195,7 @@
 
           <div class="ajeitador">
             <label for="opcoes">Escolha o local</label>
-            <select id="opcoes" name="opcoes">
+            <select id="opcoes" name="local">
               <option value="">Opções</option>
               <option value="1">Opções</option>
               <option value="2">Opções</option>
@@ -196,7 +206,7 @@
           <div class="ajeitador">
             <label for="payment">Escolha o modo de pagamento</label>
 
-            <select id="payment" name="opcoes">
+            <select id="payment" name="pagamento">
               <option value="">Opções</option>
               <option value="1">Opções</option>
               <option value="2">Opções</option>
@@ -213,6 +223,7 @@
               <input
                 type="date"
                 id="data"
+                name="data"
                 placeholder="Digite o número"
                 required
               />
@@ -222,6 +233,7 @@
               <input
                 type="time"
                 id="horaentrada"
+                name="horaentrada"
                 placeholder="Digite o número"
                 required
               />
@@ -232,6 +244,7 @@
               <input
                 type="time"
                 id="horasaida"
+                name="horasaida"
                 placeholder="Digite o número"
                 required
               />
@@ -239,12 +252,7 @@
           </div>
         </fieldset>
         <div class="botaoregistrodiv">
-          <input
-            type="button"
-            id="registrarform"
-            class="botaoregistro"
-            value="Registrar"
-          />
+          <input type="submit" class="botaoregistro" value="Registrar" />
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@
             <h3 class="itenvey">Registro Encomendas</h3>
           </a>
 
-          <a href="RegistroM.html" class="nav-item" id="moradores">
+          <a href="RegistroM.html" class="nav-item" id="condominos">
             <i class="fi fi-sr-user-pen"></i>
             <h3 class="itenvey">Moradores</h3>
           </a>
@@ -79,180 +79,180 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="left">
-        <fieldset class="cadastrodados">
-          <legend>Dados Cadastrais</legend>
+      <form action="./" method="post">
+        <div class="left">
+          <fieldset class="cadastrodados">
+            <legend>Dados Cadastrais</legend>
 
-          <div class="input-group">
-            <div class="input-position">
-              <div class="ajeitador">
-                <label for="nome">Nome completo</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Digite o nome completo"
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="CPF">CPF</label>
-                <input
-                  type="text"
-                  id="CPF"
-                  name="CPF"
-                  placeholder="000.000.000-00"
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="telefone">Número de telefone</label>
-                <input
-                  type="text"
-                  id="telefone"
-                  name="telefone"
-                  placeholder="(00) 00000-0000"
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="cartao">Cartão</label>
-                <input
-                  type="text"
-                  id="cartao"
-                  name="cartao"
-                  placeholder="Número do cartão de acesso"
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="acesso">Liberado por:</label>
-                <select id="acesso" required>
-                  <option value="">Escolha o morador</option>
-                  <option value="Morador1">Morador1</option>
-                  <option value="Morador2">Morador2</option>
-                  <option value="Morador3">Morador3</option>
-                  <option value="Morador4">Morador4</option>
-                </select>
-              </div>
-
-              <div class="checkbox-item">
-                <input type="checkbox" id="menor-idade" />
-                <label for="menor-idade">Menor de idade</label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <div class="right">
-        <fieldset class="cadastromoradia" id="Passo2">
-          <legend>Visita</legend>
-          <div class="blocoapartamento">
-            <div class="ajeitador">
-              <label for="bloco">Bloco</label>
-              <input
-                type="text"
-                id="bloco"
-                placeholder="Digite o bloco"
-                required
-              />
-            </div>
-            <div class="ajeitador">
-              <label for="apartamento">Apartamento</label>
-              <input
-                type="text"
-                id="apartamento"
-                placeholder="Digite o número"
-                required
-              />
-            </div>
-          </div>
-        </fieldset>
-
-        <div class="setautomovel">
-          <fieldset class="cadastroautomovel">
-            <legend>Meio de transporte</legend>
-
-            <div class="input-position">
-              <div class="cadastroautomovelradiobutton">
-                <div class="radio-item">
+            <div class="input-group">
+              <div class="input-position">
+                <div class="ajeitador">
+                  <label for="nome">Nome completo</label>
                   <input
-                    type="radio"
-                    id="carro"
-                    name="transporte"
-                    value="carro"
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite o nome completo"
                   />
-                  <label for="carro">Carro</label>
                 </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="moto"
-                    name="transporte"
-                    value="moto"
-                  />
-                  <label for="moto">Moto</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="acesso-comum"
-                    name="transporte"
-                    value="acesso-comum"
-                    checked
-                  />
-                  <label for="acesso-comum">Acesso Comum</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="bicicleta"
-                    name="transporte"
-                    value="bicicleta"
-                  />
-                  <label for="bicicleta">Bicicleta</label>
-                </div>
-              </div>
 
-              <div class="placaautomovel" id="placaautomovel">
-                <label for="placa" id="labelplaca">Placa do automovel</label>
-                <input
-                  type="text"
-                  id="placa"
-                  name="placa"
-                  placeholder="Insira aqui"
-                />
+                <div class="ajeitador">
+                  <label for="CPF">CPF</label>
+                  <input
+                    type="text"
+                    id="CPF"
+                    name="CPF"
+                    placeholder="000.000.000-00"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="telefone">Número de telefone</label>
+                  <input
+                    type="text"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="cartao">Cartão</label>
+                  <input
+                    type="text"
+                    id="cartao"
+                    name="cartao"
+                    placeholder="Número do cartão de acesso"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="acesso">Liberado por:</label>
+                  <input
+                    list="moradores"
+                    id="acesso"
+                    name="acesso"
+                    autocomplete="off"
+                    placeholder="Digite ou selecione o morador"
+                  />
+                  <datalist id="moradores"></datalist>
+                </div>
+
+                <div class="checkbox-item">
+                  <input type="checkbox" id="menor-idade" name="menor_idade" />
+                  <label for="menor-idade">Menor de idade</label>
+                </div>
               </div>
             </div>
           </fieldset>
         </div>
 
-        <fieldset class="cadastrohorarios" id="Passo4">
-          <legend>Data e hora</legend>
-
-          <div class="tempoinputs">
-            <div class="input-group">
-              <label for="data">Horário de Entrada</label>
-              <input type="datetime-local" id="data" />
+        <div class="right">
+          <fieldset class="cadastromoradia" id="Passo2">
+            <legend>Visita</legend>
+            <div class="blocoapartamento">
+              <div class="ajeitador">
+                <label for="bloco">Bloco</label>
+                <input
+                  type="text"
+                  id="bloco"
+                  name="bloco"
+                  placeholder="Digite o bloco"
+                  required
+                />
+              </div>
+              <div class="ajeitador">
+                <label for="apartamento">Apartamento</label>
+                <input
+                  type="text"
+                  id="apartamento"
+                  name="apartamento"
+                  placeholder="Digite o número"
+                  required
+                />
+              </div>
             </div>
+          </fieldset>
 
-            <div class="input-group">
-              <label for="saida">Horário de Saída</label>
-              <input type="time" id="saida" />
-            </div>
+          <div class="setautomovel">
+            <fieldset class="cadastroautomovel">
+              <legend>Meio de transporte</legend>
+
+              <div class="input-position">
+                <div class="cadastroautomovelradiobutton">
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="carro"
+                      name="transporte"
+                      value="carro"
+                    />
+                    <label for="carro">Carro</label>
+                  </div>
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="moto"
+                      name="transporte"
+                      value="moto"
+                    />
+                    <label for="moto">Moto</label>
+                  </div>
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="acesso-comum"
+                      name="transporte"
+                      value="acesso-comum"
+                      checked
+                    />
+                    <label for="acesso-comum">Acesso Comum</label>
+                  </div>
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="bicicleta"
+                      name="transporte"
+                      value="bicicleta"
+                    />
+                    <label for="bicicleta">Bicicleta</label>
+                  </div>
+                </div>
+
+                <div class="placaautomovel" id="placaautomovel">
+                  <label for="placa" id="labelplaca">Placa do automovel</label>
+                  <input
+                    type="text"
+                    id="placa"
+                    name="placa"
+                    placeholder="Insira aqui"
+                  />
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
 
-        <div class="botaoregistrodiv">
-          <input
-            type="button"
-            id="registrarform"
-            class="botaoregistro"
-            value="Registrar"
-          />
+          <fieldset class="cadastrohorarios" id="Passo4">
+            <legend>Data e hora</legend>
+
+            <div class="tempoinputs">
+              <div class="input-group">
+                <label for="data">Horário de Entrada</label>
+                <input type="datetime-local" id="data" name="entrada" />
+              </div>
+
+              <div class="input-group">
+                <label for="saida">Horário de Saída</label>
+                <input type="time" id="saida" name="saida" />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="botaoregistrodiv">
+            <input type="submit" class="botaoregistro" value="Registrar" />
+          </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <div class="blurOverlay" id="blurOverlay2"></div>

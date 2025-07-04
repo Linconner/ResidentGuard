@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona os elementos relacionados ao tipo de veículo e à placa
   const txtplaca = document.getElementById("placaautomovel");
   const labelplaca = document.getElementById("labelplaca");
-
-  //mudando label + fznd o txtbox aparecer
   const radios = document.querySelectorAll('input[type="radio"]');
+
+  // Adiciona evento de mudança nos rádios
   radios.forEach((radio) => {
     radio.addEventListener("change", function () {
       const moto = document.getElementById("moto");
@@ -24,20 +25,72 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // ===============================================
+  // Parte do DATALIST (simulando os dados da API)
+  // ===============================================
+  // Quando sua API estiver pronta, você vai trocar esta parte por um fetch:
+  //
+  // fetch('/api/moradores')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     data.forEach((morador) => {
+  //       const option = document.createElement("option");
+  //       option.value = morador.nome;
+  //       datalist.appendChild(option);
+  //     });
+  //   });
+
+  // Simulação com dados fictícios
+  // Simulação com dados fictícios (array de objetos)
+  const moradoresFake = [
+    { nome: "João Afonso" },
+    { nome: "Maria Clara" },
+    { nome: "Lucas Santos" },
+    { nome: "Ana Souza" },
+    { nome: "Pedro Almeida" },
+    { nome: "Juliana Ferreira" },
+    { nome: "Rafael Mendes" },
+    { nome: "Beatriz Cardoso" },
+    { nome: "Guilherme Oliveira" },
+    { nome: "Fernanda Pereira" },
+    { nome: "Daniel Santos" },
+    { nome: "Letícia Rodrigues" },
+    { nome: "Gabriel Ferreira" },
+    { nome: "Mariana Lima" },
+    { nome: "Caio Almeida" },
+    { nome: "Juliana Santos" },
+    { nome: "Lucas Cardoso" },
+    { nome: "Fernanda Mendes" },
+  ];
+
+  const datalist = document.getElementById("moradores");
+  const input = document.getElementById("acesso");
+
+  // Adiciona as options no datalist
+  moradoresFake.forEach((morador) => {
+    const option = document.createElement("option");
+    option.value = morador.nome;
+    datalist.appendChild(option);
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // evita o submit padrão
+
+      const val = input.value.toLowerCase().trim();
+      if (!val) return;
+
+      // Busca o primeiro morador que começa com o texto digitado
+      const match = moradoresFake.find((morador) =>
+        morador.nome.toLowerCase().startsWith(val)
+      );
+
+      if (match) {
+        input.value = match.nome; // preenche o input com o nome encontrado
+      }
+
+      input.blur();
+    }
+  });
 });
-function definirDataHoraAtual() {
-  const agora = new Date();
-
-  const ano = agora.getFullYear();
-  const mes = String(agora.getMonth() + 1).padStart(2, "0");
-  const dia = String(agora.getDate()).padStart(2, "0");
-  const horas = String(agora.getHours()).padStart(2, "0");
-  const minutos = String(agora.getMinutes()).padStart(2, "0");
-
-  //Formato exigido: YYYY-MM-DDTHH:MM ->
-  const dataHoraFormatada = "${ano}-${mes}-${dia}T${horas}:${minutos}";
-
-  document.getElementById("data").value = dataHoraFormatada;
-}
-
-window.addEventListener("DOMContentLoaded", definirDataHoraAtual);
