@@ -106,27 +106,52 @@
         </fieldset>
 
         <fieldset class="cadastromoradia">
-          <div class="blocoapartamento">
-            <div class="ajeitador">
-              <label for="bloco">Bloco</label>
-              <input
-                type="text"
-                id="bloco"
-                name="bloco"
-                placeholder="Digite o bloco"
-                required
-              />
-            </div>
-            <div class="ajeitador">
-              <label for="apartamento">Apartamento</label>
-              <input
-                type="text"
-                id="apartamento"
-                name="apartamento"
-                placeholder="Digite o número"
-                required
-              />
-            </div>
+          <div class="ajeitador">
+            <label for="bloco">Bloco</label>
+            <input
+              type="text"
+              id="bloco"
+              name="bloco"
+              placeholder="Digite o bloco"
+              required
+            />
+          </div>
+          <div class="ajeitador">
+            <label for="apartamento">Apartamento</label>
+            <input
+              type="text"
+              id="apartamento"
+              name="apartamento"
+              placeholder="Digite o número"
+              required
+            />
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="right">
+        <fieldset class="registroaluguel">
+          <legend>Dados do aluguel</legend>
+
+          <div class="ajeitador">
+            <label for="opcoes">Escolha o local</label>
+            <select id="opcoes" name="local">
+              <option value="">Opções</option>
+              <option value="1">Opções</option>
+              <option value="2">Opções</option>
+              <option value="3">Opções</option>
+            </select>
+          </div>
+
+          <div class="ajeitador">
+            <label for="payment">Escolha o modo de pagamento</label>
+
+            <select id="payment" name="pagamento">
+              <option value="">Opções</option>
+              <option value="1">Opções</option>
+              <option value="2">Opções</option>
+              <option value="3">Opções</option>
+            </select>
           </div>
         </fieldset>
 
@@ -187,33 +212,7 @@
             </div>
           </div>
         </fieldset>
-      </div>
 
-      <div class="right">
-        <fieldset class="registroaluguel">
-          <legend>Dados do aluguel</legend>
-
-          <div class="ajeitador">
-            <label for="opcoes">Escolha o local</label>
-            <select id="opcoes" name="local">
-              <option value="">Opções</option>
-              <option value="1">Opções</option>
-              <option value="2">Opções</option>
-              <option value="3">Opções</option>
-            </select>
-          </div>
-
-          <div class="ajeitador">
-            <label for="payment">Escolha o modo de pagamento</label>
-
-            <select id="payment" name="pagamento">
-              <option value="">Opções</option>
-              <option value="1">Opções</option>
-              <option value="2">Opções</option>
-              <option value="3">Opções</option>
-            </select>
-          </div>
-        </fieldset>
         <fieldset class="registrodataehora">
           <legend>Data e hora</legend>
 
