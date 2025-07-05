@@ -39,11 +39,13 @@
   align-items: center;
 }
 
+/* RIGHT */
 .registroaluguel {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
   height: auto;
+  flex: 1 1 auto;
 }
 
 .cadastrodados .ajeitador {
@@ -76,13 +78,27 @@
   max-height: 25vh;
 }
 
+/* RIGHT 2nd */
+
+.registrotipoaluguel {
+  flex: 1 1 auto;
+}
+
+.registrotipoaluguel .ajeitador {
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+}
+
 /* rdbtn */
 .cadastroautomovelradiobutton {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: auto;
+  width: 100%;
 }
 
 .setautomovel {
@@ -105,6 +121,7 @@
 .radio-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 0;
   cursor: pointer;
@@ -152,6 +169,7 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
   margin-left: auto; /* isso alinha o botão à direita */
+  flex: 1 1 auto;
 }
 
 .botaoregistro:hover {
@@ -165,8 +183,10 @@
   background-color: var(--var-blue);
 }
 
+/* RIGHT 3nd */
 .registrodataehora {
   height: auto;
+  flex: 1 1 auto;
 }
 
 .registrodataehora .ajeitador {

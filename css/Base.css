@@ -288,10 +288,6 @@ input[list="moradores"]:focus {
   outline: none;
 }
 
-.ajeitador {
-  margin-bottom: 0.3rem;
-}
-
 .input-position {
   display: grid;
   gap: 0.5rem;
