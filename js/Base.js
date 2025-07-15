@@ -40,4 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 300);
     });
   });
+
+  const telefoneInput = document.getElementById("telefone");
+
+  telefoneInput.addEventListener("input", function (e) {
+    let valor = e.target.value;
+
+    // Remove tudo que não for número
+    valor = valor.replace(/\D/g, "");
+
+    // Aplica formatação: XX-XXXXX-XXXX
+    if (valor.length > 2 && valor.length <= 7) {
+      valor = valor.replace(/^(\d{2})(\d+)/, "$1-$2");
+    } else if (valor.length > 7) {
+      valor = valor.replace(/^(\d{2})(\d{5})(\d+)/, "$1-$2-$3");
+    }
+
+    e.target.value = valor;
+  });
 });

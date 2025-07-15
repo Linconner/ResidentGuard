@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulta</title>
+    <title>Registro de Encomendas</title>
+
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,11 +16,14 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- CDN Flaticon Uicons SOLID ROUNDED -->
+
+    <!-- Flaticon Uicons -->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/RegistroEN.css" />
     <link rel="stylesheet" href="/css/Base.css" />
   </head>
@@ -42,7 +47,6 @@
         />
       </svg>
 
-      <!-- Menu dropdown -->
       <div class="navbarmenu" id="navbarmenu">
         <div class="itensnavbar">
           <a href="RegistroV.html" class="nav-item" id="visitantes">
@@ -61,7 +65,7 @@
           </a>
 
           <a href="RegistroM.html" class="nav-item" id="moradores">
-            <i class="fi fi-sr-user-pen"></i>
+            <i class="fi fi-sr-users-alt"></i>
             <h3 class="itenvey">Moradores</h3>
           </a>
 
@@ -79,7 +83,7 @@
       <div class="container1">
         <div class="left">
           <fieldset class="registroDestinatario">
-            <legend>Informações do destinátario</legend>
+            <legend>Informações do destinatário</legend>
 
             <label for="nomeDestinatario">Nome do destinatário</label>
             <input
@@ -87,8 +91,11 @@
               id="nomeDestinatario"
               name="nomeDestinatario"
               placeholder="Nome de quem recebe"
+              required
+              autocomplete="off"
             />
             <br /><br />
+
             <div class="destinatarioMoradia">
               <div class="campos">
                 <label for="apartamentoDestinatario">Apartamento</label>
@@ -97,6 +104,7 @@
                   id="apartamentoDestinatario"
                   name="apartamentoDestinatario"
                   placeholder="Apartamento"
+                  required
                 />
               </div>
 
@@ -107,6 +115,7 @@
                   id="blocoDestinatario"
                   name="blocoDestinatario"
                   placeholder="Bloco do apartamento"
+                  required
                 />
               </div>
             </div>
@@ -114,19 +123,19 @@
 
           <fieldset class="registroInformacoes">
             <legend>Informações da Encomenda</legend>
+
             <div class="tipoEncomenda">
               <div class="camposRadio">
                 <input
                   type="radio"
                   id="tipoEncomendaAlimento"
-                  value="Alimento"
-                  title="Alimento"
+                  value="alimento"
+                  title="alimento"
                   name="tipoEncomenda"
+                  required
                 />
                 <label for="tipoEncomendaAlimento">Alimento</label>
               </div>
-
-              <!--  -->
 
               <div class="camposRadio">
                 <input
@@ -138,8 +147,6 @@
                 />
                 <label for="tipoEncomendaPacote">Pacote</label>
               </div>
-
-              <!--  -->
 
               <div class="camposRadio">
                 <input
@@ -172,11 +179,14 @@
                   id="descricao"
                   name="descricao"
                   placeholder="Descrição da encomenda"
+                  required
+                  autocomplete="off"
                 />
               </div>
+
               <div class="campo">
                 <label for="data">Data de recebimento</label>
-                <input type="date" name="data" id="data" />
+                <input type="date" name="data" id="data" required />
               </div>
             </div>
           </fieldset>
@@ -185,6 +195,7 @@
         <div class="right">
           <fieldset class="informacoesEntregador">
             <legend>Informações do Entregador</legend>
+
             <div class="nomeEntregador">
               <label for="nomeEntregador">Nome do entregador</label>
               <input
@@ -192,26 +203,31 @@
                 name="nomeEntregador"
                 type="text"
                 placeholder="Ex: Motoboy, entregador da Amazon"
+                required
+                autocomplete="off"
               />
             </div>
+
             <div class="empresa">
-              <label for="empresa">Empresa (opcional) </label>
+              <label for="empresa">Empresa (opcional)</label>
               <input
                 type="text"
                 id="empresa"
                 name="empresa"
                 placeholder="Ex: iFood, Shopee, Correios, etc"
+                autocomplete="off"
               />
             </div>
           </fieldset>
 
           <div class="botaoregistrodiv">
-            <button class="botaoregistro" type="button">Registrar</button>
+            <button class="botaoregistro" type="submit">Registrar</button>
           </div>
         </div>
       </div>
     </form>
 
+    <!-- Scripts -->
     <script src="/js/RegistroEN.js"></script>
     <script src="/js/Base.js"></script>
   </body>
