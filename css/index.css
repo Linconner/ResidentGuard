@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("../images/logobg.svg"), url("../images/bg.svg");
+  background-position: center 8%, center;
+  background-repeat: no-repeat, repeat;
+  background-size: 90% auto, cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa a tela toda */
+  width: 100%;
+}
+.conteudoLogin {
+  background-color: #1b4965;
+  width: 39.125rem;
+  height: 40.875rem;
+}
