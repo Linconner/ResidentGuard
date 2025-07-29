@@ -4,14 +4,15 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+
+  overflow: hidden;
 }
 
 body {
-  background-image: url("../images/logobg.svg"), url("../images/bg.svg");
-  background-position: center 8%, center;
-  background-repeat: no-repeat, repeat;
-  background-size: 90% auto, cover;
+  background-image: url("../images/bg.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 main {
@@ -20,9 +21,24 @@ main {
   align-items: center;
   height: 100vh; /* ocupa a tela toda */
   width: 100%;
+  z-index: 1;
 }
 .conteudoLogin {
   background-color: #1b4965;
-  width: 39.125rem;
-  height: 40.875rem;
+  width: 34rem;
+  height: 35.4rem;
+  border-radius: 1.5625rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logobg {
+  width: 100%;
+  height: 120vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
