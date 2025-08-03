@@ -20,25 +20,22 @@
 
     <main>
       <div class="conteudoLogin">
-        <div class="conteudoLogin1">
-          <div class="logoLogin">
-            <img src="images/logo.svg" alt="" class="logo" />
-            <span class="logologinChild">ENTRAR</span>
-          </div>
-        </div>
+        <img src="images/logo.svg" alt="" class="logo" />
+        <span class="logologinChild">ENTRAR</span>
 
-        <div class="conteudoLogin2">
-          <div class="usuarioLogin">
+        <form action="/login" method="post" class="loginRg">
+          <div class="usuarioNome">
             <label for="nome">Nome</label>
             <input id="nome" name="nome" type="text" />
-
+          </div>
+          <div class="usuarioSenha">
             <label for="senha">Senha</label>
             <input id="senha" name="senha" type="password" />
           </div>
           <div class="botaoLogin2">
             <input id="entrarBtn" type="button" value="ENTRAR" />
           </div>
-        </div>
+        </form>
       </div>
     </main>
   </body>
