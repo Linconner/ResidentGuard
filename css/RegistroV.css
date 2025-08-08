@@ -1,4 +1,23 @@
-/* Unique styles in RegistroV.css after removing those present in Base.css */
+.container1 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 87vh;
+  min-height: 0;
+  width: 95%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  background-color: var(--var-azulescuroprofundo);
+  border: 2px solid #bee9eb;
+  border-radius: 3vh;
+  box-shadow: 0 4px 10px rgb(24 73 101 / 10%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
 
 .cadastrodados {
   height: 100%;
@@ -198,4 +217,18 @@
 .tempoinputs {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (width <= 992px) {
+  .container1 {
+    flex-direction: column;
+  }
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 1240px) and (min-height: 720px) {
+  .container1 {
+    height: 70vh;
+    width: 70vw;
+  }
 }

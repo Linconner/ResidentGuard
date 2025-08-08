@@ -25,7 +25,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/RegistroEN.css" />
-    <link rel="stylesheet" href="/css/Base.css" />
   </head>
   <body>
     <header class="topico">
@@ -81,7 +80,7 @@
 
     <form id="registroForm" name="registroForm">
       <div class="container1">
-        <div class="left">
+        <div class="center">
           <fieldset class="registroDestinatario">
             <legend>Informações do destinatário</legend>
 
@@ -191,39 +190,34 @@
             </div>
           </fieldset>
         </div>
+        <fieldset class="informacoesEntregador">
+          <legend>Informações do Entregador</legend>
 
-        <div class="right">
-          <fieldset class="informacoesEntregador">
-            <legend>Informações do Entregador</legend>
-
-            <div class="nomeEntregador">
-              <label for="nomeEntregador">Nome do entregador</label>
-              <input
-                id="nomeEntregador"
-                name="nomeEntregador"
-                type="text"
-                placeholder="Ex: Motoboy, entregador da Amazon"
-                required
-                autocomplete="off"
-              />
-            </div>
-
-            <div class="empresa">
-              <label for="empresa">Empresa (opcional)</label>
-              <input
-                type="text"
-                id="empresa"
-                name="empresa"
-                placeholder="Ex: iFood, Shopee, Correios, etc"
-                autocomplete="off"
-              />
-            </div>
-          </fieldset>
-
-          <div class="botaoregistrodiv">
-            <button class="botaoregistro" type="submit">Registrar</button>
+          <div class="nomeEntregador">
+            <label for="nomeEntregador">Nome do entregador</label>
+            <input
+              id="nomeEntregador"
+              name="nomeEntregador"
+              type="text"
+              placeholder="Ex: Motoboy, entregador da Amazon"
+              required
+              autocomplete="off"
+            />
           </div>
-        </div>
+
+          <div class="empresa">
+            <label for="empresa">Empresa (opcional)</label>
+            <input
+              type="text"
+              id="empresa"
+              name="empresa"
+              placeholder="Ex: iFood, Shopee, Correios, etc"
+              autocomplete="off"
+            />
+          </div>
+        </fieldset>
+
+        <!-- Botão de registro removido conforme solicitado -->
       </div>
     </form>
 

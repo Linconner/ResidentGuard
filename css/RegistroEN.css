@@ -1,90 +1,298 @@
-.left,
-.right {
-  display: flex;
-  padding: 1rem;
-  width: 50%;
-  height: 100%;
-  background-color: #396481; /* cinza mais claro */
-  font-size: 1.5rem;
-  font-weight: bold;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+/* Informações repetidas que mantive */
+:root {
+  --var-azulbb: #cae9ff;
+  --var-azulescuroprofundo: #184965;
+  --var-azulclarogray: #5fa8d3;
+  --var-azulescurosuavehover: #468faf;
+  --var-textocor: #184965;
+  --var-azulclaroesverdeado: #bee9eb;
+  --var-darkgray: #9ca3af;
+  --var-dark: #212529;
+  --var-fonttop: "League Spartan", sans-serif;
+  --var-fontlabel: "Inter", sans serif;
+  --transition: all 0.3s ease;
+  --border-radius: 0.6rem;
+  --fieldset-radius: 1rem;
+}
+
+* {
   box-sizing: border-box;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    sans-serif;
 }
 
-.left {
-  border-radius: 3vh 0 0 3vh;
-  justify-content: space-between;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.right {
-  justify-content: space-between;
-  border-radius: 0 3vh 3vh 0;
+body {
+  background-color: var(--var-azulbb);
+  line-height: 1.6;
+  padding: 20px;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.destinatarioMoradia {
-  display: flex;
-  justify-content: space-evenly;
-}
-.destinatarioMoradia input[type="text"] {
-  width: auto;
-}
-.tipoEncomenda {
-  display: flex;
-  justify-content: space-around;
-}
+.container1 {
+  box-sizing: border-box;
+  position: absolute;
+  top: 56%;
+  left: 50%; /* importante: usar left, não bottom */
+  transform: translate(-50%, -50%);
 
-.camposRadio {
+  /* largura e altura */
+  height: auto;
+  min-height: 0;
+  width: 95%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  background-color: var(--var-azulescuroprofundo);
+  border: 2px solid #bee9eb;
+  border-radius: 3vh;
+  box-shadow: 0 4px 10px rgb(24 73 101 / 10%);
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 0;
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 8px 12px;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.topico {
+  display: flex;
+  align-items: center;
+  background-color: var(--var-azulescuroprofundo);
+  position: fixed;
+  top: 0; /* topo da viewport */
+  left: 0; /* opcional, alinha à esquerda */
+  width: 100%; /* ocupa toda largura */
+  z-index: 1000; /* para ficar acima de outros elementos */
+  border-radius: 1vh;
+  height: 12%;
+  padding: 2vh;
+}
+
+.topico span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--var-fonttop);
+  font-weight: 600;
+  font-size: 4vh;
+  color: white;
+}
+
+.topico svg {
+  color: white;
+  width: 70px;
+  height: auto;
+  margin-left: 3vh;
+  border: 2px solid #0d354d;
   border-radius: var(--border-radius);
-}
-
-.camposRadio:hover {
-  background-color: var(--var-textocor);
-}
-
-.camposRadio input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--var-azulescuroprofundo);
+  padding: 10px;
+  font-size: 20px;
   cursor: pointer;
 }
 
-.camposRadio label {
-  cursor: pointer;
-  font-size: 15px;
-  margin-bottom: 0;
+.topico svg:hover {
+  transform: scale(1.05);
+  transition: color 0.1s ease-out;
+  color: #0d354d;
+}
+
+.topico svg:active {
+  background-color: var(--var-blue);
+}
+
+.navbarmenu {
+  position: absolute;
+  top: calc(100% - -30px); /* Ajuste fino para alinhar melhor */
+  left: 20px;
+  width: 275px;
+  background-color: #184965;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
+  z-index: 1001;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.25s ease-out;
+  max-height: 70vh;
+  overflow-y: auto;
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+.navbarmenu.ativa {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Ajuste para os itens do menu */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 20px;
+  color: #0d354d;
+  text-decoration: none;
+  transition: var(--transition);
+  gap: 4px;
+}
+
+.nav-item:hover {
+  background-color: #0d344d75;
+}
+
+.nav-item.active {
+  background-color: #0d354d;
+  color: #396481;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item i {
+  font-size: 1.1rem;
+  width: auto;
+}
+
+/* prettier-ignore-start */
+.blur-overlay {
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  background-color: rgb(0 0 0 / 0.15%);
   /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-user-select: none;
-  user-select: none;
+  -webkit-backdrop-filter: blur(3px); /* Safari */
+  backdrop-filter: blur(3px); /* Chrome/Edge */
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.descricaoEncomenda input[type="text"],
-.descricaoEncomenda input[type="date"] {
-  width: 50%;
+/* prettier-ignore-end */
+
+.blur-overlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.descricaoEncomenda {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.registroInformacoes {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.itenvey {
+  color: #fff;
+  font-size: 0.9rem;
 }
 
-.informacoesEntregador {
+.itensnavbar {
+  height: auto;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-flow: column wrap;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: white;
+  font-size: 1.1rem;
+}
+
+fieldset {
+  border: 3px solid var(--var-azulescuroprofundo);
+  border-radius: var(--fieldset-radius);
+  padding: 1rem;
+  margin-bottom: 0;
+  background-color: var(--light-color);
+  transition: var(--transition);
+}
+
+fieldset:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+}
+
+legend {
+  color: white;
+  font-weight: 700;
+  padding: 0 12px;
+  font-size: 1.3rem;
+}
+
+input[type="text"],
+input[type="time"],
+input[type="date"],
+input[type="tel"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.1rem solid #f5f5f5;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  transition: var(--transition);
+  background-color: #fff;
+  height: auto;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="datetime-local"]:focus {
+  box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
+  border-color: var(--var-azulescurosuavehover);
+  outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="time"]::placeholder,
+input[type="date"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="datetime-local"]::placeholder {
+  color: rgb(13 52 77 / 30.8%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+input[type="time"] {
+  color: rgb(0 0 0);
+  font-family: Montserat, sans-serif;
+  font-weight: 500;
+}
+
+input[type="time"]:focus {
+  border-color: var(--var-azulbb);
+  outline: none;
+}
+
+input[list="moradores"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.1rem solid #f5f5f5;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  transition: var(--transition);
+  background-color: #fff;
+  height: auto;
+}
+
+input[list="moradores"]:focus {
+  box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
+  border-color: var(--var-azulescurosuavehover);
+  outline: none;
+}
+
+.input-position {
+  display: grid;
+  gap: 0.5rem;
 }
 
 .botaoregistro {
@@ -111,8 +319,65 @@
   background-color: var(--var-blue);
 }
 
-.botaoregistrodiv {
-  width: auto; /* example width */
-  height: auto; /* example height */
-  margin-left: auto;
+form {
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
+/* Estilos para telas menores (tablets) */
+@media (width <= 992px) {
+  .container1 {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .blocoapartamento {
+    flex-direction: column;
+  }
+
+  .blocoapartamento .ajeitador {
+    width: 100%;
+  }
+
+  .tempoinputs {
+    flex-direction: column;
+  }
+
+  .tempoinputs .input-group {
+    width: 100%;
+  }
+}
+
+/* Estilos para telas muito pequenas (celulares) */
+@media (width <= 576px) {
+  .input-position {
+    padding: 10px;
+  }
+
+  fieldset {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .cadastroautomovelradiobutton {
+    flex-wrap: wrap;
+  }
+
+  .radio-item {
+    min-width: 50%;
+  }
+
+  .botaoregistro {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .navbarmenu {
+    width: 100%;
+  }
 }
