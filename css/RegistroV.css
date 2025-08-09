@@ -51,18 +51,6 @@
   width: 100%;
 }
 
-#placaautomovel {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-#placaautomovel.visible {
-  opacity: 1;
-  max-height: 100px; /* Ajuste conforme necessário */
-}
-
 .botaoradio {
   margin-top: 5vh;
   border: 3px solid var(--var-azulescuroprofundo);
@@ -219,6 +207,19 @@
 .tempoinputs {
   display: flex;
   justify-content: space-evenly;
+}
+
+.placa {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease; /* transição suave */
+}
+
+.placavisible {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100px;
 }
 
 @media (width <= 992px) {

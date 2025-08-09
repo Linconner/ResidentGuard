@@ -194,61 +194,61 @@
             <fieldset class="cadastroautomovel">
               <legend>Meio de transporte</legend>
 
-              <div class="input-position">
-                <div class="cadastroautomovelradiobutton" tabindex="9">
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="carro"
-                      name="transporte"
-                      value="carro"
-                      tabindex="9"
-                    />
-                    <label for="carro">Carro</label>
-                  </div>
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="moto"
-                      name="transporte"
-                      value="moto"
-                      tabindex="10"
-                    />
-                    <label for="moto">Moto</label>
-                  </div>
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="acesso-comum"
-                      name="transporte"
-                      value="acesso-comum"
-                      checked
-                      tabindex="11"
-                    />
-                    <label for="acesso-comum">Acesso Comum</label>
-                  </div>
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="bicicleta"
-                      name="transporte"
-                      value="bicicleta"
-                      tabindex="12"
-                    />
-                    <label for="bicicleta">Bicicleta</label>
-                  </div>
-                </div>
-
-                <div class="placaautomovel" id="placaautomovel">
-                  <label for="placa" id="labelplaca">Placa do automovel</label>
+              <div class="cadastroautomovelradiobutton" tabindex="9">
+                <div class="radio-item">
                   <input
-                    type="text"
-                    id="placa"
-                    name="placa"
-                    placeholder="Insira aqui"
-                    tabindex="13"
+                    type="radio"
+                    id="carro"
+                    name="transporte"
+                    value="carro"
+                    tabindex="9"
                   />
+                  <label for="carro">Carro</label>
                 </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="moto"
+                    name="transporte"
+                    value="moto"
+                    tabindex="10"
+                  />
+                  <label for="moto">Moto</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="acessocomum"
+                    name="transporte"
+                    value="acessocomum"
+                    checked
+                    tabindex="11"
+                  />
+                  <label for="acessocomum">Acesso Comum</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="bicicleta"
+                    name="transporte"
+                    value="bicicleta"
+                    tabindex="12"
+                  />
+                  <label for="bicicleta">Bicicleta</label>
+                </div>
+              </div>
+
+              <div class="placa" id="placa">
+                <label for="placa-input" id="labelplaca"
+                  >Placa do automóvel</label
+                >
+                <input
+                  type="text"
+                  id="placa-input"
+                  name="placa"
+                  placeholder="Insira aqui"
+                  tabindex="13"
+                />
               </div>
             </fieldset>
           </div>
@@ -286,5 +286,6 @@
 
     <div class="blurOverlay" id="blurOverlay2"></div>
     <script src="/js/Base.js"></script>
+    <script src="/js/RegistroV.js"></script>
   </body>
 </html>
