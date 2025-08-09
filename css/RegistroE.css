@@ -54,30 +54,6 @@
   gap: 0.5rem;
 }
 
-#outraopcao {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-#outraopcao.visivel {
-  opacity: 1;
-  max-height: 25vh;
-}
-
-#outroopcao {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-#outroopcao.visivel {
-  opacity: 1;
-  max-height: 25vh;
-}
-
 /* RIGHT 2nd */
 
 .registrotipoaluguel {
@@ -85,9 +61,21 @@
 }
 
 .registrotipoaluguel .ajeitador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.registrotipoaluguel .ajeitador > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
 }
 
 /* rdbtn */
@@ -99,16 +87,6 @@
   align-items: center;
   height: auto;
   width: 100%;
-}
-
-.setautomovel {
-  width: 100%;
-  height: auto;
-}
-
-.cadastroautomovel {
-  width: 100%;
-  height: auto;
 }
 
 .radio-group {
@@ -199,6 +177,20 @@
   gap: 0.5rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+#outraopcao,
+#outroopcao {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+#outraopcao.visivel,
+#outroopcao.visivel {
+  opacity: 1;
+  max-height: 25vh; /* pode ajustar conforme o tamanho desejado */
 }
 
 @media (width <= 768px) {

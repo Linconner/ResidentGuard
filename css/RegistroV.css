@@ -45,8 +45,10 @@
 }
 
 .input-position {
-  display: grid;
-  gap: 0.1rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1.3rem;
+  width: 100%;
 }
 
 #placaautomovel {
