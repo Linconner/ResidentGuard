@@ -29,7 +29,6 @@
   <body>
     <header class="topico">
       <span>REGISTRO DE ENCOMENDAS</span>
-
       <svg
         id="botaoicone"
         viewBox="0 0 24 24"
@@ -52,22 +51,18 @@
             <i class="fi fi-sr-user-pen"></i>
             <h3 class="itenvey">Registro Visitantes</h3>
           </a>
-
           <a href="RegistroE.html" class="nav-item" id="eventos">
             <i class="fi fi-sr-calendar-star"></i>
             <h3 class="itenvey">Registro Eventos</h3>
           </a>
-
           <a href="RegistroEN.html" class="nav-item" id="encomendas">
             <i class="fi fi-sr-gifts"></i>
             <h3 class="itenvey">Registro Encomendas</h3>
           </a>
-
           <a href="RegistroM.html" class="nav-item" id="moradores">
             <i class="fi fi-sr-users-alt"></i>
             <h3 class="itenvey">Moradores</h3>
           </a>
-
           <a href="Consulta.html" class="nav-item" id="consulta">
             <i class="fi fi-sr-search-alt"></i>
             <h3 class="itenvey">Consulta</h3>
@@ -78,12 +73,12 @@
 
     <div class="blurOverlay" id="blurOverlay"></div>
 
-    <form id="registroForm" name="registroForm">
-      <div class="container1">
-        <div class="center">
+    <div class="container1">
+      <div class="center">
+        <form id="registroForm" name="registroForm">
+          <!-- Informações do destinatário -->
           <fieldset class="registroDestinatario">
             <legend>Informações do destinatário</legend>
-
             <label for="nomeDestinatario">Nome do destinatário</label>
             <input
               type="text"
@@ -106,7 +101,6 @@
                   required
                 />
               </div>
-
               <div class="campos">
                 <label for="blocoDestinatario">Bloco</label>
                 <input
@@ -120,9 +114,9 @@
             </div>
           </fieldset>
 
+          <!-- Informações da encomenda -->
           <fieldset class="registroInformacoes">
             <legend>Informações da Encomenda</legend>
-
             <div class="tipoEncomenda">
               <div class="camposRadio">
                 <input
@@ -135,7 +129,6 @@
                 />
                 <label for="tipoEncomendaAlimento">Alimento</label>
               </div>
-
               <div class="camposRadio">
                 <input
                   type="radio"
@@ -146,7 +139,6 @@
                 />
                 <label for="tipoEncomendaPacote">Pacote</label>
               </div>
-
               <div class="camposRadio">
                 <input
                   type="radio"
@@ -157,7 +149,6 @@
                 />
                 <label for="tipoEncomendaFarmacia">Farmácia</label>
               </div>
-
               <div class="camposRadio">
                 <input
                   type="radio"
@@ -182,44 +173,44 @@
                   autocomplete="off"
                 />
               </div>
-
               <div class="campo">
                 <label for="data">Data de recebimento</label>
                 <input type="date" name="data" id="data" required />
               </div>
             </div>
           </fieldset>
-        </div>
-        <fieldset class="informacoesEntregador">
-          <legend>Informações do Entregador</legend>
 
-          <div class="nomeEntregador">
-            <label for="nomeEntregador">Nome do entregador</label>
-            <input
-              id="nomeEntregador"
-              name="nomeEntregador"
-              type="text"
-              placeholder="Ex: Motoboy, entregador da Amazon"
-              required
-              autocomplete="off"
-            />
-          </div>
+          <!-- Informações do entregador -->
+          <fieldset class="informacoesEntregador">
+            <legend>Informações do Entregador</legend>
+            <div class="nomeEntregador">
+              <label for="nomeEntregador">Nome do entregador</label>
+              <input
+                id="nomeEntregador"
+                name="nomeEntregador"
+                type="text"
+                placeholder="Ex: Motoboy, entregador da Amazon"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="empresa">
+              <label for="empresa">Empresa (opcional)</label>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                placeholder="Ex: iFood, Shopee, Correios, etc"
+                autocomplete="off"
+              />
+            </div>
+          </fieldset>
 
-          <div class="empresa">
-            <label for="empresa">Empresa (opcional)</label>
-            <input
-              type="text"
-              id="empresa"
-              name="empresa"
-              placeholder="Ex: iFood, Shopee, Correios, etc"
-              autocomplete="off"
-            />
-          </div>
-        </fieldset>
-
-        <!-- Botão de registro removido conforme solicitado -->
+          <!-- Botão de envio -->
+          <button type="submit">Registrar Encomenda</button>
+        </form>
       </div>
-    </form>
+    </div>
 
     <!-- Scripts -->
     <script src="/js/RegistroEN.js"></script>

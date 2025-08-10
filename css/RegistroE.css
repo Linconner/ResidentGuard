@@ -25,11 +25,20 @@
 .input-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 100%;
+  gap: 2rem;
 }
 .cadastrodados {
   flex: 1 1 auto;
+}
+
+.dadosAluguel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
 }
 
 .cadastromoradia {
@@ -77,13 +86,6 @@
   padding: 1rem;
 }
 
-.radio-group {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  margin: 15px 0;
-}
-
 .radio-item {
   display: flex;
   align-items: center;
@@ -91,16 +93,16 @@
   gap: 10px;
   margin-bottom: 0;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   padding: 8px 12px;
-  border-radius: var(--border-radius);
+  border-radius: 0.6rem;
 }
 
 .radio-item:hover {
   background-color: var(--var-textocor);
 }
 
-.radio-item input[type="radio"] {
+input[type="radio"] {
   width: 18px;
   height: 18px;
   accent-color: var(--var-azulescuroprofundo);
@@ -169,6 +171,7 @@
 
 #outraopcao,
 #outroopcao {
+  padding: 0;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -177,6 +180,7 @@
 
 #outraopcao.visivel,
 #outroopcao.visivel {
+  padding: 1rem;
   opacity: 1;
   max-height: 25vh; /* pode ajustar conforme o tamanho desejado */
 }
