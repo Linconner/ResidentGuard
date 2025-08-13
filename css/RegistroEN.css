@@ -9,7 +9,7 @@
   --var-darkgray: #9ca3af;
   --var-dark: #212529;
   --var-fonttop: "League Spartan", sans-serif;
-  --var-fontlabel: "Inter", sans serif;
+
   --transition: all 0.3s ease;
   --border-radius: 0.6rem;
   --fieldset-radius: 1rem;
@@ -51,7 +51,7 @@ body {
   transform: translate(-50%, -50%);
 
   /* largura e altura */
-  height: 85vh;
+  height: 75vh;
   min-height: 0;
   width: 60%;
   max-width: 1200px;
@@ -269,11 +269,31 @@ legend {
   font-size: 1.3rem;
 }
 
-
-.registroDestinatario {
-  width: 100%;
+#registroForm {
   height: 100%;
 }
+
+.topFIeld {
+  display: flex;
+  height: 60%;
+  width: 100%;
+  gap: 1rem;
+}
+
+.bottomField{
+  height: 40%;
+}
+
+.field-info-encomenda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 3rem;
+}
+
+
 
 .campoDestinatario {
   width: 100%;
@@ -287,8 +307,82 @@ legend {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.campoDestinatario input {
+  width: 75% !important;
+}
+
+.infosDest {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.descricaoEncomenda {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.descricaoEncomenda .campo {
+
+  width: 100%;
+  height: auto;
+  display: flex;
   flex-flow: column wrap;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.descricaoEncomenda .campo input {
+  width: 100%;
+}
+
+.field-info-entregador {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 3rem;
+}
+
+.registroDestinatario {
+  width: 50%;
+  height: 100%;
+}
+
+
+.InformacoesEntregador {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.informacoesdoEntregador {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field-info-entregador {
+  height: 100%;
+  width: 100%;
 }
 
 input[type="text"],
@@ -349,24 +443,15 @@ input[type="time"]:focus {
   gap: 0.5rem;
 }
 
-.registroInformacoes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
 
-}
 
 
 
 
 .tipoEncomenda {
-  display: flex;
-
+ display: flex;
  height: auto;
  width: auto;
-  padding: 1rem;
-  flex-flow: row wrap;
 }
 
 .camposRadio {
@@ -429,59 +514,9 @@ input[type="radio"] {
   background-color: var(--var-blue);
 }
 
-/* Estilos para telas menores (tablets) */
-@media (width <= 992px) {
-  .container1 {
-    flex-direction: column;
-  }
+@media (max-width:1071px) {
 
-  .left,
-  .right {
-    width: 100%;
-  }
-
-  .blocoapartamento {
-    flex-direction: column;
-  }
-
-  .blocoapartamento .ajeitador {
-    width: 100%;
-  }
-
-  .tempoinputs {
-    flex-direction: column;
-  }
-
-  .tempoinputs .input-group {
-    width: 100%;
-  }
-}
-
-/* Estilos para telas muito pequenas (celulares) */
-@media (width <= 576px) {
-  .input-position {
-    padding: 10px;
-  }
-
-  fieldset {
-    margin: 10px 0;
-    padding: 10px;
-  }
-
-  .cadastroautomovelradiobutton {
-    flex-wrap: wrap;
-  }
-
-  .radio-item {
-    min-width: 50%;
-  }
-
-  .botaoregistro {
-    width: 100%;
-    padding: 12px;
-  }
-
-  .navbarmenu {
-    width: 100%;
+  legend {
+    font-size: 0.9rem;
   }
 }
