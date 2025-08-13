@@ -1,0 +1,1 @@
+Mudanças feitas em todas as telas de registro, porém ainda sim pendem mudanças na tela de consulta para melhor organização de elementos e também visando uam tela harmonica. Farei durante essa semana essas mudanças.
