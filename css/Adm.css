@@ -1,0 +1,22 @@
+:root {
+  --var-azulbb: #cae9ff;
+  --var-azulescuroprofundo: #184965;
+  --var-azulclarogray: #5fa8d3;
+  --var-azulescurosuavehover: #468faf;
+  --var-textocor: #184965;
+  --var-azulclaroesverdeado: #bee9eb;
+  --var-darkgray: #9ca3af;
+  --var-dark: #212529;
+  --var-fonttop: "League Spartan", sans-serif;
+  --var-fontlabel: "Inter", sans serif;
+  --transition: all 0.3s ease;
+  --border-radius: 3rem;
+  --fieldset-radius: 1rem;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  background-color: #396481;
+  border-radius: 3rem;
+}
