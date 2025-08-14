@@ -14,12 +14,16 @@
 
 .left {
   border-radius: 3vh 0 0 3vh;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .right {
   justify-content: space-between;
   border-radius: 0 3vh 3vh 0;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .blocoapartamento {
@@ -41,7 +45,9 @@
   cursor: pointer;
   transition: var(--transition);
   border-radius: var(--border-radius);
-  width: fit-content;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
 }
 
 .checkbox-item:hover {
@@ -70,32 +76,47 @@
 }
 
 .registromoradorprincipal {
-  height: auto;
+  height: 100%;
+  min-height: 100%;
 }
 
 .registromoradorprincipal .input-position {
   display: flex;
   flex-direction: column;
-  gap: 0;
-}
-
-..registromoradorprincipal .ajeitador {
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .containeradicional {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   overflow: hidden;
   height: 0;
+  visibility: hidden;
   opacity: 0;
   transition: height 0.4s ease, opacity 0.4s ease;
 }
 
-.containeradicional.ativo {
-  height: 10vh;
-  opacity: 1;
+.containeradicional .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.inner {
-  padding-bottom: 5vh;
+.containeradicional input,
+.containeradicional label {
+  max-width: 100%;
+  word-break: break-word; /* quebra texto longo */
+}
+
+.containeradicional.ativo {
+  max-height: 200px; /* altura máxima controlada */
+  overflow-y: auto; /* scrolla se o conteúdo for maior */
+  opacity: 1;
+  visibility: visible;
+  height: auto;
 }
 
 .radio-item {
@@ -206,9 +227,6 @@
   padding-bottom: 0.2rem;
 }
 
-.input-group .ajeitador {
-}
-
 #tempodepermanenciadiv {
   overflow: hidden;
   height: 0;
@@ -221,26 +239,20 @@
   height: auto;
 }
 
-@media (width <= 768px) {
-  .body {
-    overflow: auto;
+@media (max-width: 1238px) {
+  .registromoradorprincipal {
+    max-height: 500px; /* limite de altura visível */
+    overflow-y: auto; /* cria a rolagem vertical */
   }
 
-  .blocoapartamento {
-    flex-direction: column;
+  .containeradicional.ativo {
+    max-height: 150px; /* controla até onde o extra cresce */
+    overflow-y: auto; /* rola dentro dele */
+    height: auto; /* deixa altura automática até o limite */
   }
 
-  .left,
-  .right {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  .left {
-    border-radius: 3vh 3vh 0 0;
-  }
-
-  .right {
-    border-radius: 0 0 3vh 3vh;
+  .containeradicional .inner {
+    flex-wrap: wrap; /* quebra o conteúdo se precisar */
+    align-items: flex-start; /* evita centralização que aumenta altura */
   }
 }

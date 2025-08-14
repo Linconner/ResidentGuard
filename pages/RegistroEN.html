@@ -81,7 +81,7 @@
             <fieldset class="registroDestinatario">
               <legend>Informações do destinatário</legend>
               <div class="destinatarioInfos">
-                <div class="infosDest">
+                
                   <div class="campoDestinatario">
                     <label for="nomeDestinatario">Nome do destinatário</label>
                     <input
@@ -118,71 +118,82 @@
                 </div>
                
             
-              </div>
+              
             </fieldset>
             <!-- Informações da encomenda -->
             <fieldset class="field-info-encomenda">
               <legend>Informações da Encomenda</legend>
             
               <div class="descricaoEncomenda">
-                <div class="campo">
-                  <label for="descricao">Descrição da encomenda</label>
-                  <input
-                    type="text"
-                    id="descricao"
-                    name="descricao"
-                    placeholder="Descrição da encomenda"
-                    required
-                    autocomplete="off"
-                  />
-                </div>
-                <div class="campo">
-                  <label for="data">Data de recebimento</label>
-                  <input type="date" name="data" id="data" required />
-                </div>
-              </div>
+                
+                  <div class="inputs-top-juntos">
+                    <div class="inputs-top-couple">
+                      <label for="descricao">Descrição da encomenda</label>
+                      <input
+                        type="text"
+                        id="descricao"
+                        name="descricao"
+                        placeholder="Descrição da encomenda"
+                        required
+                        autocomplete="off"
+                      />
+                    </div>
+                                    
+                                    <!-- segundo input amo -->
+                    <div class="inputs-top-couple">
+                      <label for="data">Data de recebimento</label>
+                      <input
+                      type="date"
+                      name="data"
+                      id="data"
+                      required />
+                    </div>
+                  </div>
+              
             
-              <div class="tipoEncomenda">
-                <div class="camposRadio">
-                  <input
-                    type="radio"
-                    id="tipoEncomendaAlimento"
-                    value="alimento"
-                    title="alimento"
-                    name="tipoEncomenda"
-                    required
-                  />
-                  <label for="tipoEncomendaAlimento">Alimento</label>
-                </div>
-                <div class="camposRadio">
-                  <input
-                    type="radio"
-                    id="tipoEncomendaPacote"
-                    value="pacote"
-                    title="pacote"
-                    name="tipoEncomenda"
-                  />
-                  <label for="tipoEncomendaPacote">Pacote</label>
-                </div>
-                <div class="camposRadio">
-                  <input
-                    type="radio"
-                    id="tipoEncomendaFarmacia"
-                    value="farmacia"
-                    title="farmacia"
-                    name="tipoEncomenda"
-                  />
-                  <label for="tipoEncomendaFarmacia">Farmácia</label>
-                </div>
-                <div class="camposRadio">
-                  <input
-                    type="radio"
-                    id="tipoEncomendaOutros"
-                    value="outros"
-                    title="outros"
-                    name="tipoEncomenda"
-                  />
-                  <label for="tipoEncomendaOutros">Outros</label>
+              
+                <div class="radio-top-juntos">
+                  <div class="camposRadio">
+                    <input
+                      type="radio"
+                      id="tipoEncomendaAlimento"
+                      value="alimento"
+                      title="alimento"
+                      name="tipoEncomenda"
+                      required
+                    />
+                    <label for="tipoEncomendaAlimento">Alimento</label>
+                  </div>
+                  <div class="camposRadio">
+                    <input
+                      type="radio"
+                      id="tipoEncomendaPacote"
+                      value="pacote"
+                      title="pacote"
+                      name="tipoEncomenda"
+                    />
+                    <label for="tipoEncomendaPacote">Pacote</label>
+                  </div>
+                  <div class="camposRadio">
+                    <input
+                      type="radio"
+                      id="tipoEncomendaFarmacia"
+                      value="farmacia"
+                      title="farmacia"
+                      name="tipoEncomenda"
+                    />
+                    <label for="tipoEncomendaFarmacia">Farmácia</label>
+                  </div>
+                  <div class="camposRadio">
+                    <input
+                      type="radio"
+                      id="tipoEncomendaOutros"
+                      value="outros"
+                      title="outros"
+                      name="tipoEncomenda"
+                    />
+                    <label for="tipoEncomendaOutros">Outros</label>
+                  </div>
                 </div>
               </div>
 
