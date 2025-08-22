@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const areaexterna = document.getElementById("area-externa");
   const comercioitinerante = document.getElementById("comercio-itinerante");
   const outroaluguel = document.getElementById("outro-radio");
+  const Moradia = document.querySelector(".cadastromoradia");
 
   // Esconde os campos inicialmente
   outroInputDiv.classList.remove("visivel");
@@ -32,13 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
       if (outroaluguel.checked) {
         outroInputDiv.classList.add("visivel");
         outraSelectDiv.classList.remove("visivel");
+        Moradia.classList.remove("cadastromoradiainvisivel");
       } else if (areaexterna.checked) {
         outraSelectDiv.classList.add("visivel");
         outroInputDiv.classList.remove("visivel");
-      } else {
-        // caso seja "comercio-itinerante" ou qualquer outro, esconde ambos
+        Moradia.classList.remove("cadastromoradiainvisivel");
+      } else if (comercioitinerante.checked) {
+        Moradia.classList.add("cadastromoradiainvisivel");
         outraSelectDiv.classList.remove("visivel");
         outroInputDiv.classList.remove("visivel");
+      } else {
+        // Caso nenhum esteja selecionado
+        outraSelectDiv.classList.remove("visivel");
+        outroInputDiv.classList.remove("visivel");
+        Moradia.classList.remove("cadastromoradiainvisivel");
       }
     });
   });

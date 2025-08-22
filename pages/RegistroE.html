@@ -84,7 +84,65 @@
       <form id="formRegistro" action="#" method="POST">
         <!-- Adicionei o formulário que estava faltando -->
         <div class="left">
-          <fieldset class="cadastrodados">
+          <fieldset class="tipo-evento">
+            <legend>Tipo do evento</legend>
+            <div class="ajeitador">
+              <div class="radioregistroAluguel">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="area-externa"
+                    name="tipoAluguel"
+                    value="area-externa"
+                    required
+                  />
+                  <label for="area-externa">Área externa</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="comercio-itinerante"
+                    name="tipoAluguel"
+                    value="comercio-itinerante"
+                  />
+                  <label for="comercio-itinerante">Comércio Itinerante</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="outro-radio"
+                    name="tipoAluguel"
+                    value="outro"
+                  />
+                  <label for="outro-radio">Outro</label>
+                </div>
+              </div>
+              <div class="inputregistroAluguel">
+                <div class="outroopcao" id="outroopcao">
+                  <input
+                    type="text"
+                    id="outro"
+                    name="outro"
+                    placeholder="Especifique outro aluguel"
+                  />
+                </div>
+                <div class="outraopcao" id="outraopcao">
+                  <select
+                    class="select"
+                    title="Selecione uma opção"
+                    name="outraopcao"
+                  >
+                    <option value="">Selecione uma opção</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="registrotipoaluguel">
             <legend>Dados do locatário</legend>
 
             <div class="input-group">
@@ -111,7 +169,9 @@
               </div>
             </div>
           </fieldset>
+        </div>
 
+        <div class="right">
           <fieldset class="cadastromoradia">
             <div class="ajeitador">
               <label for="bloco">Bloco</label>
@@ -132,94 +192,6 @@
                 placeholder="Digite o número"
                 required
               />
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="right">
-          <fieldset class="registroaluguel">
-            <legend>Dados do aluguel</legend>
-
-            <div class="dadosAluguel">
-              <div class="ajeitador">
-                <label for="opcoes">Escolha o local</label>
-                <select id="opcoes" name="local" required>
-                  <option value="">Selecione...</option>
-                  <option value="1">Salão de festas</option>
-                  <option value="2">Quadra poliesportiva</option>
-                  <option value="3">Churrasqueira</option>
-                </select>
-              </div>
-              <div class="ajeitador">
-                <label for="payment">Modo de pagamento</label>
-                <select id="payment" name="pagamento" required>
-                  <option value="">Selecione...</option>
-                  <option value="1">PIX</option>
-                  <option value="2">Dinheiro</option>
-                  <option value="3">Cartão</option>
-                </select>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="registrotipoaluguel">
-            <div class="ajeitador">
-              <div class="radioregistroAluguel">
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="area-externa"
-                    name="tipoAluguel"
-                    value="area-externa"
-                    required
-                  />
-                  <label for="area-externa">Área externa</label>
-                </div>
-
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="comercio-itinerante"
-                    name="tipoAluguel"
-                    value="comercio-itinerante"
-                  />
-                  <label for="comercio-itinerante">Comércio Itinerante</label>
-                </div>
-
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="outro-radio"
-                    name="tipoAluguel"
-                    value="outro"
-                  />
-                  <label for="outro-radio">Outro</label>
-                </div>
-              </div>
-
-              <div class="inputregistroAluguel">
-                <div class="outroopcao" id="outroopcao">
-                  <input
-                    type="text"
-                    id="outro"
-                    name="outro"
-                    placeholder="Especifique outro aluguel"
-                  />
-                </div>
-
-                <div class="outraopcao" id="outraopcao">
-                  <select
-                    class="select"
-                    title="Selecione uma opção"
-                    name="outraopcao"
-                  >
-                    <option value="">Selecione uma opção</option>
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                  </select>
-                </div>
-              </div>
             </div>
           </fieldset>
 
@@ -247,6 +219,32 @@
               </div>
             </div>
           </fieldset>
+
+          <fieldset class="registroaluguel">
+            <legend>Dados do aluguel</legend>
+
+            <div class="dadosAluguel">
+              <div class="ajeitador">
+                <label for="opcoes">Escolha o local</label>
+                <select id="opcoes" name="local" required>
+                  <option value="">Selecione...</option>
+                  <option value="1">Salão de festas</option>
+                  <option value="2">Quadra poliesportiva</option>
+                  <option value="3">Churrasqueira</option>
+                </select>
+              </div>
+              <div class="ajeitador">
+                <label for="payment">Modo de pagamento</label>
+                <select id="payment" name="pagamento" required>
+                  <option value="">Selecione...</option>
+                  <option value="1">PIX</option>
+                  <option value="2">Dinheiro</option>
+                  <option value="3">Cartão</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
           <!-- Botão de registro removido conforme solicitado -->
         </div>
       </form>

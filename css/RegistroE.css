@@ -10,6 +10,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: center;
 }
 
 .left {
@@ -29,9 +30,6 @@
   height: 100%;
   gap: 2rem;
 }
-.cadastrodados {
-  flex: 1 1 auto;
-}
 
 .dadosAluguel {
   width: 100%;
@@ -46,22 +44,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s ease;
+}
+
+.cadastromoradiainvisivel {
+  max-height: 0;
+  max-height: 0;
+  opacity: 0;
+}
+.cadastromoradiainvisivel > * {
+  height: 0;
+  opacity: 0;
 }
 
 /* RIGHT */
-.registroaluguel {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  height: auto;
-  flex: 1 1 auto;
-}
-
-.cadastrodados .ajeitador {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
 /* RIGHT 2nd */
 
@@ -84,6 +81,7 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .radio-item {
@@ -203,10 +201,6 @@ input[type="radio"] {
 
   .input-group {
     height: auto !important;
-  }
-
-  .cadastrodados .ajeitador {
-    gap: 0.25rem !important;
   }
 
   .blocoapartamento {
