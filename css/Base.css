@@ -232,6 +232,7 @@ input[type="date"],
 input[type="tel"],
 input[type="datetime-local"],
 input[type="number"],
+input[type="month"],
 select {
   width: 100%;
   padding: 0.5rem;

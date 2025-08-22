@@ -11,3 +11,5 @@ btnlimpartxt.addEventListener("click", () => {
 btnlimparfiltro.addEventListener("click", () => {
   selectsearch.value = "";
 });
+
+
