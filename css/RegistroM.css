@@ -34,50 +34,8 @@
   box-sizing: border-box;
 }
 
-/* checkbox */
-
-.checkbox-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.3rem; /* espaço entre o checkbox e o texto */
-  padding: 0.5vh 0.4vh;
-  cursor: pointer;
-  transition: var(--transition);
-  border-radius: var(--border-radius);
-  width: auto;
-  height: auto;
-  padding: 0.5rem;
-}
-
-.checkbox-item:hover {
-  background-color: var(--var-textocor);
-}
-
-.checkbox-item input[type="checkbox"] {
-  width: auto;
-  height: auto;
-  accent-color: var(--var-azulescuroprofundo);
-  cursor: pointer;
-}
-
-.checkbox-item label {
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-
-.checkbox-group .ajeitadorcheckbox {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-}
-
 .registromoradorprincipal {
-  height: 100%;
-  min-height: 100%;
+  flex: 1 1 auto;
 }
 
 .registromoradorprincipal .input-position {
@@ -237,6 +195,145 @@
 #tempodepermanenciadiv.ativaa {
   opacity: 1;
   height: auto;
+}
+
+.add-automovel {
+  background-color: #396481;
+  border: 3px solid #184965;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  height: auto;
+}
+.add-automovel:hover {
+  background-color: #184965;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+  transform: scale(1.01);
+}
+
+.add-automovel:active {
+  background-color: #396481;
+}
+
+/*automovel-hover*/
+.container1 {
+  position: relative; /* garante que o filho absoluto use ela como referência */
+}
+
+.automovel-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #396481;
+  border: 1px solid #184965;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+}
+
+.automovel-hover fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#botao-placa {
+  background-color: #396481;
+  border: 3px solid #184965;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+#botao-placa:hover {
+  background-color: #184965;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+  transform: scale(1.01);
+}
+
+.checkbox-reunidos {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.input-placa {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+/*botao*/
+.voltar-automovel-hover {
+  background-color: #a11111;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.voltar-div-btn {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.voltar-automovel-hover:hover {
+  transform: scale(1.05);
+}
+
+.div-check-automovel {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.checkBoxautomovel {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.div-check-automovel label {
+  font-size: 0.9375rem !important;
+}
+
+.div-check-automovel:hover {
+  background-color: #184965;
+  transition: var(--transition);
 }
 
 @media (max-width: 1238px) {

@@ -85,6 +85,70 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
+      <div class="automovel-hover">
+        <div class="voltar-div-btn">
+          <button class="voltar-automovel-hover">
+            <img src="/images/x.svg" alt="voltar" />
+          </button>
+        </div>
+        <fieldset>
+          <legend>Registro do Automóvel</legend>
+          <div class="checkbox-reunidos">
+            <div class="div-check-automovel">
+              <input
+                type="checkbox"
+                name="automovel"
+                class="checkBoxautomovel"
+                title="Checkbox-automovel"
+              />
+              <label for="automovel">Carro</label>
+            </div>
+            <div class="div-check-automovel">
+              <input
+                type="checkbox"
+                name="automovel"
+                class="checkBoxautomovel"
+                title="Checkbox-automovel"
+              />
+              <label for="automovel">Moto</label>
+            </div>
+            <div class="div-check-automovel">
+              <input
+                type="checkbox"
+                name="automovel"
+                class="checkBoxautomovel"
+                title="Checkbox-automovel"
+              />
+              <label for="automovel">Van</label>
+            </div>
+            <div class="div-check-automovel">
+              <input
+                type="checkbox"
+                name="automovel"
+                class="checkBoxautomovel"
+                title="Checkbox-automovel"
+              />
+              <label for="automovel">Outro</label>
+            </div>
+          </div>
+          <div class="input-placa">
+            <label for="input-placa-automovel"
+              >Digite a placa do automóvel</label
+            >
+            <input
+              type="text"
+              name="input-placa-automovel"
+              id="input-placa-automovel"
+              maxlength="7"
+              placeholder="Digite aqui a placa do automóvel"
+            />
+          </div>
+          <div class="botao-placa-automovel">
+            <button id="botao-placa">Adicionar mais um XXXX</button>
+          </div>
+        </fieldset>
+      </div>
+
       <form id="formRegistro" action="#" method="POST">
         <div class="left">
           <fieldset
@@ -136,7 +200,7 @@
                 />
               </div>
 
-              <div class="checkbox-group" tabindex="0">
+              <!-- <div class="checkbox-group" tabindex="0">
                 <label>Possui automóvel</label>
                 <div class="ajeitadorcheckbox">
                   <div class="checkbox-item">
@@ -209,7 +273,23 @@
                     />
                   </div>
                 </div>
-              </div>
+
+                <div class="placa-automovel">
+                  <label>Placa do automóvel</label>
+                  <input
+                    type="text"
+                    placeholder="Coloque a placa do automóvel aqui"
+                  />
+                </div>
+              </div> -->
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Registrar automóvel</legend>
+            <div class="adicionar-placa">
+              <button class="add-automovel" name="add-automovel-btn">
+                Adicionar um automóvel a este morador
+              </button>
             </div>
           </fieldset>
         </div>

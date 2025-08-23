@@ -69,3 +69,12 @@ cpfInput.addEventListener("input", function () {
   this.value = valor;
 });
 cpfInput.setAttribute("maxlength", 14);
+
+const divRadio = document.querySelector(".div-check-automovel");
+
+divs.forEach((div) => {
+  div.addEventListener("click", () => {
+    const checkbox = div.querySelector(".checkBoxautomovel"); // pega o checkbox dentro da div clicada
+    checkbox.checked = !checkbox.checked; // alterna entre marcado/desmarcado
+  });
+});

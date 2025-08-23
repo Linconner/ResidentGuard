@@ -1,3 +1,9 @@
+.container1 {
+  height: 75vh !important;
+  min-height: 0;
+  width: 60% !important;
+}
+
 .left,
 .right {
   display: flex;
@@ -10,7 +16,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
   flex-direction: column;
-  justify-content: center;
+
 }
 
 .left {
@@ -45,22 +51,28 @@
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  transition: opacity 0.5s, max-height 0.5s ease;
+   
 }
 
 .cadastromoradiainvisivel {
   max-height: 0;
   max-height: 0;
   opacity: 0;
+  display: none;
+ 
 }
 .cadastromoradiainvisivel > * {
   height: 0;
   opacity: 0;
 }
 
-/* RIGHT */
-
-/* RIGHT 2nd */
+.tipo-evento {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* rdbtn */
 .cadastroautomovelradiobutton {
@@ -74,7 +86,11 @@
 }
 
 .registrotipoaluguel {
-  flex: 0 1 auto;
+  flex: 2 1 auto;
+}
+
+.registroaluguel {
+  flex: 1 1 auto;
 }
 
 .radioregistroAluguel {
@@ -152,6 +168,7 @@ input[type="radio"] {
 /* RIGHT 3nd */
 .registrodataehora {
   height: auto;
+  flex: 1 1 auto;
 }
 
 .registrodataehora .ajeitador {
