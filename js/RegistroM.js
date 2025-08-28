@@ -78,3 +78,23 @@ divs.forEach((div) => {
     checkbox.checked = !checkbox.checked; // alterna entre marcado/desmarcado
   });
 });
+
+//elementos novos
+
+//elementos padrões
+document.addEventListener("DOMContentLoaded", function () {
+  const botoesIds = ["carro", "moto", "bicicleta", "outros"];
+  const botoes = botoesIds.map((id) => document.getElementById(id));
+
+  botoes.forEach((botao) => {
+    if (botao) {
+      botao.addEventListener("click", function () {
+        const prefixo = botao.id;
+        if (prefixo == "btnCarro") {
+          alert("clicaste no carro");
+        }
+        console.log("Botão clicado:", prefixo);
+      });
+    }
+  });
+});
