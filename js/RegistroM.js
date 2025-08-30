@@ -1,14 +1,107 @@
-const checkboxs = document.querySelectorAll(
-  'input[type="checkbox"]:not(#naopossuo)'
-);
 const naopossuo = document.getElementById("naopossuo");
 const carro = document.getElementById("carro");
 const moto = document.getElementById("moto");
-const outro = document.getElementById("outro");
+const outro = document.getElementById("outros");
 
-const outroinput = document.getElementById("outroinput");
-const divoutroinput = document.getElementById("containeradicional");
 const inner = document.getElementById("inner");
+
+const paraDiv = document.getElementById("field-para-inputs");
+
+//-----------------------------------------------------------//
+
+outro.addEventListener("click", function () {
+  const newDiv = CreateDiv();
+  const newInput = CreateInput("Placa da Moto");
+  const newButton = CreateButton();
+
+  newButton.addEventListener("click", function () {
+    newDiv.remove();
+  });
+
+  newDiv.appendChild(newInput);
+  newDiv.appendChild(newButton);
+  paraDiv.appendChild(newDiv);
+});
+
+carro.addEventListener("click", function () {
+  const newDiv = CreateDiv();
+  const newInput = CreateInput("Placa do Carro");
+  const newButton = CreateButton();
+
+  newButton.addEventListener("click", function () {
+    newDiv.remove();
+  });
+
+  newDiv.appendChild(newInput);
+  newDiv.appendChild(newButton);
+  paraDiv.appendChild(newDiv);
+});
+
+moto.addEventListener("click", function () {
+  const newDiv = CreateDiv();
+  const newInput = CreateInput("Placa da Moto");
+  const newButton = CreateButton();
+
+  newButton.addEventListener("click", function () {
+    newDiv.remove();
+  });
+
+  newDiv.appendChild(newInput);
+  newDiv.appendChild(newButton);
+  paraDiv.appendChild(newDiv);
+});
+
+function CreateInput(placeholder) {
+  const input = document.createElement("input");
+  input.type = "text";
+  input.placeholder = placeholder;
+  input.classList.add("input-novo");
+  return input;
+}
+
+function CreateButton() {
+  const button = document.createElement("button");
+  button.type = "button";
+
+  button.classList.add("button-novo");
+
+  return button;
+}
+
+function CreateDiv() {
+  const div = document.createElement("div");
+  div.classList.add("div-para-input");
+
+  return div;
+}
+
+function CreateSubmitButton() {
+  const button = document.createElement("button");
+  button.type = "submit";
+  button.textContent = "Enviar";
+  button.classList.add("button-enviar");
+  return button;
+}
+
+//------------------------------------------------------------//
+
+const btnHover = document.getElementById("add-automovel");
+const CardHover = document.getElementById("automovel-hover");
+const closeHover = document.getElementById("voltar-automovel-hover");
+
+btnHover.addEventListener("click", function () {
+  CardHover.classList.add("automovel-hover-ativo");
+});
+
+closeHover.addEventListener("click", function () {
+  CardHover.classList.remove("automovel-hover-ativo");
+  const input = document.querySelector("input"); // pega o primeiro input, por exemplo
+  [...paraDiv.children].forEach((child) => {
+    if (child.tagName.toLowerCase() !== "legend") {
+      child.remove();
+    }
+  });
+});
 
 // Mostrar ou esconder o campo "outro" se for marcado
 checkboxs.forEach((checkbox) => {
@@ -51,50 +144,16 @@ radio2.addEventListener("change", () => {
 const cpfInput = document.getElementById("CPF");
 
 cpfInput.addEventListener("input", function () {
-  //remover letras
   let valor = this.value.replace(/\D/g, "");
 
-  //aplica a mascara
+  if (valor.length > 11) valor = valor.slice(0, 11);
 
-  // Aplica a máscara: 000.000.000-00
-  if (valor.length > 3 && valor.length <= 6) {
-    valor = valor.replace(/(\d{3})(\d+)/, "$1.$2");
-  } else if (valor.length > 6 && valor.length <= 9) {
-    valor = valor.replace(/(\d{3})(\d{3})(\d+)/, "$1.$2.$3");
-  } else if (valor.length > 9) {
-    valor = valor.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, "$1.$2.$3-$4");
-  }
+  valor = valor
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
-  // Atualiza o valor do input
   this.value = valor;
 });
-cpfInput.setAttribute("maxlength", 14);
 
-const divRadio = document.querySelector(".div-check-automovel");
-
-divs.forEach((div) => {
-  div.addEventListener("click", () => {
-    const checkbox = div.querySelector(".checkBoxautomovel"); // pega o checkbox dentro da div clicada
-    checkbox.checked = !checkbox.checked; // alterna entre marcado/desmarcado
-  });
-});
-
-//elementos novos
-
-//elementos padrões
-document.addEventListener("DOMContentLoaded", function () {
-  const botoesIds = ["carro", "moto", "bicicleta", "outros"];
-  const botoes = botoesIds.map((id) => document.getElementById(id));
-
-  botoes.forEach((botao) => {
-    if (botao) {
-      botao.addEventListener("click", function () {
-        const prefixo = botao.id;
-        if (prefixo == "btnCarro") {
-          alert("clicaste no carro");
-        }
-        console.log("Botão clicado:", prefixo);
-      });
-    }
-  });
-});
+//------------------------------------------------------------//

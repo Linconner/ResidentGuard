@@ -85,30 +85,30 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="automovel-hover">
+      <div class="automovel-hover" id="automovel-hover">
         <div class="voltar-div-btn">
-          <button class="voltar-automovel-hover">
+          <button class="voltar-automovel-hover" id="voltar-automovel-hover">
             <img src="/images/x.svg" alt="voltar" />
           </button>
         </div>
         <fieldset class="fieldset-hover">
           <legend>Escolha o automóvel</legend>
           <div class="checkbox-reunidos">
-            <div class="carro" id="btnCarro">
+            <div class="carro" id="carro">
               <span>Carro</span>
             </div>
-            <div class="moto" id="btnMoto">
+            <div class="moto" id="moto">
               <span>Moto</span>
             </div>
-            <div class="bicicleta" id="btnBicicleta">
+            <div class="bicicleta" id="bicicleta">
               <span>Bicicleta</span>
             </div>
-            <div class="outros" id="btnOutros">
+            <div class="outros" id="outros">
               <span>Outros</span>
             </div>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset id="field-para-inputs">
           <legend>Cadastre a placa</legend>
         </fieldset>
       </div>
@@ -163,101 +163,36 @@
                   tabindex="0"
                 />
               </div>
-
-              <!-- <div class="checkbox-group" tabindex="0">
-                <label>Possui automóvel</label>
-                <div class="ajeitadorcheckbox">
-                  <div class="checkbox-item">
-                    <input
-                      type="checkbox"
-                      id="carro"
-                      name="automovel[]"
-                      value="carro"
-                      tabindex="0"
-                    />
-                    <label for="carro">Carro</label>
-                  </div>
-
-                  <div class="checkbox-item">
-                    <input
-                      type="checkbox"
-                      id="moto"
-                      name="automovel[]"
-                      value="moto"
-                      tabindex="0"
-                    />
-                    <label for="moto">Moto</label>
-                  </div>
-
-                  <div class="checkbox-item">
-                    <input
-                      type="checkbox"
-                      id="bicicleta"
-                      name="automovel[]"
-                      value="bicicleta"
-                      tabindex="0"
-                    />
-                    <label for="bicicleta">Bicicleta</label>
-                  </div>
-
-                  <div class="checkbox-item">
-                    <input
-                      type="checkbox"
-                      id="naopossuo"
-                      name="automovel[]"
-                      value="naopossuo"
-                      tabindex="0"
-                    />
-                    <label for="naopossuo">Não possuo</label>
-                  </div>
-
-                  <div class="checkbox-item">
-                    <input
-                      type="checkbox"
-                      id="outro"
-                      name="automovel[]"
-                      value="outro"
-                      tabindex="0"
-                    />
-                    <label for="outro">Outro</label>
-                  </div>
-                </div>
-
-                <div class="containeradicional" id="containeradicional">
-                  <div class="inner" id="inner">
-                    <label for="outroinput" id="labeloutroinput"
-                      >Insira um automóvel válido</label
-                    >
-                    <input
-                      type="text"
-                      id="outroinput"
-                      name="outro_automovel"
-                      placeholder="Escreva aqui um automovel que não esteja acima"
-                      tabindex="0"
-                    />
-                  </div>
-                </div>
-
-                <div class="placa-automovel">
-                  <label>Placa do automóvel</label>
-                  <input
-                    type="text"
-                    placeholder="Coloque a placa do automóvel aqui"
-                  />
-                </div>
-              </div> -->
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="registrar-automovel-morador">
             <legend>Registrar automóvel</legend>
-            <div class="adicionar-placa">
+            <div class="adicionar-placa" id="adicionar-placa">
               <button
                 class="add-automovel"
                 name="add-automovel-btn"
                 type="button"
+                id="add-automovel"
               >
                 <span> Adicionar um automóvel a este morador </span>
               </button>
+            </div>
+
+            <div class="automoveis-registrados">
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
+
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
+
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
             </div>
           </fieldset>
         </div>
