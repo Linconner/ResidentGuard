@@ -1,14 +1,15 @@
 .container1 {
-  height: 75vh !important;
+  height: 85vh !important;
   min-height: 0;
-  width: 60% !important;
+  width: 65% !important;
+  min-width: 60%;
 }
 
 .left,
 .right {
   display: flex;
   padding: 1rem;
-  width: 50%;
+  width: 50% !important;
   height: 100%;
   background-color: #396481; /* cinza mais claro */
   font-size: 1.5rem;
@@ -16,7 +17,6 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
   flex-direction: column;
-
 }
 
 .left {
@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .dadosAluguel {
@@ -43,33 +43,16 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
-}
-
-.cadastromoradia {
   flex: 1 1 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
-   
-}
-
-.cadastromoradiainvisivel {
-  max-height: 0;
-  max-height: 0;
-  opacity: 0;
-  display: none;
- 
-}
-.cadastromoradiainvisivel > * {
-  height: 0;
-  opacity: 0;
 }
 
 .tipo-evento {
-  flex: 1 1 auto;
+  width: 100%;
+
+  flex: 1 2 auto;
   display: flex;
   flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
@@ -86,7 +69,7 @@
 }
 
 .registrotipoaluguel {
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 
 .registroaluguel {
@@ -95,9 +78,10 @@
 
 .radioregistroAluguel {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
+
+  gap: 0.5rem;
 }
 
 .radio-item {
@@ -186,8 +170,9 @@ input[type="radio"] {
 
 #outraopcao,
 #outroopcao {
-  padding: 0;
+  width: 0;
   opacity: 0;
+  height: 0;
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.5s ease, max-height 0.5s ease;
@@ -195,9 +180,10 @@ input[type="radio"] {
 
 #outraopcao.visivel,
 #outroopcao.visivel {
-  padding: 1rem;
+  width: 100%;
   opacity: 1;
-  max-height: 25vh; /* pode ajustar conforme o tamanho desejado */
+  height: auto;
+  max-height: 10vh; /* pode ajustar conforme o tamanho desejado */
 }
 
 @media (width <= 768px) {

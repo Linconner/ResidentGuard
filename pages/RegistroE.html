@@ -86,59 +86,57 @@
         <div class="left">
           <fieldset class="tipo-evento">
             <legend>Tipo do evento</legend>
-            <div class="ajeitador">
-              <div class="radioregistroAluguel">
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="area-externa"
-                    name="tipoAluguel"
-                    value="area-externa"
-                    required
-                  />
-                  <label for="area-externa">Área externa</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="comercio-itinerante"
-                    name="tipoAluguel"
-                    value="comercio-itinerante"
-                  />
-                  <label for="comercio-itinerante">Comércio Itinerante</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="outro-radio"
-                    name="tipoAluguel"
-                    value="outro"
-                  />
-                  <label for="outro-radio">Outro</label>
-                </div>
+
+            <div class="radioregistroAluguel">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="area-externa"
+                  name="tipoAluguel"
+                  value="area-externa"
+                  required
+                />
+                <label for="area-externa">Aluguel</label>
               </div>
-              <div class="inputregistroAluguel">
-                <div class="outroopcao" id="outroopcao">
-                  <input
-                    type="text"
-                    id="outro"
-                    name="outro"
-                    placeholder="Especifique outro aluguel"
-                  />
-                </div>
-                <div class="outraopcao" id="outraopcao">
-                  <select
-                    class="select"
-                    title="Selecione uma opção"
-                    name="outraopcao"
-                  >
-                    <option value="">Selecione uma opção</option>
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                  </select>
-                </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="comercio-itinerante"
+                  name="tipoAluguel"
+                  value="comercio-itinerante"
+                />
+                <label for="comercio-itinerante">Comércio</label>
               </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="outro-radio"
+                  name="tipoAluguel"
+                  value="outro"
+                />
+                <label for="outro-radio">Outro</label>
+              </div>
+            </div>
+
+            <div class="outroopcao" id="outroopcao">
+              <input
+                type="text"
+                id="outro"
+                name="outro"
+                placeholder="Especifique outro aluguel"
+              />
+            </div>
+            <div class="outraopcao" id="outraopcao">
+              <select
+                class="select"
+                title="Selecione uma opção"
+                name="outraopcao"
+              >
+                <option value="">Selecione uma opção</option>
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+              </select>
             </div>
           </fieldset>
 
@@ -172,31 +170,7 @@
         </div>
 
         <div class="right">
-          <fieldset class="cadastromoradia">
-            <legend>Moradia</legend>
-            <div class="ajeitador">
-              <label for="bloco">Bloco</label>
-              <input
-                type="text"
-                id="bloco"
-                name="bloco"
-                placeholder="Digite o bloco"
-                required
-              />
-            </div>
-            <div class="ajeitador">
-              <label for="apartamento">Apartamento</label>
-              <input
-                type="text"
-                id="apartamento"
-                name="apartamento"
-                placeholder="Digite o número"
-                required
-              />
-            </div>
-          </fieldset>
-
-          <fieldset id="dataehora"class="registrodataehora">
+          <fieldset id="dataehora" class="registrodataehora">
             <legend>Data e hora</legend>
 
             <div class="inputs" id="inputsdata">

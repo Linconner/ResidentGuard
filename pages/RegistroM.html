@@ -163,119 +163,18 @@
                   tabindex="0"
                 />
               </div>
-            </div>
-          </fieldset>
-          <fieldset class="registrar-automovel-morador">
-            <legend>Registrar automóvel</legend>
-            <div class="adicionar-placa" id="adicionar-placa">
-              <button
-                class="add-automovel"
-                name="add-automovel-btn"
-                type="button"
-                id="add-automovel"
-              >
-                <span> Adicionar um automóvel a este morador </span>
-              </button>
-            </div>
 
-            <div class="automoveis-registrados">
-              <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
-              </div>
-
-              <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
-              </div>
-
-              <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="right">
-          <fieldset class="registromoradiamoradores" tabindex="0">
-            <legend>Moradia</legend>
-
-            <div class="blocoapartamento">
               <div class="ajeitador">
-                <label for="bloco">Bloco</label>
+                <label for="email">Email</label>
                 <input
-                  type="text"
-                  id="bloco"
-                  name="bloco"
-                  placeholder="Digite o bloco"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="DD-XXXXX-XXXX"
                   required
-                  aria-required="true"
                   tabindex="0"
                 />
               </div>
-              <div class="ajeitador">
-                <label for="apartamento">Apartamento</label>
-                <input
-                  type="text"
-                  id="apartamento"
-                  name="apartamento"
-                  placeholder="Digite o número"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="infosadicionais" tabindex="0">
-            <legend>Informações adicionais</legend>
-            <div class="input-group">
-              <div class="ajeitador">
-                <label for="idade">Data de nascimento</label>
-                <input
-                  type="date"
-                  id="idade"
-                  name="idade"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
-              </div>
-              <div class="radio-group" tabindex="0">
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="radio1"
-                    name="proprietario"
-                    value="proprietario"
-                    tabindex="0"
-                  />
-                  <label for="radio1">Proprietário</label>
-                </div>
-
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="radio2"
-                    name="proprietario"
-                    value="inquilino"
-                    tabindex="0"
-                  />
-                  <label for="radio2">Inquilino</label>
-                </div>
-              </div>
-            </div>
-            <div class="tempodepermanenciadiv" id="tempodepermanenciadiv">
-              <label for="tempodepermanencia">Tempo de permanencia</label>
-              <input
-                type="month"
-                id="tempodepermanencia"
-                name="tempodepermanencia"
-                placeholder="Tempo de permanencia do Inquilino"
-                tabindex="0"
-              />
             </div>
           </fieldset>
 
@@ -307,6 +206,78 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="right">
+          <fieldset class="registrar-automovel-morador">
+            <legend>Registrar automóvel</legend>
+            <div class="adicionar-placa" id="adicionar-placa">
+              <button
+                class="add-automovel"
+                name="add-automovel-btn"
+                type="button"
+                id="add-automovel"
+              >
+                <span> Adicionar um automóvel a este morador </span>
+              </button>
+            </div>
+
+            <div class="automoveis-registrados">
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
+
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
+
+              <div class="div-retangulo-automovel">
+                <span> Carro 1 </span>
+                <span class="carro12">Placa - 1234ABCD</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="proprietario-inquilino">
+            <legend>Tipo do morador</legend>
+            <div class="opções-tipo-proprietario">
+              <div class="proprietario-opcao">
+                <span>Proprietário</span>
+              </div>
+              <div class="inquilino-opcao">
+                <span>Inquilino</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="infosadicionais" tabindex="0">
+            <legend>Informações adicionais</legend>
+            <div class="input-group">
+              <div class="ajeitador">
+                <label for="idade">Data de nascimento</label>
+                <input
+                  type="date"
+                  id="idade"
+                  name="idade"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
+            </div>
+            <div class="tempodepermanenciadiv" id="tempodepermanenciadiv">
+              <label for="tempodepermanencia">Tempo de permanencia</label>
+              <input
+                type="month"
+                id="tempodepermanencia"
+                name="tempodepermanencia"
+                placeholder="Tempo de permanencia do Inquilino"
+                tabindex="0"
+              />
             </div>
           </fieldset>
 

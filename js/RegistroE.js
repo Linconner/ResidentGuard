@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const areaexterna = document.getElementById("area-externa");
   const comercioitinerante = document.getElementById("comercio-itinerante");
   const outroaluguel = document.getElementById("outro-radio");
-  const Moradia = document.querySelector(".cadastromoradia");
-
 
   const inputsdata = document.getElementById("inputsdata");
   // Esconde os campos inicialmente
@@ -35,27 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
       if (outroaluguel.checked) {
         outroInputDiv.classList.add("visivel");
         outraSelectDiv.classList.remove("visivel");
-        Moradia.classList.remove("cadastromoradiainvisivel");
+
         inputsdata.style.display = "flex";
         inputsdata.style.flexDirection = "row";
       } else if (areaexterna.checked) {
         outraSelectDiv.classList.add("visivel");
         outroInputDiv.classList.remove("visivel");
-        Moradia.classList.remove("cadastromoradiainvisivel");
+
         inputsdata.style.display = "flex";
         inputsdata.style.flexDirection = "row";
       } else if (comercioitinerante.checked) {
-        Moradia.classList.add("cadastromoradiainvisivel");
         outraSelectDiv.classList.remove("visivel");
         outroInputDiv.classList.remove("visivel");
         inputsdata.style.display = "flex";
-        inputsdata.style.flexDirection = "column"; 
-
+        inputsdata.style.flexDirection = "column";
       } else {
         // Caso nenhum esteja selecionado
         outraSelectDiv.classList.remove("visivel");
         outroInputDiv.classList.remove("visivel");
-        Moradia.classList.remove("cadastromoradiainvisivel");
+
         inputsdata.style.display = "flex";
         inputsdata.style.flexDirection = "row";
       }
