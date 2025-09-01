@@ -106,25 +106,10 @@ closeHover?.addEventListener("click", function () {
 //-----------------------------------------------------------//
 // Proprietário x Inquilino
 
-const tempodepermanenciadiv = document.getElementById("tempodepermanenciadiv");
-const tempoInput = document.getElementById("tempodepermanencia");
-const radioProprietario = document.getElementById("radio1"); // Proprietário
-const radioInquilino = document.getElementById("radio2"); // Inquilino
-
-function atualizarTempoDePermanencia() {
-  const mostrar = radioInquilino && radioInquilino.checked;
-  tempodepermanenciadiv.classList.toggle("ativaa", mostrar);
-  if (tempoInput) tempoInput.required = !!mostrar;
-}
-
-[radioProprietario, radioInquilino].forEach((radio) => {
-  if (radio) {
-    radio.addEventListener("change", atualizarTempoDePermanencia);
-  }
-});
-
-// estado inicial
-atualizarTempoDePermanencia();
+const btnInquilino = document.getElementById("botao-inquilino");
+const btnProprietario = document.getElementById("botao-proprietario");
+const radiosInquilino = btnInquilino.querySelector("input[type='radio']");
+const radiosProprietario = btnProprietario.querySelector("input[type='radio']");
 
 //-----------------------------------------------------------//
 // Formatação CPF

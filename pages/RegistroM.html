@@ -175,6 +175,18 @@
                   tabindex="0"
                 />
               </div>
+
+              <div class="ajeitador">
+                <label for="idade">Data de nascimento</label>
+                <input
+                  type="date"
+                  id="idade"
+                  name="idade"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
             </div>
           </fieldset>
 
@@ -226,57 +238,54 @@
 
             <div class="automoveis-registrados">
               <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
+                <div class="image">
+                  <img src="/images/car.svg" alt="carro" />
+                  <span class="title"> Carro 1 - </span>
+                </div>
+                <span>Placa - 1234ABCD</span>
               </div>
 
               <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
+                <div class="image">
+                  <img src="/images/bike.svg" alt="bicicleta" />
+                  <span class="title"> Bicicleta 1 </span>
+                </div>
+                <span>Cor: azul</span>
               </div>
 
               <div class="div-retangulo-automovel">
-                <span> Carro 1 </span>
-                <span class="carro12">Placa - 1234ABCD</span>
+                <div class="image">
+                  <img src="/images/ellipsis.svg" alt="outros" />
+                  <span class="title"> Moto elétrica 1 </span>
+                </div>
+                <span>Placa - 4321ADBT</span>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="proprietario-inquilino">
+          <fieldset class="tipo-morador">
             <legend>Tipo do morador</legend>
-            <div class="opções-tipo-proprietario">
-              <div class="proprietario-opcao">
-                <span>Proprietário</span>
-              </div>
-              <div class="inquilino-opcao">
-                <span>Inquilino</span>
-              </div>
-            </div>
-          </fieldset>
 
-          <fieldset class="infosadicionais" tabindex="0">
-            <legend>Informações adicionais</legend>
-            <div class="input-group">
-              <div class="ajeitador">
-                <label for="idade">Data de nascimento</label>
-                <input
-                  type="date"
-                  id="idade"
-                  name="idade"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
+            <div class="proprietario-inquilino">
+              <div class="botoes-radio-tipo" id="botao-proprietario">
+                <input type="radio" id="proprietario" name="proprietario" />
+                <img src="/images/house.svg" alt="casa" />
+                <label for="proprietario">proprietario</label>
+              </div>
+              <div class="botoes-radio-tipo" id="botao-inquilino">
+                <input type="radio" id="inquilino" name="proprietario" />
+                <img src="/images/key.svg" alt="chave" />
+                <label for="inquilino">inquilino</label>
               </div>
             </div>
-            <div class="tempodepermanenciadiv" id="tempodepermanenciadiv">
-              <label for="tempodepermanencia">Tempo de permanencia</label>
+
+            <div class="input-para-contrato">
+              <label for="datacontrato">Vencimento do contrato</label>
               <input
-                type="month"
-                id="tempodepermanencia"
-                name="tempodepermanencia"
-                placeholder="Tempo de permanencia do Inquilino"
-                tabindex="0"
+                type="date"
+                placeholder="Tempo do contrato"
+                name="datacontrato"
+                required
               />
             </div>
           </fieldset>

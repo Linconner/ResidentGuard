@@ -98,7 +98,7 @@
   background-color: var(--var-textocor);
 }
 
-.radio-item input[type="radio"] {
+input[type="radio"] {
   width: 18px;
   height: 18px;
   accent-color: var(--var-azulescuroprofundo);
@@ -204,8 +204,8 @@
 }
 
 .add-automovel {
-  background-color: #396481;
-  border: 3px solid #184965;
+  background-color: #184965;
+  border: 2px solid #11334a;
   border-radius: 0.8rem;
   padding: 1rem;
   color: white;
@@ -235,7 +235,7 @@
 .automovel-hover {
   position: absolute;
   top: 125%;
-  left: 25.7%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   height: auto;
@@ -252,6 +252,10 @@
   z-index: 9999;
   box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
   transition: all 0.5s ease;
+}
+
+.automovel-hover-ativo {
+  top: 50%;
 }
 
 .historico-automoveis {
@@ -301,10 +305,6 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
-}
-
-.automovel-hover-ativo {
-  top: 26.5%;
 }
 
 .button-novo {
@@ -451,8 +451,8 @@
   width: auto;
   height: auto;
   padding: 1rem;
-  background-color: #396481;
-  border: 3px solid #184965;
+  background-color: #184965;
+  border: 2px solid #11334a;
   border-radius: 0.8rem;
 }
 
@@ -467,13 +467,6 @@
   cursor: pointer;
 }
 
-.carro,
-.moto,
-.bicicleta,
-.outros span {
-  font-size: 16px;
-  font-weight: 600;
-}
 .automoveis-registrados {
   display: flex;
   flex-direction: column;
@@ -519,11 +512,25 @@
 }
 
 .div-retangulo-automovel span {
+  height: 21.6px;
+  width: auto;
   color: white;
   font-size: 1rem;
 }
 
-.carro12 {
+.div-retangulo-automovel img {
+  width: 21.6px;
+  height: 21.6px;
+}
+
+.image {
+  height: 25.6px;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.title {
   font-weight: normal;
 }
 
@@ -532,49 +539,44 @@
   transition: all 0.3s ease;
 }
 
-.proprietario-inquilino {
+.tipo-morador {
   flex: 1 1 auto;
-}
-
-.opções-tipo-proprietario {
-  width: 100%;
-  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
 }
 
-.opções-tipo-inquilino {
+.proprietario-inquilino {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.botoes-radio-tipo {
+  background-color: #184965;
+  border: 2px solid #11334a;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
+  /*df*/
+  display: flex;
+}
+
+.botoes-radio-tipo:hover {
+  background-color: #11334a;
+  transform: scale(1.01);
+}
+
+.botoes-radio-tipo label {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.proprietario-opcao {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: #184965;
-  border-radius: 12.6px;
-  padding: 1rem;
-  color: white;
-}
-.proprietario-opcao {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: #184965;
-  border-radius: 12.6px;
-  padding: 1rem;
-  color: white;
-}
-
-.proprietario-opcao span {
-  font-size: 1rem;
+  cursor: pointer;
 }
 
 @media (max-width: 1238px) {
