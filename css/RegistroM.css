@@ -34,6 +34,8 @@
 }
 
 .registromoradorprincipal {
+  overflow: auto;
+
   flex: 1 1 auto;
 }
 
@@ -42,6 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex: 1 1 auto;
 }
 
 .registromoradorprincipal .input-position {
@@ -234,7 +237,7 @@ input[type="radio"] {
 
 .automovel-hover {
   position: absolute;
-  top: 125%;
+  top: 130%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -486,8 +489,34 @@ input[type="radio"] {
   border-radius: 8px;
 }
 
+.input-para-contrato-div {
+  height: 0;
+  position: absolute;
+  flex: 1 1 auto;
+  transition: position 0s opacity 0s ease;
+  display: none;
+}
+
+.input-para-contrato-div input,
+.input-para-contrato-div label {
+  height: 0;
+  opacity: 0;
+}
+
+.input-para-contrato-div-ativo input,
+.input-para-contrato-div-ativo label {
+  height: auto;
+  opacity: 1;
+}
+
+.input-para-contrato-div-ativo {
+  height: fit-content;
+  opacity: 1;
+  position: static;
+  display: block;
+}
 .automoveis-registrados::-webkit-scrollbar-thumb {
-  background: #396481; /* cor do "puxador" */
+  background: #11334a; /* cor do "puxador" */
   border-radius: 8px; /* borda arredondada */
 }
 
@@ -503,7 +532,8 @@ input[type="radio"] {
 .div-retangulo-automovel {
   display: flex;
   flex-direction: column;
-  background-color: #396481;
+  background-color: #184965;
+  border: #11334a 2px solid;
   border-radius: 12.6px;
   height: auto;
   width: 100%;
@@ -536,7 +566,9 @@ input[type="radio"] {
 
 .div-retangulo-automovel:hover {
   transform: scale(1.01);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .tipo-morador {
@@ -550,6 +582,7 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex: 1 1 auto;
 }
 
 .botoes-radio-tipo {

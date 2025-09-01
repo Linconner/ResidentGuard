@@ -110,6 +110,18 @@ const btnInquilino = document.getElementById("botao-inquilino");
 const btnProprietario = document.getElementById("botao-proprietario");
 const radiosInquilino = btnInquilino.querySelector("input[type='radio']");
 const radiosProprietario = btnProprietario.querySelector("input[type='radio']");
+const inputContratoinput = document.getElementById("input-para-contrato-input");
+const inputContratodiv = document.getElementById("input-para-contrato-div");
+
+btnInquilino.addEventListener("click", function () {
+  inputContratodiv.classList.add("input-para-contrato-div-ativo");
+  inputContratoinput.classList.add("input-para-contrato-input-ativo");
+});
+
+btnProprietario.addEventListener("click", function () {
+  inputContratodiv.classList.remove("input-para-contrato-div-ativo");
+  inputContratoinput.classList.remove("input-para-contrato-div-ativo");
+});
 
 //-----------------------------------------------------------//
 // Formatação CPF
