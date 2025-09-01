@@ -17,7 +17,6 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        padding: 5rem;
       }
 
       .card {
@@ -27,17 +26,46 @@
         justify-content: center;
         align-items: center;
       }
+      .card-submit {
+        border: 1px solid black;
+        width: 450px;
+        height: 350px;
+      }
     </style>
 
     <main class="card">
       <div class="card-submit">
-        <div class="card-registro"></div>
+        <div class="card-registro">
+          <div class="registro-header">
+            <img src="" alt="" />
+            <span>Lincon Iago Segato de Camargo</span> <span>></span>
+            <span>Inquilino</span>
+          </div>
+          <div class="registro-body">
+            <div class="registro-cpf">
+              <span>CPF</span>
+              <span>123.456.789-10</span>
+            </div>
+            <div class="registro-telefone">
+              <span>Número de telefone</span>
+              <span>(11) 23456-7890</span>
+            </div>
+
+            <div class="registro-email">
+              <span>Email</span>
+              <span>lincon@example.com</span>
+            </div>
+
+            <div class="registro-datanascimento">
+              <span>Data de nascimento</span>
+              <span>01/01/2000</span>
+            </div>
+          </div>
+        </div>
 
         <div class="card-submit-btn">
-          <button type="button" class="card-submit-btn-confirm">
-            Confirmar
-          </button>
-          <button type="button" class="card-submit-btn-cancel">Cancelar</button>
+          <button type="button" class="card-submit-btn-confirm">Enviar</button>
+          <button type="button" class="card-submit-btn-cancel">Voltar</button>
         </div>
       </div>
     </main>
