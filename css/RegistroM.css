@@ -241,13 +241,13 @@ input[type="radio"] {
   left: 50%;
   transform: translate(-50%, -50%);
 
-    height: 50vh;
+  height: fit-content;
   padding: 0.5rem 1rem;
 
   background-color: #396481;
   border: 1px solid #184965;
   border-radius: 1rem;
-  width: 25vw;
+  width: fit-content;
 
   color: white;
   font-size: 1.2rem;
@@ -259,6 +259,56 @@ input[type="radio"] {
 
 .automovel-hover-ativo {
   top: 50%;
+}
+
+.adicione-o-automovel span:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+  width: fit-content;
+  height: fit-content;
+}
+
+.adicione-o-automovel span:nth-child(2) {
+  font-size: 1rem;
+  height: fit-content;
+  width: fit-content;
+}
+
+.adicione-o-automovel {
+  background: #184965;
+  border: 2px solid #11334a;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  height: fit-content;
+  width: 100%;
+}
+
+.txt {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  gap: 0.5rem;
+  flex: 3 1 auto;
+}
+
+.fieldset-hover {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.adicione-o-automovel img {
+  background: #a11111;
+  border-radius: 1rem;
+  border: none;
+  flex: 1 1 auto;
 }
 
 .historico-automoveis {
@@ -322,22 +372,61 @@ input[type="radio"] {
   background-color: #a11111;
 }
 
-.field-para-inputs {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.fieldset-hover {
-  height: 100%;
-}
-
 .automovel-hover fieldset {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+}
+
+.botao-submit-cancelar {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.botao-submit-cancelar button:first-child {
+  color: white;
+  background-color: #a11111;
+  border: 2px solid #780000;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 30%;
+
+  cursor: pointer;
+  transition: all 0.3s ease; /* suavidade */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-submit-cancelar button:nth-child(2) {
+  color: white;
+  background-color: #184965;
+  border: #11334a 2px solid;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 30%;
+
+  cursor: pointer;
+  transition: all 0.3s ease; /* suavidade */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-submit-cancelar button:hover {
+  /* azul mais escuro */
+  transform: translateY(-3px) scale(1.01); /* leve zoom + sobe */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra mais forte */
+}
+
+.ajeitadores-input {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-flow: column wrap;
+  gap: 0.5rem;
 }
 
 #botao-placa {

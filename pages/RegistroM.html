@@ -93,23 +93,52 @@
         </div>
         <fieldset class="fieldset-hover">
           <legend>Escolha o automóvel</legend>
-          <div class="checkbox-reunidos">
-            <div class="carro" id="carro">
-              <span>Carro</span>
-            </div>
-            <div class="moto" id="moto">
-              <span>Moto</span>
-            </div>
-            <div class="bicicleta" id="bicicleta">
-              <span>Bicicleta</span>
-            </div>
-            <div class="outros" id="outros">
-              <span>Outros</span>
-            </div>
+
+          <div class="ajeitadores-input">
+            <label for="automovel">Escolha o automóvel</label>
+            <select title="automovel" name="automovel">
+              <option value="">Selecione um automóvel</option>
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+              <option value="bicicleta">Bicicleta</option>
+              <option value="outro">Outro</option>
+            </select>
           </div>
-        </fieldset>
-        <fieldset id="field-para-inputs">
-          <legend>Cadastre a placa</legend>
+          <div class="ajeitadores-input">
+            <label for="automovel">Escolha a cor do automóvel</label>
+            <select title="cores" name="cores">
+              <option value="">Selecione uma cor</option>
+
+              <option value="preto">Preto</option>
+              <option value="branco">Branco</option>
+              <option value="prata">Prata</option>
+              <option value="cinza">Cinza</option>
+              <option value="azul">Azul</option>
+              <option value="vermelho">Vermelho</option>
+              <option value="verde">Verde</option>
+              <option value="marrom">Marrom</option>
+              <option value="bege">Bege</option>
+              <option value="amarelo">Amarelo</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="ajeitadores-input">
+            <label for="placa-automovel"
+              >Digite a placa do Automóvel (se houver)
+            </label>
+            <input
+              type="text"
+              maxlength="7"
+              style="text-transform: uppercase"
+              name="placa-automovel"
+              placeholder="Placa do automóvel"
+            />
+          </div>
+
+          <div class="botao-submit-cancelar">
+            <button type="button" title="cancelar">Cancelar</button>
+            <button type="button" title="enviar">Registrar</button>
+          </div>
         </fieldset>
       </div>
 
