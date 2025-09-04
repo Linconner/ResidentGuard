@@ -101,7 +101,56 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="center"></div>
+      <div class="left">
+        <fieldset class="registro-blocos-apaertamentos">
+          <legend>Registro de moradia</legend>
+          <div class="registro-bloco">
+            <label for="blocos">Registre o Bloco disponível</label>
+            <input
+              name="blocos"
+              type="text"
+              placeholder="Insira aqui o número/letra do bloco"
+            />
+          </div>
+          <div class="registro-apartamento">
+            <label for="apartamentos">Registre o Apartamento disponível</label>
+            <input
+              name="apartamentos"
+              type="text"
+              placeholder="Insira aqui o número/letra do apartamento"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="eventos-alugueis">
+          <legend>Locais e Áreas</legend>
+
+          <div class="cadastro-areas-externas">
+            <label for="areas-externas">
+              <input
+                type="text"
+                name="areas-externas"
+                placeholder="Insira aqui uma área externa que deseja cadastrar para uso"
+              />
+            </label>
+          </div>
+
+          <div class="cadastro-locais">
+            <label for="locais">
+              <input
+                type="text"
+                name="locais"
+                placeholder="Insira aqui um local externo que deseja cadastrar para moradores alugarem"
+              />
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="right">
+        <fieldset class="cadastro-funcionarios">
+          <legend>Registre um Funcionário</legend>
+        </fieldset>
+      </div>
     </div>
 
     <script src="/js/Base.js"></script>
