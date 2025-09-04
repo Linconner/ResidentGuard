@@ -89,6 +89,7 @@ moto?.addEventListener("click", function () {
 const btnHover = document.getElementById("add-automovel");
 const CardHover = document.getElementById("automovel-hover");
 const closeHover = document.getElementById("voltar-automovel-hover");
+const voltarHover = document.getElementById("cancelar");
 
 btnHover?.addEventListener("click", function () {
   CardHover.classList.add("automovel-hover-ativo");
@@ -96,11 +97,10 @@ btnHover?.addEventListener("click", function () {
 
 closeHover?.addEventListener("click", function () {
   CardHover.classList.remove("automovel-hover-ativo");
-  [...paraDiv.children].forEach((child) => {
-    if (child.tagName.toLowerCase() !== "legend") {
-      child.remove();
-    }
-  });
+});
+
+voltarHover?.addEventListener("click", function () {
+  CardHover.classList.remove("automovel-hover-ativo");
 });
 
 //-----------------------------------------------------------//

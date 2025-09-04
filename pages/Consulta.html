@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulta</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,13 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CDN Flaticon Uicons SOLID ROUNDED -->
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
@@ -29,7 +30,6 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/fontisto@3.0.4/css/fontisto/fontisto.min.css"
@@ -39,12 +39,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/Consulta.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="topico">
       <span>CONSULTA</span>
-
       <svg
         id="botaoicone"
         viewBox="0 0 24 24"
@@ -64,32 +65,27 @@
       <!-- Menu dropdown -->
       <div class="navbarmenu" id="navbarmenu">
         <div class="itensnavbar">
-          <a href="RegistroV.html" class="nav-item" id="visitantes">
+          <a href="RegistroV.html" class="nav-item">
             <i class="fi fi-sr-user-pen"></i>
             <h3 class="itenvey">Registro Visitantes</h3>
           </a>
-
-          <a href="RegistroE.html" class="nav-item" id="eventos">
+          <a href="RegistroE.html" class="nav-item">
             <i class="fi fi-sr-calendar-star"></i>
             <h3 class="itenvey">Registro Eventos</h3>
           </a>
-
-          <a href="RegistroEN.html" class="nav-item" id="encomendas">
+          <a href="RegistroEN.html" class="nav-item">
             <i class="fi fi-sr-gifts"></i>
             <h3 class="itenvey">Registro Encomendas</h3>
           </a>
-
-          <a href="RegistroM.html" class="nav-item" id="moradores">
+          <a href="RegistroM.html" class="nav-item">
             <i class="fi fi-sr-user-pen"></i>
             <h3 class="itenvey">Moradores</h3>
           </a>
-
-          <a href="Consulta.html" class="nav-item" id="consulta">
+          <a href="Consulta.html" class="nav-item">
             <i class="fi fi-sr-search-alt"></i>
             <h3 class="itenvey">Consulta</h3>
           </a>
-
-          <a href="Adm.html" class="nav-item" id="Adm">
+          <a href="Adm.html" class="nav-item">
             <i class="fi fi-sr-administrator-alt"></i>
             <h3 class="itenvey">Adm</h3>
           </a>
@@ -97,10 +93,13 @@
       </div>
     </header>
 
+    <!-- Blur overlay -->
     <div class="blurOverlay" id="blurOverlay"></div>
-    <!-- usar % no coontainer1 e flex:  -->
+
+    <!-- Container principal -->
     <div class="container1">
       <div class="container-coisas-dentro">
+        <!-- Top: pesquisa -->
         <div class="top">
           <input
             class="input-pesquisa"
@@ -109,6 +108,8 @@
           />
           <img src="/images/search.svg" class="lupazinha" id="pesquisa" />
         </div>
+
+        <!-- Bottom: grid -->
         <div class="bottom">
           <div class="grid">
             <div class="registro-moradores">
@@ -116,17 +117,8 @@
                 <img src="/images/users.svg" alt="moradores" />
               </div>
               <h1>Registro de moradores</h1>
-              <p>
-                Clique aqui para ver todos os registros cadastrados no campo
-                moradores e pesquise por nomes ou informações específicas
-              </p>
-              <img
-                src="/images/chevron-right.svg"
-                alt="abrir consulta"
-                width="30px"
-                height="30px"
-                class="icon"
-              />
+              <p>Informações detalhadas sobre moradores.</p>
+              <img src="/images/chevron-right.svg" alt="" class="icon" />
             </div>
 
             <div class="registro-visitantes">
@@ -134,34 +126,17 @@
                 <img src="/images/user-round-check.svg" alt="visitantes" />
               </div>
               <h1>Registro de visitantes</h1>
-              <p>
-                Clique aqui para ver todos os registros cadastrados no campo
-                visitantes e pesquise por nomes ou informações específicas
-              </p>
-              <img
-                src="/images/chevron-right.svg"
-                alt="abrir consulta"
-                width="30px"
-                height="30px"
-                class="icon"
-              />
+              <p>Informações detalhadas sobre visitantes.</p>
+              <img src="/images/chevron-right.svg" alt="" class="icon" />
             </div>
+
             <div class="registro-encomendas">
               <div class="imagem">
                 <img src="/images/shopping-bag.svg" alt="encomendas" />
               </div>
               <h1>Registro de encomendas</h1>
-              <p>
-                Clique aqui para ver todos os registros cadastrados no campo
-                encomendas e pesquise por nomes ou informações específicas
-              </p>
-              <img
-                src="/images/chevron-right.svg"
-                alt="abrir encomendas"
-                width="30px"
-                height="30px"
-                class="icon"
-              />
+              <p>Informações detalhadas sobre encomendas.</p>
+              <img src="/images/chevron-right.svg" alt="" class="icon" />
             </div>
 
             <div class="registro-eventos">
@@ -169,23 +144,45 @@
                 <img src="/images/calendar-clock.svg" alt="eventos" />
               </div>
               <h1>Registro de eventos</h1>
-              <p>
-                Clique aqui para ver todos os registros cadastrados no campo
-                eventos e pesquise por nomes ou informações específicas
-              </p>
-              <img
-                src="/images/chevron-right.svg"
-                alt="abrir encomendas"
-                width="30px"
-                height="30px"
-                class="icon"
-              />
+              <p>Informações detalhadas sobre eventos.</p>
+              <img src="/images/chevron-right.svg" alt="" class="icon" />
+            </div>
+
+            <!-- Linha 2: pode adicionar outros 4 cards -->
+            <div class="registro-extra1">
+              <div class="imagem">
+                <img src="/images/users.svg" alt="extra1" />
+              </div>
+              <h1>Extra 1</h1>
+              <p>Descrição do card extra 1.</p>
+            </div>
+
+            <div class="registro-extra2">
+              <div class="imagem">
+                <img src="/images/users.svg" alt="extra2" />
+              </div>
+              <h1>Extra 2</h1>
+              <p>Descrição do card extra 2.</p>
+            </div>
+
+            <div class="registro-extra3">
+              <div class="imagem">
+                <img src="/images/users.svg" alt="extra3" />
+              </div>
+              <h1>Extra 3</h1>
+              <p>Descrição do card extra 3.</p>
+            </div>
+
+            <div class="registro-extra4">
+              <div class="imagem">
+                <img src="/images/users.svg" alt="extra4" />
+              </div>
+              <h1>Extra 4</h1>
+              <p>Descrição do card extra 4.</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="tab">dadsad</div>
     </div>
 
     <script src="/js/Base.js"></script>

@@ -8,7 +8,7 @@
   --var-darkgray: #9ca3af;
   --var-dark: #212529;
   --var-fonttop: "League Spartan", sans-serif;
-  --var-fontlabel: "Inter", sans serif;
+  --var-fontlabel: "Inter", sans-serif;
   --transition: all 0.3s ease;
   --border-radius: 0.6rem;
   --fieldset-radius: 1rem;
@@ -25,41 +25,33 @@
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
   width: 100%;
-  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--var-azulbb);
 }
 
 body {
-  background-color: var(--var-azulbb);
   line-height: 1.6;
   padding: 20px;
-  overflow: hidden;
-  height: 100vh;
 }
 
 .container1 {
-  box-sizing: border-box;
   position: absolute;
   top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 100vw;
-  min-width: 26.7vw; /* ~320px relativo a uma viewport de 1200px */
+  width: 95vw;
+  max-width: 1200px;
   height: 88vh;
-  min-height: 20vh;
   border-radius: 3vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem; /* rem é relativo ao root font-size (acessível e escalável) */
+  padding: 1rem;
   background-color: var(--var-azulescuroprofundo);
-  border: 0.15vw solid #bee9eb;
-  box-shadow: 0 0.3vh 0.8vh rgb(24 73 101 / 10%);
-  overflow: hidden;
+  border: 0.15vw solid var(--var-azulclaroesverdeado);
+  box-shadow: 0 0.3vh 0.8vh rgba(24, 73, 101, 0.1);
 }
 
 .container-coisas-dentro {
@@ -67,6 +59,9 @@ body {
   width: 100%;
   background-color: #396481;
   border-radius: 3vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .topico {
@@ -74,13 +69,13 @@ body {
   align-items: center;
   background-color: var(--var-azulescuroprofundo);
   position: fixed;
-  top: 0; /* topo da viewport */
-  left: 0; /* opcional, alinha à esquerda */
-  width: 100%; /* ocupa toda largura */
-  z-index: 1000; /* para ficar acima de outros elementos */
-  border-radius: 1vh;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 12%;
   padding: 2vh;
+  border-radius: 1vh;
+  z-index: 1000;
 }
 
 .topico span {
@@ -102,45 +97,32 @@ body {
   border: 2px solid #0d354d;
   border-radius: var(--border-radius);
   padding: 10px;
-  font-size: 20px;
   cursor: pointer;
-}
-
-.topico svg:hover {
-  transform: scale(1.05);
-  transition: color 0.1s ease-out;
-  color: #0d354d;
-}
-
-.topico svg:active {
-  background-color: var(--var-blue);
 }
 
 .navbarmenu {
   position: absolute;
-  top: calc(100% - -30px); /* Ajuste fino para alinhar melhor */
+  top: 110%;
   left: 20px;
   width: 275px;
   background-color: #184965;
   border-radius: var(--border-radius);
-  box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   z-index: 1001;
   opacity: 0;
-  transform: translateY(-10px);
   visibility: hidden;
   transition: all 0.25s ease-out;
   max-height: 70vh;
   overflow-y: auto;
-  border: 1px solid rgb(0 0 0 / 10%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navbarmenu.ativa {
   opacity: 1;
-  transform: translateY(0);
   visibility: visible;
+  transform: translateY(0);
 }
 
-/* Ajuste para os itens do menu */
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -154,7 +136,7 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #0d344d75;
+  background-color: rgba(13, 52, 77, 0.46);
 }
 
 .nav-item.active {
@@ -162,34 +144,22 @@ body {
   color: #396481;
   font-weight: bold;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-item i {
-  font-size: 1.1rem;
-  width: auto;
-}
-
-/* prettier-ignore-start */
-.blur-overlay {
+.blurOverlay {
   position: fixed;
   top: 12%;
   left: 0;
   width: 100%;
   height: 88%;
-  background-color: rgb(0 0 0 / 0.15%);
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-backdrop-filter: blur(3px); /* Safari */
-  backdrop-filter: blur(3px); /* Chrome/Edge */
+  backdrop-filter: blur(3px);
   z-index: 999;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-/* prettier-ignore-end */
-
-.blur-overlay.ativo {
+.blurOverlay.ativo {
   opacity: 1;
   pointer-events: auto;
 }
@@ -199,36 +169,19 @@ body {
   font-size: 0.9rem;
 }
 
-.itensnavbar {
-  height: auto;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.container-coisas-dentro {
-  height: 100%;
-  width: 100%;
-}
-
 .top {
   height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1rem;
-}
-
-.bottom {
-  height: 90%;
-  width: 100%;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
+  position: relative;
 }
 
 .input-pesquisa {
   padding: 1rem;
   width: 100%;
-  height: 4.6296vh;
   border-radius: 0.75rem;
   background-color: #f5f5f5;
   color: black;
@@ -243,71 +196,43 @@ body {
 
 .lupazinha {
   position: absolute;
-  right: 4rem;
+  right: 1rem;
   height: 18px;
   width: 18px;
   cursor: pointer;
 }
 
+.bottom {
+  height: 90%;
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+  overflow-y: auto;
+}
+
+/* Grid com 2 rows de 4 cards */
 .grid {
-  height: 100%;
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "moradores visitantes encomendas"
-    "eventos   .          .";
-  row-gap: 0.625rem;
-  column-gap: 0.625rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  grid-template-rows: repeat(2, auto); /* 2 linhas */
+  gap: 1rem;
+  width: 100%;
 }
 
-.registro-moradores {
-  grid-area: moradores;
+.grid > div {
   display: flex;
   flex-direction: column;
   background-color: #184965;
-  height: 100%;
-  width: 100%;
-  padding: 0.9375rem;
   border-radius: 12px;
+  padding: 0.9375rem;
   gap: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.registro-visitantes {
-  grid-area: visitantes;
-  display: flex;
-  flex-direction: column;
-  background-color: #184965;
-  height: 100%;
-  width: 100%;
-  padding: 0.9375rem;
-  border-radius: 12px;
-  gap: 1rem;
-}
-
-.registro-encomendas {
-  grid-area: encomendas;
-  display: flex;
-  flex-direction: column;
-  background-color: #184965;
-  height: 100%;
-  width: 100%;
-  padding: 0.9375rem;
-  border-radius: 12px;
-  gap: 1rem;
-}
-
-.registro-eventos {
-  display: flex;
-  flex-direction: column;
-  grid-area: eventos;
-  background-color: #184965;
-  height: 100%;
-  width: 100%;
-  padding: 0.9375rem;
-  border-radius: 12px;
-  gap: 1rem;
+.grid > div:hover {
+  background-color: #0d354d;
+  transform: scale(1.01);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .imagem {
@@ -318,33 +243,17 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 0.75rem;
-  gap: 1.875rem;
 }
 
-.registro-encomendas:hover,
-.registro-eventos:hover,
-.registro-moradores:hover,
-.registro-visitantes:hover {
-  background-color: #0d354d;
-  transform: scale(1.01);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.047);
-}
-
-.bottom p,
 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: white;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 p {
-  font-size: 20px;
-  font-weight: semibold;
+  font-size: 1rem;
+  color: white;
 }
 
 .icon {
@@ -356,5 +265,8 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: ;
+  background-color: #184965;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: white;
 }
