@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: max-content;
+
+  background-color: var(--azulClaro);
+
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+}
+
+:root {
+  --azulClaro: #cae9ff;
+  --azulEscuro: #184965;
+  --azulClaro2: #396481;
+  --azulEscuro2: #11334a;
+}
+
+.container {
+  background-color: var(--azulEscuro);
+
+  height: 70vh;
+  width: 60%;
+  border-radius: 12px;
+}
