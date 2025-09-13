@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link href="./css/index.css" rel="stylesheet" />
+    <title>ResidentGuard - Login</title>
+    <link rel="stylesheet" href="/css/index.css" />
+
+    <!-- Fonte Montserrat -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-
   <body>
-    <img src="images/logobg.svg" alt="" class="logobg" />
+    <div class="login-container">
+      <!-- Lado Esquerdo -->
+      <div class="left-side">
+        <div class="logo">
+          <img src="/images/logo.png" alt="" />
+          <span>ResidentGuard</span>
+        </div>
+      </div>
 
-    <main>
-      <div class="conteudoLogin">
-        <img src="images/logo.svg" alt="" class="logo" />
-        <span class="logologinChild">ENTRAR</span>
+      <!-- Lado Direito (Formulário) -->
+      <div class="right-side">
+        <form id="loginForm">
+          <h2>Bem-vindo</h2>
+          <p>Faça login como porteiro ou ADM</p>
 
-        <form action="/login" method="post" class="loginRg">
-          <div class="usuarioNome">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" />
+          <div class="input-group">
+            <input type="email" id="email" placeholder="Digite seu e-mail" />
           </div>
-          <div class="usuarioSenha">
-            <label for="senha">Senha</label>
-            <input id="senha" name="senha" type="password" />
-          </div>
-          <div class="botaoLogin2">
+
+          <div class="input-group">
             <input
-              id="entrarBtn"
-              type="button"
-              value="ENTRAR"
-              onclick="window.location.href='./pages/RegistroV.html'"
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
             />
           </div>
+
+          <button type="submit">Entrar</button>
+          <p class="error-msg" style="display: none"></p>
         </form>
       </div>
-    </main>
+    </div>
+
+    <script>
+      // Validação com jQuery
+      $(document).ready(function () {
+        $("#loginForm").on("submit", function (e) {
+          e.preventDefault();
+          let email = $("#email").val().trim();
+          let password = $("#password").val().trim();
+          let error = "";
+
+          if (email === "" || password === "") {
+            error = "Preencha todos os campos!";
+          } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+            error = "Digite um e-mail válido!";
+          } else if (password.length < 6) {
+            error = "A senha deve ter pelo menos 6 caracteres!";
+          }
+
+          if (error) {
+            $(".error-msg").text(error).fadeIn();
+          } else {
+            $(".error-msg").fadeOut();
+            alert("Login realizado com sucesso!");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
