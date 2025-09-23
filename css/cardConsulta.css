@@ -28,9 +28,16 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-flow: column wrap;
-  padding: 0.8rem;
+  padding: 1rem 2rem;
   box-sizing: border-box;
   gap: 1rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  
 }
 
 .top-search {
@@ -48,7 +55,7 @@ body {
 
 .top-search button {
   width: 15%;
-  height: 100%;
+  height: 80%;
   border-radius: 0.75rem;
   border: none;
   background-color: var(--azulEscuro);
@@ -59,15 +66,19 @@ body {
   height: 100%;
   width: 85%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-lupa input {
-  height: 100%;
+  height: 80%;
   width: 100%;
   padding: 0.3rem;
   border-radius: 12px;
   border: 2px solid rgba(128, 128, 128, 0.204);
   padding-left: 1.5rem;
+  box-sizing: border-box;
 }
 
 .input-lupa > img {
@@ -80,30 +91,180 @@ body {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Sem fundo */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* Scroll preto */
+  border-radius: 3px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;        /* Reduz a largura */
+  scrollbar-color: rgba(0, 0, 0, 0.288) transparent; /* Cor do thumb e fundo */
+}
+
 .bottom-consulta {
   height: calc(90% - 1rem);
   width: 100%;
   background-color: var(--azulClaro2);
   border-radius: 0 0 1.2rem 1.2rem;
-
+padding: 1rem;
+box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 300px;
-
+  grid-auto-rows: 500px;
+  row-gap: 1rem;
   overflow: auto;
 }
 
-.morador1-header {
-  display: flex;
-}
+
 
 .letras-header-morador1 {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  
+}
+
+.letras-header-morador1 > img {
+  width: 24px ;
+  height: 24px ;
 }
 
 .letras-header-morador1:nth-child(1) {
   font-weight: 800;
+}
+
+.morador1 {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--azulEscuro);
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  color: white;
+  gap: 1rem;
+  border-radius: 1.1rem;
+  
+}
+
+.morador1-header {
+  height: calc(20% - 1rem);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1.5rem;
+  
+  
+}
+
+.morador1-header span {
+  font-size: 1.2rem;
+}
+
+.morador1-header img {
+  width: 24px;
+  height: 24px;
+ 
+}
+
+.morador1-header img:first-child {
+  background-color: #396481;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  
+}
+
+.letras-header-morador1 span:nth-child(1) {
+ transition: all 0.3s ease-in-out;
+}
+
+.letras-header-morador1 span:nth-child(1):hover {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.morador1-body {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  height: calc(50% - 1rem);
+ background-color: var(--azulClaro2);
+ padding: 1rem;
+ border-radius: 1.2rem;
+}
+
+.morador1-body > div {
+  background-color: var(--azulEscuro);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.morador1-body > div > span:nth-child(2) {
+  font-weight: 600;
+}
+
+.morador1-automovel {
+  height: calc(30% - 1rem);
+background-color: var(--azulClaro2);
+border-radius: 1.2rem;
+padding: 0.8rem;
+display: flex;
+flex-flow: column wrap;
+justify-content: space-between;
+
+}
+
+.automovel-header {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.automovel-header > * {
+  height: fit-content;
+}
+.automovel-header > div {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.3rem;
+}
+.automovel-header span {
+  font-weight: 200;
+}
+
+.automovel-body {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.3rem;
+  overflow: auto;
+}
+
+.automovel-body span {
+  font-weight: 600;
 }
