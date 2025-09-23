@@ -1,6 +1,6 @@
 <p align="center">
 <picture>
-    <img src="img/logo.svg" alt="residentguard Logo" width="15%"> 
+    <img src="images/logo.svg" alt="residentguard Logo" width="15%"> 
 </picture>
 
 <h1 align="center">ResidentGuard</h1>
