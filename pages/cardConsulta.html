@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- Barra de busca -->
       <div class="top-search">
         <button type="button">Voltar</button>
         <div class="input-lupa">
@@ -16,247 +17,110 @@
             id="search-consulta"
             placeholder="Insira aqui..."
           />
-          <image src="/images/search.svg" alt="lupa" />
+          <img src="/images/search.svg" alt="lupa" />
         </div>
       </div>
 
+      <!-- Botões das Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="infos">Infos</button>
+        <button class="tab-btn" data-tab="familia">Família</button>
+        <button class="tab-btn" data-tab="automoveis">Automóveis</button>
+      </div>
+
+      <!-- Conteúdo das Tabs -->
       <div class="bottom-consulta">
-        <div class="morador1">
-          <div class="morador1-header">
-            <img src="/images/circle-user.svg" alt="usuario" />
-            <div class="letras-header-morador1">
-              <span>Nome do morador</span>
-              <img src="/images/chevron-right.svg" alt="chevron" />
-              <span>Tipo do morador</span>
+        <!-- Aba Infos -->
+        <div class="tab-content active" id="infos">
+          <div class="morador1">
+            <div class="morador1-header">
+              <img src="/images/circle-user.svg" alt="usuario" />
+              <div class="letras-header-morador1">
+                <span class="nome-morador">Nome do morador</span>
+                <img src="/images/chevron-right.svg" alt="chevron" />
+                <span>Tipo do morador</span>
+              </div>
             </div>
-          </div>
-          <div class="morador1-body">
-            <div class="cpfmorador1">
-              <span>CPF:</span>
-              <span>123.456.789-10</span>
-            </div>
-            <div class="telefonemorador1">
-              <span>Telefone:</span>
-              <span>(11) 91234-5678</span>
-            </div>
-            <div class="apartamentomorador1">
-              <span>Apartamento:</span>
-              <span>101</span>
-            </div>
-            <div class="blocomorador1">
-              <span>Bloco:</span>
-              <span>A</span>
-            </div>
-          </div>
 
-          <div class="morador1-automovel">
-            <div class="automovel-header">
-              <img src="/images/car.svg" alt="automoveis" />
-              <div><span>Veiculos</span><span>(3)</span></div>
-            </div>
-            <div class="automovel-body">
-              <span>Toyota</span>
-              <span>Camaro</span>
-              <span>Bis</span>
-            </div>
-          </div>
-        </div>
-        <div class="morador1">
-          <div class="morador1-header">
-            <img src="/images/circle-user.svg" alt="usuario" />
-            <div class="letras-header-morador1">
-              <span>Nome do morador</span>
-              <img src="/images/chevron-right.svg" alt="chevron" />
-              <span>Tipo do morador</span>
-            </div>
-          </div>
-          <div class="morador1-body">
-            <div class="cpfmorador1">
-              <span>CPF:</span>
-              <span>123.456.789-10</span>
-            </div>
-            <div class="telefonemorador1">
-              <span>Telefone:</span>
-              <span>(11) 91234-5678</span>
-            </div>
-            <div class="apartamentomorador1">
-              <span>Apartamento:</span>
-              <span>101</span>
-            </div>
-            <div class="blocomorador1">
-              <span>Bloco:</span>
-              <span>A</span>
-            </div>
-          </div>
-
-          <div class="morador1-automovel">
-            <div class="automovel-header">
-              <img src="/images/car.svg" alt="automoveis" />
-              <div><span>Veiculos</span><span>(3)</span></div>
-            </div>
-            <div class="automovel-body">
-              <span>Toyota</span>
-              <span>Camaro</span>
-              <span>Bis</span>
+            <div class="morador1-body">
+              <div class="cpfmorador1">
+                <span>CPF:</span>
+                <span>123.456.789-10</span>
+              </div>
+              <div class="nomemorador1">
+                <span>Nome:</span>
+                <span>Julia Marques</span>
+              </div>
+              <div class="numeromorador1">
+                <span>Número:</span>
+                <span>(11) 91234-5678</span>
+              </div>
+              <div class="emailmorador1">
+                <span>E-mail:</span>
+                <span>julia.marques@email.com</span>
+              </div>
+              <div class="datanascmorador1">
+                <span>Data de Nascimento:</span>
+                <span>13/07/1991</span>
+              </div>
+              <div class="animalmorador1">
+                <span>Animal:</span>
+                <span>Sim</span>
+              </div>
+              <div class="tipomorador1">
+                <span>Tipo do Morador:</span>
+                <span>Inquilino</span>
+              </div>
+              <div class="contratomorador1">
+                <span>Tempo de Permanência (Contrato de Aluguel):</span>
+                <span>Fevereiro 2027</span>
+              </div>
+              <div class="statusmorador1">
+                <span>Status:</span>
+                <span>Ativo</span>
+              </div>
+              <div class="blocomorador1">
+                <span>Bloco:</span>
+                <span>A</span>
+              </div>
+              <div class="apartamentomorador1">
+                <span>Apartamento:</span>
+                <span>101</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="morador1">
-          <div class="morador1-header">
-            <img src="/images/circle-user.svg" alt="usuario" />
-            <div class="letras-header-morador1">
-              <span>Nome do morador</span>
-              <img src="/images/chevron-right.svg" alt="chevron" />
-              <span>Tipo do morador</span>
-            </div>
-          </div>
-          <div class="morador1-body">
-            <div class="cpfmorador1">
-              <span>CPF:</span>
-              <span>123.456.789-10</span>
-            </div>
-            <div class="telefonemorador1">
-              <span>Telefone:</span>
-              <span>(11) 91234-5678</span>
-            </div>
-            <div class="apartamentomorador1">
-              <span>Apartamento:</span>
-              <span>101</span>
-            </div>
-            <div class="blocomorador1">
-              <span>Bloco:</span>
-              <span>A</span>
-            </div>
-          </div>
+        <!-- Aba Família -->
+        <div class="tab-content" id="familia">
+          <h2>Família</h2>
+          <p>Conteúdo da aba Família.</p>
+        </div>
 
-          <div class="morador1-automovel">
-            <div class="automovel-header">
-              <img src="/images/car.svg" alt="automoveis" />
-              <div><span>Veiculos</span><span>(3)</span></div>
-            </div>
-            <div class="automovel-body">
-              <span>Toyota</span>
-              <span>Camaro</span>
-              <span>Bis</span>
-              <span>Toyota</span>
-              <span>Camaro</span>
-              <span>Bis</span>
-              <span>Toyota</span>
-              <span>Camaro</span>
-              <span>Bis</span>
-            </div>
-          </div>
+        <!-- Aba Automóveis -->
+        <div class="tab-content" id="automoveis">
+          <h2>Automóveis</h2>
+          <p>Conteúdo da aba Automóveis.</p>
         </div>
       </div>
     </div>
 
-    <div class="hover-card">
-      <div class="header-hover">
-        <img src="/images/info.svg" alt="" />
-        <span>Informações detalhadas</span>
-      </div>
-      <div class="body-hover">
-        <div>
-          <span>Nome completo</span>
-          <span>Julia Marques</span>
-        </div>
-        <div>
-          <span>CPF</span>
-          <span>345.678.192-10</span>
-        </div>
+    <!-- Script Tabs -->
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
 
-        <div>
-          <span>Proprietário</span>
-          <span>Lincon Iago Segato de Camargo</span>
-        </div>
-        <div>
-          <span>Possui pets</span>
-          <span>Sim</span>
-        </div>
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // remove active de todos
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
 
-        <div>
-          <span>E-mail</span>
-          <span>linconsegato@gmail.com</span>
-        </div>
-
-        <div>
-          <span> Número de telefone</span>
-          <span> 11-111111-1111</span>
-        </div>
-
-        <div>
-          <span>Data nascimento</span>
-          <span>13/07/1991</span>
-        </div>
-
-        <div>
-          <span>Contrato de locação</span>
-          <span>Fevereiro 2027</span>
-        </div>
-
-        <div>
-          <span>Tipo do morador</span>
-          <span>Locatário</span>
-        </div>
-
-        <div>
-          <span>Status</span>
-          <span>Inativo</span>
-        </div>
-      </div>
-      <div class="familia-detalhada">
-        <div class="header-familia-detalhada">
-          <img src="/images/database.svg" alt="" />
-          <div><span>Familia</span><span>(3)</span></div>
-        </div>
-
-        <div class="body-familia-detalhada">
-          <div>
-            <span>Saori Kido</span>
-            <span>Esposa - 35 anos</span>
-          </div>
-          <div>
-            <span>Maria Flor Segato</span>
-            <span>Filha - 4 anos</span>
-          </div>
-          <div>
-            <span>Bjork Aparecida Segato</span>
-            <span>Filha - 12 anos</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="veiculos-detalhada">
-        <div class="header-veiculos-detalhada">
-          <img src="/images/car.svg" alt="automoveis" />
-          <div><span>Veiculos</span><span>(3)</span></div>
-        </div>
-        <div class="body-veiculos-detalhada">
-          <div class="card">
-            <div class="headerzinho">
-              <img src="/images/car.svg" alt="" />
-              <span>Carro</span>
-            </div>
-            <div class="bodyzinho">
-              <span>HB20</span>
-              <span>ABC1234</span>
-              <span>Prata</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="headerzinho">
-              <img src="/images/car.svg" alt="" />
-              <span>Carro</span>
-            </div>
-            <div class="bodyzinho">
-              <span>HB20</span>
-              <span>ABC1234</span>
-              <span>Prata</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          // adiciona active no botão clicado e no conteúdo correspondente
+          button.classList.add("active");
+          document.getElementById(button.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
