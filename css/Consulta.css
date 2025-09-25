@@ -14,6 +14,26 @@
   --fieldset-radius: 1rem;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Sem fundo */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* Scroll preto */
+  border-radius: 3px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Reduz a largura */
+  scrollbar-color: rgba(0, 0, 0, 0.288) transparent; /* Cor do thumb e fundo */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

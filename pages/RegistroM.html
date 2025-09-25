@@ -85,6 +85,12 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
+      <div class="tabs">
+        <div class="tab-btn">
+          <button type="button" title="Adicinar morador"></button>
+        </div>
+      </div>
+
       <div class="automovel-hover" id="automovel-hover">
         <div class="voltar-div-btn">
           <button class="voltar-automovel-hover" id="voltar-automovel-hover">
@@ -96,7 +102,7 @@
 
           <div class="ajeitadores-input">
             <label for="automovel">Escolha o automóvel</label>
-            <select title="automovel" name="automovel">
+            <select title="automovel" name="automovel" id="automovel">
               <option value="">Selecione um automóvel</option>
               <option value="carro">Carro</option>
               <option value="moto">Moto</option>
@@ -104,11 +110,21 @@
               <option value="outro">Outro</option>
             </select>
           </div>
-          <div class="ajeitadores-input">
-            <label for="automovel">Escolha a cor do automóvel</label>
-            <select title="cores" name="cores">
-              <option value="">Selecione uma cor</option>
 
+          <div class="ajeitadores-input">
+            <label for="marca-automovel">Marca do automóvel</label>
+            <input
+              type="text"
+              name="marca-automovel"
+              id="marca-automovel"
+              placeholder="Digite a marca do automóvel"
+            />
+          </div>
+
+          <div class="ajeitadores-input">
+            <label for="cor-automovel">Escolha a cor do automóvel</label>
+            <select title="cores" name="cores" id="cor-automovel">
+              <option value="">Selecione uma cor</option>
               <option value="preto">Preto</option>
               <option value="branco">Branco</option>
               <option value="prata">Prata</option>
@@ -122,15 +138,17 @@
               <option value="outro">Outro</option>
             </select>
           </div>
+
           <div class="ajeitadores-input">
             <label for="placa-automovel"
-              >Digite a placa do Automóvel (se houver)
-            </label>
+              >Digite a placa do Automóvel (se houver)</label
+            >
             <input
               type="text"
               maxlength="7"
               style="text-transform: uppercase"
               name="placa-automovel"
+              id="placa-automovel"
               placeholder="Placa do automóvel"
             />
           </div>
@@ -299,25 +317,41 @@
               <div class="div-retangulo-automovel">
                 <div class="image">
                   <img src="/images/car.svg" alt="carro" />
-                  <span class="title"> Carro 1 - </span>
+                  <span class="title">Carro</span>
                 </div>
-                <span>Placa - 1234ABCD</span>
+                <span>Marca: Toyota Corolla</span>
+                <span>Placa: ABC1D23</span>
+                <span>Cor: Preto</span>
+              </div>
+
+              <div class="div-retangulo-automovel">
+                <div class="image">
+                  <img src="/images/bike.svg" alt="moto" />
+                  <span class="title">Moto</span>
+                </div>
+                <span>Marca: Honda CG 160</span>
+                <span>Placa: XYZ4E56</span>
+                <span>Cor: Vermelha</span>
               </div>
 
               <div class="div-retangulo-automovel">
                 <div class="image">
                   <img src="/images/bike.svg" alt="bicicleta" />
-                  <span class="title"> Bicicleta 1 </span>
+                  <span class="title">Bicicleta</span>
                 </div>
-                <span>Cor: azul</span>
+                <span>Marca: Caloi Elite</span>
+                <span>Placa: N/A</span>
+                <span>Cor: Azul</span>
               </div>
 
               <div class="div-retangulo-automovel">
                 <div class="image">
-                  <img src="/images/ellipsis.svg" alt="outros" />
-                  <span class="title"> Moto elétrica 1 </span>
+                  <img src="/images/ellipsis.svg" alt="outro" />
+                  <span class="title">Outro</span>
                 </div>
-                <span>Placa - 4321ADBT</span>
+                <span>Marca: Patinete Elétrico Xiaomi</span>
+                <span>Placa: N/A</span>
+                <span>Cor: Cinza</span>
               </div>
             </div>
           </fieldset>

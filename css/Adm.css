@@ -19,5 +19,35 @@
   width: 50%;
   height: 100%;
   background-color: #396481;
-  border-radius: var(--border-radius);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+}
+
+.left {
+  border-radius: 1rem 0 0rem 1rem;
+}
+.right {
+  border-radius: 0 1rem 1rem 0rem;
+}
+
+.registro-blocos-apaertamentos {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.eventos-alugueis {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.cadastro-funcionarios {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
 }

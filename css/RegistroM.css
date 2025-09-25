@@ -1,3 +1,23 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Sem fundo */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* Scroll preto */
+  border-radius: 3px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Reduz a largura */
+  scrollbar-color: rgba(0, 0, 0, 0.288) transparent; /* Cor do thumb e fundo */
+}
+
 .left,
 .right {
   display: flex;
@@ -237,7 +257,7 @@ input[type="radio"] {
 
 .automovel-hover {
   position: absolute;
-  top: 140%;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -698,6 +718,33 @@ input[type="radio"] {
 
 .botoes-radio-tipo label {
   width: 100%;
+  cursor: pointer;
+}
+
+.tabs {
+  position: absolute;
+  top: 0;
+  right: -85px;
+
+  background-color: #184965;
+
+  height: 50px;
+  width: 100px;
+  border-radius: 0 1rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs button {
+  background-color: transparent;
+  border: none;
+  padding: 2rem;
+  background: url(/images/plus.svg) no-repeat center;
+}
+
+.tabs:hover,
+.tabs button:hover {
   cursor: pointer;
 }
 
