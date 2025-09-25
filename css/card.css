@@ -15,6 +15,7 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+  font-size: 0.9rem;
 }
 
 /* Para navegadores WebKit */

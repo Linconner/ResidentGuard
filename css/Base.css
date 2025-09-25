@@ -14,8 +14,6 @@
   --fieldset-radius: 1rem;
 }
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,8 +49,8 @@ body {
   /* largura e altura */
   height: 87vh;
   min-height: 0;
-  width: 95%;
-  max-width: 1200px;
+  width: 100%;
+
   flex-wrap: wrap;
   background-color: var(--var-azulescuroprofundo);
   border: 2px solid #bee9eb;
@@ -63,8 +61,6 @@ body {
   justify-content: space-between;
   padding: 1rem;
 }
-
-
 
 .topico {
   display: flex;

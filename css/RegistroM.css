@@ -4,28 +4,42 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Sem fundo */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 0, 0); /* Scroll preto */
+  background-color: rgb(0, 0, 0);
   border-radius: 3px;
 }
 
 /* Firefox */
 * {
-  scrollbar-width: thin; /* Reduz a largura */
-  scrollbar-color: rgba(0, 0, 0, 0.288) transparent; /* Cor do thumb e fundo */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.288) transparent;
+  font-size: 0.9rem; /* tamanho global */
+}
+
+.form-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.container1 {
+  position: relative !important;
+  width: 85vw !important;
 }
 
 .left,
-.right {
+.right,
+.center {
   display: flex;
   padding: 1rem;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-color: #396481; /* cinza mais claro */
-  font-size: 1.5rem;
+  background-color: #396481;
   font-weight: bold;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
@@ -46,25 +60,27 @@
 }
 
 .blocoapartamento {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: flex;
+  gap: 1rem;
   justify-content: space-evenly;
-  box-sizing: border-box;
+}
+
+.blocoapartamento > div input {
+  width: calc(100% - 1rem);
 }
 
 .registromoradorprincipal {
   overflow: auto;
-
   flex: 1 1 auto;
 }
 
 .registrar-automovel-morador {
-  height: 45%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  flex: 1 1 auto;
 }
 
 .registromoradorprincipal .input-position {
@@ -95,12 +111,12 @@
 .containeradicional input,
 .containeradicional label {
   max-width: 100%;
-  word-break: break-word; /* quebra texto longo */
+  word-break: break-word;
 }
 
 .containeradicional.ativo {
-  max-height: 200px; /* altura máxima controlada */
-  overflow-y: auto; /* scrolla se o conteúdo for maior */
+  max-height: 200px;
+  overflow-y: auto;
   opacity: 1;
   visibility: visible;
   height: auto;
@@ -130,7 +146,6 @@ input[type="radio"] {
 
 .radio-item label {
   cursor: pointer;
-  font-size: 15px;
   margin-bottom: 0;
 }
 
@@ -146,7 +161,6 @@ input[type="radio"] {
   color: white;
   border: none;
   border-radius: var(--border-radius);
-  font-size: 15px;
   padding: 10px;
   font-weight: 500;
   cursor: pointer;
@@ -171,14 +185,13 @@ input[type="radio"] {
 }
 
 .botaoregistro {
-  width: auto; /* make button fill the container */
-  height: auto; /* make button fill the container */
+  width: auto;
+  height: auto;
   background-color: #396481;
   color: white;
   border: 3px solid var(--var-azulescuroprofundo);
   border-radius: var(--border-radius);
-  font-size: 15px;
-  padding: 0; /* remove padding to fit container */
+  padding: 0;
   font-weight: 500;
   cursor: pointer;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -232,9 +245,7 @@ input[type="radio"] {
   border-radius: 0.8rem;
   padding: 1rem;
   color: white;
-  font-size: 1rem;
   font-family: "montserrat", sans-serif;
-
   width: 100%;
   height: auto;
 }
@@ -250,27 +261,18 @@ input[type="radio"] {
   background-color: #396481;
 }
 
-/*automovel-hover*/
-.container1 {
-  position: relative; /* garante que o filho absoluto use ela como referência */
-}
-
 .automovel-hover {
   position: absolute;
   top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   height: fit-content;
   padding: 0.5rem 1rem;
-
   background-color: #396481;
   border: 1px solid #184965;
   border-radius: 1rem;
   width: fit-content;
-
   color: white;
-  font-size: 1.2rem;
   text-align: center;
   z-index: 9999;
   box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
@@ -281,32 +283,28 @@ input[type="radio"] {
   top: 50%;
 }
 
+.adicione-o-automovel {
+  background: #184965;
+  border: 2px solid #11334a;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 100%;
+}
+
 .adicione-o-automovel span:first-child {
-  font-size: 1rem;
   font-weight: bold;
   width: fit-content;
   height: fit-content;
 }
 
 .adicione-o-automovel span:nth-child(2) {
-  font-size: 1rem;
   height: fit-content;
   width: fit-content;
-}
-
-.adicione-o-automovel {
-  background: #184965;
-  border: 2px solid #11334a;
-  padding: 1rem;
-  border-radius: 1rem;
-
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  height: fit-content;
-  width: 100%;
 }
 
 .txt {
@@ -340,7 +338,6 @@ input[type="radio"] {
   border: 0.5px solid #184965;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
-
   left: 55%;
   transform: translate(-50%, -50%);
 }
@@ -415,9 +412,8 @@ input[type="radio"] {
   padding: 1rem;
   border-radius: 0.8rem;
   width: 30%;
-
   cursor: pointer;
-  transition: all 0.3s ease; /* suavidade */
+  transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -428,16 +424,14 @@ input[type="radio"] {
   padding: 1rem;
   border-radius: 0.8rem;
   width: 30%;
-
   cursor: pointer;
-  transition: all 0.3s ease; /* suavidade */
+  transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .botao-submit-cancelar button:hover {
-  /* azul mais escuro */
-  transform: translateY(-3px) scale(1.01); /* leve zoom + sobe */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra mais forte */
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .ajeitadores-input {
@@ -455,12 +449,8 @@ input[type="radio"] {
   border-radius: 0.8rem;
   padding: 1rem;
   color: white;
-  font-size: 1rem;
   font-family: "montserrat", sans-serif;
-  font-weight: bold;
-
   font-weight: 700;
-  font-size: 1rem;
   width: 100%;
   height: auto;
 }
@@ -476,10 +466,9 @@ input[type="radio"] {
 .input-placa {
   display: flex;
   flex-direction: column;
-
   gap: 0.3rem;
 }
-/*botao*/
+
 .voltar-automovel-hover {
   background-color: #a11111;
   border-radius: 15px;
@@ -582,9 +571,9 @@ input[type="radio"] {
 .automoveis-registrados {
   display: flex;
   flex-direction: column;
+  height: auto;
 
-  height: 60%;
-
+  flex: 1 1 200px;
   gap: 1rem;
   padding: 0.8rem;
   background-color: #184965;
@@ -593,9 +582,18 @@ input[type="radio"] {
 }
 
 .automoveis-registrados::-webkit-scrollbar {
-  width: 5px; /* largura da barra */
-  background: #0f2f4178; /* cor de fundo */
+  width: 5px;
+  background: #0f2f4178;
   border-radius: 8px;
+}
+
+.automoveis-registrados::-webkit-scrollbar-thumb {
+  background: #11334a;
+  border-radius: 8px;
+}
+
+.automoveis-registrados::-webkit-scrollbar-thumb:hover {
+  background: #11334a;
 }
 
 .input-para-contrato-div {
@@ -624,18 +622,12 @@ input[type="radio"] {
   position: static;
   display: block;
 }
-.automoveis-registrados::-webkit-scrollbar-thumb {
-  background: #11334a; /* cor do "puxador" */
-  border-radius: 8px; /* borda arredondada */
-}
-
-.automoveis-registrados::-webkit-scrollbar-thumb:hover {
-  background: #11334a; /* cor ao passar o mouse */
-}
 
 .adicionar-placa {
-  height: 30%;
+  height: auto;
   width: 100%;
+
+  flex: 0 0 auto;
 }
 
 .div-retangulo-automovel {
@@ -654,7 +646,6 @@ input[type="radio"] {
   height: 21.6px;
   width: auto;
   color: white;
-  font-size: 1rem;
 }
 
 .div-retangulo-automovel img {
@@ -681,10 +672,11 @@ input[type="radio"] {
 }
 
 .tipo-morador {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+
+  height: fit-content;
+  gap: 1rem;
 }
 
 .proprietario-inquilino {
@@ -697,7 +689,6 @@ input[type="radio"] {
 .botoes-radio-tipo {
   background-color: #184965;
   border: 2px solid #11334a;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -707,8 +698,6 @@ input[type="radio"] {
   padding: 8px 12px;
   border-radius: var(--border-radius);
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
-  /*df*/
-  display: flex;
 }
 
 .botoes-radio-tipo:hover {
@@ -725,9 +714,7 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   right: -85px;
-
   background-color: #184965;
-
   height: 50px;
   width: 100px;
   border-radius: 0 1rem 1rem 0;
@@ -748,20 +735,47 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.familia-detalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+  flex: 0 0 150px;
+}
+.familia-detalhes button {
+  width: 100%;
+  height: 75%;
+
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: var(--border-radius);
+
+  color: white;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.familia-detalhes button:hover {
+  transform: scale(1.01);
+  background-color: #11334a;
+  cursor: pointer;
+}
+
 @media (max-width: 1238px) {
   .registromoradorprincipal {
-    max-height: 500px; /* limite de altura visível */
-    overflow-y: auto; /* cria a rolagem vertical */
+    max-height: 500px;
+    overflow-y: auto;
   }
 
   .containeradicional.ativo {
-    max-height: 150px; /* controla até onde o extra cresce */
-    overflow-y: auto; /* rola dentro dele */
-    height: auto; /* deixa altura automática até o limite */
+    max-height: 150px;
+    overflow-y: auto;
+    height: auto;
   }
 
   .containeradicional .inner {
-    flex-wrap: wrap; /* quebra o conteúdo se precisar */
-    align-items: flex-start; /* evita centralização que aumenta altura */
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 }

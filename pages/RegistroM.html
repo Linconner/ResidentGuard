@@ -18,14 +18,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
-
     <link rel="stylesheet" href="/css/RegistroM.css" />
     <link rel="stylesheet" href="/css/Base.css" />
+    <style></style>
   </head>
   <body>
     <header class="topico" tabindex="0">
@@ -163,228 +162,233 @@
       </div>
 
       <form id="formRegistro" action="#" method="POST">
-        <div class="left">
-          <fieldset
-            class="registromoradorprincipal"
-            id="registromoradorprincipal"
-            tabindex="0"
-          >
-            <legend>Dados do morador principal</legend>
+        <!-- Grid container envolvendo left, center e right -->
+        <div class="form-grid-container">
+          <div class="left">
+            <fieldset
+              class="registromoradorprincipal"
+              id="registromoradorprincipal"
+              tabindex="0"
+            >
+              <legend>Dados do morador principal</legend>
 
-            <div class="input-position">
-              <div class="ajeitador">
-                <label for="nome">Nome completo</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Digite o nome completo"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
+              <div class="input-position">
+                <div class="ajeitador">
+                  <label for="CPF">CPF</label>
+                  <input
+                    type="text"
+                    id="CPF"
+                    name="CPF"
+                    placeholder="000.000.000-00"
+                    required
+                    aria-required="true"
+                    tabindex="0"
+                  />
+                </div>
+                <div class="ajeitador">
+                  <label for="nome">Nome completo</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite o nome completo"
+                    required
+                    aria-required="true"
+                    tabindex="0"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="telefone">Número de telefone</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="DD-XXXXX-XXXX"
+                    pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
+                    maxlength="12"
+                    required
+                    aria-required="true"
+                    tabindex="0"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="DD-XXXXX-XXXX"
+                    required
+                    tabindex="0"
+                  />
+                </div>
+
+                <div class="ajeitador">
+                  <label for="idade">Data de nascimento</label>
+                  <input
+                    type="date"
+                    id="idade"
+                    name="idade"
+                    required
+                    aria-required="true"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="cadastromoradia" id="Passo2">
+              <legend>Moradia</legend>
+              <div class="blocoapartamento">
+                <div class="ajeitador">
+                  <label for="bloco">Bloco</label>
+                  <input
+                    type="text"
+                    id="bloco"
+                    name="bloco"
+                    placeholder="Digite o bloco"
+                    required
+                    tabindex="7"
+                  />
+                </div>
+                <div class="ajeitador">
+                  <label for="apartamento">Apartamento</label>
+                  <input
+                    type="text"
+                    id="apartamento"
+                    name="apartamento"
+                    placeholder="Digite o número"
+                    required
+                    tabindex="8"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="center">
+            <fieldset class="registrar-automovel-morador">
+              <legend>Registrar automóvel</legend>
+              <div class="adicionar-placa" id="adicionar-placa">
+                <button
+                  class="add-automovel"
+                  name="add-automovel-btn"
+                  type="button"
+                  id="add-automovel"
+                >
+                  <span> Adicionar um automóvel a este morador </span>
+                </button>
               </div>
 
-              <div class="ajeitador">
-                <label for="CPF">CPF</label>
-                <input
-                  type="text"
-                  id="CPF"
-                  name="CPF"
-                  placeholder="000.000.000-00"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
+              <div class="automoveis-registrados">
+                <div class="div-retangulo-automovel">
+                  <div class="image">
+                    <img src="/images/car.svg" alt="carro" />
+                    <span class="title">Carro</span>
+                  </div>
+                  <span>Marca: Toyota Corolla</span>
+                  <span>Placa: ABC1D23</span>
+                  <span>Cor: Preto</span>
+                </div>
+
+                <div class="div-retangulo-automovel">
+                  <div class="image">
+                    <img src="/images/bike.svg" alt="moto" />
+                    <span class="title">Moto</span>
+                  </div>
+                  <span>Marca: Honda CG 160</span>
+                  <span>Placa: XYZ4E56</span>
+                  <span>Cor: Vermelha</span>
+                </div>
+
+                <div class="div-retangulo-automovel">
+                  <div class="image">
+                    <img src="/images/bike.svg" alt="bicicleta" />
+                    <span class="title">Bicicleta</span>
+                  </div>
+                  <span>Marca: Caloi Elite</span>
+                  <span>Placa: N/A</span>
+                  <span>Cor: Azul</span>
+                </div>
+
+                <div class="div-retangulo-automovel">
+                  <div class="image">
+                    <img src="/images/ellipsis.svg" alt="outro" />
+                    <span class="title">Outro</span>
+                  </div>
+                  <span>Marca: Patinete Elétrico Xiaomi</span>
+                  <span>Placa: N/A</span>
+                  <span>Cor: Cinza</span>
+                </div>
               </div>
+            </fieldset>
+          </div>
+
+          <div class="right">
+            <fieldset class="registropets" tabindex="0">
+              <legend>O morador tem animal de estimação</legend>
 
               <div class="ajeitador">
-                <label for="telefone">Número de telefone</label>
-                <input
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
-                  placeholder="DD-XXXXX-XXXX"
-                  pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
-                  maxlength="12"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
+                <div class="petsyrn">
+                  <div class="radiobuttonpets">
+                    <div class="radio-item">
+                      <input
+                        type="radio"
+                        id="simpets"
+                        name="pets"
+                        value="sim"
+                        tabindex="0"
+                      />
+                      <label for="simpets">Sim</label>
+                    </div>
+                    <div class="radio-item">
+                      <input
+                        type="radio"
+                        id="naopets"
+                        name="pets"
+                        value="nao"
+                        tabindex="0"
+                      />
+                      <label for="naopets">Não</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="tipo-morador">
+              <legend>Tipo do morador</legend>
+
+              <div class="proprietario-inquilino">
+                <div class="botoes-radio-tipo" id="botao-proprietario">
+                  <input type="radio" id="proprietario" name="proprietario" />
+                  <img src="/images/house.svg" alt="casa" />
+                  <label for="proprietario">proprietario</label>
+                </div>
+                <div class="botoes-radio-tipo" id="botao-inquilino">
+                  <input type="radio" id="inquilino" name="proprietario" />
+                  <img src="/images/key.svg" alt="chave" />
+                  <label for="inquilino">inquilino</label>
+                </div>
               </div>
 
-              <div class="ajeitador">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="DD-XXXXX-XXXX"
-                  required
-                  tabindex="0"
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="idade">Data de nascimento</label>
+              <div class="input-para-contrato-div" id="input-para-contrato-div">
+                <label for="datacontrato">Vencimento do contrato</label>
                 <input
                   type="date"
-                  id="idade"
-                  name="idade"
+                  placeholder="Tempo do contrato"
+                  name="datacontrato"
+                  class="input-para-contrato-input"
                   required
-                  aria-required="true"
-                  tabindex="0"
                 />
               </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="registropets" tabindex="0">
-            <legend>O morador tem animal de estimação</legend>
-
-            <div class="ajeitador">
-              <div class="petsyrn">
-                <div class="radiobuttonpets">
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="simpets"
-                      name="pets"
-                      value="sim"
-                      tabindex="0"
-                    />
-                    <label for="simpets">Sim</label>
-                  </div>
-                  <div class="radio-item">
-                    <input
-                      type="radio"
-                      id="naopets"
-                      name="pets"
-                      value="nao"
-                      tabindex="0"
-                    />
-                    <label for="naopets">Não</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="right">
-          <fieldset class="cadastromoradia" id="Passo2">
-            <legend>Moradia</legend>
-            <div class="blocoapartamento">
-              <div class="ajeitador">
-                <label for="apartamento">Apartamento</label>
-                <input
-                  type="text"
-                  id="apartamento"
-                  name="apartamento"
-                  placeholder="Digite o número"
-                  required
-                  tabindex="8"
-                />
-              </div>
-              <div class="ajeitador">
-                <label for="bloco">Bloco</label>
-                <input
-                  type="text"
-                  id="bloco"
-                  name="bloco"
-                  placeholder="Digite o bloco"
-                  required
-                  tabindex="7"
-                />
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="registrar-automovel-morador">
-            <legend>Registrar automóvel</legend>
-            <div class="adicionar-placa" id="adicionar-placa">
-              <button
-                class="add-automovel"
-                name="add-automovel-btn"
-                type="button"
-                id="add-automovel"
-              >
-                <span> Adicionar um automóvel a este morador </span>
-              </button>
-            </div>
-
-            <div class="automoveis-registrados">
-              <div class="div-retangulo-automovel">
-                <div class="image">
-                  <img src="/images/car.svg" alt="carro" />
-                  <span class="title">Carro</span>
-                </div>
-                <span>Marca: Toyota Corolla</span>
-                <span>Placa: ABC1D23</span>
-                <span>Cor: Preto</span>
-              </div>
-
-              <div class="div-retangulo-automovel">
-                <div class="image">
-                  <img src="/images/bike.svg" alt="moto" />
-                  <span class="title">Moto</span>
-                </div>
-                <span>Marca: Honda CG 160</span>
-                <span>Placa: XYZ4E56</span>
-                <span>Cor: Vermelha</span>
-              </div>
-
-              <div class="div-retangulo-automovel">
-                <div class="image">
-                  <img src="/images/bike.svg" alt="bicicleta" />
-                  <span class="title">Bicicleta</span>
-                </div>
-                <span>Marca: Caloi Elite</span>
-                <span>Placa: N/A</span>
-                <span>Cor: Azul</span>
-              </div>
-
-              <div class="div-retangulo-automovel">
-                <div class="image">
-                  <img src="/images/ellipsis.svg" alt="outro" />
-                  <span class="title">Outro</span>
-                </div>
-                <span>Marca: Patinete Elétrico Xiaomi</span>
-                <span>Placa: N/A</span>
-                <span>Cor: Cinza</span>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="tipo-morador">
-            <legend>Tipo do morador</legend>
-
-            <div class="proprietario-inquilino">
-              <div class="botoes-radio-tipo" id="botao-proprietario">
-                <input type="radio" id="proprietario" name="proprietario" />
-                <img src="/images/house.svg" alt="casa" />
-                <label for="proprietario">proprietario</label>
-              </div>
-              <div class="botoes-radio-tipo" id="botao-inquilino">
-                <input type="radio" id="inquilino" name="proprietario" />
-                <img src="/images/key.svg" alt="chave" />
-                <label for="inquilino">inquilino</label>
-              </div>
-            </div>
-
-            <div class="input-para-contrato-div" id="input-para-contrato-div">
-              <label for="datacontrato">Vencimento do contrato</label>
-              <input
-                type="date"
-                placeholder="Tempo do contrato"
-                name="datacontrato"
-                class="input-para-contrato-input"
-                required
-              />
-            </div>
-          </fieldset>
-
-          <!-- Botão de registro removido conforme solicitado -->
+            <fieldset class="familia-detalhes">
+              <legend>Adicione integrantes a esse morador</legend>
+              <button type="button">Como funciona?</button>
+            </fieldset>
+          </div>
         </div>
       </form>
     </div>

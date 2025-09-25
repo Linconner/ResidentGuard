@@ -79,83 +79,80 @@
           <fieldset class="cadastrodados">
             <legend>Dados Cadastrais</legend>
 
-            <div class="input-group">
-              <div class="input-position">
-                <div class="ajeitador">
-                  <label for="nome">Nome completo</label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite o nome completo"
-                    required
-                    tabindex="1"
-                  />
-                </div>
+            <div class="input-position">
+              <div class="ajeitador">
+                <label for="CPF">CPF</label>
+                <input
+                  type="text"
+                  id="CPF"
+                  name="CPF"
+                  placeholder="000.000.000-00"
+                  required
+                  tabindex="2"
+                />
+              </div>
+              <div class="ajeitador">
+                <label for="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Digite o nome completo"
+                  required
+                  tabindex="1"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="CPF">CPF</label>
-                  <input
-                    type="text"
-                    id="CPF"
-                    name="CPF"
-                    placeholder="000.000.000-00"
-                    required
-                    tabindex="2"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="telefone">Número de telefone</label>
+                <input
+                  type="text"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(00) 00000-0000"
+                  required
+                  tabindex="3"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="telefone">Número de telefone</label>
-                  <input
-                    type="text"
-                    id="telefone"
-                    name="telefone"
-                    placeholder="(00) 00000-0000"
-                    required
-                    tabindex="3"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="cartao">Cartão</label>
+                <input
+                  type="text"
+                  id="cartao"
+                  name="cartao"
+                  placeholder="Número do cartão de acesso"
+                  required
+                  tabindex="4"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="cartao">Cartão</label>
-                  <input
-                    type="text"
-                    id="cartao"
-                    name="cartao"
-                    placeholder="Número do cartão de acesso"
-                    required
-                    tabindex="4"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="acesso">Liberado por:</label>
+                <input
+                  list="moradores"
+                  id="acesso"
+                  name="acesso"
+                  autocomplete="off"
+                  placeholder="Digite ou selecione o morador"
+                  required
+                  tabindex="5"
+                />
+                <datalist id="moradores">
+                  <option value="Morador 1"></option>
+                  <option value="Morador 2"></option>
+                  <option value="Morador 3"></option>
+                </datalist>
+              </div>
 
-                <div class="ajeitador">
-                  <label for="acesso">Liberado por:</label>
-                  <input
-                    list="moradores"
-                    id="acesso"
-                    name="acesso"
-                    autocomplete="off"
-                    placeholder="Digite ou selecione o morador"
-                    required
-                    tabindex="5"
-                  />
-                  <datalist id="moradores">
-                    <option value="Morador 1"></option>
-                    <option value="Morador 2"></option>
-                    <option value="Morador 3"></option>
-                  </datalist>
-                </div>
-
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="menor-idade"
-                    name="menor_idade"
-                    tabindex="6"
-                  />
-                  <label for="menor-idade">Menor de idade</label>
-                </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="menor-idade"
+                  name="menor_idade"
+                  tabindex="6"
+                />
+                <label for="menor-idade">Menor de idade</label>
               </div>
             </div>
           </fieldset>
@@ -166,17 +163,6 @@
             <legend>Visita</legend>
             <div class="blocoapartamento">
               <div class="ajeitador">
-                <label for="apartamento">Apartamento</label>
-                <input
-                  type="text"
-                  id="apartamento"
-                  name="apartamento"
-                  placeholder="Digite o número"
-                  required
-                  tabindex="8"
-                />
-              </div>
-              <div class="ajeitador">
                 <label for="bloco">Bloco</label>
                 <input
                   type="text"
@@ -185,6 +171,17 @@
                   placeholder="Digite o bloco"
                   required
                   tabindex="7"
+                />
+              </div>
+              <div class="ajeitador">
+                <label for="apartamento">Apartamento</label>
+                <input
+                  type="text"
+                  id="apartamento"
+                  name="apartamento"
+                  placeholder="Digite o número"
+                  required
+                  tabindex="8"
                 />
               </div>
             </div>
