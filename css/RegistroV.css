@@ -20,6 +20,24 @@
   box-sizing: border-box;
 }
 
+.blurOverlay {
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  backdrop-filter: blur(3px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.blurOverlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ===== Container principal ===== */
 .container1 {
   box-sizing: border-box;

@@ -22,56 +22,8 @@
     <link rel="stylesheet" href="/css/RegistroE.css" />
     <link rel="stylesheet" href="/css/Base.css" />
   </head>
-  <body>
-    <header class="topico">
-      <span>REGISTRO DE EVENTOS</span>
-
-      <svg
-        id="botaoicone"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-      >
-        <path
-          d="M4 6H20M4 12H14M4 18H9"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-
-      <!-- Menu dropdown -->
-      <div class="navbarmenu" id="navbarmenu">
-        <div class="itensnavbar">
-          <a href="RegistroM.html" class="nav-item">
-            <i class="fi fi-sr-user-pen"></i>
-            <h3 class="itenvey">Registro Moradores</h3>
-          </a>
-          <a href="RegistroV.html" class="nav-item">
-            <i class="fi fi-sr-user-pen"></i>
-            <h3 class="itenvey">Registro Visitantes</h3>
-          </a>
-          <a href="RegistroEN.html" class="nav-item">
-            <i class="fi fi-sr-gifts"></i>
-            <h3 class="itenvey">Registro Encomendas</h3>
-          </a>
-          <a href="RegistroE.html" class="nav-item">
-            <i class="fi fi-sr-calendar-star"></i>
-            <h3 class="itenvey">Registro Eventos</h3>
-          </a>
-          <a href="Consulta.html" class="nav-item">
-            <i class="fi fi-sr-search-alt"></i>
-            <h3 class="itenvey">Consulta</h3>
-          </a>
-          <a href="Adm.html" class="nav-item">
-            <i class="fi fi-sr-administrator-alt"></i>
-            <h3 class="itenvey">Adm</h3>
-          </a>
-        </div>
-      </div>
-    </header>
+  <body data-page="evento">
+    <div id="navbar"></div>
 
     <div class="blurOverlay" id="blurOverlay"></div>
 
@@ -221,6 +173,6 @@
     </div>
 
     <script src="/js/RegistroE.js"></script>
-    <script src="/js/Base.js"></script>
+    <script src="/js/includes.js"></script>
   </body>
 </html>

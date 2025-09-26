@@ -1,8 +1,3 @@
-const naopossuo = document.getElementById("naopossuo");
-const carro = document.getElementById("carro");
-const moto = document.getElementById("moto");
-const outro = document.getElementById("outros");
-
 const inner = document.getElementById("inner");
 const paraDiv = document.getElementById("field-para-inputs");
 
@@ -110,7 +105,7 @@ const btnInquilino = document.getElementById("botao-inquilino");
 const btnProprietario = document.getElementById("botao-proprietario");
 const radiosInquilino = btnInquilino.querySelector("input[type='radio']");
 const radiosProprietario = btnProprietario.querySelector("input[type='radio']");
-const inputContratoinput = document.getElementById("input-para-contrato-input");
+
 const inputContratodiv = document.getElementById("input-para-contrato-div");
 
 btnInquilino.addEventListener("click", function () {

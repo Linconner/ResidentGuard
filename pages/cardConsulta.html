@@ -4,194 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulta</title>
-    <link rel="stylesheet" href="/css/cardConsulta.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fontisto@3.0.4/css/fontisto/fontisto.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/Consulta.css" />
   </head>
+
+  <div id="navbar"></div>
   <body>
-    <div class="container">
-      <!-- Barra de busca -->
-      <div class="top-search">
-        <button type="button">Voltar</button>
-        <div class="input-lupa">
+    <!-- Header -->
+
+    <!-- Blur overlay -->
+    <div class="blurOverlay" id="blurOverlay"></div>
+
+    <!-- Container principal -->
+    <div class="container1">
+      <div class="container-coisas-dentro">
+        <!-- Top: pesquisa -->
+        <div class="top">
           <input
+            class="input-pesquisa"
             type="search"
-            id="search-consulta"
-            placeholder="Insira aqui..."
+            placeholder="Pesquise aqui"
           />
-          <img src="/images/search.svg" alt="lupa" />
-        </div>
-      </div>
-
-      <!-- Botões das Tabs -->
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="infos">Infos</button>
-        <button class="tab-btn" data-tab="outros">Outros</button>
-      </div>
-
-      <!-- Conteúdo das Tabs -->
-      <div class="bottom-consulta">
-        <!-- Aba Infos -->
-        <div class="tab-content active" id="infos">
-          <div class="morador1">
-            <div class="morador1-header">
-              <img src="/images/circle-user.svg" alt="usuario" />
-              <div class="letras-header-morador1">
-                <span class="nome-morador">Nome do morador</span>
-                <img src="/images/chevron-right.svg" alt="chevron" />
-                <span>Tipo do morador</span>
-              </div>
-            </div>
-
-            <div class="morador1-body">
-              <div class="cpfmorador1">
-                <span>CPF:</span>
-                <span>123.456.789-10</span>
-              </div>
-              <div class="nomemorador1">
-                <span>Nome:</span>
-                <span>Julia Marques</span>
-              </div>
-              <div class="numeromorador1">
-                <span>Número:</span>
-                <span>(11) 91234-5678</span>
-              </div>
-              <div class="emailmorador1">
-                <span>E-mail:</span>
-                <span>julia.marques@email.com</span>
-              </div>
-              <div class="datanascmorador1">
-                <span>Data de Nascimento:</span>
-                <span>13/07/1991</span>
-              </div>
-              <div class="animalmorador1">
-                <span>Animal:</span>
-                <span>Sim</span>
-              </div>
-              <div class="tipomorador1">
-                <span>Tipo do Morador:</span>
-                <span>Inquilino</span>
-              </div>
-              <div class="contratomorador1">
-                <span>Tempo de Permanência (Contrato de Aluguel):</span>
-                <span>Fevereiro 2027</span>
-              </div>
-              <div class="statusmorador1">
-                <span>Status:</span>
-                <span>Ativo</span>
-              </div>
-              <div class="blocomorador1">
-                <span>Bloco:</span>
-                <span>A</span>
-              </div>
-              <div class="apartamentomorador1">
-                <span>Apartamento:</span>
-                <span>101</span>
-              </div>
-            </div>
-          </div>
+          <img src="/images/search.svg" class="lupazinha" id="pesquisa" />
         </div>
 
-        <!-- Aba Outros -->
-        <div class="tab-content" id="outros">
-          <div class="morador1">
-            <div class="morador1-header">
-              <img src="/images/circle-user.svg" alt="usuario" />
-              <div class="letras-header-morador1">
-                <span class="nome-morador">Nome do morador</span>
-                <img src="/images/chevron-right.svg" alt="chevron" />
-                <span>Tipo do morador</span>
-              </div>
-            </div>
+        <!-- Bottom: grid -->
+        <div class="bottom">
+          <fieldset>
+            <legend>Informações Gerais</legend>
+          </fieldset>
 
-            <div class="familia">
-              <div class="header-familia">
-                <img src="/images/database.svg" alt="" />
-                <span>Família</span>
-              </div>
-              <div class="body-familia">
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha</span>
-                </div>
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha - 4 anos</span>
-                </div>
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha - 5 anos</span>
-                </div>
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha - 5 anos</span>
-                </div>
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha - 5 anos</span>
-                </div>
-                <div class="card-body">
-                  <span>Maria Alice </span>
-                  <span>Filha - 5 anos</span>
-                </div>
-              </div>
-
-              <div class="header-familia">
-                <img src="/images/car.svg" alt="Ícone veículo" />
-                <span>Veículos</span>
-              </div>
-
-              <div class="body-automovel">
-                <div class="card-body">
-                  <span>Carro</span>
-                  <span>Marca: Toyota Corolla</span>
-                  <span>Placa: ABC-1234</span>
-                  <span>Cor: Preto</span>
-                </div>
-
-                <div class="card-body">
-                  <span>Moto</span>
-                  <span>Marca: Honda CG 160</span>
-                  <span>Placa: XYZ-5678</span>
-                  <span>Cor: Vermelha</span>
-                </div>
-
-                <div class="card-body">
-                  <span>Bicicleta</span>
-                  <span>Marca: Caloi Elite</span>
-                  <span>Placa: N/A</span>
-                  <span>Cor: Azul</span>
-                </div>
-
-                <div class="card-body">
-                  <span>Caminhonete</span>
-                  <span>Marca: Ford Ranger</span>
-                  <span>Placa: JKL-9012</span>
-                  <span>Cor: Branca</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <fieldset>
+            <legend>Informações Gerais</legend>
+          </fieldset>
         </div>
       </div>
-
-      <!-- Aba Automóveis -->
     </div>
 
-    <!-- Script Tabs -->
-    <script>
-      const tabButtons = document.querySelectorAll(".tab-btn");
-      const tabContents = document.querySelectorAll(".tab-content");
-
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // remove active de todos
-          tabButtons.forEach((btn) => btn.classList.remove("active"));
-          tabContents.forEach((content) => content.classList.remove("active"));
-
-          // adiciona active no botão clicado e no conteúdo correspondente
-          button.classList.add("active");
-          document.getElementById(button.dataset.tab).classList.add("active");
-        });
-      });
-    </script>
+    <script src="/js/includes.js"></script>
+    <script src="/js/Base.js"></script>
+    <script src="/js/Consulta.js"></script>
   </body>
 </html>
