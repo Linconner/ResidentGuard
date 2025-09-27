@@ -13,6 +13,11 @@
   --transition: all 0.3s ease;
   --border-radius: 0.6rem;
   --fieldset-radius: 1rem;
+
+  --azulClaro: #cae9ff;
+  --azulEscuro: #184965;
+  --azulClaro2: #396481;
+  --azulEscuro2: #11334a;
 }
 
 * {
@@ -69,7 +74,7 @@ body {
   /* largura e altura */
   height: 85vh;
   min-height: 75vh;
-  width: 65%;
+  width: 55%;
   max-width: 1200px;
   flex-wrap: wrap;
   background-color: var(--var-azulescuroprofundo);
@@ -83,11 +88,14 @@ body {
 .center {
   height: 100%;
   width: 100%;
-  overflow-y: overlay;
+  overflow-y: auto;
   background-color: #396481;
   border-radius: 1rem;
   box-sizing: border-box;
   padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 /* Largura da scrollbar */
@@ -112,113 +120,13 @@ body {
 .center::-webkit-scrollbar-thumb:hover {
   background-color: #9e9e9e;
 }
+
 form {
   width: auto;
   display: flex;
   height: auto;
   display: flex;
   flex-direction: column;
-}
-
-.topico {
-  display: flex;
-  align-items: center;
-  background-color: var(--var-azulescuroprofundo);
-  position: fixed;
-  top: 0; /* topo da viewport */
-  left: 0; /* opcional, alinha à esquerda */
-  width: 100%; /* ocupa toda largura */
-  z-index: 1000; /* para ficar acima de outros elementos */
-  border-radius: 1vh;
-  height: 12%;
-  padding: 2vh;
-}
-
-.topico span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--var-fonttop);
-  font-weight: 600;
-  font-size: 4vh;
-  color: white;
-}
-
-.topico svg {
-  color: white;
-  width: 70px;
-  height: auto;
-  margin-left: 3vh;
-  border: 2px solid #0d354d;
-  border-radius: var(--border-radius);
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.topico svg:hover {
-  transform: scale(1.05);
-  transition: color 0.1s ease-out;
-  color: #0d354d;
-}
-
-.topico svg:active {
-  background-color: var(--var-blue);
-}
-
-.navbarmenu {
-  position: absolute;
-  top: calc(100% - -30px); /* Ajuste fino para alinhar melhor */
-  left: 20px;
-  width: 275px;
-  background-color: #184965;
-  border-radius: var(--border-radius);
-  box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
-  z-index: 1001;
-  opacity: 0;
-  transform: translateY(-10px);
-  visibility: hidden;
-  transition: all 0.25s ease-out;
-  max-height: 70vh;
-  overflow-y: auto;
-  border: 1px solid rgb(0 0 0 / 10%);
-}
-
-.navbarmenu.ativa {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
-
-/* Ajuste para os itens do menu */
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 12px 20px;
-  color: #0d354d;
-  text-decoration: none;
-  transition: var(--transition);
-  gap: 4px;
-}
-
-.nav-item:hover {
-  background-color: #0d344d75;
-}
-
-.nav-item.active {
-  background-color: #0d354d;
-  color: #396481;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-item i {
-  font-size: 1.1rem;
-  width: auto;
 }
 
 /* prettier-ignore-start */
@@ -243,17 +151,6 @@ form {
 .blur-overlay.ativo {
   opacity: 1;
   pointer-events: auto;
-}
-
-.itenvey {
-  color: #fff;
-  font-size: 0.9rem;
-}
-
-.itensnavbar {
-  height: auto;
-  display: flex;
-  flex-flow: column wrap;
 }
 
 label {
@@ -289,34 +186,22 @@ legend {
 }
 
 .topFIeld {
-  display: flex;
-  height: 60%;
+  height: 100%;
   width: 100%;
-  gap: 1rem;
-}
-
-.bottomField {
-  height: 40%;
 }
 
 .field-info-encomenda {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  gap: 1rem;
-  height: 100%;
+  /*encomenda*/
+
+  width: 100%;
+  height: auto;
+  flex: 1 1 auto;
 }
 
 .registroDestinatario {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  gap: 1rem;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  flex: 1 1 auto;
 }
 
 .campoDestinatario {
@@ -331,6 +216,7 @@ legend {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .campoDestinatario input {
@@ -351,12 +237,13 @@ legend {
 }
 
 .field-info-entregador {
+  /*entregador*/
+
+  width: 100%;
+  height: auto;
+  flex: 1 1 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .InformacoesEntregador {
@@ -371,17 +258,12 @@ legend {
 }
 
 .informacoesdoEntregador {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  height: 100%;
 }
 
-.field-info-entregador {
-  height: 100%;
-  width: 100%;
+.informacoesdoEntregador input {
+  width: 100% !important;
 }
 
 input[type="text"],
@@ -530,6 +412,27 @@ input[type="radio"] {
 }
 .inputs-top-couple input {
   width: 100% !important;
+}
+
+.btnconfirmar {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+}
+
+.btnconfirmar button {
+  background: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btnconfirmar button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 3px 5px #0000;
 }
 
 @media (max-width: 1071px) {

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fontisto@3.0.4/css/fontisto/fontisto.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/Consulta.css" />
+  </head>
+
+  <div id="navbar"></div>
+  <body>
+    <!-- Header -->
+
+    <!-- Blur overlay -->
+    <div class="blurOverlay" id="blurOverlay"></div>
+
+    <!-- Container principal -->
+    <div class="container1">
+      <div class="container-coisas-dentro">
+        <!-- Top: pesquisa -->
+        <div class="top">
+          <input
+            class="input-pesquisa"
+            type="search"
+            placeholder="Pesquise aqui"
+          />
+          <img src="/images/search.svg" class="lupazinha" id="pesquisa" />
+        </div>
+
+        <!-- Bottom: grid -->
+        <div class="bottom">
+          <div>
+            <!-- Fieldset do topo, para procura de dados e filtragens de status -->
+
+            <fieldset>
+              <div>
+                <input
+                  type="search"
+                  placeholder="Procure por dados do morador"
+                />
+              </div>
+              <div>
+                <div>
+                  <img src="/images/ellipsis.svg" alt="" />
+                  <span>Status</span>
+                </div>
+                <button type="button">Todos</button>
+                <button type="button">Ativos</button>
+                <button type="button">Inativos</button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <!-- morador -->
+              <div>
+                <div>
+                  <img src="/images/circle-user.svg" alt="" />
+                </div>
+                <div>
+                  <span>Maria Silva Santos</span>
+                  <div>
+                    <span>Bloco xxx</span>
+                    <span>Apto xxx</span>
+                    <span>(11)1111-1111</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src="/images/circle-user.svg" alt="" />
+                </div>
+                <div>
+                  <span>Maria Silva Santos</span>
+                  <div>
+                    <span>Bloco xxx</span>
+                    <span>Apto xxx</span>
+                    <span>(11)1111-1111</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src="/images/circle-user.svg" alt="" />
+                </div>
+                <div>
+                  <span>Maria Silva Santos</span>
+                  <div>
+                    <span>Bloco xxx</span>
+                    <span>Apto xxx</span>
+                    <span>(11)1111-1111</span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div>
+            <div>
+              <img src="/images/circle-user.svg" alt="" />
+              <span>Maria Silva Santos</span>
+              <span>Ativo</span>
+            </div>
+
+            <div>
+              <div>
+                <span>Inquilina</span>
+                <span>Contrato de 2 anos</span>
+                <span>90223939410</span>
+                <span>Maria Silva Santos</span>
+                <span>(11)1111-1111</span>
+                <span>maria@gmail.com</span>
+                <span>01/08/1998</span>
+                <span>Bloco 2</span>
+                <span>Apto 23</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/includes.js"></script>
+    <script src="/js/Base.js"></script>
+    <script src="/js/Consulta.js"></script>
+  </body>
+</html>

@@ -25,175 +25,159 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/RegistroEN.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
   </head>
   <body data-page="encomenda">
-
-   <div id="navbar"></div>
+    <div id="navbar"></div>
 
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="center">
-
-
-        
-        <form id="registroForm" name="registroForm">
-          <!-- Informações do destinatário -->
-          <div class="topFIeld">
-            <fieldset class="registroDestinatario">
-              <legend>Informações do destinatário</legend>
-              <div class="destinatarioInfos">
-                
-                  <div class="campoDestinatario">
-                    <label for="nomeDestinatario">Nome do destinatário</label>
-                    <input
-                      type="text"
-                      id="nomeDestinatario"
-                      name="nomeDestinatario"
-                      placeholder="Nome de quem recebe"
-                      required
-                      autocomplete="off"
-                    />
-            
-                  </div>
-                    <div class="campoDestinatario">
-                      <label for="apartamentoDestinatario">Apartamento</label>
-                      <input
-                        type="number"
-                        id="apartamentoDestinatario"
-                        name="apartamentoDestinatario"
-                        placeholder="Apartamento"
-                        required
-            
-                      />
-                    </div>
-                    <div class="campoDestinatario">
-                      <label for="blocoDestinatario">Bloco</label>
-                      <input
-                        type="text"
-                        id="blocoDestinatario"
-                        name="blocoDestinatario"
-                        placeholder="Bloco do apartamento"
-                        maxlength="3"
-                        required
-                      />
-                    </div>
-                </div>
-               
-            
-              
-            </fieldset>
-            <!-- Informações da encomenda -->
-            <fieldset class="field-info-encomenda">
-              <legend>Informações da Encomenda</legend>
-            
-              <div class="descricaoEncomenda">
-                
-                  <div class="inputs-top-juntos">
-                    <div class="inputs-top-couple">
-                      <label for="descricao">Descrição da encomenda</label>
-                      <input
-                        type="text"
-                        id="descricao"
-                        name="descricao"
-                        placeholder="Descrição da encomenda"
-                        required
-                        autocomplete="off"
-                      />
-                    </div>
-                                    
-                                    <!-- segundo input amo -->
-                    <div class="inputs-top-couple">
-                      <label for="data">Data de recebimento</label>
-                      <input
-                      type="date"
-                      name="data"
-                      id="data"
-                      required />
-                    </div>
-                  </div>
-              
-            
-              
-                <div class="radio-top-juntos">
-                  <div class="camposRadio">
-                    <input
-                      type="radio"
-                      id="tipoEncomendaAlimento"
-                      value="alimento"
-                      title="alimento"
-                      name="tipoEncomenda"
-                      required
-                    />
-                    <label for="tipoEncomendaAlimento">Alimento</label>
-                  </div>
-                  <div class="camposRadio">
-                    <input
-                      type="radio"
-                      id="tipoEncomendaPacote"
-                      value="pacote"
-                      title="pacote"
-                      name="tipoEncomenda"
-                    />
-                    <label for="tipoEncomendaPacote">Pacote</label>
-                  </div>
-                  <div class="camposRadio">
-                    <input
-                      type="radio"
-                      id="tipoEncomendaFarmacia"
-                      value="farmacia"
-                      title="farmacia"
-                      name="tipoEncomenda"
-                    />
-                    <label for="tipoEncomendaFarmacia">Farmácia</label>
-                  </div>
-                  <div class="camposRadio">
-                    <input
-                      type="radio"
-                      id="tipoEncomendaOutros"
-                      value="outros"
-                      title="outros"
-                      name="tipoEncomenda"
-                    />
-                    <label for="tipoEncomendaOutros">Outros</label>
-                  </div>
-                </div>
+      <form id="registroForm" name="registroForm">
+        <!-- Informações do destinatário -->
+        <div class="center">
+          <fieldset class="registroDestinatario">
+            <legend>Informações do destinatário</legend>
+            <div class="destinatarioInfos">
+              <div class="campoDestinatario">
+                <label for="nomeDestinatario">Nome do destinatário</label>
+                <input
+                  type="text"
+                  id="nomeDestinatario"
+                  name="nomeDestinatario"
+                  placeholder="Nome de quem recebe"
+                  required
+                  autocomplete="off"
+                />
               </div>
+              <div class="campoDestinatario">
+                <label for="apartamentoDestinatario">Apartamento</label>
+                <input
+                  type="number"
+                  id="apartamentoDestinatario"
+                  name="apartamentoDestinatario"
+                  placeholder="Apartamento"
+                  required
+                />
+              </div>
+              <div class="campoDestinatario">
+                <label for="blocoDestinatario">Bloco</label>
+                <input
+                  type="text"
+                  id="blocoDestinatario"
+                  name="blocoDestinatario"
+                  placeholder="Bloco do apartamento"
+                  maxlength="3"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+          <!-- Informações da encomenda -->
+          <fieldset class="field-info-encomenda">
+            <legend>Informações da Encomenda</legend>
 
-            </fieldset>
-          </div>
-
-          <!-- Informações do entregador -->
-          <div class="bottomField">
-            <fieldset class="field-info-entregador">
-              <legend>Informações do Entregador</legend>
-              <div class="InformacoesEntregador">
-                <div class="informacoesdoEntregador">
-                  <label for="nomeEntregador">Nome do entregador</label>
+            <div class="descricaoEncomenda">
+              <div class="inputs-top-juntos">
+                <div class="inputs-top-couple">
+                  <label for="descricao">Descrição da encomenda</label>
                   <input
-                    id="nomeEntregador"
-                    name="nomeEntregador"
                     type="text"
-                    placeholder="Ex: Motoboy, entregador da Amazon"
+                    id="descricao"
+                    name="descricao"
+                    placeholder="Descrição da encomenda"
                     required
                     autocomplete="off"
                   />
                 </div>
-                <div class="informacoesdoEntregador">
-                  <label for="empresa">Empresa (opcional)</label>
-                  <input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    placeholder="Ex: iFood, Shopee, Correios, etc"
-                    autocomplete="off"
-                  />
+
+                <!-- segundo input amo -->
+                <div class="inputs-top-couple">
+                  <label for="data">Data de recebimento</label>
+                  <input type="date" name="data" id="data" required />
                 </div>
               </div>
-            </fieldset>
-          </div>
 
-        
+              <div class="radio-top-juntos">
+                <div class="camposRadio">
+                  <input
+                    type="radio"
+                    id="tipoEncomendaAlimento"
+                    value="alimento"
+                    title="alimento"
+                    name="tipoEncomenda"
+                    required
+                  />
+                  <label for="tipoEncomendaAlimento">Alimento</label>
+                </div>
+                <div class="camposRadio">
+                  <input
+                    type="radio"
+                    id="tipoEncomendaPacote"
+                    value="pacote"
+                    title="pacote"
+                    name="tipoEncomenda"
+                  />
+                  <label for="tipoEncomendaPacote">Pacote</label>
+                </div>
+                <div class="camposRadio">
+                  <input
+                    type="radio"
+                    id="tipoEncomendaFarmacia"
+                    value="farmacia"
+                    title="farmacia"
+                    name="tipoEncomenda"
+                  />
+                  <label for="tipoEncomendaFarmacia">Farmácia</label>
+                </div>
+                <div class="camposRadio">
+                  <input
+                    type="radio"
+                    id="tipoEncomendaOutros"
+                    value="outros"
+                    title="outros"
+                    name="tipoEncomenda"
+                  />
+                  <label for="tipoEncomendaOutros">Outros</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Informações do entregador -->
+
+          <fieldset class="field-info-entregador">
+            <legend>Informações do Entregador</legend>
+
+            <div class="informacoesdoEntregador">
+              <label for="nomeEntregador">Nome do entregador</label>
+              <input
+                id="nomeEntregador"
+                name="nomeEntregador"
+                type="text"
+                placeholder="Ex: Motoboy, entregador da Amazon"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="informacoesdoEntregador">
+              <label for="empresa">Empresa (opcional)</label>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                placeholder="Ex: iFood, Shopee, Correios, etc"
+                autocomplete="off"
+              />
+            </div>
+          </fieldset>
+
+          <div class="btnconfirmar">
+            <button type="button">CADASTRAR</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <!-- Scripts -->
     <script src="/js/RegistroEN.js"></script>
