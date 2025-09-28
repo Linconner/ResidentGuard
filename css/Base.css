@@ -1,25 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Hammersmith+One&family=Hind+Madurai:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap");
+
 :root {
-  --var-azulbb: #cae9ff;
-  --var-azulescuroprofundo: #184965;
-  --var-azulclarogray: #5fa8d3;
-  --var-azulescurosuavehover: #468faf;
-  --var-textocor: #184965;
-  --var-azulclaroesverdeado: #bee9eb;
-  --var-darkgray: #9ca3af;
-  --var-dark: #212529;
   --var-fonttop: "League Spartan", sans-serif;
   --var-fontlabel: "Inter", sans serif;
   --transition: all 0.3s ease;
   --border-radius: 0.6rem;
   --fieldset-radius: 1rem;
+  --azulClaro: #cae9ff;
+  --azulEscuro: #184965;
+  --azulClaro2: #396481;
+  --azulEscuro2: #11334a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.484) transparent;
+  font-size: 0.9rem;
+}
+
+/* Para navegadores WebKit */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html,
@@ -32,7 +55,7 @@ body {
 }
 
 body {
-  background-color: var(--var-azulbb);
+  background-color: var(--azulClaro);
   line-height: 1.6;
   padding: 20px;
   overflow: hidden;
@@ -49,23 +72,20 @@ body {
   /* largura e altura */
   height: 87vh;
   min-height: 0;
-  width: 100%;
+  width: 80%;
 
   flex-wrap: wrap;
-  background-color: var(--var-azulescuroprofundo);
-  border: 2px solid #bee9eb;
+  background-color: var(--azulClaro2);
+
+  border: 15px solid var(--azulEscuro);
   border-radius: 3vh;
   box-shadow: 0 4px 10px rgb(24 73 101 / 10%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
 }
 
 .topico {
   display: flex;
   align-items: center;
-  background-color: var(--var-azulescuroprofundo);
+  background-color: var(--azulEscuro);
   position: fixed;
   top: 0; /* topo da viewport */
   left: 0; /* opcional, alinha à esquerda */
@@ -92,7 +112,7 @@ body {
   width: 70px;
   height: auto;
   margin-left: 3vh;
-  border: 2px solid #0d354d;
+  border: 2px solid var(--azulEscuro2);
   border-radius: var(--border-radius);
   padding: 10px;
   font-size: 20px;
@@ -102,11 +122,11 @@ body {
 .topico svg:hover {
   transform: scale(1.05);
   transition: color 0.1s ease-out;
-  color: #0d354d;
+  color: var(--azulEscuro2);
 }
 
 .topico svg:active {
-  background-color: var(--var-blue);
+  background-color: var(--azulEscuro);
 }
 
 .navbarmenu {
@@ -114,7 +134,7 @@ body {
   top: calc(100% - -30px); /* Ajuste fino para alinhar melhor */
   left: 20px;
   width: 275px;
-  background-color: #184965;
+  background-color: var(--azulEscuro);
   border-radius: var(--border-radius);
   box-shadow: 0 10px 25px rgb(0 0 0 / 20%);
   z-index: 1001;
@@ -147,12 +167,12 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #0d344d75;
+  background-color: rgba(17, 51, 74, 0.46);
 }
 
 .nav-item.active {
-  background-color: #0d354d;
-  color: #396481;
+  background-color: var(--azulEscuro2);
+  color: var(--azulClaro2);
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -207,11 +227,11 @@ label {
 }
 
 fieldset {
-  border: 3px solid var(--var-azulescuroprofundo);
+  border: 3px solid var(--azulEscuro);
   border-radius: var(--fieldset-radius);
   padding: 1rem;
   margin-bottom: 0;
-  background-color: var(--light-color);
+  background-color: var(--azulClaro2);
   transition: var(--transition);
 }
 
@@ -234,11 +254,12 @@ input[type="datetime-local"],
 input[type="number"],
 input[type="month"],
 input[type="email"],
+input[type="search"],
 select {
   width: 100%;
   padding: 0.5rem;
   border: 0.1rem solid #f5f5f5;
-  border-radius: var(--border-radius);
+  border-radius: 0.6rem;
   font-size: 1rem;
   transition: var(--transition);
   background-color: #fff;
@@ -250,7 +271,7 @@ input[type="tel"]:focus,
 input[type="datetime-local"]:focus,
 input[type="number"]:focus {
   box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
-  border-color: var(--var-azulescurosuavehover);
+  border-color: var(--azulClaro2);
   outline: none;
 }
 
@@ -272,7 +293,7 @@ input[type="time"] {
 }
 
 input[type="time"]:focus {
-  border-color: var(--var-azulbb);
+  border-color: var(--azulClaro);
   outline: none;
 }
 
@@ -289,14 +310,14 @@ input[list="moradores"] {
 
 input[list="moradores"]:focus {
   box-shadow: 0 0 5px 5px rgb(13 52 77 / 28.8%);
-  border-color: var(--var-azulescurosuavehover);
+  border-color: var(--azulClaro2);
   outline: none;
 }
 
 .botaoregistro {
-  background-color: #396481;
+  background-color: var(--azulClaro2);
   color: white;
-  border: 3px solid var(--var-azulescuroprofundo);
+  border: 3px solid var(--azulEscuro);
   border-radius: var(--border-radius);
   font-size: 15px;
   padding: 10px;
@@ -307,14 +328,14 @@ input[list="moradores"]:focus {
 }
 
 .botaoregistro:hover {
-  background-color: #184965;
+  background-color: var(--azulEscuro);
   color: white;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0 0 0.25rem 0.15rem rgb(0 0 0 / 6.4%);
 }
 
 .botaoregistro:active {
-  background-color: var(--var-blue);
+  background-color: var(--azulEscuro);
 }
 
 form {

@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Hammersmith+One&family=Hind+Madurai:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap");
+
+:root {
+  --transition: all 0.3s ease;
+  --border-radius: 3rem;
+  --fieldset-radius: 1rem;
+  --azulClaro: #cae9ff;
+  --azulEscuro: #184965;
+  --azulClaro2: #396481;
+  --azulEscuro2: #11334a;
+  --laranjaContraste: #ff8c42;
+  --small: 0.8rem;
+  --normal: 0.9rem;
+  --big: 1.2rem;
+}
+
+* {
+  font-size: 0.95rem;
+  color: white;
+}
+
+.small {
+  font-size: var(--small);
+}
+
+.normal {
+  font-size: var(--normal);
+}
+
+.big {
+  font-size: var(--big);
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "busca-filtro central-de-informacoes"
+    "card-dos-moradores central-de-informacoes";
+
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.busca-filtro {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  grid-area: busca-filtro;
+}
+
+/*div-1*/
+
+.busca-filtro div:first-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  flex: 2 1 auto;
+}
+
+.busca-filtro div:first-child img {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.busca-filtro div:nth-child(1) input {
+  padding-left: 3rem;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+/*div-2*/
+
+.busca-filtro div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 34.4px;
+  gap: 1rem;
+
+  flex: 1 1 auto;
+}
+
+.busca-filtro div:nth-child(2) div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.busca-filtro div:nth-child(2) div:first-child .funnel {
+  width: 1em;
+  height: 1em;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor; /* usa a cor do texto */
+  fill: none; /* sem preenchimento */
+  stroke-width: 2; /* espessura padrão */
+}
+
+/* controla só o funil */
+.funnel {
+  color: white; /* muda a cor do traço (por causa do currentColor) */
+  /* stroke-width: 3;  você pode mudar aqui também */
+}
+
+.filtros {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.3rem;
+}
+
+.filtros div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azulEscuro);
+  border-radius: 3rem;
+  padding: 2px 13px;
+  font-size: var(--small);
+  cursor: pointer;
+}
+
+.card-dos-moradores {
+  grid-area: card-dos-moradores;
+  width: 100%;
+}
+
+.central-de-informacoes {
+  height: 100%;
+  width: 100%;
+  grid-area: central-de-informacoes;
+}
+
+.header-morador {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 0.8rem;
+  height: auto; /* ou altura fixa em px, ex: 80px */
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--azulEscuro2);
+}
+
+.icone-foto {
+  width: 60px; /* tamanho fixo do círculo */
+  height: 60px; /* igual ao width pra ser círculo */
+  padding: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--azulEscuro2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icone-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.informacoes-texto {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.nome-status {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.informacoes-abaixo-nome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.endereco {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.meio-card {
+  height: auto;
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--azulEscuro2);
+}
+
+.meio-card > div {
+  display: flex;
+  flex-flow: column;
+  gap: 0.3rem;
+  background-color: var(--azulEscuro);
+  border-radius: 0.6rem;
+  border: 2px solid var(--azulEscuro2);
+  flex: 1 1 auto;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem;
+}
+
+.footer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.footer > div {
+  width: 100%;
+  flex: 1 1 auto;
+
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.footer > div:not(.registro-tipodomorador) {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.registro-tipodomorador {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0.6rem;
+}
+
+.registro-tipodomorador img {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.central-de-informacoes {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+
+  overflow: auto;
+}
+
+.central-de-informacoes > div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* .central-de-informacoes > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+
+.central-de-informacoes div img {
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 50%;
+  padding: 1.5rem;
+  width: 85px;
+  height: 85px;
+} */
+
+.foto-status-tipo {
+  height: fit-content;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+
+  align-items: center;
+  gap: 0.6rem;
+
+  border-bottom: 1px solid var(--azulEscuro2);
+}
+
+.foto-status-tipo img {
+  width: 100px;
+  height: 100px;
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.status-tipo {
+  text-align: center;
+}
+
+/*templates*/
+
+.span-ativo {
+  background-color: var(--azulEscuro2);
+  border-radius: 12rem;
+  padding: 2px 12px;
+  line-height: 29.18px;
+  font-size: var(--small);
+}
+
+.span-endereco {
+  color: var(--laranjaContraste);
+  font-weight: 600;
+}
+
+.informacoes-abaixo-nome > span {
+  font-weight: 300;
+}
+
+.lucide-body-card {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--laranjaContraste);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lucide-body-card path {
+  stroke: var(--laranjaContraste);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.calendario img {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.registro-tipodomorador {
+  display: flex;
+}
+
+.sp {
+  background-color: transparent;
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 12rem;
+  padding: 2px 12px;
+  line-height: 29.18px;
+  font-size: var(--small);
+}

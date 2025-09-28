@@ -40,124 +40,459 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/Consulta.css" />
+    <link rel="stylesheet" href="/css/ConsultaMorador.css" />
+    <link rel="stylesheet" href="/css/Base.css" />
   </head>
 
-  <div id="navbar"></div>
   <body>
-    <!-- Header -->
+    <!-- Navbar precisa estar dentro do body -->
+    <div id="navbar"></div>
 
     <!-- Blur overlay -->
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <!-- Container principal -->
     <div class="container1">
-      <div class="container-coisas-dentro">
-        <!-- Top: pesquisa -->
-        <div class="top">
-          <input
-            class="input-pesquisa"
-            type="search"
-            placeholder="Pesquise aqui"
-          />
-          <img src="/images/search.svg" class="lupazinha" id="pesquisa" />
+      <fieldset class="busca-filtro">
+        <div>
+          <img src="/images/search.svg" alt="" />
+          <input type="search" placeholder="Busque os dados do morador" />
         </div>
-
-        <!-- Bottom: grid -->
-        <div class="bottom">
+        <div>
+          <!-- SVG inline -->
           <div>
-            <!-- Fieldset do topo, para procura de dados e filtragens de status -->
+            <svg
+              class="icon funnel"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+              />
+            </svg>
+            <span class="semibold">Status:</span>
+          </div>
+          <div class="filtros">
+            <div>Todos</div>
+            <div>Ativos</div>
+            <div>Inativos</div>
+          </div>
+        </div>
+      </fieldset>
 
-            <fieldset>
-              <div>
-                <input
-                  type="search"
-                  placeholder="Procure por dados do morador"
+      <fieldset class="card-dos-moradores">
+        <div class="card-dos-moradores-filho">
+          <div class="header-morador">
+            <div class="icone-foto">
+              <img src="/images/users.svg" alt="imagem-usuario" />
+            </div>
+            <div class="informacoes-texto">
+              <div class="nome-status">
+                <span class="bold big">Maria Silva Santos</span>
+                <span class="span-ativo semibold">Ativo</span>
+              </div>
+              <div class="informacoes-abaixo-nome">
+                <div class="endereco">
+                  <span class="span-endereco">Apto 101</span>
+                  <span class="span-endereco">Bloco 2</span>
+                </div>
+                <span>40 anos</span>
+                <span>Engenheira Civil</span>
+                <span>Casada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meio card -->
+          <div class="meio-card">
+            <div>
+              <svg
+                class="lucide-body-card"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.6667 31.375V28.4583C23.6667 26.9112 23.0521 25.4275 21.9581 24.3335C20.8642 23.2396 19.3804 22.625 17.8333 22.625H9.08333C7.53624 22.625 6.05251 23.2396 4.95854 24.3335C3.86458 25.4275 3.25 26.9112 3.25 28.4583V31.375M23.6667 5.31167C24.9176 5.63596 26.0254 6.36643 26.8162 7.38842C27.607 8.41042 28.0361 9.66609 28.0361 10.9583C28.0361 12.2506 27.607 13.5062 26.8162 14.5282C26.0254 15.5502 24.9176 16.2807 23.6667 16.605M32.4167 31.375V28.4583C32.4157 27.1659 31.9855 25.9103 31.1937 24.8888C30.4018 23.8673 29.2931 23.1377 28.0417 22.8146M19.2917 10.9583C19.2917 14.18 16.68 16.7917 13.4583 16.7917C10.2367 16.7917 7.625 14.18 7.625 10.9583C7.625 7.73667 10.2367 5.125 13.4583 5.125C16.68 5.125 19.2917 7.73667 19.2917 10.9583Z"
                 />
-              </div>
-              <div>
-                <div>
-                  <img src="/images/ellipsis.svg" alt="" />
-                  <span>Status</span>
-                </div>
-                <button type="button">Todos</button>
-                <button type="button">Ativos</button>
-                <button type="button">Inativos</button>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <!-- morador -->
-              <div>
-                <div>
-                  <img src="/images/circle-user.svg" alt="" />
-                </div>
-                <div>
-                  <span>Maria Silva Santos</span>
-                  <div>
-                    <span>Bloco xxx</span>
-                    <span>Apto xxx</span>
-                    <span>(11)1111-1111</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <img src="/images/circle-user.svg" alt="" />
-                </div>
-                <div>
-                  <span>Maria Silva Santos</span>
-                  <div>
-                    <span>Bloco xxx</span>
-                    <span>Apto xxx</span>
-                    <span>(11)1111-1111</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <img src="/images/circle-user.svg" alt="" />
-                </div>
-                <div>
-                  <span>Maria Silva Santos</span>
-                  <div>
-                    <span>Bloco xxx</span>
-                    <span>Apto xxx</span>
-                    <span>(11)1111-1111</span>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+              </svg>
+              <span>3</span>
+              <span class="small">Família</span>
+            </div>
+            <div>
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="lucide-body-card"
+              >
+                <circle cx="11" cy="4" r="2" />
+                <circle cx="18" cy="8" r="2" />
+                <circle cx="20" cy="16" r="2" />
+                <path
+                  d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"
+                />
+              </svg>
+              <span>2</span>
+              <span class="small">Pets</span>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide-body-card"
+              >
+                <path
+                  d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                />
+                <circle cx="7" cy="17" r="2" />
+                <path d="M9 17h6" />
+                <circle cx="17" cy="17" r="2" />
+              </svg>
+              <span>4</span>
+              <span class="small">Veículos</span>
+            </div>
           </div>
 
-          <div>
+          <!-- Footer -->
+          <div class="footer">
             <div>
-              <img src="/images/circle-user.svg" alt="" />
-              <span>Maria Silva Santos</span>
-              <span>Ativo</span>
+              <span class="small">Telefone</span>
+              <span>(11)1111-1111</span>
             </div>
-
             <div>
-              <div>
-                <span>Inquilina</span>
-                <span>Contrato de 2 anos</span>
-                <span>90223939410</span>
-                <span>Maria Silva Santos</span>
-                <span>(11)1111-1111</span>
-                <span>maria@gmail.com</span>
-                <span>01/08/1998</span>
-                <span>Bloco 2</span>
-                <span>Apto 23</span>
+              <span class="small">Email</span>
+              <span>maria@gmail.com</span>
+            </div>
+            <div class="registro-tipodomorador">
+              <img src="/images/calendar-clock.svg" alt="" />
+              <div class="flex-column">
+                <span class="small">Registro</span>
+                <span>09/01/2020</span>
               </div>
-              <div></div>
+              <span class="sp">Proprietário</span>
             </div>
           </div>
         </div>
-      </div>
+      </fieldset>
+
+      <fieldset class="central-de-informacoes">
+        <div>
+          <!--  <div><img src="/images/house.svg" alt="" /></div>
+          <span class="semibold">Selecione um morador</span>
+          <span class="small"
+            >Clique em um morador da lista para ver informações detalhadas e
+            opções de ação</span
+          > -->
+
+          <div class="foto-status-tipo">
+            <img src="/images/circle-user.svg" alt="" />
+            <div>
+              <span class="bold big">Maria Silva Santos</span>
+              <div class="status-tipo">
+                <span class="span-ativo">Ativo</span>
+                <span class="sp">Proprietário</span>
+              </div>
+            </div>
+          </div>
+          <!-- infos pessoais -->
+          <div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-round-icon lucide-user-round"
+              >
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+              </svg>
+              <span>Informações Pessoais</span>
+            </div>
+            <div class="grid-infos-pessoais">
+              <div>
+                <span>Idade</span>
+                <span>40 anos</span>
+              </div>
+              <div>
+                <span>CPF</span>
+                <span>123.456.789-01</span>
+              </div>
+              <div>
+                <span>Data de nascimento</span>
+                <span>01/01/1991</span>
+              </div>
+            </div>
+          </div>
+          <!-- contato e residência -->
+          <div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin-icon lucide-map-pin"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Contato & Residência</span>
+            </div>
+            <div class="card-contato-residencia">
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-house-icon lucide-house"
+                  >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                      d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span>Apartamento</span>
+                  <span>Apto 101</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-house-icon lucide-house"
+                  >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                      d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span>Bloco</span>
+                  <span>Bloco 2</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                </div>
+                <div>
+                  <span>Email</span>
+                  <span>email@example.com</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-calendar-icon lucide-calendar"
+                  >
+                    <path d="M8 2v4" />
+                    <path d="M16 2v4" />
+                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                    <path d="M3 10h18" />
+                  </svg>
+                </div>
+                <div>
+                  <span>Registro/Mudança</span>
+                  <span>09/04/2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Familia -->
+            <div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-users-icon lucide-users"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <circle cx="9" cy="7" r="4" />
+                </svg>
+                <span>Familia (3)</span>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <span>José Santo</span>
+                    <span>(11)99999-9999</span>
+                  </div>
+                  <div>
+                    <span>Esposo - 38 anos</span>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <span>José Santo</span>
+                    <span>(11)99999-9999</span>
+                  </div>
+                  <div>
+                    <span>Esposo - 38 anos</span>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <span>Gustavo Santos</span>
+                    <span>(11)99999-9999</span>
+                  </div>
+                  <div>
+                    <span>Filho - 8 anos</span>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <span>Saori Santos</span>
+                    <span>(11)99999-9999</span>
+                  </div>
+                  <div>
+                    <span>Filha - 5 anos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card veiculos -->
+            <div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="lucide-body-card"
+                >
+                  <path
+                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                  />
+                  <circle cx="7" cy="17" r="2" />
+                  <path d="M9 17h6" />
+                  <circle cx="17" cy="17" r="2" />
+                </svg>
+                <span>Veículos (2)</span>
+              </div>
+              <div>
+                <span>Toyota Corolla</span>
+                <div>
+                  <span>Prata</span>
+                  <span>XYZ-5678</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card de botões -->
+            <div>
+              <div>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user-round-x-icon lucide-user-round-x"
+                  >
+                    <path d="M2 21a8 8 0 0 1 11.873-7" />
+                    <circle cx="10" cy="8" r="5" />
+                    <path d="m17 17 5 5" />
+                    <path d="m22 17-5 5" />
+                  </svg>
+                  <span>Desativar Morador</span>
+                </button>
+              </div>
+              <div>
+                <button type="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eraser-icon lucide-eraser"
+                  >
+                    <path
+                      d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
+                    />
+                    <path d="m5.082 11.09 8.828 8.828" />
+                  </svg>
+                  Remover Morador
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
     </div>
 
     <script src="/js/includes.js"></script>
     <script src="/js/Base.js"></script>
-    <script src="/js/Consulta.js"></script>
   </body>
 </html>
