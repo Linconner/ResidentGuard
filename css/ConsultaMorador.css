@@ -11,6 +11,7 @@
   --laranjaContraste: #ff8c42;
   --small: 0.8rem;
   --normal: 0.9rem;
+  --medium: 1.1rem;
   --big: 1.2rem;
 }
 
@@ -29,6 +30,10 @@
 
 .big {
   font-size: var(--big);
+}
+
+.medium {
+  font-size: var(--medium);
 }
 
 .semibold {
@@ -330,6 +335,88 @@
   text-align: center;
 }
 
+.status-tipo span {
+  padding: 2px 10px;
+  border-radius: 1rem;
+  line-height: 20px;
+}
+.status-tipo span:first-child {
+  background-color: var(--azulEscuro2);
+}
+.status-tipo span:nth-child(2) {
+  border: 2px solid var(--azulEscuro2);
+}
+
+.grid-infos-pessoais {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.4em;
+}
+
+.grid-infos-pessoais > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-infos-pessoais div span:nth-child(1) {
+  font-size: var(--small);
+}
+
+.grid-infos-pessoais div span:nth-child(2) {
+  font-weight: 600;
+}
+
+.informacoes-pessoais-container {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--azulEscuro2);
+}
+
+.card-contato-residencia {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--azulEscuro2);
+}
+
+.card-contato-residencia > div {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.label-span {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.label-span span:nth-child(2) {
+  font-weight: 600;
+}
+
+.icones-centralizados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icones-centralizados svg {
+  font-size: var(--medium);
+  width: 1em;
+  height: 1em;
+}
+
+.informacoes-contato-residencia-container {
+  height: fit-content;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--azulEscuro2);
+}
+
+.familia-informacoes {
+  display: flex;
+}
+
 /*templates*/
 
 .span-ativo {
@@ -382,4 +469,29 @@
   padding: 2px 12px;
   line-height: 29.18px;
   font-size: var(--small);
+}
+
+.header-cards {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.header-cards svg {
+  font-size: var(--medium) !important;
+  stroke-width: 2.5;
+  width: 1em;
+  height: 1em;
+}
+
+.card-infos-template {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 0.6rem;
+  padding: 0.6rem;
 }

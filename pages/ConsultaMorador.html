@@ -189,14 +189,15 @@
             <div>
               <span class="bold big">Maria Silva Santos</span>
               <div class="status-tipo">
-                <span class="span-ativo">Ativo</span>
-                <span class="sp">Proprietário</span>
+                <span>Ativo</span>
+                <span>Proprietário</span>
               </div>
             </div>
           </div>
           <!-- infos pessoais -->
-          <div>
-            <div>
+
+          <div class="informacoes-pessoais-container">
+            <div class="header-cards">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -212,9 +213,9 @@
                 <circle cx="12" cy="8" r="5" />
                 <path d="M20 21a8 8 0 0 0-16 0" />
               </svg>
-              <span>Informações Pessoais</span>
+              <span class="medium semibold">Informações Pessoais</span>
             </div>
-            <div class="grid-infos-pessoais">
+            <div class="grid-infos-pessoais card-infos-template">
               <div>
                 <span>Idade</span>
                 <span>40 anos</span>
@@ -227,11 +228,19 @@
                 <span>Data de nascimento</span>
                 <span>01/01/1991</span>
               </div>
+              <div>
+                <span>Data de nascimento</span>
+                <span>01/01/1991</span>
+              </div>
+              <div>
+                <span>Data de nascimento</span>
+                <span>01/01/1991</span>
+              </div>
             </div>
           </div>
           <!-- contato e residência -->
-          <div>
-            <div>
+          <div class="informacoes-contato-residencia-container">
+            <div class="header-cards">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -249,11 +258,11 @@
                 />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Contato & Residência</span>
+              <span class="medium semibold">Contato & Residência</span>
             </div>
-            <div class="card-contato-residencia">
+            <div class="card-contato-residencia card-infos-template">
               <div>
-                <div>
+                <div class="icones-centralizados">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -272,13 +281,13 @@
                     />
                   </svg>
                 </div>
-                <div>
-                  <span>Apartamento</span>
+                <div class="label-span">
+                  <span class="small">Apartamento</span>
                   <span>Apto 101</span>
                 </div>
               </div>
               <div>
-                <div>
+                <div class="icones-centralizados">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -297,13 +306,13 @@
                     />
                   </svg>
                 </div>
-                <div>
+                <div class="label-span">
                   <span>Bloco</span>
                   <span>Bloco 2</span>
                 </div>
               </div>
               <div>
-                <div>
+                <div class="icones-centralizados">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -320,13 +329,13 @@
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                   </svg>
                 </div>
-                <div>
+                <div class="label-span">
                   <span>Email</span>
                   <span>email@example.com</span>
                 </div>
               </div>
               <div>
-                <div>
+                <div class="icones-centralizados">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -345,16 +354,105 @@
                     <path d="M3 10h18" />
                   </svg>
                 </div>
-                <div>
+                <div class="label-span">
                   <span>Registro/Mudança</span>
                   <span>09/04/2025</span>
                 </div>
               </div>
             </div>
-
-            <!-- Card Familia -->
-            <div>
+          </div>
+          <!-- Card Familia -->
+          <div>
+            <div class="header-cards">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-users-icon lucide-users"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
+              <span class="medium semibold">Familia (3)</span>
+            </div>
+            <div class="familia-informacoes">
               <div>
+                <div>
+                  <span>José Santo</span>
+                  <span>(11)99999-9999</span>
+                </div>
+                <div>
+                  <span>Esposo - 38 anos</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span>José Santo</span>
+                  <span>(11)99999-9999</span>
+                </div>
+                <div>
+                  <span>Esposo - 38 anos</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span>Gustavo Santos</span>
+                  <span>(11)99999-9999</span>
+                </div>
+                <div>
+                  <span>Filho - 8 anos</span>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <span>Saori Santos</span>
+                  <span>(11)99999-9999</span>
+                </div>
+                <div>
+                  <span>Filha - 5 anos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card veiculos -->
+          <div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide-body-card"
+              >
+                <path
+                  d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                />
+                <circle cx="7" cy="17" r="2" />
+                <path d="M9 17h6" />
+                <circle cx="17" cy="17" r="2" />
+              </svg>
+              <span>Veículos (2)</span>
+            </div>
+            <div>
+              <span>Toyota Corolla</span>
+              <div>
+                <span>Prata</span>
+                <span>XYZ-5678</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de botões -->
+          <div>
+            <div>
+              <button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -365,127 +463,37 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-users-icon lucide-users"
+                  class="lucide lucide-user-round-x-icon lucide-user-round-x"
                 >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <circle cx="9" cy="7" r="4" />
+                  <path d="M2 21a8 8 0 0 1 11.873-7" />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="m17 17 5 5" />
+                  <path d="m22 17-5 5" />
                 </svg>
-                <span>Familia (3)</span>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <span>José Santo</span>
-                    <span>(11)99999-9999</span>
-                  </div>
-                  <div>
-                    <span>Esposo - 38 anos</span>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <span>José Santo</span>
-                    <span>(11)99999-9999</span>
-                  </div>
-                  <div>
-                    <span>Esposo - 38 anos</span>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <span>Gustavo Santos</span>
-                    <span>(11)99999-9999</span>
-                  </div>
-                  <div>
-                    <span>Filho - 8 anos</span>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <span>Saori Santos</span>
-                    <span>(11)99999-9999</span>
-                  </div>
-                  <div>
-                    <span>Filha - 5 anos</span>
-                  </div>
-                </div>
-              </div>
+                <span>Desativar Morador</span>
+              </button>
             </div>
-
-            <!-- card veiculos -->
             <div>
-              <div>
+              <button type="button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
-                  class="lucide-body-card"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-eraser-icon lucide-eraser"
                 >
                   <path
-                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                    d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
                   />
-                  <circle cx="7" cy="17" r="2" />
-                  <path d="M9 17h6" />
-                  <circle cx="17" cy="17" r="2" />
+                  <path d="m5.082 11.09 8.828 8.828" />
                 </svg>
-                <span>Veículos (2)</span>
-              </div>
-              <div>
-                <span>Toyota Corolla</span>
-                <div>
-                  <span>Prata</span>
-                  <span>XYZ-5678</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card de botões -->
-            <div>
-              <div>
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-user-round-x-icon lucide-user-round-x"
-                  >
-                    <path d="M2 21a8 8 0 0 1 11.873-7" />
-                    <circle cx="10" cy="8" r="5" />
-                    <path d="m17 17 5 5" />
-                    <path d="m22 17-5 5" />
-                  </svg>
-                  <span>Desativar Morador</span>
-                </button>
-              </div>
-              <div>
-                <button type="button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-eraser-icon lucide-eraser"
-                  >
-                    <path
-                      d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
-                    />
-                    <path d="m5.082 11.09 8.828 8.828" />
-                  </svg>
-                  Remover Morador
-                </button>
-              </div>
+                Remover Morador
+              </button>
             </div>
           </div>
         </div>
