@@ -17,8 +17,12 @@
 
 * {
   font-size: 0.95rem;
+ }
+ body {
   color: white;
-}
+ }
+
+
 
 .small {
   font-size: var(--small);
@@ -103,6 +107,7 @@
   padding-left: 3rem;
   font-size: 0.95rem;
   width: 100%;
+  color: black;
 }
 
 /*div-2*/
@@ -155,10 +160,21 @@
   justify-content: center;
   align-items: center;
   background-color: var(--azulEscuro);
-  border-radius: 3rem;
-  padding: 2px 13px;
+  border-radius: 15px;
+  padding: 0px 12px;
   font-size: var(--small);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.filtros div:hover {
+background-color: var(--azulEscuro2);
+}
+
+.filtros div:active {
+transform: scale(0.98);
+background-color: var(--azulEscuro);
+
 }
 
 .card-dos-moradores {
@@ -515,18 +531,40 @@
   border-radius: 0.6rem;
 }
 
+button > span {
+  color: white;
+}
+
 .desativar-btn {
-  background-color: var(--azulEscuro2);
-  border: 2px solid var(--azulEscuro);
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
   padding: 0.6rem 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
+  transition: var(--transition);
 }
 .desativar-btn svg {
   width: 2em;
   height: 2em;
+}
+
+.desativar-btn:hover{
+  cursor: pointer;
+  background-color: var(--azulEscuro2);
+  
+}
+
+.desativar-btn:active, 
+.apagar-btn:active{
+  transform: scale(0.98);
+  border: none;
+}
+
+.apagar-btn:hover {
+  cursor: pointer;
+  background-color: #800404;
 }
 
 .apagar-btn {
@@ -537,6 +575,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
+  transition: var(--transition);
 }
 .apagar-btn svg {
   width: 2em;

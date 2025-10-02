@@ -1,0 +1,15 @@
+.familia-nao-selecionada {
+  display: none;
+}
+
+.familia-selecionada {
+  display: block;
+}
+
+.aluguel-nao-selecionado {
+  display: none;
+}
+
+.aluguel-selecionado {
+  display: block;
+}
