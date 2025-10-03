@@ -1,9 +1,24 @@
-.familia-nao-selecionada {
-  display: none;
+:root {
+  --var-fonttop: "League Spartan", sans-serif;
+  --var-fontlabel: "Inter", sans serif;
+  --transition: all 0.3s ease;
+  --border-radius: 3rem;
+  --fieldset-radius: 1rem;
+  --azulClaro: #cae9ff;
+  --azulEscuro: #184965;
+  --azulClaro2: #396481;
+  --azulEscuro2: #11334a;
 }
 
-.familia-selecionada {
-  display: block;
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.familia-nao-selecionada {
+  display: none;
 }
 
 .aluguel-nao-selecionado {
@@ -12,4 +27,192 @@
 
 .aluguel-selecionado {
   display: block;
+}
+
+.contato-invisivel {
+  display: none;
+}
+
+.contato-visivel {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.8rem;
+}
+
+.num-telefone-invisivel {
+  display: none;
+}
+
+.num-telefone-visivel {
+  display: block;
+}
+
+.e-mail-invisivel {
+  display: none;
+}
+
+.e-mail-visivel {
+  display: block;
+}
+
+.container1 {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+
+  padding: 0.5rem;
+  width: 60% !important;
+}
+
+.container1 fieldset {
+  flex: 1 1 auto;
+}
+
+form {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.infos {
+  grid-area: infos;
+  border-radius: 3vh 3vh 0 0;
+  background-color: var(--azulClaro2);
+
+  width: 100%; /* Isso é importante para expandir na grid */
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.resto {
+  grid-area: resto;
+  overflow-y: auto; /* rolagem se necessário */
+  padding: 1rem;
+}
+
+.informacoes {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.teste {
+  display: grid;
+  grid-template-rows: auto auto 1fr; /* Altura automática para o topo, e resto ocupa o espaço */
+  grid-template-areas:
+    "voltar-tela"
+    "infos"
+    "resto";
+  height: fit-content;
+  width: 100%;
+}
+
+#registroFamilia {
+  height: 100%;
+  width: 100%;
+}
+
+.form-group {
+  height: fit-content;
+  width: 100%;
+}
+
+#resultado {
+  color: white;
+}
+
+.grau-cpf {
+  width: 100%;
+  height: fit-content;
+}
+
+.nome-data,
+.grau-cpf {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.8rem;
+}
+
+.grid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "grau-cpf nome-data"
+    ".      add-morador";
+  gap: 1rem;
+}
+
+.add-morador {
+  grid-area: add-morador;
+}
+
+.add-morador {
+  margin-top: auto;
+  width: 100%;
+}
+
+.add-morador button {
+  width: 100%;
+}
+
+#morador1 {
+  cursor: pointer;
+}
+
+.voltar-tela {
+  grid-area: voltar-tela;
+  width: 100%;
+  min-width: 100%;
+  min-height: 30px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.voltar-tela button {
+  width: fit-content;
+  height: fit-content;
+
+  background-color: #a11111;
+  border: none;
+  height: 100%;
+  width: 60px;
+  border-radius: 0.8rem;
+}
+
+.voltar-tela a {
+  text-decoration: none;
+  color: white;
+}
+
+.personalizacao-btn:hover {
+  transform: scale(1.02);
+}
+
+.personalizacao-btn:active {
+  transform: scale(0.96);
+}
+
+#add-outro-morador {
+  background: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+#add-outro-morador:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 3px 5px #0000;
+}
+
+#add-outro-morador:active {
+  transform: scale(0.96);
 }

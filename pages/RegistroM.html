@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Consulta</title>
+   
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +25,9 @@
     />
     <link rel="stylesheet" href="/css/RegistroM.css" />
     <link rel="stylesheet" href="/css/Base.css" />
+
+ 
+
   </head>
   <body data-page="morador">
     <div id="navbar"></div>
@@ -31,11 +35,7 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      <div class="tabs">
-        <div class="tab-btn">
-          <button type="button" title="Adicinar morador"></button>
-        </div>
-      </div>
+      
 
       <div class="automovel-hover" id="automovel-hover">
         <div class="voltar-div-btn">
@@ -119,7 +119,7 @@
             >
               <legend>Dados do morador principal</legend>
 
-              <div class="input-position">
+           
                 <div class="ajeitador">
                   <label for="CPF">CPF</label>
                   <input
@@ -183,7 +183,7 @@
                     tabindex="0"
                   />
                 </div>
-              </div>
+              
             </fieldset>
             <fieldset class="cadastromoradia" id="Passo2">
               <legend>Moradia</legend>
@@ -331,15 +331,17 @@
               </div>
             </fieldset>
 
-            <fieldset class="familia-detalhes">
+            <fieldset class="botao-detalhes">
               <legend>Adicione integrantes a esse morador</legend>
-              <button type="button">Como funciona?</button>
+              <button type="button">CADASTRAR GRUPO</button>
+              <button type="button" id="btn-concluir-cadastro"><a href="/pages/Familia.html">CONCLUIR CADASTRO</a></button>
             </fieldset>
           </div>
         </div>
       </form>
+      
     </div>
-
+   
     <script src="/js/RegistroM.js"></script>
     <script src="/js/includes.js"></script>
   </body>

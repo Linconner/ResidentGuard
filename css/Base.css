@@ -344,6 +344,21 @@ form {
   height: 100%;
 }
 
+.btn-confirmar {
+  background: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-confimar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 3px 5px #0000;
+}
+
 /* Estilos para telas menores (tablets) */
 @media (width <= 992px) {
   .container1 {

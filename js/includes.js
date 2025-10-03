@@ -92,7 +92,7 @@ function atualizarTituloSpan() {
     // Adicione outras páginas aqui
   };
 
-  span.textContent = titulos[page] || "Sistema";
+  span.textContent = titulos[page] || "sistema";
 }
 
 // -----------------------------

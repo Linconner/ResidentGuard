@@ -40,6 +40,9 @@ if (selectMorador) {
 
 const dataNascimento = document.getElementById("data_nascimento");
 const resultadoData = document.getElementById("resultado");
+const contato = document.getElementById("contato");
+const numTelefone = document.getElementById("num-telefone");
+const email = document.getElementById("e-mail");
 
 dataNascimento.addEventListener("change", function () {
   const dataNasc = new Date(this.value);
@@ -53,9 +56,30 @@ dataNascimento.addEventListener("change", function () {
     idade--;
   }
 
+  if (idade >= 14) {
+    contato.classList.remove("contato-invisivel");
+    contato.classList.add("contato-visivel");
+    numTelefone.classList.remove("num-telefone-invisivel");
+    numTelefone.classList.add("num-telefone-visivel");
+
+    email.classList.remove("e-mail-invisivel");
+    email.classList.add("e-mail.visivel");
+  } else if (idade < 14) {
+    contato.classList.remove("contato-visivel");
+    contato.classList.add("contato-invisivel");
+  }
+
   // mostra na tela
   resultadoData.textContent = "Idade calculada: " + idade + " anos";
 
   // se quiser "guardar" esse valor, você pode salvar em variável
   console.log("Idade: ", idade);
+});
+
+//masks
+
+$(document).ready(function () {
+  $("#numero-telefone").mask("(00) 0000-0000");
+  $("#cpf").mask("000.000.000-00", { reverse: true });
+  $("#data_nascimento").mask("00/00/0000");
 });

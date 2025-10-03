@@ -1,3 +1,4 @@
+// Elementos principais
 const inner = document.getElementById("inner");
 const paraDiv = document.getElementById("field-para-inputs");
 
@@ -15,6 +16,7 @@ function CreateInput(placeholder) {
 function CreateButton() {
   const button = document.createElement("button");
   button.type = "button";
+  button.textContent = "Remover";
   button.classList.add("button-novo");
   return button;
 }
@@ -36,46 +38,28 @@ function CreateSubmitButton() {
 //-----------------------------------------------------------//
 // Eventos de adicionar veículos
 
-outro?.addEventListener("click", function () {
-  const newDiv = CreateDiv();
-  const newInput = CreateInput("Outro veículo - Placa");
-  const newButton = CreateButton();
+const outro = document.getElementById("outro");
+const carro = document.getElementById("carro");
+const moto = document.getElementById("moto");
 
-  newButton.addEventListener("click", function () {
-    newDiv.remove();
+[outro, carro, moto].forEach(btn => {
+  btn?.addEventListener("click", function () {
+    const newDiv = CreateDiv();
+    let placeholder = "";
+
+    if (btn === outro) placeholder = "Outro veículo - Placa";
+    if (btn === carro) placeholder = "Placa do Carro";
+    if (btn === moto) placeholder = "Placa da Moto";
+
+    const newInput = CreateInput(placeholder);
+    const newButton = CreateButton();
+
+    newButton.addEventListener("click", () => newDiv.remove());
+
+    newDiv.appendChild(newInput);
+    newDiv.appendChild(newButton);
+    paraDiv.appendChild(newDiv);
   });
-
-  newDiv.appendChild(newInput);
-  newDiv.appendChild(newButton);
-  paraDiv.appendChild(newDiv);
-});
-
-carro?.addEventListener("click", function () {
-  const newDiv = CreateDiv();
-  const newInput = CreateInput("Placa do Carro");
-  const newButton = CreateButton();
-
-  newButton.addEventListener("click", function () {
-    newDiv.remove();
-  });
-
-  newDiv.appendChild(newInput);
-  newDiv.appendChild(newButton);
-  paraDiv.appendChild(newDiv);
-});
-
-moto?.addEventListener("click", function () {
-  const newDiv = CreateDiv();
-  const newInput = CreateInput("Placa da Moto");
-  const newButton = CreateButton();
-
-  newButton.addEventListener("click", function () {
-    newDiv.remove();
-  });
-
-  newDiv.appendChild(newInput);
-  newDiv.appendChild(newButton);
-  paraDiv.appendChild(newDiv);
 });
 
 //-----------------------------------------------------------//
@@ -86,16 +70,18 @@ const CardHover = document.getElementById("automovel-hover");
 const closeHover = document.getElementById("voltar-automovel-hover");
 const voltarHover = document.getElementById("cancelar");
 
-btnHover?.addEventListener("click", function () {
-  CardHover.classList.add("automovel-hover-ativo");
-});
 
-closeHover?.addEventListener("click", function () {
-  CardHover.classList.remove("automovel-hover-ativo");
+btnHover?.addEventListener("click", () => {
+  CardHover?.classList.add("automovel-hover-ativo");
+  
 });
-
-voltarHover?.addEventListener("click", function () {
-  CardHover.classList.remove("automovel-hover-ativo");
+closeHover?.addEventListener("click", () => {
+  CardHover?.classList.remove("automovel-hover-ativo");
+  
+});
+voltarHover?.addEventListener("click", () => {
+  CardHover?.classList.remove("automovel-hover-ativo");
+  
 });
 
 //-----------------------------------------------------------//
@@ -103,35 +89,20 @@ voltarHover?.addEventListener("click", function () {
 
 const btnInquilino = document.getElementById("botao-inquilino");
 const btnProprietario = document.getElementById("botao-proprietario");
-const radiosInquilino = btnInquilino.querySelector("input[type='radio']");
-const radiosProprietario = btnProprietario.querySelector("input[type='radio']");
 
 const inputContratodiv = document.getElementById("input-para-contrato-div");
+const inputContratoinput = document.getElementById("input-para-contrato-input");
 
-btnInquilino.addEventListener("click", function () {
-  inputContratodiv.classList.add("input-para-contrato-div-ativo");
-  inputContratoinput.classList.add("input-para-contrato-input-ativo");
+btnInquilino?.addEventListener("click", () => {
+  inputContratodiv?.classList.add("input-para-contrato-div-ativo");
+  inputContratoinput?.classList.add("input-para-contrato-input-ativo");
 });
 
-btnProprietario.addEventListener("click", function () {
-  inputContratodiv.classList.remove("input-para-contrato-div-ativo");
-  inputContratoinput.classList.remove("input-para-contrato-div-ativo");
+btnProprietario?.addEventListener("click", () => {
+  inputContratodiv?.classList.remove("input-para-contrato-div-ativo");
+  inputContratoinput?.classList.remove("input-para-contrato-input-ativo");
 });
 
 //-----------------------------------------------------------//
 // Formatação CPF
 
-const cpfInput = document.getElementById("CPF");
-
-cpfInput?.addEventListener("input", function () {
-  let valor = this.value.replace(/\D/g, "");
-
-  if (valor.length > 11) valor = valor.slice(0, 11);
-
-  valor = valor
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
-  this.value = valor;
-});

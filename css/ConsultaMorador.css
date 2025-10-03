@@ -2,7 +2,7 @@
 
 :root {
   --transition: all 0.3s ease;
-  --border-radius: 3rem;
+  --border-radius: 0.6rem;
   --fieldset-radius: 1rem;
   --azulClaro: #cae9ff;
   --azulEscuro: #184965;
