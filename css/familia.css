@@ -32,6 +32,7 @@ body {
 .df-column {
   display: flex;
   flex-flow: column nowrap;
+  gap: 1rem;
 }
 
 .df-column > div {
@@ -232,4 +233,73 @@ form {
 
 .btn-ativado {
   display: flex;
+}
+
+#adicionar-automóvel svg,
+#adicionar-aluguel svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+#adicionar-automóvel {
+  background-color: transparent;
+  border: 2px solid var(--azulEscuro);
+  border-radius: 1rem;
+  padding: 0.6rem 0.8rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: auto;
+  height: auto;
+}
+#adicionar-automóvel:hover {
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  box-shadow: 0 0 5px 3px #00000002;
+}
+#adicionar-aluguel:hover {
+  background-color: var(--azulEscuro2);
+  border: 2px solid var(--azulEscuro2);
+  box-shadow: 0 0 5px 3px #00000002;
+}
+
+#adicionar-aluguel {
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 1rem;
+  padding: 0.6rem 0.8rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: auto;
+  height: auto;
+}
+
+#adicionar-automóvel:active {
+  background-color: var(--azulEscuro2);
+  border: 2px solid var(--azulEscuro);
+  transform: scale(0.97);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#adicionar-aluguel:active {
+  background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro);
+  transform: scale(0.97);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-automovel-aluguel {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
 }

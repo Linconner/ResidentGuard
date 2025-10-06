@@ -162,176 +162,227 @@
             </div>
           </fieldset>
 
-          <!-- Registro de aluguel -->
-          <fieldset class="aluguel-nao-selecionado" id="registroAluguel">
-            <legend>Registro de aluguel</legend>
+          <div id="registroAluguel" class="aluguel-nao-selecionado">
+            <!-- Registro de aluguel -->
+            <fieldset>
+              <legend>Registro de aluguel</legend>
+              <div class="df-column">
+                <!--  -->
+                <div>
+                  <div class="form-group">
+                    <label>CPF</label>
+                    <input
+                      type="text"
+                      name="cpf"
+                      placeholder="Digite seu CPF"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input
+                      type="text"
+                      name="nome"
+                      placeholder="Digite seu nome completo"
+                    />
+                  </div>
+                </div>
+                <!--  -->
+                <div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Digite seu email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Data de Nascimento</label>
+                    <input
+                      type="date"
+                      name="data_nascimento"
+                      title="Data de nascimento do morador"
+                    />
+                  </div>
+                </div>
+                <!--  -->
+                <div>
+                  <div class="form-group">
+                    <label>Possui animal?</label>
+                    <select
+                      name="animal"
+                      title="O morador possui animal de estimação?"
+                    >
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Tempo de permanência</label>
+                    <input
+                      type="text"
+                      name="tempo_permanencia"
+                      placeholder="Ex: 12 meses"
+                    />
+                  </div>
+                </div>
 
-            <div class="df-column">
-              <!--  -->
-              <div>
-                <div class="form-group">
-                  <label>CPF</label>
-                  <input type="text" name="cpf" placeholder="Digite seu CPF" />
-                </div>
-                <div class="form-group">
-                  <label>Nome Completo</label>
-                  <input
-                    type="text"
-                    name="nome"
-                    placeholder="Digite seu nome completo"
-                  />
+                <div class="add-automovel-aluguel">
+                  <div class="adicionar-automóvel">
+                    <button
+                      type="button"
+                      id="adicionar-automóvel"
+                      title="Aperte aqui para adicionar um automóvel a este morador"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-key-square-icon lucide-key-square"
+                      >
+                        <path
+                          d="M12.4 2.7a2.5 2.5 0 0 1 3.4 0l5.5 5.5a2.5 2.5 0 0 1 0 3.4l-3.7 3.7a2.5 2.5 0 0 1-3.4 0L8.7 9.8a2.5 2.5 0 0 1 0-3.4z"
+                        />
+                        <path d="m14 7 3 3" />
+                        <path
+                          d="m9.4 10.6-6.814 6.814A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814"
+                        />
+                      </svg>
+
+                      Adicione um automóvel
+                    </button>
+                  </div>
+                  <div class="adicionar-aluguel">
+                    <button
+                      type="button"
+                      id="adicionar-aluguel"
+                      title="Aperte aqui para adicionar um automóvel a este morador"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-circle-plus-icon lucide-circle-plus"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 12h8" />
+                        <path d="M12 8v8" />
+                      </svg>
+                      Registrar e continuar
+                    </button>
+                  </div>
                 </div>
               </div>
-              <!--  -->
-              <div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Digite seu email"
-                  />
-                </div>
-                <div class="form-group">
-                  <label>Data de Nascimento</label>
-                  <input
-                    type="date"
-                    name="data_nascimento"
-                    title="Data de nascimento do morador"
-                  />
+            </fieldset>
+            <fieldset class="field-a-f-selecionado" id="field-a-f">
+              <!-- Automóveis -->
+              <div class="parte-automoveis">
+                <div class="consulta-dos-automoveis">
+                  <div class="div-retangulo-automovel">
+                    <div class="image">
+                      <img src="/images/car.svg" alt="carro" />
+                      <span class="title">Carro</span>
+                    </div>
+                    <span>Marca: Toyota Corolla</span>
+                    <span>Placa: ABC1D23</span>
+                    <span>Cor: Preto</span>
+                    <button class="btn-excluir">Excluir</button>
+                  </div>
+                  <div class="div-retangulo-automovel">
+                    <div class="image">
+                      <img src="/images/bike.svg" alt="moto" />
+                      <span class="title">Moto</span>
+                    </div>
+                    <span>Marca: Honda CG 160</span>
+                    <span>Placa: XYZ4E56</span>
+                    <span>Cor: Vermelha</span>
+                    <button class="btn-excluir">Excluir</button>
+                  </div>
                 </div>
               </div>
-              <!--  -->
-              <div>
-                <div class="form-group">
-                  <label>Possui animal?</label>
-                  <select
-                    name="animal"
-                    title="O morador possui animal de estimação?"
+              <!-- Moradores -->
+              <div class="parte-moradores">
+                <div class="adicionar-morador">
+                  <button
+                    type="button"
+                    id="adicionar-morador"
+                    title="Aperte aqui para adicionar outro morador a este aluguel"
                   >
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                  </select>
+                    Adicione outro morador
+                  </button>
                 </div>
-                <div class="form-group">
-                  <label>Tempo de permanência</label>
-                  <input
-                    type="text"
-                    name="tempo_permanencia"
-                    placeholder="Ex: 12 meses"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Automóveis -->
-            <div class="parte-automoveis">
-              <div class="adicionar-automóvel">
-                <button
-                  type="button"
-                  id="adicionar-automóvel"
-                  title="Aperte aqui para adicionar um automóvel a este morador"
-                >
-                  Adicione um automóvel
-                </button>
-              </div>
-
-              <div class="consulta-dos-automoveis">
-                <div class="div-retangulo-automovel">
-                  <div class="image">
-                    <img src="/images/car.svg" alt="carro" />
-                    <span class="title">Carro</span>
+                <div class="consulta-moradores">
+                  <div class="card-morador">
+                    <div class="icone">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M20 21a8 8 0 1 0-8-8 8 8 0 0 0 8 8Z" />
+                        <path d="M4 36v-2a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v2" />
+                      </svg>
+                      <span class="title">Morador</span>
+                    </div>
+                    <span>Grau de parentesco: Pai</span>
+                    <span>CPF: 123.456.789-00</span>
+                    <span>Nome Completo: João da Silva</span>
+                    <span>Data de Nascimento: 12/03/1980</span>
+                    <div class="contato">
+                      <span>Email: joao@email.com</span>
+                      <span>Telefone: (11) 91234-5678</span>
+                    </div>
+                    <button class="btn-excluir">Excluir</button>
                   </div>
-                  <span>Marca: Toyota Corolla</span>
-                  <span>Placa: ABC1D23</span>
-                  <span>Cor: Preto</span>
-                  <button class="btn-excluir">Excluir</button>
-                </div>
-
-                <div class="div-retangulo-automovel">
-                  <div class="image">
-                    <img src="/images/bike.svg" alt="moto" />
-                    <span class="title">Moto</span>
+                  <div class="card-morador">
+                    <div class="icone">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M20 21a8 8 0 1 0-8-8 8 8 0 0 0 8 8Z" />
+                        <path d="M4 36v-2a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v2" />
+                      </svg>
+                      <span class="title">Morador</span>
+                    </div>
+                    <span>Grau de parentesco: Filho</span>
+                    <span>CPF: 987.654.321-00</span>
+                    <span>Nome Completo: Pedro da Silva</span>
+                    <span>Data de Nascimento: 05/08/2005</span>
+                    <div class="contato">
+                      <span>Email: pedro@email.com</span>
+                      <span>Telefone: (11) 99876-5432</span>
+                    </div>
+                    <button class="btn-excluir">Excluir</button>
                   </div>
-                  <span>Marca: Honda CG 160</span>
-                  <span>Placa: XYZ4E56</span>
-                  <span>Cor: Vermelha</span>
-                  <button class="btn-excluir">Excluir</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Moradores -->
-            <div class="parte-moradores">
-              <div class="adicionar-morador">
-                <button
-                  type="button"
-                  id="adicionar-morador"
-                  title="Aperte aqui para adicionar outro morador a este aluguel"
-                >
-                  Adicione outro morador
-                </button>
-              </div>
-
-              <div class="consulta-moradores">
-                <div class="card-morador">
-                  <div class="icone">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M20 21a8 8 0 1 0-8-8 8 8 0 0 0 8 8Z" />
-                      <path d="M4 36v-2a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v2" />
-                    </svg>
-                    <span class="title">Morador</span>
-                  </div>
-                  <span>Grau de parentesco: Pai</span>
-                  <span>CPF: 123.456.789-00</span>
-                  <span>Nome Completo: João da Silva</span>
-                  <span>Data de Nascimento: 12/03/1980</span>
-                  <div class="contato">
-                    <span>Email: joao@email.com</span>
-                    <span>Telefone: (11) 91234-5678</span>
-                  </div>
-                  <button class="btn-excluir">Excluir</button>
-                </div>
-
-                <div class="card-morador">
-                  <div class="icone">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M20 21a8 8 0 1 0-8-8 8 8 0 0 0 8 8Z" />
-                      <path d="M4 36v-2a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v2" />
-                    </svg>
-                    <span class="title">Morador</span>
-                  </div>
-                  <span>Grau de parentesco: Filho</span>
-                  <span>CPF: 987.654.321-00</span>
-                  <span>Nome Completo: Pedro da Silva</span>
-                  <span>Data de Nascimento: 05/08/2005</span>
-                  <div class="contato">
-                    <span>Email: pedro@email.com</span>
-                    <span>Telefone: (11) 99876-5432</span>
-                  </div>
-                  <button class="btn-excluir">Excluir</button>
                 </div>
               </div>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
+
           <div class="add-morador btn-desativado" id="botao-add">
             <button type="button" id="add-outro-morador">
               Adicione outro morador
