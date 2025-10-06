@@ -24,19 +24,17 @@ if (selectMorador) {
         registroAluguel.classList.remove("aluguel-nao-selecionado");
         registroAluguel.classList.add("aluguel-selecionado");
         break;
-
       default:
         registroFamilia.classList.remove("familia-selecionada");
         registroFamilia.classList.add("familia-nao-selecionada");
         registroAluguel.classList.remove("aluguel-selecionado");
         registroAluguel.classList.add("aluguel-nao-selecionado");
         break;
-      // Adicione outros casos aqui, se necessário
     }
   });
 }
 
-//lógica para a data de nascimento
+// lógica para a data de nascimento
 
 const dataNascimento = document.getElementById("data_nascimento");
 const resultadoData = document.getElementById("resultado");
@@ -45,26 +43,31 @@ const numTelefone = document.getElementById("num-telefone");
 const email = document.getElementById("e-mail");
 
 dataNascimento.addEventListener("change", function () {
-  const dataNasc = new Date(this.value);
+  const partes = this.value.split("/"); // exemplo: "31/12/2000"
+  const dia = parseInt(partes[0], 10);
+  const mes = parseInt(partes[1], 10) - 1;
+  const ano = parseInt(partes[2], 10);
+
+  const dataNasc = new Date(ano, mes, dia);
   const hoje = new Date();
 
   let idade = hoje.getFullYear() - dataNasc.getFullYear();
-  const mes = hoje.getMonth() - dataNasc.getMonth();
+  const mesDiff = hoje.getMonth() - dataNasc.getMonth();
 
-  // ajusta se ainda não fez aniversário neste ano
-  if (mes < 0 || (mes === 0 && hoje.getDate() < dataNasc.getDate())) {
+  if (mesDiff < 0 || (mesDiff === 0 && hoje.getDate() < dataNasc.getDate())) {
     idade--;
   }
 
   if (idade >= 14) {
     contato.classList.remove("contato-invisivel");
     contato.classList.add("contato-visivel");
+
     numTelefone.classList.remove("num-telefone-invisivel");
     numTelefone.classList.add("num-telefone-visivel");
 
     email.classList.remove("e-mail-invisivel");
-    email.classList.add("e-mail.visivel");
-  } else if (idade < 14) {
+    email.classList.add("e-mail-visivel"); // corrigido
+  } else {
     contato.classList.remove("contato-visivel");
     contato.classList.add("contato-invisivel");
   }
@@ -72,14 +75,26 @@ dataNascimento.addEventListener("change", function () {
   // mostra na tela
   resultadoData.textContent = "Idade calculada: " + idade + " anos";
 
-  // se quiser "guardar" esse valor, você pode salvar em variável
+  // debug
   console.log("Idade: ", idade);
 });
 
-//masks
+// masks
 
 $(document).ready(function () {
   $("#numero-telefone").mask("(00) 0000-0000");
   $("#cpf").mask("000.000.000-00", { reverse: true });
   $("#data_nascimento").mask("00/00/0000");
+});
+
+const forms = document.getElementById("forms");
+const btn = document.getElementById("botao-add");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // evita envio automático
+
+  if (form.checkValidity()) {
+    btn.classList.remove("btn-desativado");
+    btn.classList.add("btn-ativado");
+  }
 });

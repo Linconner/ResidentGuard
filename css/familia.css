@@ -29,14 +29,28 @@ body {
   display: block;
 }
 
+.df-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.df-column > div {
+  display: flex;
+  gap: 1rem;
+}
+
 .contato-invisivel {
   display: none;
 }
 
 .contato-visivel {
   display: flex;
-  flex-flow: column wrap;
   gap: 0.8rem;
+  grid-area: contato-visivel;
+}
+
+.contato-visivel input {
+  width: 100% !important;
 }
 
 .num-telefone-invisivel {
@@ -64,10 +78,6 @@ body {
   width: 60% !important;
 }
 
-.container1 fieldset {
-  flex: 1 1 auto;
-}
-
 form {
   height: fit-content;
   width: fit-content;
@@ -89,6 +99,9 @@ form {
   grid-area: resto;
   overflow-y: auto; /* rolagem se necessário */
   padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
 }
 
 .informacoes {
@@ -102,12 +115,12 @@ form {
     "voltar-tela"
     "infos"
     "resto";
-  height: fit-content;
+  min-height: 100%;
   width: 100%;
 }
 
 #registroFamilia {
-  height: 100%;
+  height: fit-content;
   width: 100%;
 }
 
@@ -140,12 +153,8 @@ form {
   grid-template-rows: auto;
   grid-template-areas:
     "grau-cpf nome-data"
-    ".      add-morador";
-  gap: 1rem;
-}
-
-.add-morador {
-  grid-area: add-morador;
+    "contato-visivel contato-visivel";
+  column-gap: 1rem;
 }
 
 .add-morador {
@@ -215,4 +224,12 @@ form {
 
 #add-outro-morador:active {
   transform: scale(0.96);
+}
+
+.btn-desativado {
+  display: block;
+}
+
+.btn-ativado {
+  display: flex;
 }

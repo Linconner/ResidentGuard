@@ -33,7 +33,7 @@
 
     <!-- Container Principal -->
     <div class="container1">
-      <form class="teste">
+      <form class="teste" id="forms">
         <div class="voltar-tela">
           <button type="button" class="personalizacao-btn">
             <a href="/pages/RegistroM.html">Voltar</a>
@@ -159,12 +159,6 @@
                   />
                 </div>
               </div>
-
-              <div class="add-morador">
-                <button type="button" id="add-outro-morador">
-                  Adicione outro morador
-                </button>
-              </div>
             </div>
           </fieldset>
 
@@ -172,52 +166,62 @@
           <fieldset class="aluguel-nao-selecionado" id="registroAluguel">
             <legend>Registro de aluguel</legend>
 
-            <div class="form-group">
-              <label>CPF</label>
-              <input type="text" name="cpf" placeholder="Digite seu CPF" />
-            </div>
-
-            <div class="form-group">
-              <label>Nome Completo</label>
-              <input
-                type="text"
-                name="nome"
-                placeholder="Digite seu nome completo"
-              />
-            </div>
-
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="Digite seu email" />
-            </div>
-
-            <div class="form-group">
-              <label>Data de Nascimento</label>
-              <input
-                type="date"
-                name="data_nascimento"
-                title="Data de nascimento do morador"
-              />
-            </div>
-
-            <div class="form-group">
-              <label>Possui animal?</label>
-              <select
-                name="animal"
-                title="O morador possui animal de estimação?"
-              >
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>Tempo de permanência (contrato de aluguel)</label>
-              <input
-                type="text"
-                name="tempo_permanencia"
-                placeholder="Ex: 12 meses"
-              />
+            <div class="df-column">
+              <!--  -->
+              <div>
+                <div class="form-group">
+                  <label>CPF</label>
+                  <input type="text" name="cpf" placeholder="Digite seu CPF" />
+                </div>
+                <div class="form-group">
+                  <label>Nome Completo</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                  />
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Digite seu email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Data de Nascimento</label>
+                  <input
+                    type="date"
+                    name="data_nascimento"
+                    title="Data de nascimento do morador"
+                  />
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <div class="form-group">
+                  <label>Possui animal?</label>
+                  <select
+                    name="animal"
+                    title="O morador possui animal de estimação?"
+                  >
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Tempo de permanência</label>
+                  <input
+                    type="text"
+                    name="tempo_permanencia"
+                    placeholder="Ex: 12 meses"
+                  />
+                </div>
+              </div>
             </div>
 
             <!-- Automóveis -->
@@ -328,6 +332,11 @@
               </div>
             </div>
           </fieldset>
+          <div class="add-morador btn-desativado" id="botao-add">
+            <button type="button" id="add-outro-morador">
+              Adicione outro morador
+            </button>
+          </div>
         </div>
       </form>
     </div>
