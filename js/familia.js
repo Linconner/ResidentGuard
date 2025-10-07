@@ -1,100 +1,107 @@
-const selectMorador = document.getElementById("morador1");
-const registroFamilia = document.getElementById("registroFamilia");
-const registroAluguel = document.getElementById("registroAluguel");
+// familia.js - JavaScript para funcionalidades da página
 
-if (selectMorador) {
-  selectMorador.addEventListener("change", () => {
-    let valor = selectMorador.value;
-    switch (valor) {
-      case "familia":
-        registroFamilia.classList.remove("familia-nao-selecionada");
-        registroFamilia.classList.add("familia-selecionada");
-        registroAluguel.classList.remove("aluguel-selecionado");
-        registroAluguel.classList.add("aluguel-nao-selecionado");
-        break;
-      case "aluguel":
-        registroFamilia.classList.remove("familia-selecionada");
-        registroFamilia.classList.add("familia-nao-selecionada");
-        registroAluguel.classList.remove("aluguel-nao-selecionado");
-        registroAluguel.classList.add("aluguel-selecionado");
-        break;
-      case "familia-aluguel":
-        registroFamilia.classList.remove("familia-nao-selecionada");
-        registroFamilia.classList.add("familia-selecionada");
-        registroAluguel.classList.remove("aluguel-nao-selecionado");
-        registroAluguel.classList.add("aluguel-selecionado");
-        break;
-      default:
-        registroFamilia.classList.remove("familia-selecionada");
-        registroFamilia.classList.add("familia-nao-selecionada");
-        registroAluguel.classList.remove("aluguel-selecionado");
-        registroAluguel.classList.add("aluguel-nao-selecionado");
-        break;
+document.addEventListener("DOMContentLoaded", function () {
+  // Máscaras para os campos
+  $("#cpf").mask("000.000.000-00");
+  $("#data_nascimento").mask("00/00/0000");
+  $("#numero-telefone").mask("(00) 00000-0000");
+
+  // Elementos principais
+  const tipoGrupoSelect = document.getElementById("morador1");
+  const registroFamilia = document.getElementById("registroFamilia");
+  const registroAluguel = document.getElementById("registroAluguel");
+  const botaoAddMorador = document.getElementById("botao-add");
+  const contatoSection = document.getElementById("contato");
+  const numTelefone = document.getElementById("num-telefone");
+  const email = document.getElementById("e-mail");
+
+  // Controle de visibilidade baseado na seleção do tipo de grupo
+  tipoGrupoSelect.addEventListener("change", function () {
+    const valor = this.value;
+
+    // Resetar todos os estados
+    registroFamilia.classList.remove("familia-selecionada");
+    registroFamilia.classList.add("familia-nao-selecionada");
+    registroAluguel.classList.remove("aluguel-selecionado");
+    registroAluguel.classList.add("aluguel-nao-selecionado");
+
+    // Aplicar estados baseados na seleção
+    if (valor === "familia" || valor === "familia-aluguel") {
+      registroFamilia.classList.remove("familia-nao-selecionada");
+      registroFamilia.classList.add("familia-selecionada");
+    }
+
+    if (valor === "aluguel" || valor === "familia-aluguel") {
+      registroAluguel.classList.remove("aluguel-nao-selecionado");
+      registroAluguel.classList.add("aluguel-selecionado");
     }
   });
-}
 
-// lógica para a data de nascimento
+  // Controle de campos de contato
+  document.getElementById("nome").addEventListener("blur", function () {
+    if (this.value.trim() !== "") {
+      contatoSection.classList.remove("contato-invisivel");
+      contatoSection.classList.add("contato-visivel");
+      numTelefone.classList.remove("num-telefone-invisivel");
+      numTelefone.classList.add("num-telefone-visivel");
+      email.classList.remove("e-mail-invisivel");
+      email.classList.add("e-mail-visivel");
+      botaoAddMorador.classList.remove("btn-desativado");
+      botaoAddMorador.classList.add("btn-ativado");
+    }
+  });
 
-const dataNascimento = document.getElementById("data_nascimento");
-const resultadoData = document.getElementById("resultado");
-const contato = document.getElementById("contato");
-const numTelefone = document.getElementById("num-telefone");
-const email = document.getElementById("e-mail");
+  // Adicionar outro morador
+  document
+    .getElementById("add-outro-morador")
+    .addEventListener("click", function () {
+      // Limpar os campos do formulário
+      document.getElementById("parentesco").value = "";
+      document.getElementById("cpf").value = "";
+      document.getElementById("nome").value = "";
+      document.getElementById("data_nascimento").value = "";
+      document.getElementById("numero-telefone").value = "";
+      document.getElementById("email").value = "";
 
-dataNascimento.addEventListener("change", function () {
-  const partes = this.value.split("/"); // exemplo: "31/12/2000"
-  const dia = parseInt(partes[0], 10);
-  const mes = parseInt(partes[1], 10) - 1;
-  const ano = parseInt(partes[2], 10);
+      // Focar no primeiro campo
+      document.getElementById("parentesco").focus();
+    });
 
-  const dataNasc = new Date(ano, mes, dia);
-  const hoje = new Date();
+  // Validação de idade
+  document
+    .getElementById("data_nascimento")
+    .addEventListener("blur", function () {
+      const dataNascimento = this.value;
+      const resultado = document.getElementById("resultado");
 
-  let idade = hoje.getFullYear() - dataNasc.getFullYear();
-  const mesDiff = hoje.getMonth() - dataNasc.getMonth();
+      if (dataNascimento.length === 10) {
+        const partesData = dataNascimento.split("/");
+        const data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+        const hoje = new Date();
+        const idade = hoje.getFullYear() - data.getFullYear();
 
-  if (mesDiff < 0 || (mesDiff === 0 && hoje.getDate() < dataNasc.getDate())) {
-    idade--;
-  }
+        if (idade < 18) {
+          resultado.textContent = "Menor de idade";
+          resultado.style.color = "#ff6b6b";
+        } else {
+          resultado.textContent = "Maior de idade";
+          resultado.style.color = "#51cf66";
+        }
+      } else {
+        resultado.textContent = "";
+      }
+    });
 
-  if (idade >= 14) {
-    contato.classList.remove("contato-invisivel");
-    contato.classList.add("contato-visivel");
+  // Botões do formulário de aluguel
+  document
+    .getElementById("adicionar-automóvel")
+    .addEventListener("click", function () {
+      alert("Funcionalidade de adicionar automóvel será implementada aqui.");
+    });
 
-    numTelefone.classList.remove("num-telefone-invisivel");
-    numTelefone.classList.add("num-telefone-visivel");
-
-    email.classList.remove("e-mail-invisivel");
-    email.classList.add("e-mail-visivel"); // corrigido
-  } else {
-    contato.classList.remove("contato-visivel");
-    contato.classList.add("contato-invisivel");
-  }
-
-  // mostra na tela
-  resultadoData.textContent = "Idade calculada: " + idade + " anos";
-
-  // debug
-  console.log("Idade: ", idade);
-});
-
-// masks
-
-$(document).ready(function () {
-  $("#numero-telefone").mask("(00) 0000-0000");
-  $("#cpf").mask("000.000.000-00", { reverse: true });
-  $("#data_nascimento").mask("00/00/0000");
-});
-
-const forms = document.getElementById("forms");
-const btn = document.getElementById("botao-add");
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); // evita envio automático
-
-  if (form.checkValidity()) {
-    btn.classList.remove("btn-desativado");
-    btn.classList.add("btn-ativado");
-  }
+  document
+    .getElementById("adicionar-aluguel")
+    .addEventListener("click", function () {
+      alert("Registro de aluguel será processado aqui.");
+    });
 });
