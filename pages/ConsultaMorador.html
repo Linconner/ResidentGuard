@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consulta</title>
-
+    <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,6 +55,82 @@
 
     <!-- Container principal -->
     <div class="container1">
+      <div class="modal-editar-familia">
+        <fieldset class="fieldset-editar-familia">
+          <legend>Edite os dados</legend>
+
+          <div class="container-editar-familia">
+            <div class="left-editar-familia">
+              <div class="grupo-editar-familia">
+                <label for="nome-editar-familia">Nome</label>
+                <input
+                  type="text"
+                  name="nome-editar-familia"
+                  id="nome-editar-familia"
+                />
+              </div>
+              <div class="grupo-editar-familia">
+                <label for="cpf-editar-familia">Cpf</label>
+                <input
+                  type="text"
+                  name="cpf-editar-familia"
+                  id="cpf-editar-familia"
+                />
+              </div>
+              <div class="grupo-editar-familia">
+                <label for="datanascimento-editar-familia"
+                  >Data de Nascimento</label
+                >
+                <input
+                  type="date"
+                  name="datanascimento-editar-familia"
+                  id="datanascimento-editar-familia"
+                />
+              </div>
+              <div class="grupo-editar-familia">
+                <label for="email-editar-familia">E-mail</label>
+                <input
+                  type="text"
+                  name="email-editar-familia"
+                  id="email-editar-familia"
+                />
+              </div>
+              <div class="grupo-editar-familia">
+                <label for="telefone-editar-familia">Número de telefone</label>
+                <input
+                  type="text"
+                  name="telefone-editar-familia"
+                  id="telefone-editar-familia"
+                />
+              </div>
+            </div>
+            <div class="right-editar-familia">
+              <div class="mensagem-editar-familia">
+                <div class="iconeSpan-editar-familia">
+                  <span>!</span>
+                  <span>Atenção</span>
+                </div>
+                <div>
+                  <p>
+                    toda a alteração de dados feita por meios de edição estarão
+                    guardadas no sistema !
+                  </p>
+                </div>
+              </div>
+
+              <div class="botoes-editar-familia">
+                <div class="grupoBtn-editar-familia">
+                  <button>Confirmar alterações</button>
+                </div>
+                <div class="grupoBtn-editar-familia">
+                  <button>Voltar e cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
       <fieldset class="busca-filtro">
         <div>
           <img src="/images/search.svg" alt="" />
@@ -403,25 +479,54 @@
               <span class="medium semibold">Informações Pessoais</span>
             </div>
             <div class="grid-infos-pessoais card-infos-template">
-              <div>
-                <span>Idade</span>
-                <span>40 anos</span>
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Idade</span>
+                  <span>40 anos</span>
+                </div>
+                <button type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
-              <div>
-                <span>CPF</span>
-                <span>123.456.789-01</span>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>CPF</span>
+                  <span>123.456.789-01</span>
+                </div>
+                <button type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
-              <div>
-                <span>Data de nascimento</span>
-                <span>01/01/1991</span>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Data de nascimento</span>
+                  <span>01/01/1991</span>
+                </div>
+                <button type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
-              <div>
-                <span>Data de nascimento</span>
-                <span>01/01/1991</span>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Data de nascimento</span>
+                  <span>01/01/1991</span>
+                </div>
+                <button type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
-              <div>
-                <span>Data de nascimento</span>
-                <span>01/01/1991</span>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Data de nascimento</span>
+                  <span>01/01/1991</span>
+                </div>
+                <button type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -472,6 +577,12 @@
                   <span class="small">Apartamento</span>
                   <span>Apto 101</span>
                 </div>
+
+                <div class="botao-div">
+                  <button class="botao-editar" type="button" title="editar">
+                    <i data-lucide="square-pen"></i>
+                  </button>
+                </div>
               </div>
               <div>
                 <div class="icones-centralizados">
@@ -497,6 +608,9 @@
                   <span>Bloco</span>
                   <span>Bloco 2</span>
                 </div>
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
               <div>
                 <div class="icones-centralizados">
@@ -520,6 +634,9 @@
                   <span>Email</span>
                   <span>email@example.com</span>
                 </div>
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
               <div>
                 <div class="icones-centralizados">
@@ -545,6 +662,10 @@
                   <span>Registro/Mudança</span>
                   <span>09/04/2025</span>
                 </div>
+
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -569,6 +690,9 @@
                 <circle cx="9" cy="7" r="4" />
               </svg>
               <span class="medium semibold">Familia (3)</span>
+              <button class="botao-editar" type="button" title="editar">
+                <i data-lucide="square-pen"></i>
+              </button>
             </div>
             <div class="familia-informacoes card-infos-template">
               <div>
@@ -634,6 +758,9 @@
                 <circle cx="17" cy="17" r="2" />
               </svg>
               <span class="medium semibold">Veículos (2)</span>
+              <button class="botao-editar" type="button" title="editar">
+                <i data-lucide="square-pen"></i>
+              </button>
             </div>
             <div class="card-infos-automoveis card-infos-template">
               <div>
@@ -710,6 +837,10 @@
         </div>
       </fieldset>
     </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
 
     <script src="/js/includes.js"></script>
     <script src="/js/Base.js"></script>

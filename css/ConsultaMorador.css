@@ -17,12 +17,10 @@
 
 * {
   font-size: 0.95rem;
- }
- body {
+}
+body {
   color: white;
- }
-
-
+}
 
 .small {
   font-size: var(--small);
@@ -58,6 +56,7 @@
   padding: 1rem;
   gap: 1rem;
   overflow-y: auto;
+  position: relative;
 }
 
 .busca-filtro {
@@ -168,13 +167,12 @@
 }
 
 .filtros div:hover {
-background-color: var(--azulEscuro2);
+  background-color: var(--azulEscuro2);
 }
 
 .filtros div:active {
-transform: scale(0.98);
-background-color: var(--azulEscuro);
-
+  transform: scale(0.98);
+  background-color: var(--azulEscuro);
 }
 
 .card-dos-moradores {
@@ -404,9 +402,77 @@ background-color: var(--azulEscuro);
   gap: 1.4em;
 }
 
-.grid-infos-pessoais > div {
+.div-row-card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.dois-span {
   display: flex;
   flex-direction: column;
+}
+
+.div-row-card button {
+  background: transparent;
+  color: inherit;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+
+  height: fit-content;
+  width: auto;
+
+  transition: var(--transition);
+}
+
+.div-row-card button:hover {
+  background: var(--azulEscuro2);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.div-row-card button svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.botao-editar {
+  background: transparent;
+  color: inherit;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+
+  height: fit-content;
+  width: auto;
+
+  transition: var(--transition);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  height: fit-content;
+}
+
+.botao-editar svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.botao-editar:hover {
+  background: var(--azulEscuro2);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.botao-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .grid-infos-pessoais div span:nth-child(1) {
@@ -550,14 +616,13 @@ button > span {
   height: 2em;
 }
 
-.desativar-btn:hover{
+.desativar-btn:hover {
   cursor: pointer;
   background-color: var(--azulEscuro2);
-  
 }
 
-.desativar-btn:active, 
-.apagar-btn:active{
+.desativar-btn:active,
+.apagar-btn:active {
   transform: scale(0.98);
   border: none;
 }
@@ -659,4 +724,75 @@ button > span {
   border: 2px solid var(--azulEscuro2);
   border-radius: 0.6rem;
   padding: 0.6rem;
+}
+
+.modal-editar-familia {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  width: 50%;
+  height: auto;
+  background: var(--azulClaro2);
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.fieldset-editar-familia {
+  min-height: 100%;
+}
+
+/*container dentro do fieldset*/
+.container-editar-familia {
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.left-editar-familia {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.right-editar-familia {
+  width: 100%;
+  min-height: 100%;
+  padding: 0.5rem;
+
+  display: flex;
+}
+
+.botoes-editar-familia {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.botao-editar-sair {
+  width: 100%;
+  height: 5vh;
+}
+
+.botao-editar-sair button {
+  background: #a11111;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  padding: 0.15rem;
+
+  margin-left: auto;
 }
