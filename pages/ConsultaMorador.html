@@ -55,7 +55,7 @@
 
     <!-- Container principal -->
     <div class="container1">
-      <div class="modal-editar-familia">
+      <div class="modal-editar-familia modal-desativado" id="modal-desativado">
         <fieldset class="fieldset-editar-familia">
           <legend>Edite os dados</legend>
 
@@ -70,7 +70,7 @@
                 />
               </div>
               <div class="grupo-editar-familia">
-                <label for="cpf-editar-familia">Cpf</label>
+                <label for="cpf-editar-familia">CPF</label>
                 <input
                   type="text"
                   name="cpf-editar-familia"
@@ -90,7 +90,7 @@
               <div class="grupo-editar-familia">
                 <label for="email-editar-familia">E-mail</label>
                 <input
-                  type="text"
+                  type="email"
                   name="email-editar-familia"
                   id="email-editar-familia"
                 />
@@ -107,10 +107,12 @@
             <div class="right-editar-familia">
               <div class="mensagem-editar-familia">
                 <div class="iconeSpan-editar-familia">
-                  <span>!</span>
-                  <span>Atenção</span>
+                  <div class="div-para-o-icone">
+                    <i data-lucide="message-square-warning"></i>
+                  </div>
+                  <span class="medium semibold">Atenção</span>
                 </div>
-                <div>
+                <div class="paragrafo-editar-familia">
                   <p>
                     toda a alteração de dados feita por meios de edição estarão
                     guardadas no sistema !
@@ -119,10 +121,10 @@
               </div>
 
               <div class="botoes-editar-familia">
-                <div class="grupoBtn-editar-familia">
+                <div class="confirmar-editar-familia" id="confirmar-e-editar">
                   <button>Confirmar alterações</button>
                 </div>
-                <div class="grupoBtn-editar-familia">
+                <div class="voltar-editar-familia" id="voltar-e-fechar">
                   <button>Voltar e cancelar</button>
                 </div>
               </div>
@@ -484,7 +486,7 @@
                   <span>Idade</span>
                   <span>40 anos</span>
                 </div>
-                <button type="button" title="editar">
+                <button class="botao-editar" type="button" title="editar">
                   <i data-lucide="square-pen"></i>
                 </button>
               </div>
@@ -494,7 +496,7 @@
                   <span>CPF</span>
                   <span>123.456.789-01</span>
                 </div>
-                <button type="button" title="editar">
+                <button class="botao-editar" type="button" title="editar">
                   <i data-lucide="square-pen"></i>
                 </button>
               </div>
@@ -504,7 +506,7 @@
                   <span>Data de nascimento</span>
                   <span>01/01/1991</span>
                 </div>
-                <button type="button" title="editar">
+                <button class="botao-editar" type="button" title="editar">
                   <i data-lucide="square-pen"></i>
                 </button>
               </div>
@@ -514,7 +516,7 @@
                   <span>Data de nascimento</span>
                   <span>01/01/1991</span>
                 </div>
-                <button type="button" title="editar">
+                <button class="botao-editar" type="button" title="editar">
                   <i data-lucide="square-pen"></i>
                 </button>
               </div>
@@ -524,7 +526,7 @@
                   <span>Data de nascimento</span>
                   <span>01/01/1991</span>
                 </div>
-                <button type="button" title="editar">
+                <button class="botao-editar" type="button" title="editar">
                   <i data-lucide="square-pen"></i>
                 </button>
               </div>
@@ -573,12 +575,11 @@
                     />
                   </svg>
                 </div>
-                <div class="label-span">
-                  <span class="small">Apartamento</span>
-                  <span>Apto 101</span>
-                </div>
-
-                <div class="botao-div">
+                <div class="div-row-card">
+                  <div class="label-span">
+                    <span class="small">Apartamento</span>
+                    <span>Apto 101</span>
+                  </div>
                   <button class="botao-editar" type="button" title="editar">
                     <i data-lucide="square-pen"></i>
                   </button>
@@ -604,13 +605,15 @@
                     />
                   </svg>
                 </div>
-                <div class="label-span">
-                  <span>Bloco</span>
-                  <span>Bloco 2</span>
+                <div class="div-row-card">
+                  <div class="label-span">
+                    <span>Bloco</span>
+                    <span>Bloco 2</span>
+                  </div>
+                  <button class="botao-editar" type="button" title="editar">
+                    <i data-lucide="square-pen"></i>
+                  </button>
                 </div>
-                <button class="botao-editar" type="button" title="editar">
-                  <i data-lucide="square-pen"></i>
-                </button>
               </div>
               <div>
                 <div class="icones-centralizados">
@@ -630,13 +633,15 @@
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                   </svg>
                 </div>
-                <div class="label-span">
-                  <span>Email</span>
-                  <span>email@example.com</span>
+                <div class="div-row-card">
+                  <div class="label-span">
+                    <span>Email</span>
+                    <span>email@example.com</span>
+                  </div>
+                  <button class="botao-editar" type="button" title="editar">
+                    <i data-lucide="square-pen"></i>
+                  </button>
                 </div>
-                <button class="botao-editar" type="button" title="editar">
-                  <i data-lucide="square-pen"></i>
-                </button>
               </div>
               <div>
                 <div class="icones-centralizados">
@@ -658,14 +663,15 @@
                     <path d="M3 10h18" />
                   </svg>
                 </div>
-                <div class="label-span">
-                  <span>Registro/Mudança</span>
-                  <span>09/04/2025</span>
+                <div class="div-row-card">
+                  <div class="label-span">
+                    <span>Registro/Mudança</span>
+                    <span>09/04/2025</span>
+                  </div>
+                  <button class="botao-editar" type="button" title="editar">
+                    <i data-lucide="square-pen"></i>
+                  </button>
                 </div>
-
-                <button class="botao-editar" type="button" title="editar">
-                  <i data-lucide="square-pen"></i>
-                </button>
               </div>
             </div>
           </div>
@@ -841,8 +847,11 @@
     <script>
       lucide.createIcons();
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script src="/js/ConsultaMorador.js"></script>
     <script src="/js/includes.js"></script>
     <script src="/js/Base.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
   </body>
 </html>
