@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Consulta</title>
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +25,6 @@
     />
     <link rel="stylesheet" href="/css/RegistroM.css" />
     <link rel="stylesheet" href="/css/Base.css" />
-
- 
-
   </head>
   <body data-page="morador">
     <div id="navbar"></div>
@@ -35,8 +32,6 @@
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
-      
-
       <div class="automovel-hover" id="automovel-hover">
         <div class="voltar-div-btn">
           <button class="voltar-automovel-hover" id="voltar-automovel-hover">
@@ -119,71 +114,69 @@
             >
               <legend>Dados do morador principal</legend>
 
-           
-                <div class="ajeitador">
-                  <label for="CPF">CPF</label>
-                  <input
-                    type="text"
-                    id="CPF"
-                    name="CPF"
-                    placeholder="000.000.000-00"
-                    required
-                    aria-required="true"
-                    tabindex="0"
-                  />
-                </div>
-                <div class="ajeitador">
-                  <label for="nome">Nome completo</label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite o nome completo"
-                    required
-                    aria-required="true"
-                    tabindex="0"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="CPF">CPF</label>
+                <input
+                  type="text"
+                  id="CPF"
+                  name="CPF"
+                  placeholder="000.000.000-00"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
+              <div class="ajeitador">
+                <label for="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Digite o nome completo"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="telefone">Número de telefone</label>
-                  <input
-                    type="tel"
-                    id="telefone"
-                    name="telefone"
-                    placeholder="DD-XXXXX-XXXX"
-                    pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
-                    maxlength="12"
-                    required
-                    aria-required="true"
-                    tabindex="0"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="telefone">Número de telefone</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="DD-XXXXX-XXXX"
+                  pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
+                  maxlength="12"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="DD-XXXXX-XXXX"
-                    required
-                    tabindex="0"
-                  />
-                </div>
+              <div class="ajeitador">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="DD-XXXXX-XXXX"
+                  required
+                  tabindex="0"
+                />
+              </div>
 
-                <div class="ajeitador">
-                  <label for="idade">Data de nascimento</label>
-                  <input
-                    type="date"
-                    id="idade"
-                    name="idade"
-                    required
-                    aria-required="true"
-                    tabindex="0"
-                  />
-                </div>
-              
+              <div class="ajeitador">
+                <label for="idade">Data de nascimento</label>
+                <input
+                  type="date"
+                  id="idade"
+                  name="idade"
+                  required
+                  aria-required="true"
+                  tabindex="0"
+                />
+              </div>
             </fieldset>
             <fieldset class="cadastromoradia" id="Passo2">
               <legend>Moradia</legend>
@@ -333,15 +326,18 @@
 
             <fieldset class="botao-detalhes">
               <legend>Adicione integrantes a esse morador</legend>
-              <button type="button">CADASTRAR GRUPO</button>
-              <button type="button" id="btn-concluir-cadastro"><a href="/pages/Familia.html">CONCLUIR CADASTRO</a></button>
+              <button id="cadastrar-grupoBtn" type="button">
+                CADASTRAR GRUPO
+              </button>
+              <button type="button" id="btn-concluir-cadastro">
+                CONCLUIR CADASTRO
+              </button>
             </fieldset>
           </div>
         </div>
       </form>
-      
     </div>
-   
+
     <script src="/js/RegistroM.js"></script>
     <script src="/js/includes.js"></script>
   </body>

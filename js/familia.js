@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tipoGrupoSelect.addEventListener("change", function () {
     const valor = this.value;
 
-    // Resetar todos os estados
+    // Resetar todos os estados (Este é o seu "else" - sempre oculta antes de decidir mostrar)
     registroFamilia.classList.remove("familia-selecionada");
     registroFamilia.classList.add("familia-nao-selecionada");
     registroAluguel.classList.remove("aluguel-selecionado");
@@ -104,4 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       alert("Registro de aluguel será processado aqui.");
     });
+});
+
+// botao voltar para a tela de morador
+
+const voltarBtn = document.getElementById("voltarBtn");
+
+voltarBtn?.addEventListener("click", () => {
+  window.location.href = "/pages/RegistroM.html";
 });

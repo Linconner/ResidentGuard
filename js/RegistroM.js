@@ -42,7 +42,7 @@ const outro = document.getElementById("outro");
 const carro = document.getElementById("carro");
 const moto = document.getElementById("moto");
 
-[outro, carro, moto].forEach(btn => {
+[outro, carro, moto].forEach((btn) => {
   btn?.addEventListener("click", function () {
     const newDiv = CreateDiv();
     let placeholder = "";
@@ -70,18 +70,14 @@ const CardHover = document.getElementById("automovel-hover");
 const closeHover = document.getElementById("voltar-automovel-hover");
 const voltarHover = document.getElementById("cancelar");
 
-
 btnHover?.addEventListener("click", () => {
   CardHover?.classList.add("automovel-hover-ativo");
-  
 });
 closeHover?.addEventListener("click", () => {
   CardHover?.classList.remove("automovel-hover-ativo");
-  
 });
 voltarHover?.addEventListener("click", () => {
   CardHover?.classList.remove("automovel-hover-ativo");
-  
 });
 
 //-----------------------------------------------------------//
@@ -106,3 +102,10 @@ btnProprietario?.addEventListener("click", () => {
 //-----------------------------------------------------------//
 // Formatação CPF
 
+//--------------------------------------------------------------//
+// Botao para ir pra outra tela :p
+
+const cadastrarGrupoBtn = document.getElementById("cadastrar-grupoBtn");
+cadastrarGrupoBtn?.addEventListener("click", () => {
+  window.location.href = "/pages/Familia.html";
+});

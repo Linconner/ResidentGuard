@@ -17,13 +17,18 @@ body {
   overflow: hidden;
 }
 
-.familia-nao-selecionada,
-.aluguel-nao-selecionado {
+/* CORREÇÃO APLICADA AQUI: Aumentando a especificidade para garantir o display: none */
+#registroFamilia.familia-nao-selecionada,
+#registroAluguel.aluguel-nao-selecionado {
   display: none;
 }
 
 .aluguel-selecionado {
   display: block;
+}
+
+.familia-selecionada {
+  display: flex;
 }
 
 .df-column {
@@ -175,13 +180,21 @@ form {
   background-color: #a11111;
   border: none;
   height: 100%;
-  width: 60px;
+  width: auto;
   border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.3rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  color: white;
 }
 
-.voltar-tela a {
-  text-decoration: none;
-  color: white;
+.personalizacao-btn > svg {
+  width: 1em;
+  height: 1em;
 }
 
 .personalizacao-btn:hover {
