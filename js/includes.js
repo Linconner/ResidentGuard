@@ -12,6 +12,11 @@ async function carregarComponente(id, arquivo) {
     // Inicializa a navbar
     inicializarNavbar();
 
+    // Inicializa ícones Lucide após carregar o componente
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
     // Atualiza o span do título após a navbar estar carregada
     atualizarTituloSpan();
   } catch (err) {

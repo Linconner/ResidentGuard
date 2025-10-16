@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+form {
+  display: flex;
+}
+
 .blurOverlay {
   position: fixed;
   top: 12%;

@@ -14,7 +14,6 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- CDN Flaticon Uicons SOLID ROUNDED -->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
@@ -24,150 +23,182 @@
   </head>
   <body data-page="evento">
     <div id="navbar"></div>
-
     <div class="blurOverlay" id="blurOverlay"></div>
 
     <div class="container1">
       <form id="formRegistro" action="#" method="POST">
-        <!-- Adicionei o formulário que estava faltando -->
-        <div class="left">
-          <fieldset class="tipo-evento">
-            <legend>Tipo do evento</legend>
-
-            <div class="radioregistroAluguel">
-              <div class="radio-item">
-                <input
-                  type="radio"
-                  id="area-externa"
-                  name="tipoAluguel"
-                  value="area-externa"
-                  required
-                />
-                <label for="area-externa">Aluguel</label>
-              </div>
-              <div class="radio-item">
-                <input
-                  type="radio"
-                  id="comercio-itinerante"
-                  name="tipoAluguel"
-                  value="comercio-itinerante"
-                />
-                <label for="comercio-itinerante">Comércio</label>
-              </div>
-              <div class="radio-item">
-                <input
-                  type="radio"
-                  id="outro-radio"
-                  name="tipoAluguel"
-                  value="outro"
-                />
-                <label for="outro-radio">Outro</label>
-              </div>
+        <div class="form-wrapper">
+          <!-- LADO ESQUERDO -->
+          <div class="left">
+            <!-- Tipo de evento -->
+            <div class="campo">
+              <fieldset>
+                <legend>Escolha o tipo do evento</legend>
+                <select
+                  name="tipoEvento"
+                  id="tipoEvento"
+                  title="Escolha aqui o tipo do aluguel que será criado"
+                >
+                  <option value="">Escolha o tipo do evento</option>
+                  <option value="1">Aluguel de áreas externas</option>
+                  <option value="2">Comércio Itinerante</option>
+                </select>
+              </fieldset>
             </div>
 
-            <div class="outroopcao" id="outroopcao">
-              <input
-                type="text"
-                id="outro"
-                name="outro"
-                placeholder="Especifique outro aluguel"
-              />
-            </div>
-            <div class="outraopcao" id="outraopcao">
-              <select
-                class="select"
-                title="Selecione uma opção"
-                name="outraopcao"
-              >
-                <option value="">Selecione uma opção</option>
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-              </select>
-            </div>
-          </fieldset>
-
-          <fieldset class="registrotipoaluguel">
-            <legend>Dados do locatário</legend>
-
-            <div class="input-group">
-              <div class="ajeitador">
-                <label for="nome">Nome completo</label>
+            <!-- Dados do morador -->
+            <fieldset class="if-morador-">
+              <legend>Dados do morador</legend>
+              <div class="campo">
+                <label for="cpf-morador">CPF</label>
                 <input
                   type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Digite o nome completo"
-                  required
-                />
-              </div>
-
-              <div class="ajeitador">
-                <label for="CPF">CPF</label>
-                <input
-                  type="text"
-                  id="CPF"
                   name="CPF"
+                  id="cpf-morador"
                   placeholder="000.000.000-00"
-                  required
                 />
               </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="right">
-          <fieldset id="dataehora" class="registrodataehora">
-            <legend>Data e hora</legend>
-
-            <div class="inputs" id="inputsdata">
-              <div class="ajeitador">
-                <label for="data">Dia do aluguel</label>
-                <input type="date" id="data" name="data" required />
-              </div>
-              <div class="ajeitador">
-                <label for="horaentrada">Hora de entrada</label>
+              <div class="campo">
+                <label for="nome-morador">Nome</label>
                 <input
-                  type="time"
-                  id="horaentrada"
-                  name="horaentrada"
+                  type="text"
+                  name="nome"
+                  id="nome-morador"
+                  placeholder="Nome completo"
+                />
+              </div>
+              <div class="campo">
+                <label for="telefone-morador">Telefone</label>
+                <input
+                  type="tel"
+                  name="telefone"
+                  id="telefone-morador"
+                  placeholder="(00) 00000-0000"
+                />
+              </div>
+            </fieldset>
+
+            <!-- Dados do locatário -->
+            <fieldset class="if-naoMorador">
+              <legend>Dados do locatário</legend>
+              <div class="campo">
+                <label for="cpf-naoMorador">CPF</label>
+                <input
+                  type="text"
+                  name="CPF"
+                  id="cpf-naoMorador"
+                  placeholder="000.000.000-00"
+                />
+              </div>
+              <div class="campo">
+                <label for="nome-naoMorador">Nome</label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome-naoMorador"
+                  placeholder="Nome completo"
+                />
+              </div>
+              <div class="campo">
+                <label for="telefone-naoMorador">Telefone</label>
+                <input
+                  type="tel"
+                  name="telefone"
+                  id="telefone-naoMorador"
+                  placeholder="(00) 00000-0000"
+                />
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- LADO DIREITO -->
+          <div class="right">
+            <fieldset class="dados-aluguel">
+              <legend>Dados do aluguel</legend>
+
+              <div class="campo">
+                <label for="dataAluguel">Data do aluguel:</label>
+                <input
+                  type="date"
+                  id="dataAluguel"
+                  name="dataAluguel"
                   required
                 />
               </div>
 
-              <div class="ajeitador">
-                <label for="horasaida">Hora da saída</label>
-                <input type="time" id="horasaida" name="horasaida" required />
+              <div class="campo-duplo">
+                <div class="campo-duplo-campo">
+                  <label for="horaEntrada">Hora de entrada:</label>
+                  <input
+                    type="time"
+                    id="horaEntrada"
+                    name="horaEntrada"
+                    required
+                  />
+                </div>
+                <div class="campo-duplo-campo">
+                  <label for="horaSaida">Hora de saída:</label>
+                  <input type="time" id="horaSaida" name="horaSaida" required />
+                </div>
               </div>
-            </div>
-          </fieldset>
 
-          <fieldset class="registroaluguel">
-            <legend>Dados do aluguel</legend>
-
-            <div class="dadosAluguel">
-              <div class="ajeitador">
-                <label for="opcoes">Escolha o local</label>
-                <select id="opcoes" name="local" required>
+              <div class="campo">
+                <label for="tipoAluguel">Tipo de aluguel:</label>
+                <select id="tipoAluguel" name="tipoAluguel" required>
                   <option value="">Selecione...</option>
-                  <option value="1">Salão de festas</option>
-                  <option value="2">Quadra poliesportiva</option>
-                  <option value="3">Churrasqueira</option>
+                  <option value="comercio">Comércio itinerante</option>
+                  <option value="areaExterna">
+                    Área externa do condomínio
+                  </option>
                 </select>
               </div>
-              <div class="ajeitador">
-                <label for="payment">Modo de pagamento</label>
-                <select id="payment" name="pagamento" required>
+
+              <div id="divComercio" class="campo" style="display: none">
+                <label for="localComercio">Local (comércio itinerante):</label>
+                <select id="localComercio" name="localComercio">
                   <option value="">Selecione...</option>
-                  <option value="1">PIX</option>
-                  <option value="2">Dinheiro</option>
-                  <option value="3">Cartão</option>
+                  <option value="entrada">Entrada principal</option>
+                  <option value="estacionamento">Estacionamento</option>
+                  <option value="praça">Praça interna</option>
+                  <option value="quadra">Próximo à quadra</option>
                 </select>
               </div>
-            </div>
-          </fieldset>
 
-          <!-- Botão de registro removido conforme solicitado -->
+              <div id="divAreaExterna" class="campo" style="display: none">
+                <label for="localAreaExterna">Local (área externa):</label>
+                <select id="localAreaExterna" name="localAreaExterna">
+                  <option value="">Selecione...</option>
+                  <option value="piscina">Piscina</option>
+                  <option value="churrasqueira">Churrasqueira</option>
+                  <option value="salão">Salão de festas</option>
+                  <option value="quadra">Quadra</option>
+                  <option value="jardim">Jardim</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="formaPagamento">Forma de pagamento:</label>
+                <select id="formaPagamento" name="formaPagamento" required>
+                  <option value="">Selecione...</option>
+                  <option value="pix">PIX</option>
+                  <option value="cartao">Cartão</option>
+                  <option value="dinheiro">Dinheiro</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="valorPago">Valor a ser pago (R$):</label>
+                <input
+                  type="number"
+                  id="valorPago"
+                  name="valorPago"
+                  min="0"
+                  step="0.01"
+                  required
+                />
+              </div>
+            </fieldset>
+          </div>
         </div>
       </form>
     </div>

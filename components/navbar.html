@@ -1,115 +1,84 @@
-<script src="https://unpkg.com/lucide@latest"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
 
-<script>
-  lucide.createIcons();
-</script>
-
-<header class="topico">
-  <span id="titulo-span"></span>
-  <svg
-    id="botaoicone"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    stroke="currentColor"
-  >
-    <path
-      d="M4 6H20M4 12H14M4 18H9"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+    <!-- Ícones Flaticon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
-  </svg>
 
-  <!-- Menu dropdown -->
-  <div class="navbarmenu" id="navbarmenu">
-    <div class="itensnavbar">
-      <a href="Adm.html" class="nav-item">
-        <i class="fi fi-sr-administrator-alt"></i>
-        <h3 class="itenvey">Adm</h3>
-      </a>
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-      <a href="RegistroM.html" class="nav-item">
-        <i class="fi fi-sr-user-pen"></i>
-        <h3 class="itenvey">Registro Moradores</h3>
-      </a>
-      <a href="RegistroV.html" class="nav-item">
-        <i class="fi fi-sr-user-pen"></i>
-        <h3 class="itenvey">Registro Visitantes</h3>
-      </a>
-      <a href="RegistroEN.html" class="nav-item">
-        <i class="fi fi-sr-gifts"></i>
-        <h3 class="itenvey">Registro Encomendas</h3>
-      </a>
-      <a href="RegistroE.html" class="nav-item">
-        <i class="fi fi-sr-calendar-star"></i>
-        <h3 class="itenvey">Registro Eventos</h3>
-      </a>
-      <a href="Consulta.html" class="nav-item">
-        <i class="fi fi-sr-search-alt"></i>
-        <h3 class="itenvey">Consulta</h3>
-      </a>
+  <body>
+    <header class="topico">
+      <span id="titulo-span">ResidentGuard</span>
 
-      <a href="/index.html" class="nav-item">
-        <i class="fi fi-sr-administrator-alt"></i>
-        <h3 class="itenvey">Sair</h3>
-      </a>
-    </div>
-  </div>
-</header>
+      <!-- Botão de menu -->
+      <svg
+        id="botaoicone"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="currentColor"
+      >
+        <path
+          d="M4 6H20M4 12H14M4 18H9"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
 
-<!-- Overlay de fundo -->
-<div id="blurOverlay"></div>
+      <!-- Menu dropdown -->
+      <div class="navbarmenu" id="navbarmenu">
+        <div class="itensnavbar">
+          <a href="Adm.html" class="nav-item">
+            <i class="fi fi-sr-administrator-alt"></i>
+            <h3 class="itenvey">Adm</h3>
+          </a>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const botaoicone = document.getElementById("botaoicone");
-    const navbar = document.getElementById("navbarmenu");
-    const blurOverlay = document.getElementById("blurOverlay");
-    const navItems = document.querySelectorAll(".nav-item");
+          <a href="RegistroM.html" class="nav-item">
+            <i class="fi fi-sr-user-pen"></i>
+            <h3 class="itenvey">Registro Moradores</h3>
+          </a>
 
-    if (!botaoicone || !navbar || !blurOverlay) {
-      console.error("Elementos essenciais não encontrados!");
-      return;
-    }
+          <a href="RegistroV.html" class="nav-item">
+            <i class="fi fi-sr-user-pen"></i>
+            <h3 class="itenvey">Registro Visitantes</h3>
+          </a>
 
-    // Ativa o item atual conforme URL
-    navItems.forEach((link) => {
-      if (link.href === location.href) link.classList.add("active");
-    });
+          <a href="RegistroEN.html" class="nav-item">
+            <i class="fi fi-sr-gifts"></i>
+            <h3 class="itenvey">Registro Encomendas</h3>
+          </a>
 
-    // Abrir/fechar menu
-    botaoicone.addEventListener("click", function (event) {
-      event.stopPropagation();
-      navbar.classList.toggle("ativa");
-      blurOverlay.classList.toggle("ativo");
-    });
+          <a href="RegistroE.html" class="nav-item">
+            <i class="fi fi-sr-calendar-star"></i>
+            <h3 class="itenvey">Registro Eventos</h3>
+          </a>
 
-    // Fechar se clicar fora
-    document.addEventListener("click", function (event) {
-      const isClickInsideNavbar = navbar.contains(event.target);
-      const isClickOnButton = event.target.closest("#botaoicone");
-      if (
-        !isClickInsideNavbar &&
-        !isClickOnButton &&
-        navbar.classList.contains("ativa")
-      ) {
-        navbar.classList.remove("ativa");
-        blurOverlay.classList.remove("ativo");
-      }
-    });
+          <a href="Consulta.html" class="nav-item">
+            <i class="fi fi-sr-search-alt"></i>
+            <h3 class="itenvey">Consulta</h3>
+          </a>
 
-    // Clique em item → fecha menu
-    navItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        navItems.forEach((navItem) => navItem.classList.remove("active"));
-        this.classList.add("active");
-        setTimeout(() => {
-          navbar.classList.remove("ativa");
-          blurOverlay.classList.remove("ativo");
-        }, 300);
-      });
-    });
-  });
-</script>
+          <!-- Ícone Lucide -->
+          <a href="/index.html" class="nav-item">
+            <i data-lucide="log-out"></i>
+            <h3 class="itenvey">Sair</h3>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fundo borrado -->
+    <div id="blurOverlay"></div>
+  </body>
+</html>
