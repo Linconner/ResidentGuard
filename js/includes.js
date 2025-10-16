@@ -89,7 +89,7 @@ function atualizarTituloSpan() {
     evento: "REGISTRO DE EVENTOS",
     adm: "ADMIN",
     familia: "REGISTRO DE FAMILIA",
-    consultaMorador: "TELA DE CONSULTA DO MORADOR",
+    consultaM: "TELA DE CONSULTA DO MORADOR",
 
     // Adicione outras páginas aqui
   };
