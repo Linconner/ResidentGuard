@@ -96,7 +96,7 @@ body {
   padding: 2vh;
 }
 
-.topico span {
+#titulo-span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,26 +107,35 @@ body {
   color: white;
 }
 
-.topico svg {
-  color: white;
-  width: 70px;
-  height: auto;
-  margin-left: 3vh;
-  border: 2px solid var(--azulEscuro2);
-  border-radius: var(--border-radius);
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.topico svg:hover {
-  transform: scale(1.05);
-  transition: color 0.1s ease-out;
-  color: var(--azulEscuro2);
-}
-
-.topico svg:active {
+.MenuDropDown {
+  width: 150px;
+  height: 70px;
   background-color: var(--azulEscuro);
+  border: 2px solid var(--azulEscuro2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 3rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: var(--transition);
+}
+
+.MenuDropDown:hover {
+  background: var(--azulEscuro2);
+  transform: scale(1.1);
+}
+
+.MenuDropDown span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.MenuDropDown:active {
+  background-color: var(--azulEscuro);
+  transform: scale(1);
 }
 
 .navbarmenu {
@@ -176,11 +185,6 @@ body {
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-item i {
-  font-size: 1.1rem;
-  width: auto;
 }
 
 /* prettier-ignore-start */

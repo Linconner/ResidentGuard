@@ -10,62 +10,48 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
-
-    <!-- Ícones Lucide -->
-    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body>
     <header class="topico">
-      <span id="titulo-span">ResidentGuard</span>
+      <span id="titulo-span"></span>
 
       <!-- Botão de menu -->
-      <svg
-        id="botaoicone"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-      >
-        <path
-          d="M4 6H20M4 12H14M4 18H9"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+      <div class="MenuDropDown" id="botaoicone">
+        <i data-lucide="logs" id="icone-menu"></i>
+        <span>Menu</span>
+      </div>
 
       <!-- Menu dropdown -->
       <div class="navbarmenu" id="navbarmenu">
         <div class="itensnavbar">
           <a href="Adm.html" class="nav-item">
-            <i class="fi fi-sr-administrator-alt"></i>
+            <i data-lucide="shield"></i>
             <h3 class="itenvey">Adm</h3>
           </a>
 
           <a href="RegistroM.html" class="nav-item">
-            <i class="fi fi-sr-user-pen"></i>
+            <i data-lucide="user-pen"></i>
             <h3 class="itenvey">Registro Moradores</h3>
           </a>
 
           <a href="RegistroV.html" class="nav-item">
-            <i class="fi fi-sr-user-pen"></i>
+            <i data-lucide="user-pen"></i>
             <h3 class="itenvey">Registro Visitantes</h3>
           </a>
 
           <a href="RegistroEN.html" class="nav-item">
-            <i class="fi fi-sr-gifts"></i>
+            <i data-lucide="package"></i>
             <h3 class="itenvey">Registro Encomendas</h3>
           </a>
 
           <a href="RegistroE.html" class="nav-item">
-            <i class="fi fi-sr-calendar-star"></i>
+            <i data-lucide="calendar"></i>
             <h3 class="itenvey">Registro Eventos</h3>
           </a>
 
           <a href="Consulta.html" class="nav-item">
-            <i class="fi fi-sr-search-alt"></i>
+            <i data-lucide="search"></i>
             <h3 class="itenvey">Consulta</h3>
           </a>
 
@@ -79,6 +65,6 @@
     </header>
 
     <!-- Fundo borrado -->
-    <div id="blurOverlay"></div>
+    <div id="blurOverlay" class="blur-overlay"></div>
   </body>
 </html>
