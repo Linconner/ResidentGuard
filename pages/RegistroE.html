@@ -50,7 +50,7 @@
             </div>
 
             <!-- Dados do morador -->
-            <fieldset class="if-morador-">
+            <fieldset id="ifMorador" class="if-morador-">
               <legend>Dados do morador</legend>
               <div class="campo">
                 <label for="cpf-morador">CPF</label>
@@ -82,7 +82,7 @@
             </fieldset>
 
             <!-- Dados do locatário -->
-            <fieldset class="if-naoMorador">
+            <fieldset id="ifNaoMorador" class="if-naoMorador">
               <legend>Dados do locatário</legend>
               <div class="campo">
                 <label for="cpf-naoMorador">CPF</label>
@@ -197,10 +197,14 @@
                   name="valorPago"
                   min="0"
                   step="0.01"
+                  placeholder="R$00.00"
                   required
                 />
               </div>
             </fieldset>
+            <div class="btnconfirmar">
+              <button type="button">CADASTRAR</button>
+            </div>
           </div>
         </div>
       </form>

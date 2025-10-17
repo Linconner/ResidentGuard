@@ -38,18 +38,39 @@ function inicializarNavbar() {
     return;
   }
 
+  // Caso a navbar já esteja ativa ao carregar
+  if (navbar.classList.contains("ativa")) {
+    alert("oie");
+  }
+
   // Marca o link ativo
   navItems.forEach((link) => {
     if (link.href === location.href) link.classList.add("active");
   });
 
   // Toggle do menu
+
   botaoicone.addEventListener("click", (event) => {
     event.stopPropagation();
     navbar.classList.toggle("ativa");
     blurOverlay.classList.toggle("ativo");
+    botaoicone.classList.toggle("botao-ativo");
   });
 
+  // Fecha o menu clicando fora
+  document.addEventListener("click", (event) => {
+    const isClickInsideNavbar = navbar.contains(event.target);
+    const isClickOnButton = event.target.closest("#botaoicone");
+    if (
+      !isClickInsideNavbar &&
+      !isClickOnButton &&
+      navbar.classList.contains("ativa")
+    ) {
+      navbar.classList.remove("ativa");
+      blurOverlay.classList.remove("ativo");
+      botaoicone.classList.remove("botao-ativo"); // <--- garante que o botão volte ao estado original
+    }
+  });
   // Fecha o menu clicando fora
   document.addEventListener("click", (event) => {
     const isClickInsideNavbar = navbar.contains(event.target);
@@ -95,7 +116,6 @@ function atualizarTituloSpan() {
     adm: "ADMIN",
     familia: "REGISTRO DE FAMILIA",
     consultaM: "TELA DE CONSULTA DO MORADOR",
-
     // Adicione outras páginas aqui
   };
 
