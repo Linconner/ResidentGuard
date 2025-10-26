@@ -49,7 +49,7 @@
           </div>
 
           <!-- LADO ESQUERDO -->
-          <div class="left">
+          <div class="top">
             <!-- Tipo de evento -->
 
             <!-- Dados do morador -->
@@ -118,8 +118,8 @@
           </div>
 
           <!-- Embaixo -->
-          <div class="right">
-            <fieldset class="dados-aluguel">
+          <div class="bottom">
+            <fieldset class="dados-aluguel" id="dados-aluguel">
               <legend>Dados do aluguel</legend>
 
               <div class="campo">
@@ -195,7 +195,7 @@
               <div class="campo">
                 <label for="valorPago">Valor a ser pago (R$):</label>
                 <input
-                  type="number"
+                  type="text"
                   id="valorPago"
                   name="valorPago"
                   min="0"
@@ -206,14 +206,15 @@
               </div>
             </fieldset>
             <div class="btnconfirmar">
-              <button type="button">CADASTRAR</button>
+              <button id="cadastrar-btn" type="button">CADASTRAR</button>
             </div>
           </div>
         </div>
       </form>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/js/RegistroE.js"></script>
     <script src="/js/includes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
   </body>
 </html>

@@ -2,11 +2,10 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Consulta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Morador</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fontes e ícones -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -19,35 +18,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
-    />
-    <!-- Ícones Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Estilos -->
     <link rel="stylesheet" href="/css/RegistroM.css" />
     <link rel="stylesheet" href="/css/Base.css" />
   </head>
+
   <body data-page="morador">
     <div id="navbar"></div>
 
+    <!-- 🔹 Fundo desfocado -->
     <div class="blurOverlay" id="blurOverlay"></div>
 
-    <div class="container1">
-      <div class="automovel-hover" id="automovel-hover">
-        <div class="voltar-div-btn">
-          <button class="voltar-automovel-hover" id="voltar-automovel-hover">
-            <img src="/images/x.svg" alt="voltar" />
-          </button>
-        </div>
-        <fieldset class="fieldset-hover">
-          <legend>Escolha o automóvel</legend>
-
+    <!-- 🔹 Modal do automóvel -->
+    <div class="automovel-hover" id="automovel-hover">
+      <fieldset class="fieldset-hover">
+        <legend>Registrar Automóvel</legend>
+        <div class="left-modal">
           <div class="ajeitadores-input">
-            <label for="automovel">Escolha o automóvel</label>
-            <select title="automovel" name="automovel" id="automovel">
-              <option value="">Selecione um automóvel</option>
+            <label for="automovel">Tipo de automóvel</label>
+            <select id="automovel">
+              z
+              <option value="">Selecione</option>
               <option value="carro">Carro</option>
               <option value="moto">Moto</option>
               <option value="bicicleta">Bicicleta</option>
@@ -56,59 +49,61 @@
           </div>
 
           <div class="ajeitadores-input">
-            <label for="marca-automovel">Marca do automóvel</label>
+            <label for="marca-automovel">Marca</label>
             <input
               type="text"
-              name="marca-automovel"
               id="marca-automovel"
-              placeholder="Digite a marca do automóvel"
+              placeholder="Digite a marca"
             />
           </div>
 
           <div class="ajeitadores-input">
-            <label for="cor-automovel">Escolha a cor do automóvel</label>
-            <select title="cores" name="cores" id="cor-automovel">
-              <option value="">Selecione uma cor</option>
-              <option value="preto">Preto</option>
-              <option value="branco">Branco</option>
-              <option value="prata">Prata</option>
-              <option value="cinza">Cinza</option>
-              <option value="azul">Azul</option>
-              <option value="vermelho">Vermelho</option>
-              <option value="verde">Verde</option>
-              <option value="marrom">Marrom</option>
-              <option value="bege">Bege</option>
-              <option value="amarelo">Amarelo</option>
-              <option value="outro">Outro</option>
-            </select>
+            <label for="cor-automovel">Cor</label>
+            <input type="text" id="cor-automovel" placeholder="Digite a cor" />
           </div>
 
           <div class="ajeitadores-input">
-            <label for="placa-automovel"
-              >Digite a placa do Automóvel (se houver)</label
-            >
+            <label for="placa-automovel">Placa</label>
             <input
               type="text"
-              maxlength="7"
-              style="text-transform: uppercase"
-              name="placa-automovel"
               id="placa-automovel"
+              maxlength="7"
               placeholder="Placa do automóvel"
+              style="text-transform: uppercase"
             />
+          </div>
+        </div>
+
+        <div class="right-modal">
+          <div class="div-informacao-modal">
+            <div class="right-icon">
+              <div class="wrapSVG">
+                <i data-lucide="car-front"></i>
+              </div>
+
+              <span>Cadastre um automóvel!</span>
+              <p>
+                para cadastrar um automóvel, basta colocar as informações
+                necessárias e apertar no botão para o cadastro, cada automóvel
+                cadastrado ficará para a consulta na tela de cadastro de
+                moradores.
+              </p>
+            </div>
           </div>
 
           <div class="botao-submit-cancelar">
-            <button type="button" title="cancelar" id="cancelar">
-              Cancelar
-            </button>
-            <button type="button" title="enviar">Registrar</button>
+            <button id="cancelar" type="button">Cancelar</button>
+            <button type="button">Registrar</button>
           </div>
-        </fieldset>
-      </div>
+        </div>
+      </fieldset>
+    </div>
 
+    <!-- 🔹 Conteúdo principal -->
+    <div class="container1">
       <form id="formRegistro" action="#" method="POST">
-        <!-- Grid container envolvendo left, center e right -->
         <div class="form-grid-container">
+          <!-- Coluna esquerda -->
           <div class="left">
             <fieldset
               class="registromoradorprincipal"
@@ -125,10 +120,9 @@
                   name="CPF"
                   placeholder="000.000.000-00"
                   required
-                  aria-required="true"
-                  tabindex="0"
                 />
               </div>
+
               <div class="ajeitador">
                 <label for="nome">Nome completo</label>
                 <input
@@ -137,8 +131,6 @@
                   name="nome"
                   placeholder="Digite o nome completo"
                   required
-                  aria-required="true"
-                  tabindex="0"
                 />
               </div>
 
@@ -149,11 +141,7 @@
                   id="telefone"
                   name="telefone"
                   placeholder="DD-XXXXX-XXXX"
-                  pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}"
-                  maxlength="12"
                   required
-                  aria-required="true"
-                  tabindex="0"
                 />
               </div>
 
@@ -163,25 +151,18 @@
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="DD-XXXXX-XXXX"
+                  placeholder="exemplo@email.com"
                   required
-                  tabindex="0"
                 />
               </div>
 
               <div class="ajeitador">
                 <label for="idade">Data de nascimento</label>
-                <input
-                  type="date"
-                  id="idade"
-                  name="idade"
-                  required
-                  aria-required="true"
-                  tabindex="0"
-                />
+                <input type="date" id="idade" name="idade" required />
               </div>
             </fieldset>
-            <fieldset class="cadastromoradia" id="Passo2">
+
+            <fieldset class="cadastromoradia">
               <legend>Moradia</legend>
               <div class="blocoapartamento">
                 <div class="ajeitador">
@@ -192,7 +173,6 @@
                     name="bloco"
                     placeholder="Digite o bloco"
                     required
-                    tabindex="7"
                   />
                 </div>
                 <div class="ajeitador">
@@ -203,27 +183,28 @@
                     name="apartamento"
                     placeholder="Digite o número"
                     required
-                    tabindex="8"
                   />
                 </div>
               </div>
             </fieldset>
           </div>
 
+          <!-- Coluna central -->
           <div class="center">
             <fieldset class="registrar-automovel-morador">
-              <legend>Registrar automóvel</legend>
-              <div class="adicionar-placa" id="adicionar-placa">
-                <button
-                  class="add-automovel"
-                  name="add-automovel-btn"
-                  type="button"
-                  id="add-automovel"
-                >
-                  <span> Adicionar um automóvel a este morador </span>
-                </button>
-              </div>
+              <legend>Automóveis</legend>
 
+              <!-- Botão para abrir o modal -->
+              <button
+                class="add-automovel"
+                name="add-automovel-btn"
+                type="button"
+                id="add-automovel"
+              >
+                <span>Adicionar automóvel</span>
+              </button>
+
+              <!-- Exemplo de lista -->
               <div class="automoveis-registrados">
                 <div class="div-retangulo-automovel">
                   <div class="image">
@@ -234,84 +215,38 @@
                   <span>Placa: ABC1D23</span>
                   <span>Cor: Preto</span>
                 </div>
-
-                <div class="div-retangulo-automovel">
-                  <div class="image">
-                    <img src="/images/bike.svg" alt="moto" />
-                    <span class="title">Moto</span>
-                  </div>
-                  <span>Marca: Honda CG 160</span>
-                  <span>Placa: XYZ4E56</span>
-                  <span>Cor: Vermelha</span>
-                </div>
-
-                <div class="div-retangulo-automovel">
-                  <div class="image">
-                    <img src="/images/bike.svg" alt="bicicleta" />
-                    <span class="title">Bicicleta</span>
-                  </div>
-                  <span>Marca: Caloi Elite</span>
-                  <span>Placa: N/A</span>
-                  <span>Cor: Azul</span>
-                </div>
-
-                <div class="div-retangulo-automovel">
-                  <div class="image">
-                    <img src="/images/ellipsis.svg" alt="outro" />
-                    <span class="title">Outro</span>
-                  </div>
-                  <span>Marca: Patinete Elétrico Xiaomi</span>
-                  <span>Placa: N/A</span>
-                  <span>Cor: Cinza</span>
-                </div>
               </div>
             </fieldset>
           </div>
 
+          <!-- Coluna direita -->
           <div class="right">
-            <fieldset class="registropets" tabindex="0">
-              <legend>O morador tem animal de estimação</legend>
-
-              <div class="ajeitador">
-                <div class="petsyrn">
-                  <div class="radiobuttonpets">
-                    <div class="radio-item">
-                      <input
-                        type="radio"
-                        id="simpets"
-                        name="pets"
-                        value="sim"
-                        tabindex="0"
-                      />
-                      <label for="simpets">Sim</label>
-                    </div>
-                    <div class="radio-item">
-                      <input
-                        type="radio"
-                        id="naopets"
-                        name="pets"
-                        value="nao"
-                        tabindex="0"
-                      />
-                      <label for="naopets">Não</label>
-                    </div>
-                  </div>
+            <fieldset class="registropets">
+              <legend>Possui animais de estimação?</legend>
+              <div class="radiobuttonpets">
+                <div class="radio-item">
+                  <input type="radio" id="simpets" name="pets" value="sim" />
+                  <label for="simpets">Sim</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="naopets" name="pets" value="nao" />
+                  <label for="naopets">Não</label>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="tipo-morador">
-              <legend>Tipo do morador</legend>
 
+            <fieldset class="tipo-morador">
+              <legend>Tipo de morador</legend>
               <div class="proprietario-inquilino">
                 <div class="botoes-radio-tipo" id="botao-proprietario">
-                  <input type="radio" id="proprietario" name="proprietario" />
+                  <input type="radio" id="proprietario" name="tipo" />
                   <img src="/images/house.svg" alt="casa" />
-                  <label for="proprietario">proprietario</label>
+                  <label for="proprietario">Proprietário</label>
                 </div>
                 <div class="botoes-radio-tipo" id="botao-inquilino">
-                  <input type="radio" id="inquilino" name="proprietario" />
+                  <input type="radio" id="inquilino" name="tipo" />
                   <img src="/images/key.svg" alt="chave" />
-                  <label for="inquilino">inquilino</label>
+                  <label for="inquilino">Inquilino</label>
                 </div>
               </div>
 
@@ -319,21 +254,20 @@
                 <label for="datacontrato">Vencimento do contrato</label>
                 <input
                   type="date"
-                  placeholder="Tempo do contrato"
+                  id="datacontrato"
                   name="datacontrato"
-                  class="input-para-contrato-input"
-                  required
+                  placeholder="Tempo do contrato"
                 />
               </div>
             </fieldset>
 
             <fieldset class="botao-detalhes">
-              <legend>Adicione integrantes a esse morador</legend>
+              <legend>Ações</legend>
               <button id="cadastrar-grupoBtn" type="button">
-                CADASTRAR GRUPO
+                Cadastrar grupo
               </button>
-              <button type="button" id="btn-concluir-cadastro">
-                CONCLUIR CADASTRO
+              <button id="btn-concluir-cadastro" type="button">
+                Concluir cadastro
               </button>
             </fieldset>
           </div>
@@ -341,6 +275,7 @@
       </form>
     </div>
 
+    <!-- Scripts -->
     <script src="/js/RegistroM.js"></script>
     <script src="/js/includes.js"></script>
   </body>

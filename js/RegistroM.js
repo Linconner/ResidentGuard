@@ -63,21 +63,28 @@ const moto = document.getElementById("moto");
 });
 
 //-----------------------------------------------------------//
-// Hover do automóvel
-
+//
 const btnHover = document.getElementById("add-automovel");
-const CardHover = document.getElementById("automovel-hover");
-const closeHover = document.getElementById("voltar-automovel-hover");
-const voltarHover = document.getElementById("cancelar");
+const cardHover = document.getElementById("automovel-hover");
+const cancelarHover = document.getElementById("cancelar");
+const blurOverlay = document.getElementById("blurOverlay");
 
+// 🟢 Abrir modal
 btnHover?.addEventListener("click", () => {
-  CardHover?.classList.add("automovel-hover-ativo");
+  cardHover?.classList.add("automovel-hover-ativo");
+  blurOverlay?.classList.add("ativo");
 });
-closeHover?.addEventListener("click", () => {
-  CardHover?.classList.remove("automovel-hover-ativo");
+
+// 🟠 Fechar modal com o botão Cancelar
+cancelarHover?.addEventListener("click", () => {
+  cardHover?.classList.remove("automovel-hover-ativo");
+  blurOverlay?.classList.remove("ativo");
 });
-voltarHover?.addEventListener("click", () => {
-  CardHover?.classList.remove("automovel-hover-ativo");
+
+// ⚫ Fechar modal clicando fora (no blur)
+blurOverlay?.addEventListener("click", () => {
+  cardHover?.classList.remove("automovel-hover-ativo");
+  blurOverlay?.classList.remove("ativo");
 });
 
 //-----------------------------------------------------------//

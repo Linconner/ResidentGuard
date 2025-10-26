@@ -71,15 +71,35 @@
   border-radius: 0.8rem;
 }
 
-.registro-blocos-apaertamentos {
+.registro-apartamentos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  
   flex: 1 1 auto;
   display: flex;
-  flex-flow: row nowrap;
+
   gap: 0.6rem;
 }
 
-.registro-blocos-apaertamentos > div {
-  width: 50%;
+
+
+.registro-bloco,
+.registro-apartamento {
+  width: 100%;
+}
+
+.registro-apartamento > div > input {
+  width: 100%;
+
+}
+
+.cadastro-locais,
+.cadastro-areas-externas {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .eventos-alugueis {

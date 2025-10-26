@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/cardAutomovel.css" />
+  </head>
+  <body>
+    <div class="everything">
+      <div class="fake-input">
+        <div class="icon-color">
+          <span class="colorSymbol"></span>
+          <span id="selectedColor"
+            >Vermelho
+            <!-- Color --></span
+          >
+        </div>
+        <div class="chevrons">
+          <i data-lucide="chevron-down"></i>
+        </div>
+      </div>
+
+      <div class="colors-dropdown">
+        <div class="colors-grid">
+          <button type="button" class="color-option" tabindex="0">
+            <span class="nameColor">Vermelho</span>
+            <div class="symbol-hex">
+              <span class="Symbol"></span>
+              <span class="hexColor">#a11111</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="/js/cardAutomovel.js"></script>
+</html>

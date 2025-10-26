@@ -235,7 +235,7 @@ body {
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(3px); /* Safari */
   backdrop-filter: blur(3px); /* Chrome/Edge */
-  z-index: 999;
+  z-index: 990;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
