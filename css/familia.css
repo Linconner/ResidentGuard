@@ -266,18 +266,32 @@ form {
   background-color: var(--azulEscuro2);
 }
 
+.familia-aluguel {
+  margin-bottom: 0.5rem;
+}
+
 /* Corrige alinhamento usando grid, sem mudar o design */
 .aluguel-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 2rem;
   width: 100%;
+
+  grid-template-areas:
+    "form-group form-group"
+    "form-group form-group"
+    "form-group form-group"
+    "botoes botoes";
 }
 
 .aluguel-grid .form-group {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.botoes {
+  grid-area: botoes;
 }
 
 .aluguel-grid .botoes-linha {
@@ -396,4 +410,76 @@ form {
 .botao-excluir-card button:hover {
   background: #6c0a0a;
   transform: scale(1.03);
+}
+
+.botao-change {
+  width: 100%;
+  height: 6vh;
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+}
+
+.botao-change button {
+  width: 20%;
+
+  border-radius: 0.6rem;
+  padding: 0.8rem 1rem;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botao-change button:nth-child(2) {
+  height: fit-content;
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: var(--transition);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-change button:nth-child(1) {
+  height: fit-content;
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: var(--transition);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-change button svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.botao-change button:hover {
+  background-color: var(--azulEscuro2);
+  transform: scale(1.02);
+}
+
+.botao-change button:active {
+  transform: scale(0.98);
+}
+
+.botao-change button.active-tab {
+  background-color: var(--azulEscuro2);
+  border-color: var(--azulClaro);
 }

@@ -24,10 +24,77 @@
     <link rel="stylesheet" href="/css/RegistroV.css" />
     <link rel="stylesheet" href="/css/Base.css" />
   </head>
+
   <body data-page="visitante">
     <div id="navbar"></div>
 
     <div class="blurOverlay" id="blurOverlay"></div>
+
+    <div class="automovel-hover" id="automovel-hover">
+      <fieldset class="fieldset-hover">
+        <legend>Registrar Automóvel</legend>
+        <div class="left-modal">
+          <div class="ajeitadores-input">
+            <label for="automovel">Tipo de automóvel</label>
+            <select id="automovel">
+              <option value="">Selecione</option>
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+              <option value="bicicleta">Bicicleta</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="ajeitadores-input">
+            <label for="marca-automovel">Marca</label>
+            <input
+              type="text"
+              id="marca-automovel"
+              placeholder="Digite a marca"
+            />
+          </div>
+
+          <div class="ajeitadores-input">
+            <label for="cor-automovel">Cor</label>
+            <input type="text" id="cor-automovel" placeholder="Digite a cor" />
+          </div>
+
+          <div class="ajeitadores-input">
+            <label for="placa-automovel">Placa</label>
+            <input
+              type="text"
+              id="placa-automovel"
+              maxlength="7"
+              placeholder="Placa do automóvel"
+              style="text-transform: uppercase"
+            />
+          </div>
+        </div>
+
+        <div class="right-modal">
+          <div class="div-informacao-modal">
+            <div class="right-icon">
+              <div class="wrapSVG">
+                <i data-lucide="car-front"></i>
+              </div>
+
+              <span class="cadastreumautomovel">Cadastre um automóvel!</span>
+              <p class="paragrafo">
+                para cadastrar um automóvel, basta colocar as informações
+                necessárias e apertar no botão para o cadastro, cada automóvel
+                cadastrado ficará para a consulta na tela de cadastro de
+                moradores.
+              </p>
+            </div>
+          </div>
+
+          <div class="botao-submit-cancelar">
+            <button id="cancelar" type="button">Cancelar</button>
+            <button type="button">Registrar</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
     <div class="container1">
       <form action="./" method="post">
@@ -147,61 +214,14 @@
             <fieldset class="cadastroautomovel">
               <legend>Meio de transporte</legend>
 
-              <div class="cadastroautomovelradiobutton" tabindex="9">
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="carro"
-                    name="transporte"
-                    value="carro"
-                    tabindex="9"
-                  />
-                  <label for="carro">Carro</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="moto"
-                    name="transporte"
-                    value="moto"
-                    tabindex="10"
-                  />
-                  <label for="moto">Moto</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="acessocomum"
-                    name="transporte"
-                    value="acessocomum"
-                    tabindex="11"
-                  />
-                  <label for="acessocomum">Acesso Comum</label>
-                </div>
-                <div class="radio-item">
-                  <input
-                    type="radio"
-                    id="bicicleta"
-                    name="transporte"
-                    value="bicicleta"
-                    tabindex="12"
-                  />
-                  <label for="bicicleta">Bicicleta</label>
-                </div>
-              </div>
-
-              <div class="placa" id="placa">
-                <label for="placa-input" id="labelplaca"
-                  >Placa do automóvel</label
-                >
-                <input
-                  type="text"
-                  id="placa-input"
-                  name="placa"
-                  placeholder="Insira aqui"
-                  tabindex="13"
-                />
-              </div>
+              <button
+                class="add-automovel"
+                name="add-automovel-btn"
+                type="button"
+                id="add-automovel"
+              >
+                <span>Adicionar automóvel</span>
+              </button>
             </fieldset>
           </div>
 

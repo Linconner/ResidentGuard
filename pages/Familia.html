@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Família</title>
-    <link rel<script src="https://unpkg.com/lucide@latest"></script>="stylesheet" href="/css/familia.css" />
+    <link rel="stylesheet" href="/css/familia.css" />
     <link rel="stylesheet" href="/css/Base.css" />
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -224,25 +224,37 @@
                 </div>
 
                 <!-- Linha de botões -->
-                <div class="form-group margin">
-                  <button
-                    type="button"
-                    id="adicionar-automóvel"
-                    title="Adicionar automóvel"
-                  >
-                    <i class="fa-solid fa-car"></i>
-                    Adicione um automóvel
-                  </button>
-                </div>
-                <div class="form-group margin">
-                  <button
-                    type="button"
-                    id="adicionar-aluguel"
-                    title="Registrar e continuar"
-                  >
-                    <i class="fa-solid fa-circle-check"></i>
-                    Registrar e continuar
-                  </button>
+                <div class="botoes">
+                  <div class="form-group margin">
+                    <button
+                      type="button"
+                      id="adicionar-automóvel"
+                      title="Adicionar automóvel"
+                    >
+                      <i class="fa-solid fa-car"></i>
+                      Adicione um automóvel
+                    </button>
+                  </div>
+                  <div class="form-group margin">
+                    <button
+                      type="button"
+                      id="adicionar-aluguel"
+                      title="Registrar e continuar"
+                    >
+                      <i class="fa-solid fa-circle-check"></i>
+                      Registrar e adicionar outro morador
+                    </button>
+                  </div>
+                  <div class="form-group margin">
+                    <button
+                      type="button"
+                      id="adicionar-aluguel"
+                      title="Registrar e continuar"
+                    >
+                      <i class="fa-solid fa-circle-check"></i>
+                      Registrar e continuar
+                    </button>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -251,60 +263,116 @@
           <div class="consulta-dados">
             <fieldset>
               <legend>Consulte aqui as pessoas registradas</legend>
+<div class="tab-familia-aluguel">
+  <div class="tab-1-familia familia-selecionada">
+    <div class="consulta-de-pessoas">
+      <div class="card-pessoa-individual">
+        <div class="img-nome">
+          <i data-lucide="user-round"></i>
+          <span>Nome da pessoa</span>
+        </div>
 
-              <div class="consulta-de-pessoas">
-                <div class="card-pessoa-individual">
-                  <div class="img-nome">
-                    <i data-lucide="user-round"></i>
-                    <span>Nome da pessoa</span>
-                  </div>
+        <div class="detalhes-pessoa">
+          <div class="parentesco-pessoa">
+            <div>
+              <i data-lucide="users"></i>
+              <span>Parentesco</span>
+            </div>
+            <span>Filho</span>
+          </div>
 
-                  <div class="detalhes-pessoa">
-                    <div class="parentesco-pessoa">
-                      <div>
-                        <i data-lucide="users"></i>
-                        <span>Parentesco</span>
-                      </div>
-                      <span>Filho</span>
-                    </div>
+          <div class="cpf-pessoa">
+            <div>
+              <i data-lucide="id-card"></i>
+              <span>CPF</span>
+            </div>
+            <span>123.456.789-00</span>
+          </div>
 
-                    <div class="cpf-pessoa">
-                      <div>
-                        <i data-lucide="id-card"></i>
-                        <span>CPF</span>
-                      </div>
-                      <span>123.456.789-00</span>
-                    </div>
+          <div class="data-nascimento-pessoa">
+            <div>
+              <i data-lucide="calendar"></i>
+              <span>Data de Nascimento</span>
+            </div>
+            <span>12/05/2005</span>
+          </div>
 
-                    <div class="data-nascimento-pessoa">
-                      <div>
-                        <i data-lucide="calendar"></i>
-                        <span>Data de Nascimento</span>
-                      </div>
-                      <span>12/05/2005</span>
-                    </div>
+          <div class="email-pessoa">
+            <div>
+              <i data-lucide="mail"></i>
+              <span>Email</span>
+            </div>
+            <span>exemplo@email.com</span>
+          </div>
 
-                    <div class="email-pessoa">
-                      <div>
-                        <i data-lucide="mail"></i>
-                        <span>Email</span>
-                      </div>
-                      <span>exemplo@email.com</span>
-                    </div>
+          <div class="telefone-pessoa">
+            <div>
+              <i data-lucide="phone"></i>
+              <span>Telefone</span>
+            </div>
+            <span>(16) 99999-9999</span>
+          </div>
 
-                    <div class="telefone-pessoa">
-                      <div>
-                        <i data-lucide="phone"></i>
-                        <span>Telefone</span>
-                      </div>
-                      <span>(16) 99999-9999</span>
-                    </div>
+          <div class="botao-excluir-card">
+            <button type="button">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                    <div class="botao-excluir-card">
-                      <button type="button">Excluir</button>
-                    </div>
-                  </div>
-                </div>
+  <div class="tab-2-aluguel aluguel-nao-selecionado">
+    <div class="consulta-de-pessoas">
+      <!-- Placeholder for rental cards -->
+      <div class="card-pessoa-individual">
+        <div class="img-nome">
+          <i data-lucide="user-round"></i>
+          <span>Nome do inquilino</span>
+        </div>
+
+        <div class="detalhes-pessoa">
+          <div class="cpf-pessoa">
+            <div>
+              <i data-lucide="id-card"></i>
+              <span>CPF</span>
+            </div>
+            <span>123.456.789-00</span>
+          </div>
+
+          <div class="email-pessoa">
+            <div>
+              <i data-lucide="mail"></i>
+              <span>Email</span>
+            </div>
+            <span>exemplo@email.com</span>
+          </div>
+
+          <div class="telefone-pessoa">
+            <div>
+              <i data-lucide="phone"></i>
+              <span>Telefone</span>
+            </div>
+            <span>(16) 99999-9999</span>
+          </div>
+
+          <div class="botao-excluir-card">
+            <button type="button">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+              <div class="botao-change">
+                <button id="family" type="button">
+                  <i data-lucide="book-user"></i>
+                  <span>Familia</span>
+                </button>
+                <button id="trial"  type="button">
+                  <i data-lucide="key-square"></i>
+                  <span>Aluguel</span>
+                </buttoni>
               </div>
             </fieldset>
           </div>

@@ -26,14 +26,16 @@ form {
 
 .blurOverlay {
   position: fixed;
-  top: 12%;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 88%;
-  backdrop-filter: blur(3px);
-  z-index: 999;
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   pointer-events: none;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   transition: opacity 0.3s ease;
 }
 
@@ -270,6 +272,546 @@ form {
   visibility: visible;
   opacity: 1;
   max-height: 100px;
+}
+
+.add-automovel {
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  width: 100%;
+  height: auto;
+}
+.add-automovel:hover {
+  background-color: #184965;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+  transform: scale(1.01);
+}
+
+/* 🔵 Modal do automóvel */
+.automovel-hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  display: none;
+  height: 60vh;
+  width: 60vw;
+  padding: 1.5rem;
+  background-color: #396481;
+  color: white;
+  border-radius: 1rem;
+  border: 2px solid #184965;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 20; /* fica acima do blur */
+  transition: all 0.3s ease;
+}
+
+.automovel-hover-ativo {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.wrapSVG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+svg.lucide.lucide-car-front {
+  width: 8em;
+  height: 8em;
+  border: 2px solid #11334a;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background: #184965;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+svg.lucide.lucide-car-front:hover {
+  transform: scale(1.05);
+}
+
+.adicione-o-automovel {
+  background: #184965;
+  border: 2px solid #11334a;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 100%;
+}
+
+.adicione-o-automovel span:first-child {
+  font-weight: bold;
+  width: fit-content;
+  height: fit-content;
+}
+
+.adicione-o-automovel span:nth-child(2) {
+  height: fit-content;
+  width: fit-content;
+}
+
+.txt {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  gap: 0.5rem;
+  flex: 3 1 auto;
+}
+
+/*editando aqui o modal*/
+
+.fieldset-hover {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 1rem;
+}
+
+.left-modal,
+.right-modal {
+  min-width: 50%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.right-icon {
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.adicione-o-automovel img {
+  background: #a11111;
+  border-radius: 1rem;
+  border: none;
+  flex: 1 1 auto;
+}
+
+.historico-automoveis {
+  position: absolute;
+  top: 50.5%;
+  width: 25vw;
+  height: auto;
+  background: #396481;
+  border: 0.5px solid #184965;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.automovel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carro-historico,
+.moto-historico {
+  height: 8.3vh;
+  background: #184965;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  padding: 1rem;
+}
+
+.veiculos-historico-tittle {
+  font-weight: bold;
+}
+
+.input-novo {
+  width: 50%;
+}
+
+.div-para-input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.button-novo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12.6px;
+  background-image: url("/images/trash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background-color: #a11111;
+}
+
+.botao-submit-cancelar {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.botao-submit-cancelar button:first-child {
+  color: white;
+  background-color: #a11111;
+  border: 2px solid #780000;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-submit-cancelar button:nth-child(2) {
+  color: white;
+  background-color: #184965;
+  border: #11334a 2px solid;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-submit-cancelar button:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ajeitadores-input {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#botao-placa {
+  background-color: #396481;
+  border: 3px solid #184965;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  height: auto;
+}
+
+#botao-placa:hover {
+  background-color: #184965;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 11.1%);
+  transform: scale(1.01);
+}
+
+.input-placa {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.div-check-automovel {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.checkBoxautomovel {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.div-check-automovel label {
+  font-size: 0.9375rem !important;
+}
+
+.div-check-automovel:hover {
+  background-color: #184965;
+  transition: var(--transition);
+}
+
+.checkbox-reunidos {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "carro moto"
+    "bicicleta outros";
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.carro {
+  grid-area: carro;
+}
+
+.moto {
+  grid-area: moto;
+}
+
+.bicicleta {
+  grid-area: bicicleta;
+}
+
+.outros {
+  grid-area: outros;
+}
+
+.carro,
+.moto,
+.bicicleta,
+.outros {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: 0.8rem;
+}
+
+.carro:hover,
+.moto:hover,
+.bicicleta:hover,
+.outros:hover {
+  background-color: #184965;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.automoveis-registrados {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  flex: 1 1 200px;
+  gap: 1rem;
+  padding: 0.8rem;
+  background-color: #184965;
+  border-radius: 12.6px;
+  overflow-y: auto;
+}
+
+.automoveis-registrados::-webkit-scrollbar {
+  width: 5px;
+  background: #0f2f4178;
+  border-radius: 8px;
+}
+
+.automoveis-registrados::-webkit-scrollbar-thumb {
+  background: #11334a;
+  border-radius: 8px;
+}
+
+.automoveis-registrados::-webkit-scrollbar-thumb:hover {
+  background: #11334a;
+}
+
+.input-para-contrato-div {
+  height: 0;
+  position: absolute;
+  flex: 1 1 auto;
+  transition: position 0s opacity 0s ease;
+  display: none;
+}
+
+.input-para-contrato-div input,
+.input-para-contrato-div label {
+  height: 0;
+  opacity: 0;
+}
+
+.input-para-contrato-div-ativo input,
+.input-para-contrato-div-ativo label {
+  height: auto;
+  opacity: 1;
+}
+
+.input-para-contrato-div-ativo {
+  height: fit-content;
+  opacity: 1;
+  position: static;
+  display: block;
+}
+
+.adicionar-placa {
+  height: auto;
+  width: 100%;
+
+  flex: 0 0 auto;
+}
+
+.div-retangulo-automovel {
+  display: flex;
+  flex-direction: column;
+  background-color: #184965;
+  border: #11334a 2px solid;
+  border-radius: 12.6px;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.div-retangulo-automovel span {
+  height: 21.6px;
+  width: auto;
+  color: white;
+}
+
+.div-retangulo-automovel img {
+  width: 21.6px;
+  height: 21.6px;
+}
+
+.image {
+  height: 25.6px;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: normal;
+}
+
+.div-retangulo-automovel:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tipo-morador {
+  display: flex;
+  flex-direction: column;
+
+  height: fit-content;
+  gap: 1rem;
+}
+
+.proprietario-inquilino {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 auto;
+}
+
+.botoes-radio-tipo {
+  background-color: #184965;
+  border: 2px solid #11334a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.058);
+}
+
+.botoes-radio-tipo:hover {
+  background-color: #11334a;
+  transform: scale(1.01);
+}
+
+.botoes-radio-tipo label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.botao-detalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  height: auto;
+  flex: 0 0 150px;
+  flex-flow: row wrap;
+}
+.botao-detalhes button {
+  width: calc(50% - 0.4rem);
+  height: auto;
+  padding: 1rem;
+
+  background-color: #184965;
+  border: 2px solid #11334a;
+  border-radius: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.botao-detalhes button:hover {
+  transform: scale(1.01);
+  background-color: #11334a;
+  cursor: pointer;
+}
+.botao-detalhes button:active {
+  transform: scale(0.95);
+  background-color: #184965;
+}
+
+#btn-concluir-cadastro a {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+.cadastreumautomovel {
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.4vh;
+  margin-bottom: 1vh;
+}
+p.paragrafo {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 60%;
 }
 
 /* Responsivo */

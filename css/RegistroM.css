@@ -300,6 +300,28 @@ input[type="radio"] {
   display: block;
 }
 
+.wrapSVG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+svg.lucide.lucide-car-front {
+  width: 8em;
+  height: 8em;
+  border: 2px solid #11334a;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background: #184965;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+svg.lucide.lucide-car-front:hover {
+  transform: scale(1.05);
+}
+
 .adicione-o-automovel {
   background: #184965;
   border: 2px solid #11334a;
@@ -347,6 +369,16 @@ input[type="radio"] {
 .right-modal {
   min-width: 50%;
   min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.right-icon {
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 /**/
@@ -425,6 +457,7 @@ input[type="radio"] {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .botao-submit-cancelar button:first-child {
@@ -749,6 +782,20 @@ input[type="radio"] {
   text-decoration: none;
   height: 100%;
   width: 100%;
+}
+.cadastreumautomovel {
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.4vh;
+  margin-bottom: 1vh;
+}
+p.paragrafo {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 60%;
 }
 
 @media (max-width: 1238px) {

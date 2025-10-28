@@ -104,6 +104,32 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       alert("Registro de aluguel será processado aqui.");
     });
+
+  // Tabs para Familia e Aluguel na consulta
+  const familyBtn = document.getElementById("family");
+  const trialBtn = document.getElementById("trial");
+  const tabFamilia = document.querySelector(".tab-1-familia");
+  const tabAluguel = document.querySelector(".tab-2-aluguel");
+
+  familyBtn.addEventListener("click", function () {
+    tabFamilia.classList.remove("familia-nao-selecionada");
+    tabFamilia.classList.add("familia-selecionada");
+    tabAluguel.classList.remove("aluguel-selecionado");
+    tabAluguel.classList.add("aluguel-nao-selecionado");
+
+    familyBtn.classList.add("active-tab");
+    trialBtn.classList.remove("active-tab");
+  });
+
+  trialBtn.addEventListener("click", function () {
+    tabAluguel.classList.remove("aluguel-nao-selecionado");
+    tabAluguel.classList.add("aluguel-selecionado");
+    tabFamilia.classList.remove("familia-selecionada");
+    tabFamilia.classList.add("familia-nao-selecionada");
+
+    trialBtn.classList.add("active-tab");
+    familyBtn.classList.remove("active-tab");
+  });
 });
 
 // botao voltar para a tela de morador
