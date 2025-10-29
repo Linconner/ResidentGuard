@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta do Funcionário</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fontisto@3.0.4/css/fontisto/fontisto.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <link rel="stylesheet" href="/css/ConsultaFuncionario.css" />
+    <link rel="stylesheet" href="/css/Base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+  </head>
+
+  <body data-page="consultaF">
+    <!-- Navbar precisa estar dentro do body -->
+    <div id="navbar"></div>
+
+    <!-- Blur overlay -->
+    <div class="blurOverlay" id="blurOverlay"></div>
+
+    <!-- Container principal -->
+    <div class="container1">
+      <div
+        class="modal-editar-funcionario modal-desativado"
+        id="modal-desativado"
+      >
+        <fieldset class="fieldset-editar-funcionario">
+          <legend>Edite os dados do funcionário</legend>
+
+          <div class="container-editar-funcionario">
+            <div class="left-editar-funcionario">
+              <div class="grupo-editar-funcionario">
+                <label for="nome-editar-funcionario">Nome</label>
+                <input
+                  type="text"
+                  name="nome-editar-funcionario"
+                  id="nome-editar-funcionario"
+                />
+              </div>
+              <div class="grupo-editar-funcionario">
+                <label for="cpf-editar-funcionario">CPF</label>
+                <input
+                  type="text"
+                  name="cpf-editar-funcionario"
+                  id="cpf-editar-funcionario"
+                />
+              </div>
+              <div class="grupo-editar-funcionario">
+                <label for="datanascimento-editar-funcionario"
+                  >Data de Nascimento</label
+                >
+                <input
+                  type="date"
+                  name="datanascimento-editar-funcionario"
+                  id="datanascimento-editar-funcionario"
+                />
+              </div>
+              <div class="grupo-editar-funcionario">
+                <label for="email-editar-funcionario">E-mail</label>
+                <input
+                  type="email"
+                  name="email-editar-funcionario"
+                  id="email-editar-funcionario"
+                />
+              </div>
+              <div class="grupo-editar-funcionario">
+                <label for="telefone-editar-funcionario"
+                  >Número de telefone</label
+                >
+                <input
+                  type="text"
+                  name="telefone-editar-funcionario"
+                  id="telefone-editar-funcionario"
+                />
+              </div>
+            </div>
+            <div class="right-editar-funcionario">
+              <div class="mensagem-editar-funcionario">
+                <div class="iconeSpan-editar-funcionario">
+                  <div class="div-para-o-icone">
+                    <i data-lucide="message-square-warning"></i>
+                  </div>
+                  <span class="medium semibold">Atenção</span>
+                </div>
+                <div class="paragrafo-editar-funcionario">
+                  <p>
+                    toda a alteração de dados feita por meios de edição estarão
+                    guardadas no sistema !
+                  </p>
+                </div>
+              </div>
+
+              <div class="botoes-editar-funcionario">
+                <div
+                  class="confirmar-editar-funcionario"
+                  id="confirmar-e-editar"
+                >
+                  <button>Confirmar alterações</button>
+                </div>
+                <div class="voltar-editar-funcionario" id="voltar-e-fechar">
+                  <button>Voltar e cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <fieldset class="busca-filtro">
+        <div>
+          <img src="/images/search.svg" alt="" />
+          <input type="search" placeholder="Busque os dados do funcionário" />
+        </div>
+        <div>
+          <!-- SVG inline -->
+          <div>
+            <svg
+              class="icon funnel"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"
+              />
+            </svg>
+            <span class="semibold">Status:</span>
+          </div>
+          <div class="filtros">
+            <div>Todos</div>
+            <div>Ativos</div>
+            <div>Inativos</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="card-dos-funcionarios">
+        <fieldset>
+          <div class="card-dos-funcionarios-filho">
+            <div class="header-funcionario">
+              <div class="icone-foto">
+                <img src="/images/users.svg" alt="imagem-usuario" />
+              </div>
+              <div class="informacoes-texto">
+                <div class="nome-status">
+                  <span class="bold big">Maria Silva Santos</span>
+                  <span class="span-ativo semibold">Ativo</span>
+                </div>
+                <div class="informacoes-abaixo-nome">
+                  <div class="endereco">Zeladora</div>
+                </div>
+              </div>
+            </div>
+            <!-- Meio card -->
+
+            <!-- Footer -->
+            <div class="footer">
+              <div>
+                <span class="small">CPF</span>
+                <span>123.345.567-90</span>
+              </div>
+              <div>
+                <span class="small">Telefone</span>
+                <span>(11)1111-1111</span>
+              </div>
+
+              <!-- Div apenas adm, ver a lógica depois (DIV INTERATIVA) -->
+              <div class="apenas-adm" id="apenas-adm">
+                <span class="small">Senha</span>
+                <span>123456789</span>
+              </div>
+              <!--  -->
+
+              <div class="registro-tipodomorador">
+                <img src="/images/calendar-clock.svg" alt="" />
+                <div class="flex-column">
+                  <span class="small">Registro</span>
+                  <span>09/01/2020</span>
+                </div>
+                <span class="sp">Proprietário</span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <fieldset class="central-de-informacoes">
+        <div>
+          <!--  <div><img src="/images/house.svg" alt="" /></div>
+          <span class="semibold">Selecione um morador</span>
+          <span class="small"
+            >Clique em um funcionário da lista para ver informações detalhadas e
+            opções de ação</span
+        -->
+
+          <div class="foto-status-tipo">
+            <img src="/images/circle-user.svg" alt="" />
+            <div>
+              <span class="bold big">Maria</span>
+              <div class="status-tipo">
+                <span class="normal" id="ativo-desativo">Ativo</span>
+
+                <span class="normal">Funcionário</span>
+              </div>
+            </div>
+          </div>
+          <!-- infos pessoais -->
+
+          <div class="informacoes-pessoais-container">
+            <div class="header-cards">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-round-icon lucide-user-round"
+              >
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+              </svg>
+              <span class="medium semibold">Informações Pessoais</span>
+            </div>
+            <div class="grid-infos-pessoais card-infos-template">
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>CPF</span>
+                  <span>123.456.789-01</span>
+                </div>
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
+              </div>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Data de nascimento</span>
+                  <span id="span-substituindo">00/00/0000</span>
+                </div>
+                <button
+                  class="botao-editar"
+                  type="button"
+                  title="editar"
+                  id="botao-editar-substituir"
+                >
+                  <i data-lucide="square-pen"></i>
+                </button>
+              </div>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Número de telefone</span>
+                  <span>(00)00000-0000</span>
+                </div>
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
+              </div>
+
+              <div class="div-row-card">
+                <div class="dois-span">
+                  <span>Cargo</span>
+                  <span>Zeladora</span>
+                </div>
+                <button class="botao-editar" type="button" title="editar">
+                  <i data-lucide="square-pen"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de botões -->
+          <div class="card-botoes">
+            <div>
+              <button class="desativar-btn" id="desativar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-user-round-x-icon lucide-user-round-x"
+                >
+                  <path d="M2 21a8 8 0 0 1 11.873-7" />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="m17 17 5 5" />
+                  <path d="m22 17-5 5" />
+                </svg>
+                <span class="small semi">Desativar Funcionário</span>
+              </button>
+            </div>
+            <div>
+              <button type="button" class="apagar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-eraser-icon lucide-eraser"
+                >
+                  <path
+                    d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
+                  />
+                  <path d="m5.082 11.09 8.828 8.828" />
+                </svg>
+                <span class="small semibold">Remover Funcionário</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="/js/ConsultaFuncionario.js"></script>
+    <script src="/js/includes.js"></script>
+    <script src="/js/Base.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  </body>
+</html>

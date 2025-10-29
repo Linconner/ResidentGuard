@@ -116,7 +116,7 @@ function atualizarTituloSpan() {
     adm: "ADMIN",
     familia: "REGISTRO DE FAMILIA",
     consultaM: "TELA DE CONSULTA DO MORADOR",
-    // Adicione outras páginas aqui
+    consultaF: "TELA DE CONSULTA DO FUNCIONÁRIO",
   };
 
   span.textContent = titulos[page] || "sistema";
