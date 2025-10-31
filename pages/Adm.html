@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
@@ -70,33 +72,47 @@
               placeholder="Insira aqui o número/letra do apartamento"
             />
           </div>
+
+          <div class="botao-template-div">
+            <button type="button" class="botao-template">
+              <i data-lucide="plus"></i>
+              <span>Cadastrar esse campo</span>
+            </button>
+          </div>
         </fieldset>
 
         <fieldset class="eventos-alugueis">
           <legend>Locais e Áreas</legend>
 
-          <div class="cadastro-areas-externas">
-            <label for="area-externa">Área Externa</label>
-            <input
-              type="text"
-              id="area-externa"
-              name="area-externa"
-              placeholder="Ex: Churrasqueira, Quadra, Piscina..."
-            />
+          <div>
+            <div class="cadastro-areas-externas">
+              <label for="area-externa">Área Externa</label>
+              <input
+                type="text"
+                id="area-externa"
+                name="area-externa"
+                placeholder="Ex: Churrasqueira, Quadra, Piscina..."
+              />
+            </div>
+            <div class="cadastro-locais">
+              <label for="local">Local para Aluguel</label>
+              <input
+                type="text"
+                id="local"
+                name="local"
+                placeholder="Ex: Salão de festas, Espaço gourmet..."
+              />
+            </div>
           </div>
 
-          <div class="cadastro-locais">
-            <label for="local">Local para Aluguel</label>
-            <input
-              type="text"
-              id="local"
-              name="local"
-              placeholder="Ex: Salão de festas, Espaço gourmet..."
-            />
+          <div class="botao-template-div">
+            <button type="button" class="botao-template">
+              <i data-lucide="plus"></i>
+              <span>Cadastrar esse campo</span>
+            </button>
           </div>
         </fieldset>
-      
-     
+
         <fieldset class="cadastro-funcionarios">
           <legend>Registre um Funcionário</legend>
 
@@ -157,17 +173,20 @@
               <option value="jardineiro">Jardineiro</option>
             </select>
           </div>
-        </fieldset>
 
-        <div class="btnconfirmar">
-          <button type="button">
-            CADASTRAR
-          </button>
-        </div>
+          <div class="botao-template-div">
+            <button type="button" class="botao-template">
+              <i data-lucide="plus"></i>
+              <span>Cadastrar esse campo</span>
+            </button>
+          </div>
+        </fieldset>
       </div>
     </div>
-  </div>
 
     <script src="/js/includes.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

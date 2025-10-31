@@ -71,19 +71,15 @@
   border-radius: 0.8rem;
 }
 
-.registro-apartamentos{
-  display: flex;
+.registro-apartamentos {
   justify-content: center;
   align-items: center;
-  flex-flow: row;
-  
+
   flex: 1 1 auto;
   display: flex;
-
+  flex-flow: nowrap column;
   gap: 0.6rem;
 }
-
-
 
 .registro-bloco,
 .registro-apartamento {
@@ -92,7 +88,6 @@
 
 .registro-apartamento > div > input {
   width: 100%;
-
 }
 
 .cadastro-locais,
@@ -105,44 +100,53 @@
 .eventos-alugueis {
   flex: 1 1 auto;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   gap: 0.6rem;
 }
 .eventos-alugueis > div {
-  width: 50%;
+  width: 100%;
 }
 
 .cadastro-funcionarios {
+  width: 100%;
   flex: 1 1 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row: auto;
+  display: flex;
+  flex-flow: column nowrap;
 
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
-.btnconfirmar {
-  width: fit-content;
+.botao-template {
   height: fit-content;
-  margin-left: auto;
-}
+  background-color: #184965;
+  border: 2px solid #11334a;
 
-.btnconfirmar button {
-  background: var(--azulEscuro);
-  border: 2px solid var(--azulEscuro2);
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 1.2rem;
-  cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
+
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  border-radius: 0.6rem;
+  padding: 0.4rem 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
 }
 
-.btnconfirmar button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 3px 5px #0000;
+.botao-template-div {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.botao-template-div > button:hover {
+  transform: scale(1.01);
 }
 
-.btnconfirmar button:active {
-  transform: scale(0.96);
+.botao-template-div > button:active {
+  transform: scale(0.95);
 }

@@ -34,13 +34,11 @@
 
 /* Lados esquerdo e direito */
 .top {
- padding: 0 1rem 0 1rem;
-
+  padding: 0 1rem 0 1rem;
 }
 
-
 .bottom {
-  padding: 0 1rem 1rem 1rem ;
+  padding: 0 1rem 1rem 1rem;
 }
 
 /* Fieldsets */
@@ -91,7 +89,9 @@ label {
   font-weight: 500;
 }
 
-#ifMorador, #ifNaoMorador, #dados-aluguel {
+#ifMorador,
+#ifNaoMorador,
+#dados-aluguel {
   display: none;
 }
 
@@ -99,36 +99,39 @@ label {
   display: none;
 }
 
-
-
-
-.btnconfirmar {
-  width: fit-content;
+.botao-template {
   height: fit-content;
-  margin-left: auto;
-  margin-top: auto;
-}
+  background-color: #184965;
+  border: 2px solid #11334a;
 
-.btnconfirmar button {
-  background: var(--azulEscuro);
-  border: 2px solid var(--azulEscuro2);
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 1.2rem;
-  cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
+  display: flex;
+  justify-content: center;
+
+  width: 3vh;
+  border-radius: 0.6rem;
+  padding: 0.4rem 1rem;
+  color: white;
+  cursor: pointer;
+
+  gap: 0.5rem;
+
+  margin-top: 1rem;
 }
 
-.btnconfirmar button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 3px 5px #0000;
+.botao-template-div {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.botao-template-div > button:hover {
+  transform: scale(1.01);
 }
 
-.btnconfirmar button:active {
-  transform: scale(0.96);
+.botao-template-div > button:active {
+  transform: scale(0.95);
 }
-
 .dados-aluguel {
   margin-bottom: 1rem;
 }
