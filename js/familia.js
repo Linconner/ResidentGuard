@@ -111,22 +111,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabFamilia = document.querySelector(".tab-1-familia");
   const tabAluguel = document.querySelector(".tab-2-aluguel");
 
-  familyBtn.addEventListener("click", function () {
-    tabFamilia.classList.remove("familia-nao-selecionada");
-    tabFamilia.classList.add("familia-selecionada");
-    tabAluguel.classList.remove("aluguel-selecionado");
-    tabAluguel.classList.add("aluguel-nao-selecionado");
+  // Inicialmente, mostra a aba Familia e marca o botao como ativo
+  tabFamilia.style.display = "block";
+  tabAluguel.style.display = "none";
+  familyBtn.classList.add("active-tab");
 
+  familyBtn.addEventListener("click", function () {
+    // Mostra a aba Familia e esconde a aba Aluguel
+    tabFamilia.style.display = "block";
+    tabAluguel.style.display = "none";
+    // Marca o botao Familia como ativo e remove do Aluguel
     familyBtn.classList.add("active-tab");
     trialBtn.classList.remove("active-tab");
   });
 
   trialBtn.addEventListener("click", function () {
-    tabAluguel.classList.remove("aluguel-nao-selecionado");
-    tabAluguel.classList.add("aluguel-selecionado");
-    tabFamilia.classList.remove("familia-selecionada");
-    tabFamilia.classList.add("familia-nao-selecionada");
-
+    // Mostra a aba Aluguel e esconde a aba Familia
+    tabAluguel.style.display = "block";
+    tabFamilia.style.display = "none";
+    // Marca o botao Aluguel como ativo e remove do Familia
     trialBtn.classList.add("active-tab");
     familyBtn.classList.remove("active-tab");
   });

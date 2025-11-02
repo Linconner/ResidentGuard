@@ -100,7 +100,7 @@ label {
 }
 
 .botao-template {
-  height: fit-content;
+  height: 5vh;
   background-color: #184965;
   border: 2px solid #11334a;
 
@@ -108,16 +108,15 @@ label {
   transition: var(--transition);
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  width: 3vh;
+  width: 35%;
   border-radius: 0.6rem;
   padding: 0.4rem 1rem;
   color: white;
   cursor: pointer;
 
   gap: 0.5rem;
-
-  margin-top: 1rem;
 }
 
 .botao-template-div {
@@ -132,6 +131,12 @@ label {
 .botao-template-div > button:active {
   transform: scale(0.95);
 }
+
+.botao-template > span {
+  height: 100%;
+  line-height: 100%;
+}
+
 .dados-aluguel {
   margin-bottom: 1rem;
 }

@@ -23,6 +23,12 @@ body {
   display: none;
 }
 
+/* Regras para esconder as abas quando não selecionadas */
+.familia-nao-selecionada,
+.aluguel-nao-selecionado {
+  display: none;
+}
+
 .aluguel-selecionado {
   display: block;
 }
@@ -481,5 +487,5 @@ form {
 
 .botao-change button.active-tab {
   background-color: var(--azulEscuro2);
-  border-color: var(--azulClaro);
+  border-color: var(--azulEscuro);
 }
